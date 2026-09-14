@@ -26,7 +26,19 @@ describe('GraphQL common queries (e2e)', () => {
       });
   });
 
+  it('does not write request bodies to the console', async () => {
+    const consoleLog = jest.spyOn(console, 'log').mockImplementation();
+
+    await request(app.getHttpServer())
+      .post('/graphql')
+      .send({ query: '{ healthCheck }', password: 'request-secret' })
+      .expect(200);
+
+    expect(JSON.stringify(consoleLog.mock.calls)).not.toContain('request-secret');
+  });
+
   afterEach(async () => {
+    jest.restoreAllMocks();
     await app.close();
   });
 });

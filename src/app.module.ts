@@ -2,12 +2,11 @@ import { join } from 'path';
 
 import type { Request } from 'express';
 import { APP_INTERCEPTOR } from '@nestjs/core';
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
-import { LoggerMiddleware } from './logger.middleware';
 import { ResponseLoggingInterceptor } from './responseLogger.interceptor';
 import { CommonModule } from './common/common.module';
 
@@ -33,8 +32,4 @@ import { CommonModule } from './common/common.module';
     },
   ],
 })
-export class AppModule implements NestModule {
-  configure(consumer: MiddlewareConsumer) {
-    consumer.apply(LoggerMiddleware).forRoutes('*');
-  }
-}
+export class AppModule {}

@@ -5,7 +5,6 @@ describe('AppModule configuration', () => {
     jest.dontMock('@nestjs/graphql');
     jest.dontMock('@nestjs/apollo');
     jest.dontMock('../src/common/common.module');
-    jest.dontMock('../src/logger.middleware');
     jest.dontMock('../src/responseLogger.interceptor');
   });
 
@@ -32,9 +31,6 @@ describe('AppModule configuration', () => {
       }));
       jest.doMock('../src/common/common.module', () => ({
         CommonModule: class MockCommonModule {},
-      }));
-      jest.doMock('../src/logger.middleware', () => ({
-        LoggerMiddleware: class MockLoggerMiddleware {},
       }));
       jest.doMock('../src/responseLogger.interceptor', () => ({
         ResponseLoggingInterceptor: class MockResponseLoggingInterceptor {},
