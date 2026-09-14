@@ -31,7 +31,7 @@ export class SmsService {
       this.logger.error({
         event: 'sms.send.failed',
         receiver:
-          phone.length >= 7
+          phone.length > 7
             ? `${phone.slice(0, 3)}****${phone.slice(-4)}`
             : '[REDACTED]',
         error: error instanceof Error ? error.name : 'UnknownError',
