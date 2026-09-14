@@ -39,7 +39,7 @@ export class ResponseLoggingInterceptor implements NestInterceptor {
 
     return next.handle().pipe(
       tap({
-        next: () =>
+        complete: () =>
           this.logger.log({
             ...metadata(response?.statusCode ?? 200),
             outcome: 'success',

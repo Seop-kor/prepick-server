@@ -66,6 +66,21 @@ describe('ResponseLoggingInterceptor', () => {
     );
   });
 
+  it('logs success once after a multi-value stream completes', async () => {
+    const log = jest.spyOn(Logger.prototype, 'log').mockImplementation();
+
+    await lastValueFrom(
+      new ResponseLoggingInterceptor().intercept(graphqlContext('SendEmail'), {
+        handle: () => of('first', 'second'),
+      } as CallHandler),
+    );
+
+    expect(log).toHaveBeenCalledTimes(1);
+    expect(log).toHaveBeenCalledWith(
+      expect.objectContaining({ outcome: 'success' }),
+    );
+  });
+
   it('logs only the error class when a request fails', async () => {
     const errorLog = jest.spyOn(Logger.prototype, 'error').mockImplementation();
     const next = {
