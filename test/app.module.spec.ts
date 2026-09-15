@@ -5,8 +5,6 @@ describe('AppModule configuration', () => {
     jest.dontMock('@nestjs/graphql');
     jest.dontMock('@nestjs/apollo');
     jest.dontMock('../src/common/common.module');
-    jest.dontMock('../src/logger.middleware');
-    jest.dontMock('../src/responseLogger.interceptor');
   });
 
   it('loads environment variables from environments/.env', () => {
@@ -33,13 +31,6 @@ describe('AppModule configuration', () => {
       jest.doMock('../src/common/common.module', () => ({
         CommonModule: class MockCommonModule {},
       }));
-      jest.doMock('../src/logger.middleware', () => ({
-        LoggerMiddleware: class MockLoggerMiddleware {},
-      }));
-      jest.doMock('../src/responseLogger.interceptor', () => ({
-        ResponseLoggingInterceptor: class MockResponseLoggingInterceptor {},
-      }));
-
       require('../src/app.module');
 
       expect(configForRoot).toHaveBeenCalledWith({
