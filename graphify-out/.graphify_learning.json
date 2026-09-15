@@ -1,0 +1,207 @@
+{
+  "generated_at": "2026-09-15T13:48:43.925499+00:00",
+  "nodes": {
+    "docs_spec_smart_order_consumer_app_prd_authentication_api": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Authentication API",
+      "last": "2026-09-14T14:27:58.164927+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:27:58.164927+00:00",
+          "outcome": "useful",
+          "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
+        },
+        {
+          "date": "2026-09-14T14:19:28.321537+00:00",
+          "outcome": "useful",
+          "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
+        },
+        {
+          "date": "2026-09-12T17:49:38.563712+00:00",
+          "outcome": "useful",
+          "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
+        }
+      ],
+      "score": 2.892063939,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "preferred",
+      "uses": 3
+    },
+    "docs_spec_smart_order_consumer_app_prd_consumer_backend_scope": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Consumer Backend Scope",
+      "last": "2026-09-14T14:19:28.321537+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:19:28.321537+00:00",
+          "outcome": "useful",
+          "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
+        },
+        {
+          "date": "2026-09-12T17:49:38.563712+00:00",
+          "outcome": "useful",
+          "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
+        }
+      ],
+      "score": 1.91428859,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "preferred",
+      "uses": 2
+    },
+    "docs_spec_smart_order_consumer_app_prd_core_order_journey": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Core Order Journey",
+      "last": "2026-09-14T14:27:58.164927+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:27:58.164927+00:00",
+          "outcome": "useful",
+          "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
+        }
+      ],
+      "score": 0.977775349,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_spec_smart_order_consumer_app_prd_menu_api": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Menu API",
+      "last": "2026-09-14T14:27:58.164927+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:27:58.164927+00:00",
+          "outcome": "useful",
+          "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
+        },
+        {
+          "date": "2026-09-12T17:49:38.563712+00:00",
+          "outcome": "useful",
+          "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
+        }
+      ],
+      "score": 1.914421892,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "preferred",
+      "uses": 2
+    },
+    "docs_spec_smart_order_consumer_app_prd_order_api": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Order API",
+      "last": "2026-09-14T14:27:58.164927+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:27:58.164927+00:00",
+          "outcome": "useful",
+          "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
+        },
+        {
+          "date": "2026-09-12T17:49:38.563712+00:00",
+          "outcome": "useful",
+          "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
+        }
+      ],
+      "score": 1.914421892,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "preferred",
+      "uses": 2
+    },
+    "docs_spec_smart_order_consumer_app_prd_phone_number_account_identity": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Phone Number Account Identity",
+      "last": "2026-09-14T14:19:28.321537+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:19:28.321537+00:00",
+          "outcome": "useful",
+          "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
+        }
+      ],
+      "score": 0.977642047,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_spec_smart_order_consumer_app_prd_six_digit_otp_verification": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Six-Digit OTP Verification",
+      "last": "2026-09-14T14:19:28.321537+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:19:28.321537+00:00",
+          "outcome": "useful",
+          "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
+        }
+      ],
+      "score": 0.977642047,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_spec_smart_order_consumer_app_prd_smart_order_consumer_app": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Smart Order Consumer App",
+      "last": "2026-09-12T17:49:38.563712+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-12T17:49:38.563712+00:00",
+          "outcome": "useful",
+          "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
+        }
+      ],
+      "score": 0.936646544,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_spec_smart_order_consumer_app_prd_store_details_and_menu_catalog": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Store Details and Menu Catalog",
+      "last": "2026-09-14T14:27:58.164927+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:27:58.164927+00:00",
+          "outcome": "useful",
+          "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
+        }
+      ],
+      "score": 0.977775349,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_spec_smart_order_consumer_app_prd_store_discovery_api": {
+      "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
+      "label": "Store Discovery API",
+      "last": "2026-09-12T17:49:38.563712+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-12T17:49:38.563712+00:00",
+          "outcome": "useful",
+          "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
+        }
+      ],
+      "score": 0.936646544,
+      "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_common_sms_service_smsservice": {
+      "code_fingerprint": "241c29a5eef398d6aaad93d75413c23d88d6be1f827e9f2bb14ebcc3377fc45b",
+      "label": "SmsService",
+      "last": "2026-09-14T14:27:58.164927+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T14:27:58.164927+00:00",
+          "outcome": "useful",
+          "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
+        }
+      ],
+      "score": 0.977775349,
+      "source_file": "src/common/sms.service.ts",
+      "status": "tentative",
+      "uses": 1
+    }
+  },
+  "version": 1
+}
