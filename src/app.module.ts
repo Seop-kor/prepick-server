@@ -1,13 +1,14 @@
 import { join } from 'path';
 
 import type { Request } from 'express';
-import { APP_INTERCEPTOR } from '@nestjs/core';
+import { APP_FILTER } from '@nestjs/core';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
-import { ResponseLoggingInterceptor } from './responseLogger.interceptor';
+import { GraphqlExceptionFilter } from './graphqlException.filter';
+import { ResponseLoggingPlugin } from './responseLogger.plugin';
 import { CommonModule } from './common/common.module';
 
 @Module({
@@ -22,13 +23,14 @@ import { CommonModule } from './common/common.module';
       sortSchema: true,
       autoSchemaFile: join(process.cwd(), 'schema.gql'),
       context: ({ req }: { req: Request }) => ({ req }),
+      plugins: [new ResponseLoggingPlugin()],
     }),
     CommonModule,
   ],
   providers: [
     {
-      provide: APP_INTERCEPTOR,
-      useClass: ResponseLoggingInterceptor,
+      provide: APP_FILTER,
+      useClass: GraphqlExceptionFilter,
     },
   ],
 })
