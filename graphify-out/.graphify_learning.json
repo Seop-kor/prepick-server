@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T13:48:43.925499+00:00",
+  "generated_at": "2026-09-16T11:24:27.741409+00:00",
   "nodes": {
     "docs_spec_smart_order_consumer_app_prd_authentication_api": {
       "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
@@ -22,7 +22,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 2.892063939,
+      "score": 2.832558383,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 3
@@ -43,7 +43,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.91428859,
+      "score": 1.874901215,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -59,7 +59,7 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.977775349,
+      "score": 0.957657168,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -80,7 +80,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.914421892,
+      "score": 1.875031774,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -101,7 +101,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.914421892,
+      "score": 1.875031774,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -117,7 +117,7 @@
           "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
         }
       ],
-      "score": 0.977642047,
+      "score": 0.957526608,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -133,7 +133,7 @@
           "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
         }
       ],
-      "score": 0.977642047,
+      "score": 0.957526608,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -149,7 +149,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 0.936646544,
+      "score": 0.917374607,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -165,7 +165,7 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.977775349,
+      "score": 0.957657168,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -181,7 +181,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 0.936646544,
+      "score": 0.917374607,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -197,7 +197,7 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.977775349,
+      "score": 0.957657168,
       "source_file": "src/common/sms.service.ts",
       "status": "tentative",
       "uses": 1
