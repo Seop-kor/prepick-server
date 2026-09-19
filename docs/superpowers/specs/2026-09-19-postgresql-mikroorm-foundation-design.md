@@ -36,25 +36,27 @@ Consumer 인증 API는 PostgreSQL 트랜잭션, unique constraint, advisory lock
 아래 패키지를 추가한다.
 
 - dependency: `@mikro-orm/migrations@7.2.1`
+- dependency: `dotenv`
 - devDependency: `@mikro-orm/cli@7.2.1`
 - devDependency: `tsx`
 
-`@mikro-orm/cli`와 `@mikro-orm/migrations`는 NestJS 연결 자체가 아니라 인증 계획에서 요구하는 migration CLI를 위해 사용한다. `tsx`는 CLI가 TypeScript 설정과 migration 파일을 직접 읽는 데 사용한다. MikroORM core, PostgreSQL driver, migration과 CLI의 버전은 `7.2.1`로 맞춘다.
+`@mikro-orm/cli`와 `@mikro-orm/migrations`는 NestJS 연결 자체가 아니라 인증 계획에서 요구하는 migration CLI를 위해 사용한다. `tsx`는 CLI가 TypeScript 설정과 migration 파일을 직접 읽는 데 사용한다. `dotenv`는 NestJS를 부팅하지 않는 CLI 설정에서만 `environments/.env`를 읽는다. MikroORM core, PostgreSQL driver, migration과 CLI의 버전은 `7.2.1`로 맞춘다.
 
 ## 설정 구조
 
-`src/mikro-orm.config.ts`를 런타임과 CLI가 함께 사용하는 단일 설정으로 둔다.
+`src/database/mikro-orm.options.ts`는 database URL을 받아 공통 MikroORM 설정을 만드는 순수 함수로 둔다.
 
-- Node.js의 `loadEnvFile()`로 존재하는 `environments/.env`를 읽는다.
-- 이미 프로세스에 설정된 환경변수를 우선하고 secret 값을 로그에 출력하지 않는다.
-- `DATABASE_URL`이 없으면 시작 단계에서 명확한 오류를 발생시킨다.
-- PostgreSQL driver의 `clientUrl`에 `DATABASE_URL`을 전달한다.
+- PostgreSQL driver의 `clientUrl`에 전달받은 URL을 설정한다.
 - compiled entity는 `dist/**/*.entity.js`, TypeScript entity는 `src/**/*.entity.ts`에서 찾는다.
 - 인증 entity가 아직 없는 기반 단계에서는 `discovery.warnWhenNoEntities`를 비활성화한다.
 - compiled migration은 `dist/database/migrations`, TypeScript migration은 `src/database/migrations`에서 찾는다.
 - `Migrator` extension을 등록한다.
 
-`AppModule`은 이 설정을 `MikroOrmModule.forRoot(...)`에 전달하고 `autoLoadEntities: true`를 추가한다. feature module이 나중에 `forFeature(...)`로 등록한 entity가 런타임에 포함된다. NestJS MikroORM middleware가 요청별 EntityManager context를 관리하며 별도 repository layer는 만들지 않는다.
+애플리케이션에서는 기존 `ConfigModule.forRoot({ envFilePath: 'environments/.env' })`를 유지한다. `MikroOrmModule.forRootAsync(...)`가 `ConfigService`를 주입받아 `DATABASE_URL`을 `getOrThrow()`로 읽고 공통 설정 함수에 전달한다. `autoLoadEntities: true`를 추가하여 feature module이 나중에 `forFeature(...)`로 등록한 entity를 런타임에 포함한다.
+
+CLI는 `AppModule`을 부팅하지 않으므로 `ConfigModule`의 환경변수 로딩을 사용할 수 없다. `src/mikro-orm.config.ts`에서 `dotenv`로 `environments/.env`를 읽은 뒤 같은 공통 설정 함수를 호출한다. 이미 프로세스에 설정된 환경변수를 우선하며, `DATABASE_URL`이 없으면 명확한 오류를 발생시키고 secret 값은 로그에 출력하지 않는다.
+
+NestJS MikroORM middleware가 요청별 EntityManager context를 관리하며 별도 repository layer는 만들지 않는다.
 
 ## Migration 정책
 
