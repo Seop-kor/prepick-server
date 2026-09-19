@@ -154,7 +154,7 @@
       "file_type": "code",
       "norm_label": "appmodule",
       "source_file": "src/app.module.ts",
-      "source_location": "L49"
+      "source_location": "L51"
     },
     {
       "id": "src_common_common_module_commonmodule",
@@ -297,7 +297,20 @@
       "file_type": "code",
       "norm_label": "mockconfigservice",
       "source_file": "test/app.module.spec.ts",
-      "source_location": "L14"
+      "source_location": "L15"
+    },
+    {
+      "id": "test_app_module_spec_mockpostgresqldriver",
+      "label": "MockPostgreSqlDriver",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "app.module.spec.ts",
+      "file_type": "code",
+      "norm_label": "mockpostgresqldriver",
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L16"
     },
     {
       "id": "src_common_common_resolver_commonresolver_constructor",
@@ -382,6 +395,18 @@
       "norm_label": ".getotp()",
       "source_file": "src/common/util.service.ts",
       "source_location": "L6"
+    },
+    {
+      "id": "src_database_mikro_orm_options_createmikroormoptions",
+      "label": "createMikroOrmOptions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "code",
+      "norm_label": "createmikroormoptions()",
+      "source_file": "src/database/mikro-orm.options.ts",
+      "source_location": "L4"
     },
     {
       "id": "src_graphqlexception_filter_graphqlexceptionfilter_catch",
@@ -1068,18 +1093,6 @@
       "source_location": "L44"
     },
     {
-      "id": "src_database_mikro_orm_options_createmikroormoptions",
-      "label": "createMikroOrmOptions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "mikro-orm.options.ts",
-      "file_type": "code",
-      "norm_label": "createmikroormoptions()",
-      "source_file": "src/database/mikro-orm.options.ts",
-      "source_location": "L4"
-    },
-    {
       "id": "catch",
       "label": "Catch",
       "_origin": "ast",
@@ -1234,6 +1247,17 @@
       "source_location": ""
     },
     {
+      "id": "src_database_mikro_orm_options",
+      "label": "mikro-orm.options.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "code",
+      "norm_label": "mikro-orm.options.ts",
+      "source_file": "src/database/mikro-orm.options.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_graphqlexception_filter",
       "label": "graphqlException.filter.ts",
       "_origin": "ast",
@@ -1253,6 +1277,17 @@
       "file_type": "code",
       "norm_label": "main.ts",
       "source_file": "src/main.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_mikro_orm_config",
+      "label": "mikro-orm.config.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "code",
+      "norm_label": "mikro-orm.config.ts",
+      "source_file": "src/mikro-orm.config.ts",
       "source_location": "L1"
     },
     {
@@ -1300,6 +1335,28 @@
       "source_location": "L1"
     },
     {
+      "id": "test_database_database_integration_spec",
+      "label": "database.integration-spec.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "code",
+      "norm_label": "database.integration-spec.ts",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_database_mikro_orm_options_spec",
+      "label": "mikro-orm.options.spec.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "code",
+      "norm_label": "mikro-orm.options.spec.ts",
+      "source_file": "test/database/mikro-orm.options.spec.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "ref_apollo_server",
       "label": "@apollo/server",
       "_origin": "ast",
@@ -1311,26 +1368,37 @@
       "source_location": "L31"
     },
     {
-      "id": "ref_mikro_orm_nestjs",
-      "label": "@mikro-orm/nestjs",
+      "id": "ref_dotenv",
+      "label": "dotenv",
       "_origin": "ast",
       "community": 0,
       "community_name": "app.module.ts",
       "file_type": "concept",
-      "norm_label": "@mikro-orm/nestjs",
+      "norm_label": "dotenv",
       "source_file": "package.json",
-      "source_location": "L35"
+      "source_location": "L50"
     },
     {
-      "id": "ref_nestjs_apollo",
-      "label": "@nestjs/apollo",
+      "id": "ref_mikro_orm_migrations",
+      "label": "@mikro-orm/migrations",
       "_origin": "ast",
       "community": 0,
       "community_name": "app.module.ts",
       "file_type": "concept",
-      "norm_label": "@nestjs/apollo",
+      "norm_label": "@mikro-orm/migrations",
       "source_file": "package.json",
-      "source_location": "L37"
+      "source_location": "L34"
+    },
+    {
+      "id": "ref_mikro_orm_postgresql",
+      "label": "@mikro-orm/postgresql",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/postgresql",
+      "source_file": "package.json",
+      "source_location": "L36"
     },
     {
       "id": "ref_nestjs_axios",
@@ -1397,17 +1465,6 @@
       "norm_label": "@nestjs/testing",
       "source_file": "package.json",
       "source_location": "L61"
-    },
-    {
-      "id": "ref_supertest",
-      "label": "supertest",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "supertest",
-      "source_file": "package.json",
-      "source_location": "L73"
     },
     {
       "id": "agents_skills_caveman_compress_scripts_cli",
@@ -2686,6 +2743,17 @@
       "source_location": "L91"
     },
     {
+      "id": "eslint_config",
+      "label": "eslint.config.mjs",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "eslint.config.mjs",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1"
+    },
+    {
       "id": "package",
       "label": "package.json",
       "_origin": "ast",
@@ -2728,6 +2796,39 @@
       "norm_label": "license",
       "source_file": "package.json",
       "source_location": "L7"
+    },
+    {
+      "id": "package_mikro_orm",
+      "label": "mikro-orm",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "mikro-orm",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "package_mikro_orm_configpaths",
+      "label": "configPaths",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "configpaths",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "package_mikro_orm_preferts",
+      "label": "preferTs",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "code",
+      "norm_label": "preferts",
+      "source_file": "package.json",
+      "source_location": "L9"
     },
     {
       "id": "package_name",
@@ -2862,6 +2963,17 @@
       "source_location": "L56"
     },
     {
+      "id": "ref_eslint_js",
+      "label": "@eslint/js",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@eslint/js",
+      "source_file": "package.json",
+      "source_location": "L57"
+    },
+    {
       "id": "ref_eslint_plugin_prettier",
       "label": "eslint-plugin-prettier",
       "_origin": "ast",
@@ -2871,6 +2983,17 @@
       "norm_label": "eslint-plugin-prettier",
       "source_file": "package.json",
       "source_location": "L68"
+    },
+    {
+      "id": "ref_globals",
+      "label": "globals",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "globals",
+      "source_file": "package.json",
+      "source_location": "L69"
     },
     {
       "id": "ref_graphql",
@@ -2915,6 +3038,28 @@
       "norm_label": "@mikro-orm/core",
       "source_file": "package.json",
       "source_location": "L33"
+    },
+    {
+      "id": "ref_mikro_orm_nestjs",
+      "label": "@mikro-orm/nestjs",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/nestjs",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "ref_nestjs_apollo",
+      "label": "@nestjs/apollo",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@nestjs/apollo",
+      "source_file": "package.json",
+      "source_location": "L37"
     },
     {
       "id": "ref_nestjs_cli",
@@ -3003,6 +3148,17 @@
       "norm_label": "source-map-support",
       "source_file": "package.json",
       "source_location": "L72"
+    },
+    {
+      "id": "ref_supertest",
+      "label": "supertest",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "supertest",
+      "source_file": "package.json",
+      "source_location": "L73"
     },
     {
       "id": "ref_ts_jest",
@@ -3113,6 +3269,17 @@
       "norm_label": "typescript",
       "source_file": "package.json",
       "source_location": "L79"
+    },
+    {
+      "id": "ref_typescript_eslint",
+      "label": "typescript-eslint",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "typescript-eslint",
+      "source_file": "package.json",
+      "source_location": "L80"
     },
     {
       "id": "nest_cli",
@@ -4443,125 +4610,15 @@
       "source_location": "L552"
     },
     {
-      "id": "src_database_mikro_orm_options",
-      "label": "mikro-orm.options.ts",
+      "id": "test_main_spec",
+      "label": "main.spec.ts",
       "_origin": "ast",
       "community": 39,
-      "community_name": "mikro-orm.options.ts",
+      "community_name": "main.spec.ts",
       "file_type": "code",
-      "norm_label": "mikro-orm.options.ts",
-      "source_file": "src/database/mikro-orm.options.ts",
+      "norm_label": "main.spec.ts",
+      "source_file": "test/main.spec.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "src_mikro_orm_config",
-      "label": "mikro-orm.config.ts",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "mikro-orm.options.ts",
-      "file_type": "code",
-      "norm_label": "mikro-orm.config.ts",
-      "source_file": "src/mikro-orm.config.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_database_database_integration_spec",
-      "label": "database.integration-spec.ts",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "mikro-orm.options.ts",
-      "file_type": "code",
-      "norm_label": "database.integration-spec.ts",
-      "source_file": "test/database/database.integration-spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_database_mikro_orm_options_spec",
-      "label": "mikro-orm.options.spec.ts",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "mikro-orm.options.ts",
-      "file_type": "code",
-      "norm_label": "mikro-orm.options.spec.ts",
-      "source_file": "test/database/mikro-orm.options.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_dotenv",
-      "label": "dotenv",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "mikro-orm.options.ts",
-      "file_type": "concept",
-      "norm_label": "dotenv",
-      "source_file": "package.json",
-      "source_location": "L50"
-    },
-    {
-      "id": "ref_mikro_orm_migrations",
-      "label": "@mikro-orm/migrations",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "mikro-orm.options.ts",
-      "file_type": "concept",
-      "norm_label": "@mikro-orm/migrations",
-      "source_file": "package.json",
-      "source_location": "L34"
-    },
-    {
-      "id": "ref_mikro_orm_postgresql",
-      "label": "@mikro-orm/postgresql",
-      "_origin": "ast",
-      "community": 39,
-      "community_name": "mikro-orm.options.ts",
-      "file_type": "concept",
-      "norm_label": "@mikro-orm/postgresql",
-      "source_file": "package.json",
-      "source_location": "L36"
-    },
-    {
-      "id": "eslint_config",
-      "label": "eslint.config.mjs",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "eslint.config.mjs",
-      "file_type": "code",
-      "norm_label": "eslint.config.mjs",
-      "source_file": "eslint.config.mjs",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_eslint_js",
-      "label": "@eslint/js",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "eslint.config.mjs",
-      "file_type": "concept",
-      "norm_label": "@eslint/js",
-      "source_file": "package.json",
-      "source_location": "L57"
-    },
-    {
-      "id": "ref_globals",
-      "label": "globals",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "eslint.config.mjs",
-      "file_type": "concept",
-      "norm_label": "globals",
-      "source_file": "package.json",
-      "source_location": "L69"
-    },
-    {
-      "id": "ref_typescript_eslint",
-      "label": "typescript-eslint",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "eslint.config.mjs",
-      "file_type": "concept",
-      "norm_label": "typescript-eslint",
-      "source_file": "package.json",
-      "source_location": "L80"
     },
     {
       "id": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778",
@@ -4616,39 +4673,6 @@
       "node_kind": "heading",
       "norm_label": "q: \u1109\u1169\u1100\u1172\u1106\u1169 pr\u110b\u1166\u1109\u1165 subagent-driven \u1100\u1162\u1107\u1161\u11af \u1109\u1175 \u1110\u1169\u110f\u1173\u11ab \u1100\u116a\u1103\u1161 \u1109\u1161\u110b\u116d\u11bc\u110b\u1173\u11af \u110b\u1165\u1104\u1165\u11c2\u1100\u1166 \u1107\u1161\u11bc\u110c\u1175\u1112\u1161\u11af \u1100\u1165\u11ba\u110b\u1175\u11ab\u1100\u1161?",
       "source_file": "graphify-out/memory/query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "package_mikro_orm",
-      "label": "mikro-orm",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "mikro-orm",
-      "file_type": "code",
-      "norm_label": "mikro-orm",
-      "source_file": "package.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "package_mikro_orm_configpaths",
-      "label": "configPaths",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "mikro-orm",
-      "file_type": "code",
-      "norm_label": "configpaths",
-      "source_file": "package.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "package_mikro_orm_preferts",
-      "label": "preferTs",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "mikro-orm",
-      "file_type": "code",
-      "norm_label": "preferts",
-      "source_file": "package.json",
       "source_location": "L9"
     },
     {
@@ -8572,7 +8596,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "src/app.module.ts",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -9352,7 +9376,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -9364,7 +9388,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -9376,7 +9400,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -9388,7 +9412,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -9484,7 +9508,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/app.e2e-spec.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -9496,7 +9520,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/app.e2e-spec.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -9521,6 +9545,18 @@
       "context": "import",
       "source_file": "test/common/util.service.spec.ts",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "test_database_database_integration_spec",
+      "target": "src_app_module_appmodule",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -9657,19 +9693,19 @@
     },
     {
       "source": "src_app_module",
-      "target": "src_graphqlexception_filter",
+      "target": "ref_nestjs_apollo",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
       "source": "src_app_module",
-      "target": "src_responselogger_plugin",
+      "target": "src_graphqlexception_filter",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9681,7 +9717,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "src_common_common_module",
+      "target": "src_responselogger_plugin",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9693,7 +9729,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "src_database_mikro_orm_options",
+      "target": "src_common_common_module",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9701,6 +9737,18 @@
       "context": "import",
       "source_file": "src/app.module.ts",
       "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_module",
+      "target": "src_database_mikro_orm_options",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app.module.ts",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -9717,7 +9765,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_core",
+      "target": "ref_mikro_orm_postgresql",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9729,7 +9777,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_common",
+      "target": "ref_nestjs_core",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9741,7 +9789,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_config",
+      "target": "ref_nestjs_common",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9753,7 +9801,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_graphql",
+      "target": "ref_nestjs_config",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9765,7 +9813,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_apollo",
+      "target": "ref_nestjs_graphql",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10061,7 +10109,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/app.e2e-spec.ts",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -10073,7 +10121,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/app.e2e-spec.ts",
-      "source_location": "L2",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -10085,7 +10133,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/app.e2e-spec.ts",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -10097,7 +10145,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/app.e2e-spec.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -10109,7 +10157,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/app.e2e-spec.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -10162,7 +10210,7 @@
     },
     {
       "source": "test_database_database_integration_spec",
-      "target": "ref_mikro_orm_postgresql",
+      "target": "ref_nestjs_testing",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10174,6 +10222,30 @@
     },
     {
       "source": "test_database_database_integration_spec",
+      "target": "ref_mikro_orm_postgresql",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "test_database_database_integration_spec",
+      "target": "src_app_module",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_database_database_integration_spec",
       "target": "src_mikro_orm_config",
       "relation": "imports_from",
       "_origin": "ast",
@@ -10181,7 +10253,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/database/database.integration-spec.ts",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -13388,7 +13460,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app.module.ts",
-      "source_location": "L49",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -13509,7 +13581,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "test/app.module.spec.ts",
-      "source_location": "L14",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "test_app_module_spec",
+      "target": "test_app_module_spec_mockpostgresqldriver",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -16333,5 +16416,5 @@
       "source_file": ".agents/skills/caveman-optimize/SKILL.md"
     }
   ],
-  "built_at_commit": "29437920a05e5843f0f3066ea41602ce2a29aba3"
+  "built_at_commit": "4c610c1f8a2d3a4759333887a1eb7917ff78fd3d"
 }

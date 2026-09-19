@@ -1,16 +1,16 @@
 # Graph Report - prepick-server  (2026-09-20)
 
 ## Corpus Check
-- 91 files · ~49,492 words
+- 92 files · ~49,721 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 632 nodes · 750 edges · 44 communities (39 shown, 4 thin omitted)
+- 634 nodes · 755 edges · 42 communities (36 shown, 4 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `29437920`
+- Built from commit: `4c610c1f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -54,10 +54,7 @@
 - Q: graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?
 - Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?
 - Review Focus
-- mikro-orm.options.ts
-- eslint.config.mjs
 - Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?
-- mikro-orm
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 21 edges
@@ -97,19 +94,19 @@
 - **Evidence-First Optimization Safety** — _agents_skills_caveman_evidence_review_skill_evidence_bucket_separation, _agents_skills_caveman_learn_skill_savings_evidence_rungs, _agents_skills_caveman_manage_skill_fail_closed_lifecycle_gate, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 - **Operator-Controlled Changes** — _agents_skills_caveman_discover_skill_operator_approval_gate, _agents_skills_caveman_learn_skill_consent_gated_editing, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 
-## Communities (44 total, 4 thin omitted)
+## Communities (42 total, 4 thin omitted)
 
 ### Community 0 - "app.module.ts"
 Cohesion: 0.07
-Nodes (27): Catch, Query, @apollo/server, @mikro-orm/nestjs, @nestjs/apollo, @nestjs/axios, @nestjs/common, @nestjs/config (+19 more)
+Nodes (28): Catch, Query, @apollo/server, dotenv, @mikro-orm/migrations, @mikro-orm/postgresql, @nestjs/axios, @nestjs/common (+20 more)
 
 ### Community 1 - "compress.py"
 Cohesion: 0.06
 Nodes (61): main(), print_usage(), Caveman Compress CLI Usage: caveman <filepath>, backup_dir_for(), build_compress_prompt(), build_fix_prompt(), call_claude(), compress_file() (+53 more)
 
 ### Community 2 - "package.json"
-Cohesion: 0.05
-Nodes (38): author, description, license, name, private, version, @as-integrations/express5, axios (+30 more)
+Cohesion: 0.04
+Nodes (47): author, description, license, mikro-orm, configPaths, preferTs, name, private (+39 more)
 
 ### Community 3 - "validate.py"
 Cohesion: 0.10
@@ -239,25 +236,13 @@ Nodes (4): Answer, Outcome, Q: 데이터베이스 서버 없이 먼저 개발할
 Cohesion: 0.22
 Nodes (8): File Map, Global Constraints, PostgreSQL·MikroORM Foundation Implementation Plan, Review Focus, Task 1: Shared MikroORM Options and Aligned Dependencies, Task 2: NestJS Runtime and MikroORM CLI Configuration, Task 3: PostgreSQL Integration Test and Migration Harness, Task 4: Auth Prerequisite Verification and Knowledge Graph Update
 
-### Community 39 - "mikro-orm.options.ts"
-Cohesion: 0.39
-Nodes (4): dotenv, @mikro-orm/migrations, @mikro-orm/postgresql, createMikroOrmOptions()
-
-### Community 40 - "eslint.config.mjs"
-Cohesion: 0.50
-Nodes (3): @eslint/js, globals, typescript-eslint
-
 ### Community 41 - "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?"
 Cohesion: 0.50
 Nodes (3): Answer, Outcome, Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?
 
-### Community 42 - "mikro-orm"
-Cohesion: 0.67
-Nodes (3): mikro-orm, configPaths, preferTs
-
 ## Knowledge Gaps
-- **312 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+307 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 399 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **313 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+308 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 400 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
@@ -272,16 +257,16 @@ Nodes (3): mikro-orm, configPaths, preferTs
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `package.json`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `scripts` connect `scripts` to `package.json`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `license` to the rest of the system?**
-  _312 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _313 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.module.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.06887755102040816 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06638714185883997 - nodes in this community are weakly interconnected._
 - **Should `compress.py` be split into smaller, more focused modules?**
   _Cohesion score 0.05673076923076923 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04251700680272109 - nodes in this community are weakly interconnected._

@@ -38,9 +38,7 @@
   "36": "Q: graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?",
   "37": "Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?",
   "38": "Review Focus",
-  "39": "mikro-orm.options.ts",
-  "40": "eslint.config.mjs",
+  "39": "main.spec.ts",
   "41": "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?",
-  "42": "mikro-orm",
   "43": "mikro-orm.config.spec.ts"
 }
