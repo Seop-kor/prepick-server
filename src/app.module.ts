@@ -2,6 +2,7 @@ import { join } from 'path';
 
 import type { Request } from 'express';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
+import { PostgreSqlDriver } from '@mikro-orm/postgresql';
 import { APP_FILTER } from '@nestjs/core';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
@@ -20,6 +21,7 @@ import { createMikroOrmOptions } from './database/mikro-orm.options';
       envFilePath: 'environments/.env',
     }),
     MikroOrmModule.forRootAsync({
+      driver: PostgreSqlDriver,
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
         ...createMikroOrmOptions(

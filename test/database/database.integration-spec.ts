@@ -1,11 +1,16 @@
-import { MikroORM } from '@mikro-orm/postgresql';
+import { Test, TestingModule } from '@nestjs/testing';
+import { EntityManager, MikroORM } from '@mikro-orm/postgresql';
 
+import { AppModule } from '../../src/app.module';
 import mikroOrmConfig from '../../src/mikro-orm.config';
 
 describe('PostgreSQL database foundation', () => {
   let orm: Awaited<ReturnType<typeof MikroORM.init>> | undefined;
+  let testingModule: TestingModule | undefined;
 
   afterEach(async () => {
+    await testingModule?.close();
+    testingModule = undefined;
     await orm?.close(true);
     orm = undefined;
   });
@@ -15,5 +20,13 @@ describe('PostgreSQL database foundation', () => {
     await orm.connect();
 
     await expect(orm.checkConnection()).resolves.toEqual({ ok: true });
+  });
+
+  it('NestJS 모듈을 구성하면 PostgreSQL EntityManager를 주입한다', async () => {
+    testingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    expect(testingModule.get(EntityManager)).toBeInstanceOf(EntityManager);
   });
 });

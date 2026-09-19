@@ -30,4 +30,19 @@ describe('createMikroOrmOptions', () => {
       }),
     );
   });
+
+  it('DATABASE_URL 형식이 올바르지 않으면 원문을 노출하지 않고 실패한다', () => {
+    const clientUrl =
+      'postgresql://app:unescaped#secret@db.example:5432/prepick';
+
+    expect(() => createMikroOrmOptions(clientUrl)).toThrow(
+      'DATABASE_URL is invalid',
+    );
+
+    try {
+      createMikroOrmOptions(clientUrl);
+    } catch (error) {
+      expect((error as Error).message).not.toContain('unescaped#secret');
+    }
+  });
 });

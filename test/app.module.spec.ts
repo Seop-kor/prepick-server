@@ -2,6 +2,7 @@ describe('AppModule configuration', () => {
   afterEach(() => {
     jest.resetModules();
     jest.dontMock('@mikro-orm/nestjs');
+    jest.dontMock('@mikro-orm/postgresql');
     jest.dontMock('@nestjs/config');
     jest.dontMock('@nestjs/graphql');
     jest.dontMock('@nestjs/apollo');
@@ -12,6 +13,7 @@ describe('AppModule configuration', () => {
   it('애플리케이션 모듈을 불러오면 ConfigService로 MikroORM을 구성한다', () => {
     jest.isolateModules(() => {
       class MockConfigService {}
+      class MockPostgreSqlDriver {}
 
       const configForRoot = jest.fn(() => ({
         module: class MockConfigModule {},
@@ -26,6 +28,9 @@ describe('AppModule configuration', () => {
       }));
       jest.doMock('@mikro-orm/nestjs', () => ({
         MikroOrmModule: { forRootAsync: mikroOrmForRootAsync },
+      }));
+      jest.doMock('@mikro-orm/postgresql', () => ({
+        PostgreSqlDriver: MockPostgreSqlDriver,
       }));
       jest.doMock('@nestjs/graphql', () => ({
         GraphQLModule: {
@@ -53,6 +58,7 @@ describe('AppModule configuration', () => {
 
       const [asyncOptions] = mikroOrmForRootAsync.mock.calls[0] as unknown as [
         {
+          driver: unknown;
           inject: unknown[];
           useFactory: (config: {
             getOrThrow: (key: string) => string;
@@ -63,6 +69,7 @@ describe('AppModule configuration', () => {
         .fn<(key: string) => string>()
         .mockReturnValue('postgresql://runtime-database');
 
+      expect(asyncOptions.driver).toBe(MockPostgreSqlDriver);
       expect(asyncOptions.inject).toEqual([MockConfigService]);
       expect(asyncOptions.useFactory({ getOrThrow })).toEqual(
         expect.objectContaining({
