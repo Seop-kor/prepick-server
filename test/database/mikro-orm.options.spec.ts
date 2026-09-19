@@ -10,7 +10,7 @@ jest.mock('@mikro-orm/postgresql', () => ({
 }));
 
 describe('createMikroOrmOptions', () => {
-  it('preserves the database URL and configures discovery and migrations', () => {
+  it('데이터베이스 URL을 전달하면 엔티티 탐색과 마이그레이션 옵션을 구성한다', () => {
     const clientUrl =
       'postgresql://app:p%40ss@db.example:5432/prepick?sslmode=require';
 
@@ -20,6 +20,7 @@ describe('createMikroOrmOptions', () => {
     expect(options.entities).toEqual(['dist/**/*.entity.js']);
     expect(options.entitiesTs).toEqual(['src/**/*.entity.ts']);
     expect(options.discovery).toEqual({ warnWhenNoEntities: false });
+    expect(options.driverOptions).toEqual({ connectionString: clientUrl });
     expect(options.extensions).toContain(Migrator);
     expect(options.migrations).toEqual(
       expect.objectContaining({

@@ -4,6 +4,7 @@ import { defineConfig } from '@mikro-orm/postgresql';
 export function createMikroOrmOptions(clientUrl: string) {
   return defineConfig({
     clientUrl,
+    driverOptions: { connectionString: clientUrl },
     entities: ['dist/**/*.entity.js'],
     entitiesTs: ['src/**/*.entity.ts'],
     discovery: { warnWhenNoEntities: false },
