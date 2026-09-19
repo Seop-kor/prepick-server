@@ -9,7 +9,7 @@ describe('AppModule configuration', () => {
     jest.dontMock('../src/database/mikro-orm.options');
   });
 
-  it('loads the env file and configures MikroORM from ConfigService', () => {
+  it('애플리케이션 모듈을 불러오면 ConfigService로 MikroORM을 구성한다', () => {
     jest.isolateModules(() => {
       class MockConfigService {}
 

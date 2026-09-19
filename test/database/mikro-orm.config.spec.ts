@@ -12,7 +12,7 @@ describe('MikroORM CLI configuration', () => {
     jest.dontMock('../../src/database/mikro-orm.options');
   });
 
-  it('uses a process-provided DATABASE_URL without changing it', () => {
+  it('프로세스에 DATABASE_URL이 있으면 변경하지 않고 사용한다', () => {
     const clientUrl =
       'postgresql://ci:p%40ss@db.example:5432/prepick?sslmode=require';
     process.env.DATABASE_URL = clientUrl;
@@ -36,7 +36,7 @@ describe('MikroORM CLI configuration', () => {
     expect(options?.clientUrl).toBe(clientUrl);
   });
 
-  it('fails without exposing a connection string when DATABASE_URL is missing', () => {
+  it('DATABASE_URL이 없으면 연결 문자열을 노출하지 않고 실패한다', () => {
     delete process.env.DATABASE_URL;
     jest.doMock('dotenv', () => ({ config: jest.fn() }));
     jest.doMock('../../src/database/mikro-orm.options', () => ({
