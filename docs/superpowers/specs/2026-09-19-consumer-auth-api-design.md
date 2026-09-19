@@ -60,8 +60,8 @@ Consumer App은 휴대폰 번호 기반 회원가입과 로그인, 로그인 상
 ### 공개 Mutation
 
 ```graphql
-sendSignupOtp(phoneNumber: String!): OtpRequestPayload!
-verifySignupOtp(phoneNumber: String!, code: String!): OtpVerificationPayload!
+sendSignupOtp(phone: String!): OtpRequestPayload!
+verifySignupOtp(phone: String!, code: String!): OtpVerificationPayload!
 signUp(input: SignUpInput!): AuthPayload!
 login(input: LoginInput!): AuthPayload!
 refreshSession(refreshToken: String!): AuthPayload!
@@ -84,7 +84,7 @@ input SignUpInput {
 }
 
 input LoginInput {
-  phoneNumber: String!
+  phone: String!
   password: String!
 }
 
@@ -109,7 +109,7 @@ type OtpVerificationPayload {
 type User {
   id: ID!
   name: String!
-  phoneNumber: String!
+  phone: String!
   createdAt: DateTime!
 }
 ```
@@ -127,7 +127,7 @@ type User {
 ```text
 id
 name
-phoneNumber       UNIQUE
+phone             UNIQUE
 password
 createdAt
 updatedAt
@@ -139,7 +139,7 @@ updatedAt
 
 ```text
 id
-phoneNumber
+phone
 otp
 expiresAt
 attemptCount
@@ -301,7 +301,7 @@ GraphQL 응답의 `extensions.code`가 `UNAUTHENTICATED`이면 앱은 보안 저
 
 ### PostgreSQL 통합 테스트
 
-- `User.phoneNumber` unique constraint
+- `User.phone` unique constraint
 - `RefreshSession.userId` unique constraint
 - 회원가입 transaction의 성공과 rollback
 - 동시 refresh 요청 중 하나만 성공하는지 확인
