@@ -154,7 +154,7 @@
       "file_type": "code",
       "norm_label": "appmodule",
       "source_file": "src/app.module.ts",
-      "source_location": "L37"
+      "source_location": "L49"
     },
     {
       "id": "src_common_common_module_commonmodule",
@@ -285,6 +285,19 @@
       "norm_label": "validationresult",
       "source_file": ".agents/skills/caveman-compress/scripts/validate.py",
       "source_location": "L43"
+    },
+    {
+      "id": "test_app_module_spec_mockconfigservice",
+      "label": "MockConfigService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 30,
+      "community_name": "app.module.spec.ts",
+      "file_type": "code",
+      "norm_label": "mockconfigservice",
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L14"
     },
     {
       "id": "src_common_common_resolver_commonresolver_constructor",
@@ -1055,6 +1068,18 @@
       "source_location": "L44"
     },
     {
+      "id": "src_database_mikro_orm_options_createmikroormoptions",
+      "label": "createMikroOrmOptions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "mikro-orm.options.ts",
+      "file_type": "code",
+      "norm_label": "createmikroormoptions()",
+      "source_file": "src/database/mikro-orm.options.ts",
+      "source_location": "L4"
+    },
+    {
       "id": "catch",
       "label": "Catch",
       "_origin": "ast",
@@ -1283,7 +1308,18 @@
       "file_type": "concept",
       "norm_label": "@apollo/server",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L31"
+    },
+    {
+      "id": "ref_mikro_orm_nestjs",
+      "label": "@mikro-orm/nestjs",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/nestjs",
+      "source_file": "package.json",
+      "source_location": "L35"
     },
     {
       "id": "ref_nestjs_apollo",
@@ -1294,7 +1330,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/apollo",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L37"
     },
     {
       "id": "ref_nestjs_axios",
@@ -1305,7 +1341,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/axios",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L38"
     },
     {
       "id": "ref_nestjs_common",
@@ -1316,7 +1352,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/common",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L39"
     },
     {
       "id": "ref_nestjs_config",
@@ -1327,7 +1363,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/config",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L40"
     },
     {
       "id": "ref_nestjs_core",
@@ -1338,7 +1374,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/core",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L41"
     },
     {
       "id": "ref_nestjs_graphql",
@@ -1349,7 +1385,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/graphql",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L42"
     },
     {
       "id": "ref_nestjs_testing",
@@ -1360,7 +1396,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/testing",
       "source_file": "package.json",
-      "source_location": "L47"
+      "source_location": "L61"
     },
     {
       "id": "ref_supertest",
@@ -1371,7 +1407,7 @@
       "file_type": "concept",
       "norm_label": "supertest",
       "source_file": "package.json",
-      "source_location": "L59"
+      "source_location": "L73"
     },
     {
       "id": "agents_skills_caveman_compress_scripts_cli",
@@ -1759,6 +1795,402 @@
       "source_location": "L78"
     },
     {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design",
+      "label": "2026-09-19-consumer-auth-api-design.md",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-19-consumer-auth-api-design.md",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_api_\uc778\uc99d",
+      "label": "API \uc778\uc99d",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "api \u110b\u1175\u11ab\u110c\u1173\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L221"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_authmodule",
+      "label": "AuthModule",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "authmodule",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "label": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "consumer \u110b\u1175\u11ab\u110c\u1173\u11bc api \u1109\u1165\u11af\u1100\u1168",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_e2e_\ud14c\uc2a4\ud2b8",
+      "label": "GraphQL E2E \ud14c\uc2a4\ud2b8",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "graphql e2e \u1110\u1166\u1109\u1173\u1110\u1173",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_\uacc4\uc57d",
+      "label": "GraphQL \uacc4\uc57d",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "graphql \u1100\u1168\u110b\u1163\u11a8",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uac80\uc99d",
+      "label": "OTP \uac80\uc99d",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "otp \u1100\u1165\u11b7\u110c\u1173\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L197"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uc694\uccad",
+      "label": "OTP \uc694\uccad",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "otp \u110b\u116d\u110e\u1165\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L183"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uc815\ucc45",
+      "label": "OTP \uc815\ucc45",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "otp \u110c\u1165\u11bc\u110e\u1162\u11a8",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L246"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otpchallenge",
+      "label": "OtpChallenge",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "otpchallenge",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L138"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_postgresql_\ud1b5\ud569_\ud14c\uc2a4\ud2b8",
+      "label": "PostgreSQL \ud1b5\ud569 \ud14c\uc2a4\ud2b8",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "postgresql \u1110\u1169\u11bc\u1112\u1161\u11b8 \u1110\u1166\u1109\u1173\u1110\u1173",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L302"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_refreshsession",
+      "label": "RefreshSession",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "refreshsession",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L160"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_token_refresh",
+      "label": "Token refresh",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "token refresh",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L233"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_user",
+      "label": "User",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L125"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_usersmodule",
+      "label": "UsersModule",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "usersmodule",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uacf5\uac1c_mutation",
+      "label": "\uacf5\uac1c Mutation",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1100\u1169\u11bc\u1100\u1162 mutation",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L60"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub2e8\uc704_\ud14c\uc2a4\ud2b8",
+      "label": "\ub2e8\uc704 \ud14c\uc2a4\ud2b8",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1103\u1161\u11ab\u110b\u1171 \u1110\u1166\u1109\u1173\u1110\u1173",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L290"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub2e8\uc77c_\uae30\uae30_\ub85c\uadf8\uc778",
+      "label": "\ub2e8\uc77c \uae30\uae30 \ub85c\uadf8\uc778",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1103\u1161\u11ab\u110b\u1175\u11af \u1100\u1175\u1100\u1175 \u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L242"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub370\uc774\ud130_\ubaa8\ub378",
+      "label": "\ub370\uc774\ud130 \ubaa8\ub378",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1103\u1166\u110b\u1175\u1110\u1165 \u1106\u1169\u1103\u1166\u11af",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L123"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub85c\uadf8\uc778",
+      "label": "\ub85c\uadf8\uc778",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L214"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa8\ub4c8_\uad6c\uc870",
+      "label": "\ubaa8\ub4c8 \uad6c\uc870",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1106\u1169\u1103\u1172\u11af \u1100\u116e\u110c\u1169",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa9\ud45c",
+      "label": "\ubaa9\ud45c",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1106\u1169\u11a8\u1111\u116d",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubc30\uacbd",
+      "label": "\ubc30\uacbd",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1107\u1162\u1100\u1167\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubcf4\uc548\uacfc_\ub85c\uae45",
+      "label": "\ubcf4\uc548\uacfc \ub85c\uae45",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1107\u1169\u110b\u1161\u11ab\u1100\u116a \u1105\u1169\u1100\u1175\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L277"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc624\ub958_\uacc4\uc57d",
+      "label": "\uc624\ub958 \uacc4\uc57d",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u1169\u1105\u1172 \u1100\u1168\u110b\u1163\u11a8",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L268"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc644\ub8cc_\uc870\uac74",
+      "label": "\uc644\ub8cc \uc870\uac74",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u116a\u11ab\u1105\u116d \u110c\u1169\u1100\u1165\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L318"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud544\uc694_query",
+      "label": "\uc778\uc99d \ud544\uc694 Query",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u1175\u11ab\u110c\u1173\u11bc \u1111\u1175\u11af\u110b\u116d query",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "label": "\uc778\uc99d \ud750\ub984",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u1175\u11ab\u110c\u1173\u11bc \u1112\u1173\u1105\u1173\u11b7",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L181"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc785\ub825_\uac80\uc99d",
+      "label": "\uc785\ub825 \uac80\uc99d",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u1175\u11b8\u1105\u1167\u11a8 \u1100\u1165\u11b7\u110c\u1173\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L258"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc81c\uc678_\ubc94\uc704",
+      "label": "\uc81c\uc678 \ubc94\uc704",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110c\u1166\u110b\u116c \u1107\u1165\u11b7\u110b\u1171",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc8fc\uc694_\uc785\ub825\uacfc_\uc751\ub2f5",
+      "label": "\uc8fc\uc694 \uc785\ub825\uacfc \uc751\ub2f5",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110c\u116e\u110b\u116d \u110b\u1175\u11b8\u1105\u1167\u11a8\u1100\u116a \u110b\u1173\u11bc\u1103\u1161\u11b8",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud14c\uc2a4\ud2b8_\uc804\ub7b5",
+      "label": "\ud14c\uc2a4\ud2b8 \uc804\ub7b5",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1110\u1166\u1109\u1173\u1110\u1173 \u110c\u1165\u11ab\u1105\u1163\u11a8",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L288"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud68c\uc6d0\uac00\uc785\uacfc_\uc790\ub3d9_\ub85c\uadf8\uc778",
+      "label": "\ud68c\uc6d0\uac00\uc785\uacfc \uc790\ub3d9 \ub85c\uadf8\uc778",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1112\u116c\u110b\u116f\u11ab\u1100\u1161\u110b\u1175\u11b8\u1100\u116a \u110c\u1161\u1103\u1169\u11bc \u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L205"
+    },
+    {
       "id": "package_scripts",
       "label": "scripts",
       "_origin": "ast",
@@ -1767,7 +2199,7 @@
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "package.json",
-      "source_location": "L8"
+      "source_location": "L15"
     },
     {
       "id": "package_scripts_build",
@@ -1778,7 +2210,7 @@
       "file_type": "code",
       "norm_label": "build",
       "source_file": "package.json",
-      "source_location": "L9"
+      "source_location": "L16"
     },
     {
       "id": "package_scripts_format",
@@ -1789,7 +2221,7 @@
       "file_type": "code",
       "norm_label": "format",
       "source_file": "package.json",
-      "source_location": "L10"
+      "source_location": "L17"
     },
     {
       "id": "package_scripts_lint",
@@ -1800,7 +2232,7 @@
       "file_type": "code",
       "norm_label": "lint",
       "source_file": "package.json",
-      "source_location": "L15"
+      "source_location": "L22"
     },
     {
       "id": "package_scripts_start",
@@ -1811,7 +2243,7 @@
       "file_type": "code",
       "norm_label": "start",
       "source_file": "package.json",
-      "source_location": "L11"
+      "source_location": "L18"
     },
     {
       "id": "package_scripts_start_debug",
@@ -1822,7 +2254,7 @@
       "file_type": "code",
       "norm_label": "start:debug",
       "source_file": "package.json",
-      "source_location": "L13"
+      "source_location": "L20"
     },
     {
       "id": "package_scripts_start_dev",
@@ -1833,7 +2265,7 @@
       "file_type": "code",
       "norm_label": "start:dev",
       "source_file": "package.json",
-      "source_location": "L12"
+      "source_location": "L19"
     },
     {
       "id": "package_scripts_start_prod",
@@ -1844,7 +2276,7 @@
       "file_type": "code",
       "norm_label": "start:prod",
       "source_file": "package.json",
-      "source_location": "L14"
+      "source_location": "L21"
     },
     {
       "id": "package_scripts_test",
@@ -1855,7 +2287,7 @@
       "file_type": "code",
       "norm_label": "test",
       "source_file": "package.json",
-      "source_location": "L16"
+      "source_location": "L23"
     },
     {
       "id": "package_scripts_test_cov",
@@ -1866,7 +2298,7 @@
       "file_type": "code",
       "norm_label": "test:cov",
       "source_file": "package.json",
-      "source_location": "L18"
+      "source_location": "L25"
     },
     {
       "id": "package_scripts_test_debug",
@@ -1877,7 +2309,7 @@
       "file_type": "code",
       "norm_label": "test:debug",
       "source_file": "package.json",
-      "source_location": "L19"
+      "source_location": "L26"
     },
     {
       "id": "package_scripts_test_e2e",
@@ -1888,7 +2320,18 @@
       "file_type": "code",
       "norm_label": "test:e2e",
       "source_file": "package.json",
-      "source_location": "L20"
+      "source_location": "L27"
+    },
+    {
+      "id": "package_scripts_test_integration",
+      "label": "test:integration",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "scripts",
+      "file_type": "code",
+      "norm_label": "test:integration",
+      "source_file": "package.json",
+      "source_location": "L28"
     },
     {
       "id": "package_scripts_test_watch",
@@ -1899,7 +2342,7 @@
       "file_type": "code",
       "norm_label": "test:watch",
       "source_file": "package.json",
-      "source_location": "L17"
+      "source_location": "L24"
     },
     {
       "id": "agents_skills_caveman_explore_package",
@@ -2130,7 +2573,7 @@
       "file_type": "code",
       "norm_label": "jest",
       "source_file": "package.json",
-      "source_location": "L67"
+      "source_location": "L82"
     },
     {
       "id": "package_jest_collectcoveragefrom",
@@ -2141,7 +2584,7 @@
       "file_type": "code",
       "norm_label": "collectcoveragefrom",
       "source_file": "package.json",
-      "source_location": "L78"
+      "source_location": "L93"
     },
     {
       "id": "package_jest_coveragedirectory",
@@ -2152,7 +2595,7 @@
       "file_type": "code",
       "norm_label": "coveragedirectory",
       "source_file": "package.json",
-      "source_location": "L81"
+      "source_location": "L96"
     },
     {
       "id": "package_jest_modulefileextensions",
@@ -2163,7 +2606,7 @@
       "file_type": "code",
       "norm_label": "modulefileextensions",
       "source_file": "package.json",
-      "source_location": "L68"
+      "source_location": "L83"
     },
     {
       "id": "package_jest_rootdir",
@@ -2174,7 +2617,7 @@
       "file_type": "code",
       "norm_label": "rootdir",
       "source_file": "package.json",
-      "source_location": "L73"
+      "source_location": "L88"
     },
     {
       "id": "package_jest_testenvironment",
@@ -2185,7 +2628,18 @@
       "file_type": "code",
       "norm_label": "testenvironment",
       "source_file": "package.json",
-      "source_location": "L82"
+      "source_location": "L97"
+    },
+    {
+      "id": "package_jest_testpathignorepatterns",
+      "label": "testPathIgnorePatterns",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "jest",
+      "file_type": "code",
+      "norm_label": "testpathignorepatterns",
+      "source_file": "package.json",
+      "source_location": "L98"
     },
     {
       "id": "package_jest_testregex",
@@ -2196,7 +2650,7 @@
       "file_type": "code",
       "norm_label": "testregex",
       "source_file": "package.json",
-      "source_location": "L74"
+      "source_location": "L89"
     },
     {
       "id": "package_jest_transform",
@@ -2207,7 +2661,18 @@
       "file_type": "code",
       "norm_label": "transform",
       "source_file": "package.json",
-      "source_location": "L75"
+      "source_location": "L90"
+    },
+    {
+      "id": "package_jest_watchman",
+      "label": "watchman",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "jest",
+      "file_type": "code",
+      "norm_label": "watchman",
+      "source_file": "package.json",
+      "source_location": "L101"
     },
     {
       "id": "package_transform_t_j_s",
@@ -2218,18 +2683,7 @@
       "file_type": "code",
       "norm_label": "^.+\\\\.(t|j)s$",
       "source_file": "package.json",
-      "source_location": "L76"
-    },
-    {
-      "id": "eslint_config",
-      "label": "eslint.config.mjs",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "package.json",
-      "file_type": "code",
-      "norm_label": "eslint.config.mjs",
-      "source_file": "eslint.config.mjs",
-      "source_location": "L1"
+      "source_location": "L91"
     },
     {
       "id": "package",
@@ -2317,7 +2771,7 @@
       "file_type": "concept",
       "norm_label": "@as-integrations/express5",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L32"
     },
     {
       "id": "ref_axios",
@@ -2328,7 +2782,7 @@
       "file_type": "concept",
       "norm_label": "axios",
       "source_file": "package.json",
-      "source_location": "L33"
+      "source_location": "L45"
     },
     {
       "id": "ref_bcrypt",
@@ -2339,7 +2793,7 @@
       "file_type": "concept",
       "norm_label": "bcrypt",
       "source_file": "package.json",
-      "source_location": "L34"
+      "source_location": "L46"
     },
     {
       "id": "ref_class_transformer",
@@ -2350,7 +2804,7 @@
       "file_type": "concept",
       "norm_label": "class-transformer",
       "source_file": "package.json",
-      "source_location": "L35"
+      "source_location": "L47"
     },
     {
       "id": "ref_class_validator",
@@ -2361,7 +2815,7 @@
       "file_type": "concept",
       "norm_label": "class-validator",
       "source_file": "package.json",
-      "source_location": "L36"
+      "source_location": "L48"
     },
     {
       "id": "ref_date_fns",
@@ -2372,7 +2826,7 @@
       "file_type": "concept",
       "norm_label": "date-fns",
       "source_file": "package.json",
-      "source_location": "L37"
+      "source_location": "L49"
     },
     {
       "id": "ref_eslint",
@@ -2383,7 +2837,7 @@
       "file_type": "concept",
       "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L52"
+      "source_location": "L66"
     },
     {
       "id": "ref_eslint_config_prettier",
@@ -2394,7 +2848,7 @@
       "file_type": "concept",
       "norm_label": "eslint-config-prettier",
       "source_file": "package.json",
-      "source_location": "L53"
+      "source_location": "L67"
     },
     {
       "id": "ref_eslint_eslintrc",
@@ -2405,18 +2859,7 @@
       "file_type": "concept",
       "norm_label": "@eslint/eslintrc",
       "source_file": "package.json",
-      "source_location": "L43"
-    },
-    {
-      "id": "ref_eslint_js",
-      "label": "@eslint/js",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "@eslint/js",
-      "source_file": "package.json",
-      "source_location": "L44"
+      "source_location": "L56"
     },
     {
       "id": "ref_eslint_plugin_prettier",
@@ -2427,18 +2870,7 @@
       "file_type": "concept",
       "norm_label": "eslint-plugin-prettier",
       "source_file": "package.json",
-      "source_location": "L54"
-    },
-    {
-      "id": "ref_globals",
-      "label": "globals",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "globals",
-      "source_file": "package.json",
-      "source_location": "L55"
+      "source_location": "L68"
     },
     {
       "id": "ref_graphql",
@@ -2449,7 +2881,7 @@
       "file_type": "concept",
       "norm_label": "graphql",
       "source_file": "package.json",
-      "source_location": "L38"
+      "source_location": "L51"
     },
     {
       "id": "ref_jest",
@@ -2460,7 +2892,29 @@
       "file_type": "concept",
       "norm_label": "jest",
       "source_file": "package.json",
-      "source_location": "L56"
+      "source_location": "L70"
+    },
+    {
+      "id": "ref_mikro_orm_cli",
+      "label": "@mikro-orm/cli",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/cli",
+      "source_file": "package.json",
+      "source_location": "L58"
+    },
+    {
+      "id": "ref_mikro_orm_core",
+      "label": "@mikro-orm/core",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/core",
+      "source_file": "package.json",
+      "source_location": "L33"
     },
     {
       "id": "ref_nestjs_cli",
@@ -2471,7 +2925,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/cli",
       "source_file": "package.json",
-      "source_location": "L45"
+      "source_location": "L59"
     },
     {
       "id": "ref_nestjs_jwt",
@@ -2482,7 +2936,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/jwt",
       "source_file": "package.json",
-      "source_location": "L31"
+      "source_location": "L43"
     },
     {
       "id": "ref_nestjs_platform_express",
@@ -2493,7 +2947,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/platform-express",
       "source_file": "package.json",
-      "source_location": "L32"
+      "source_location": "L44"
     },
     {
       "id": "ref_nestjs_schematics",
@@ -2504,7 +2958,7 @@
       "file_type": "concept",
       "norm_label": "@nestjs/schematics",
       "source_file": "package.json",
-      "source_location": "L46"
+      "source_location": "L60"
     },
     {
       "id": "ref_prettier",
@@ -2515,7 +2969,7 @@
       "file_type": "concept",
       "norm_label": "prettier",
       "source_file": "package.json",
-      "source_location": "L57"
+      "source_location": "L71"
     },
     {
       "id": "ref_reflect_metadata",
@@ -2526,7 +2980,7 @@
       "file_type": "concept",
       "norm_label": "reflect-metadata",
       "source_file": "package.json",
-      "source_location": "L39"
+      "source_location": "L52"
     },
     {
       "id": "ref_rxjs",
@@ -2537,7 +2991,7 @@
       "file_type": "concept",
       "norm_label": "rxjs",
       "source_file": "package.json",
-      "source_location": "L40"
+      "source_location": "L53"
     },
     {
       "id": "ref_source_map_support",
@@ -2548,7 +3002,7 @@
       "file_type": "concept",
       "norm_label": "source-map-support",
       "source_file": "package.json",
-      "source_location": "L58"
+      "source_location": "L72"
     },
     {
       "id": "ref_ts_jest",
@@ -2559,7 +3013,7 @@
       "file_type": "concept",
       "norm_label": "ts-jest",
       "source_file": "package.json",
-      "source_location": "L60"
+      "source_location": "L74"
     },
     {
       "id": "ref_ts_loader",
@@ -2570,7 +3024,7 @@
       "file_type": "concept",
       "norm_label": "ts-loader",
       "source_file": "package.json",
-      "source_location": "L61"
+      "source_location": "L75"
     },
     {
       "id": "ref_ts_node",
@@ -2581,7 +3035,7 @@
       "file_type": "concept",
       "norm_label": "ts-node",
       "source_file": "package.json",
-      "source_location": "L62"
+      "source_location": "L76"
     },
     {
       "id": "ref_tsconfig_paths",
@@ -2592,7 +3046,18 @@
       "file_type": "concept",
       "norm_label": "tsconfig-paths",
       "source_file": "package.json",
-      "source_location": "L63"
+      "source_location": "L77"
+    },
+    {
+      "id": "ref_tsx",
+      "label": "tsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "tsx",
+      "source_file": "package.json",
+      "source_location": "L78"
     },
     {
       "id": "ref_types_express",
@@ -2603,7 +3068,7 @@
       "file_type": "concept",
       "norm_label": "@types/express",
       "source_file": "package.json",
-      "source_location": "L48"
+      "source_location": "L62"
     },
     {
       "id": "ref_types_jest",
@@ -2614,7 +3079,7 @@
       "file_type": "concept",
       "norm_label": "@types/jest",
       "source_file": "package.json",
-      "source_location": "L49"
+      "source_location": "L63"
     },
     {
       "id": "ref_types_node",
@@ -2625,7 +3090,7 @@
       "file_type": "concept",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L50"
+      "source_location": "L64"
     },
     {
       "id": "ref_types_supertest",
@@ -2636,7 +3101,7 @@
       "file_type": "concept",
       "norm_label": "@types/supertest",
       "source_file": "package.json",
-      "source_location": "L51"
+      "source_location": "L65"
     },
     {
       "id": "ref_typescript",
@@ -2647,18 +3112,7 @@
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L64"
-    },
-    {
-      "id": "ref_typescript_eslint",
-      "label": "typescript-eslint",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "typescript-eslint",
-      "source_file": "package.json",
-      "source_location": "L65"
+      "source_location": "L79"
     },
     {
       "id": "nest_cli",
@@ -3233,6 +3687,210 @@
       "source_location": "L112"
     },
     {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api",
+      "label": "2026-09-19-consumer-auth-api.md",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-19-consumer-auth-api.md",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_consumer_authentication_api_implementation_plan",
+      "label": "Consumer Authentication API Implementation Plan",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "consumer authentication api implementation plan",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_file_map",
+      "label": "File Map",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "file map",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_global_constraints",
+      "label": "Global Constraints",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "global constraints",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_prerequisite_contract",
+      "label": "Prerequisite Contract",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "prerequisite contract",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "label": "Review Focus",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "review focus",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L68"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_0_verify_the_database_foundation",
+      "label": "Task 0: Verify the Database Foundation",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 0: verify the database foundation",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L78"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_10_final_verification_and_knowledge_graph_update",
+      "label": "Task 10: Final Verification and Knowledge Graph Update",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 10: final verification and knowledge graph update",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1171"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_1_stable_graphql_error_and_validation_contract",
+      "label": "Task 1: Stable GraphQL Error and Validation Contract",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: stable graphql error and validation contract",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L114"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_2_user_persistence_and_phone_normalization",
+      "label": "Task 2: User Persistence and Phone Normalization",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: user persistence and phone normalization",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L238"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_3_otp_challenge_lifecycle",
+      "label": "Task 3: OTP Challenge Lifecycle",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: otp challenge lifecycle",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L375"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_4_stateless_access_tokens_and_rotating_refresh_sessions",
+      "label": "Task 4: Stateless Access Tokens and Rotating Refresh Sessions",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 4: stateless access tokens and rotating refresh sessions",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L519"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_5_signup_and_login_orchestration",
+      "label": "Task 5: Signup and Login Orchestration",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 5: signup and login orchestration",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L656"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_6_global_access_guard_and_currentuser",
+      "label": "Task 6: Global Access Guard and `currentUser`",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 6: global access guard and `currentuser`",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L781"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_7_authentication_graphql_module_and_resolver",
+      "label": "Task 7: Authentication GraphQL Module and Resolver",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 7: authentication graphql module and resolver",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L886"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_8_auth_migration_and_postgresql_integration_proof",
+      "label": "Task 8: Auth Migration and PostgreSQL Integration Proof",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 8: auth migration and postgresql integration proof",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L998"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_9_full_graphql_authentication_journey_and_leakage_regression",
+      "label": "Task 9: Full GraphQL Authentication Journey and Leakage Regression",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 9: full graphql authentication journey and leakage regression",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1105"
+    },
+    {
       "id": "docs_superpowers_plans_2026_09_15_safe_logging_secure_otp",
       "label": "2026-09-15-safe-logging-secure-otp.md",
       "_origin": "ast",
@@ -3339,6 +3997,138 @@
       "norm_label": "task 5: verify the pr and refresh graphify",
       "source_file": "docs/superpowers/plans/2026-09-15-safe-logging-secure-otp.md",
       "source_location": "L560"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design",
+      "label": "2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_integration_test",
+      "label": "Integration test",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "integration test",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L75"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_migration_\uc815\ucc45",
+      "label": "Migration \uc815\ucc45",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "migration \u110c\u1165\u11bc\u110e\u1162\u11a8",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L61"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "label": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "postgresql\u00b7mikroorm \u1100\u1175\u1107\u1161\u11ab \u1109\u1165\u11af\u1100\u1168",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\uac80\uc99d_\uae30\uc900",
+      "label": "\uac80\uc99d \uae30\uc900",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1100\u1165\u11b7\u110c\u1173\u11bc \u1100\u1175\u110c\u116e\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L95"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\ubaa9\ud45c",
+      "label": "\ubaa9\ud45c",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1106\u1169\u11a8\u1111\u116d",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\ubc30\uacbd",
+      "label": "\ubc30\uacbd",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1107\u1162\u1100\u1167\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\uc124\uc815_\uad6c\uc870",
+      "label": "\uc124\uc815 \uad6c\uc870",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1109\u1165\u11af\u110c\u1165\u11bc \u1100\u116e\u110c\u1169",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L45"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\uc624\ub958\uc640_\ubcf4\uc548",
+      "label": "\uc624\ub958\uc640 \ubcf4\uc548",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u1169\u1105\u1172\u110b\u116a \u1107\u1169\u110b\u1161\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L87"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\uc81c\uc678_\ubc94\uc704",
+      "label": "\uc81c\uc678 \ubc94\uc704",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110c\u1166\u110b\u116c \u1107\u1165\u11b7\u110b\u1171",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\ud328\ud0a4\uc9c0",
+      "label": "\ud328\ud0a4\uc9c0",
+      "_origin": "ast",
+      "community": 34,
+      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1111\u1162\u110f\u1175\u110c\u1175",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L28"
     },
     {
       "id": "graphify_out_memory_query_20260912_174938_32b91154_smart_order_consumer_app_prd_md_docs_spec_smart",
@@ -3545,6 +4335,334 @@
       "source_location": "L20"
     },
     {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation",
+      "label": "2026-09-19-postgresql-mikroorm-foundation.md",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_file_map",
+      "label": "File Map",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "file map",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L27"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_global_constraints",
+      "label": "Global Constraints",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "global constraints",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_postgresql_mikroorm_foundation_implementation_plan",
+      "label": "PostgreSQL\u00b7MikroORM Foundation Implementation Plan",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "postgresql\u00b7mikroorm foundation implementation plan",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_review_focus",
+      "label": "Review Focus",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "review focus",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_task_1_shared_mikroorm_options_and_aligned_dependencies",
+      "label": "Task 1: Shared MikroORM Options and Aligned Dependencies",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: shared mikroorm options and aligned dependencies",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L51"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_task_2_nestjs_runtime_and_mikroorm_cli_configuration",
+      "label": "Task 2: NestJS Runtime and MikroORM CLI Configuration",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: nestjs runtime and mikroorm cli configuration",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L174"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_task_3_postgresql_integration_test_and_migration_harness",
+      "label": "Task 3: PostgreSQL Integration Test and Migration Harness",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: postgresql integration test and migration harness",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L417"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_task_4_auth_prerequisite_verification_and_knowledge_graph_update",
+      "label": "Task 4: Auth Prerequisite Verification and Knowledge Graph Update",
+      "_origin": "ast",
+      "community": 38,
+      "community_name": "Review Focus",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 4: auth prerequisite verification and knowledge graph update",
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L552"
+    },
+    {
+      "id": "src_database_mikro_orm_options",
+      "label": "mikro-orm.options.ts",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "mikro-orm.options.ts",
+      "file_type": "code",
+      "norm_label": "mikro-orm.options.ts",
+      "source_file": "src/database/mikro-orm.options.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_mikro_orm_config",
+      "label": "mikro-orm.config.ts",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "mikro-orm.options.ts",
+      "file_type": "code",
+      "norm_label": "mikro-orm.config.ts",
+      "source_file": "src/mikro-orm.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_database_database_integration_spec",
+      "label": "database.integration-spec.ts",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "mikro-orm.options.ts",
+      "file_type": "code",
+      "norm_label": "database.integration-spec.ts",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_database_mikro_orm_options_spec",
+      "label": "mikro-orm.options.spec.ts",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "mikro-orm.options.ts",
+      "file_type": "code",
+      "norm_label": "mikro-orm.options.spec.ts",
+      "source_file": "test/database/mikro-orm.options.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_dotenv",
+      "label": "dotenv",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "mikro-orm.options.ts",
+      "file_type": "concept",
+      "norm_label": "dotenv",
+      "source_file": "package.json",
+      "source_location": "L50"
+    },
+    {
+      "id": "ref_mikro_orm_migrations",
+      "label": "@mikro-orm/migrations",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "mikro-orm.options.ts",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/migrations",
+      "source_file": "package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "ref_mikro_orm_postgresql",
+      "label": "@mikro-orm/postgresql",
+      "_origin": "ast",
+      "community": 39,
+      "community_name": "mikro-orm.options.ts",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/postgresql",
+      "source_file": "package.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "eslint_config",
+      "label": "eslint.config.mjs",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "eslint.config.mjs",
+      "file_type": "code",
+      "norm_label": "eslint.config.mjs",
+      "source_file": "eslint.config.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_eslint_js",
+      "label": "@eslint/js",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "eslint.config.mjs",
+      "file_type": "concept",
+      "norm_label": "@eslint/js",
+      "source_file": "package.json",
+      "source_location": "L57"
+    },
+    {
+      "id": "ref_globals",
+      "label": "globals",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "eslint.config.mjs",
+      "file_type": "concept",
+      "norm_label": "globals",
+      "source_file": "package.json",
+      "source_location": "L69"
+    },
+    {
+      "id": "ref_typescript_eslint",
+      "label": "typescript-eslint",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "eslint.config.mjs",
+      "file_type": "concept",
+      "norm_label": "typescript-eslint",
+      "source_file": "package.json",
+      "source_location": "L80"
+    },
+    {
+      "id": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778",
+      "label": "query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Q: \uc18c\uaddc\ubaa8 PR\uc5d0\uc11c subagent-driven \uac1c\ubc1c \uc2dc \ud1a0\ud070 \uacfc\ub2e4 \uc0ac\uc6a9\uc744 \uc5b4\ub5bb\uac8c \ubc29\uc9c0\ud560 \uac83\uc778\uac00?",
+      "file_type": "document",
+      "frontmatter": {
+        "type": "query",
+        "date": "2026-09-15T13:48:43.839250+00:00",
+        "question": "\uc18c\uaddc\ubaa8 PR\uc5d0\uc11c subagent-driven \uac1c\ubc1c \uc2dc \ud1a0\ud070 \uacfc\ub2e4 \uc0ac\uc6a9\uc744 \uc5b4\ub5bb\uac8c \ubc29\uc9c0\ud560 \uac83\uc778\uac00?",
+        "contributor": "graphify",
+        "outcome": "useful"
+      },
+      "node_kind": "page",
+      "norm_label": "query_20260915_134843_1cc6f686_\u1109\u1169\u1100\u1172\u1106\u1169_pr\u110b\u1166\u1109\u1165_subagent_driven_\u1100\u1162\u1107\u1161\u11af_\u1109\u1175_\u1110\u1169\u110f\u1173\u11ab_\u1100\u116a\u1103\u1161_\u1109\u1161\u110b\u116d\u11bc\u110b\u1173\u11af_\u110b\u1165\u1104\u1165\u11c2\u1100\u1166_\u1107\u1161\u11bc\u110c\u1175\u1112\u1161\u11af_\u1100\u1165\u11ba\u110b\u1175\u11ab.md",
+      "source_file": "graphify-out/memory/query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778_answer",
+      "label": "Answer",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Q: \uc18c\uaddc\ubaa8 PR\uc5d0\uc11c subagent-driven \uac1c\ubc1c \uc2dc \ud1a0\ud070 \uacfc\ub2e4 \uc0ac\uc6a9\uc744 \uc5b4\ub5bb\uac8c \ubc29\uc9c0\ud560 \uac83\uc778\uac00?",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "answer",
+      "source_file": "graphify-out/memory/query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778_outcome",
+      "label": "Outcome",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Q: \uc18c\uaddc\ubaa8 PR\uc5d0\uc11c subagent-driven \uac1c\ubc1c \uc2dc \ud1a0\ud070 \uacfc\ub2e4 \uc0ac\uc6a9\uc744 \uc5b4\ub5bb\uac8c \ubc29\uc9c0\ud560 \uac83\uc778\uac00?",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "outcome",
+      "source_file": "graphify-out/memory/query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778_q_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778\uac00",
+      "label": "Q: \uc18c\uaddc\ubaa8 PR\uc5d0\uc11c subagent-driven \uac1c\ubc1c \uc2dc \ud1a0\ud070 \uacfc\ub2e4 \uc0ac\uc6a9\uc744 \uc5b4\ub5bb\uac8c \ubc29\uc9c0\ud560 \uac83\uc778\uac00?",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "Q: \uc18c\uaddc\ubaa8 PR\uc5d0\uc11c subagent-driven \uac1c\ubc1c \uc2dc \ud1a0\ud070 \uacfc\ub2e4 \uc0ac\uc6a9\uc744 \uc5b4\ub5bb\uac8c \ubc29\uc9c0\ud560 \uac83\uc778\uac00?",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q: \u1109\u1169\u1100\u1172\u1106\u1169 pr\u110b\u1166\u1109\u1165 subagent-driven \u1100\u1162\u1107\u1161\u11af \u1109\u1175 \u1110\u1169\u110f\u1173\u11ab \u1100\u116a\u1103\u1161 \u1109\u1161\u110b\u116d\u11bc\u110b\u1173\u11af \u110b\u1165\u1104\u1165\u11c2\u1100\u1166 \u1107\u1161\u11bc\u110c\u1175\u1112\u1161\u11af \u1100\u1165\u11ba\u110b\u1175\u11ab\u1100\u1161?",
+      "source_file": "graphify-out/memory/query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "package_mikro_orm",
+      "label": "mikro-orm",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "mikro-orm",
+      "file_type": "code",
+      "norm_label": "mikro-orm",
+      "source_file": "package.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "package_mikro_orm_configpaths",
+      "label": "configPaths",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "mikro-orm",
+      "file_type": "code",
+      "norm_label": "configpaths",
+      "source_file": "package.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "package_mikro_orm_preferts",
+      "label": "preferTs",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "mikro-orm",
+      "file_type": "code",
+      "norm_label": "preferts",
+      "source_file": "package.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "test_database_mikro_orm_config_spec",
+      "label": "mikro-orm.config.spec.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "mikro-orm.config.spec.ts",
+      "file_type": "code",
+      "norm_label": "mikro-orm.config.spec.ts",
+      "source_file": "test/database/mikro-orm.config.spec.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "package_devdependencies",
       "label": "devDependencies",
       "_origin": "ast",
@@ -3553,7 +4671,7 @@
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
-      "source_location": "L42"
+      "source_location": "L55"
     },
     {
       "id": "package_devdependencies_eslint",
@@ -3564,7 +4682,7 @@
       "file_type": "code",
       "norm_label": "eslint",
       "source_file": "package.json",
-      "source_location": "L52"
+      "source_location": "L66"
     },
     {
       "id": "package_devdependencies_eslint_config_prettier",
@@ -3575,7 +4693,7 @@
       "file_type": "code",
       "norm_label": "eslint-config-prettier",
       "source_file": "package.json",
-      "source_location": "L53"
+      "source_location": "L67"
     },
     {
       "id": "package_devdependencies_eslint_eslintrc",
@@ -3586,7 +4704,7 @@
       "file_type": "code",
       "norm_label": "@eslint/eslintrc",
       "source_file": "package.json",
-      "source_location": "L43"
+      "source_location": "L56"
     },
     {
       "id": "package_devdependencies_eslint_js",
@@ -3597,7 +4715,7 @@
       "file_type": "code",
       "norm_label": "@eslint/js",
       "source_file": "package.json",
-      "source_location": "L44"
+      "source_location": "L57"
     },
     {
       "id": "package_devdependencies_eslint_plugin_prettier",
@@ -3608,7 +4726,7 @@
       "file_type": "code",
       "norm_label": "eslint-plugin-prettier",
       "source_file": "package.json",
-      "source_location": "L54"
+      "source_location": "L68"
     },
     {
       "id": "package_devdependencies_globals",
@@ -3619,7 +4737,7 @@
       "file_type": "code",
       "norm_label": "globals",
       "source_file": "package.json",
-      "source_location": "L55"
+      "source_location": "L69"
     },
     {
       "id": "package_devdependencies_jest",
@@ -3630,7 +4748,18 @@
       "file_type": "code",
       "norm_label": "jest",
       "source_file": "package.json",
-      "source_location": "L56"
+      "source_location": "L70"
+    },
+    {
+      "id": "package_devdependencies_mikro_orm_cli",
+      "label": "@mikro-orm/cli",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "@mikro-orm/cli",
+      "source_file": "package.json",
+      "source_location": "L58"
     },
     {
       "id": "package_devdependencies_nestjs_cli",
@@ -3641,7 +4770,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/cli",
       "source_file": "package.json",
-      "source_location": "L45"
+      "source_location": "L59"
     },
     {
       "id": "package_devdependencies_nestjs_schematics",
@@ -3652,7 +4781,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/schematics",
       "source_file": "package.json",
-      "source_location": "L46"
+      "source_location": "L60"
     },
     {
       "id": "package_devdependencies_nestjs_testing",
@@ -3663,7 +4792,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/testing",
       "source_file": "package.json",
-      "source_location": "L47"
+      "source_location": "L61"
     },
     {
       "id": "package_devdependencies_prettier",
@@ -3674,7 +4803,7 @@
       "file_type": "code",
       "norm_label": "prettier",
       "source_file": "package.json",
-      "source_location": "L57"
+      "source_location": "L71"
     },
     {
       "id": "package_devdependencies_source_map_support",
@@ -3685,7 +4814,7 @@
       "file_type": "code",
       "norm_label": "source-map-support",
       "source_file": "package.json",
-      "source_location": "L58"
+      "source_location": "L72"
     },
     {
       "id": "package_devdependencies_supertest",
@@ -3696,7 +4825,7 @@
       "file_type": "code",
       "norm_label": "supertest",
       "source_file": "package.json",
-      "source_location": "L59"
+      "source_location": "L73"
     },
     {
       "id": "package_devdependencies_ts_jest",
@@ -3707,7 +4836,7 @@
       "file_type": "code",
       "norm_label": "ts-jest",
       "source_file": "package.json",
-      "source_location": "L60"
+      "source_location": "L74"
     },
     {
       "id": "package_devdependencies_ts_loader",
@@ -3718,7 +4847,7 @@
       "file_type": "code",
       "norm_label": "ts-loader",
       "source_file": "package.json",
-      "source_location": "L61"
+      "source_location": "L75"
     },
     {
       "id": "package_devdependencies_ts_node",
@@ -3729,7 +4858,7 @@
       "file_type": "code",
       "norm_label": "ts-node",
       "source_file": "package.json",
-      "source_location": "L62"
+      "source_location": "L76"
     },
     {
       "id": "package_devdependencies_tsconfig_paths",
@@ -3740,7 +4869,18 @@
       "file_type": "code",
       "norm_label": "tsconfig-paths",
       "source_file": "package.json",
-      "source_location": "L63"
+      "source_location": "L77"
+    },
+    {
+      "id": "package_devdependencies_tsx",
+      "label": "tsx",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "devDependencies",
+      "file_type": "code",
+      "norm_label": "tsx",
+      "source_file": "package.json",
+      "source_location": "L78"
     },
     {
       "id": "package_devdependencies_types_express",
@@ -3751,7 +4891,7 @@
       "file_type": "code",
       "norm_label": "@types/express",
       "source_file": "package.json",
-      "source_location": "L48"
+      "source_location": "L62"
     },
     {
       "id": "package_devdependencies_types_jest",
@@ -3762,7 +4902,7 @@
       "file_type": "code",
       "norm_label": "@types/jest",
       "source_file": "package.json",
-      "source_location": "L49"
+      "source_location": "L63"
     },
     {
       "id": "package_devdependencies_types_node",
@@ -3773,7 +4913,7 @@
       "file_type": "code",
       "norm_label": "@types/node",
       "source_file": "package.json",
-      "source_location": "L50"
+      "source_location": "L64"
     },
     {
       "id": "package_devdependencies_types_supertest",
@@ -3784,7 +4924,7 @@
       "file_type": "code",
       "norm_label": "@types/supertest",
       "source_file": "package.json",
-      "source_location": "L51"
+      "source_location": "L65"
     },
     {
       "id": "package_devdependencies_typescript",
@@ -3795,7 +4935,7 @@
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
-      "source_location": "L64"
+      "source_location": "L79"
     },
     {
       "id": "package_devdependencies_typescript_eslint",
@@ -3806,7 +4946,7 @@
       "file_type": "code",
       "norm_label": "typescript-eslint",
       "source_file": "package.json",
-      "source_location": "L65"
+      "source_location": "L80"
     },
     {
       "id": "tsconfig",
@@ -4059,7 +5199,7 @@
       "file_type": "code",
       "norm_label": "dependencies",
       "source_file": "package.json",
-      "source_location": "L22"
+      "source_location": "L30"
     },
     {
       "id": "package_dependencies_apollo_server",
@@ -4070,7 +5210,7 @@
       "file_type": "code",
       "norm_label": "@apollo/server",
       "source_file": "package.json",
-      "source_location": "L23"
+      "source_location": "L31"
     },
     {
       "id": "package_dependencies_as_integrations_express5",
@@ -4081,7 +5221,7 @@
       "file_type": "code",
       "norm_label": "@as-integrations/express5",
       "source_file": "package.json",
-      "source_location": "L24"
+      "source_location": "L32"
     },
     {
       "id": "package_dependencies_axios",
@@ -4092,7 +5232,7 @@
       "file_type": "code",
       "norm_label": "axios",
       "source_file": "package.json",
-      "source_location": "L33"
+      "source_location": "L45"
     },
     {
       "id": "package_dependencies_bcrypt",
@@ -4103,7 +5243,7 @@
       "file_type": "code",
       "norm_label": "bcrypt",
       "source_file": "package.json",
-      "source_location": "L34"
+      "source_location": "L46"
     },
     {
       "id": "package_dependencies_class_transformer",
@@ -4114,7 +5254,7 @@
       "file_type": "code",
       "norm_label": "class-transformer",
       "source_file": "package.json",
-      "source_location": "L35"
+      "source_location": "L47"
     },
     {
       "id": "package_dependencies_class_validator",
@@ -4125,7 +5265,7 @@
       "file_type": "code",
       "norm_label": "class-validator",
       "source_file": "package.json",
-      "source_location": "L36"
+      "source_location": "L48"
     },
     {
       "id": "package_dependencies_date_fns",
@@ -4136,7 +5276,18 @@
       "file_type": "code",
       "norm_label": "date-fns",
       "source_file": "package.json",
-      "source_location": "L37"
+      "source_location": "L49"
+    },
+    {
+      "id": "package_dependencies_dotenv",
+      "label": "dotenv",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "dotenv",
+      "source_file": "package.json",
+      "source_location": "L50"
     },
     {
       "id": "package_dependencies_graphql",
@@ -4147,7 +5298,51 @@
       "file_type": "code",
       "norm_label": "graphql",
       "source_file": "package.json",
-      "source_location": "L38"
+      "source_location": "L51"
+    },
+    {
+      "id": "package_dependencies_mikro_orm_core",
+      "label": "@mikro-orm/core",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "@mikro-orm/core",
+      "source_file": "package.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "package_dependencies_mikro_orm_migrations",
+      "label": "@mikro-orm/migrations",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "@mikro-orm/migrations",
+      "source_file": "package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "package_dependencies_mikro_orm_nestjs",
+      "label": "@mikro-orm/nestjs",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "@mikro-orm/nestjs",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "package_dependencies_mikro_orm_postgresql",
+      "label": "@mikro-orm/postgresql",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "dependencies",
+      "file_type": "code",
+      "norm_label": "@mikro-orm/postgresql",
+      "source_file": "package.json",
+      "source_location": "L36"
     },
     {
       "id": "package_dependencies_nestjs_apollo",
@@ -4158,7 +5353,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/apollo",
       "source_file": "package.json",
-      "source_location": "L25"
+      "source_location": "L37"
     },
     {
       "id": "package_dependencies_nestjs_axios",
@@ -4169,7 +5364,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/axios",
       "source_file": "package.json",
-      "source_location": "L26"
+      "source_location": "L38"
     },
     {
       "id": "package_dependencies_nestjs_common",
@@ -4180,7 +5375,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/common",
       "source_file": "package.json",
-      "source_location": "L27"
+      "source_location": "L39"
     },
     {
       "id": "package_dependencies_nestjs_config",
@@ -4191,7 +5386,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/config",
       "source_file": "package.json",
-      "source_location": "L28"
+      "source_location": "L40"
     },
     {
       "id": "package_dependencies_nestjs_core",
@@ -4202,7 +5397,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/core",
       "source_file": "package.json",
-      "source_location": "L29"
+      "source_location": "L41"
     },
     {
       "id": "package_dependencies_nestjs_graphql",
@@ -4213,7 +5408,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/graphql",
       "source_file": "package.json",
-      "source_location": "L30"
+      "source_location": "L42"
     },
     {
       "id": "package_dependencies_nestjs_jwt",
@@ -4224,7 +5419,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/jwt",
       "source_file": "package.json",
-      "source_location": "L31"
+      "source_location": "L43"
     },
     {
       "id": "package_dependencies_nestjs_platform_express",
@@ -4235,7 +5430,7 @@
       "file_type": "code",
       "norm_label": "@nestjs/platform-express",
       "source_file": "package.json",
-      "source_location": "L32"
+      "source_location": "L44"
     },
     {
       "id": "package_dependencies_reflect_metadata",
@@ -4246,7 +5441,7 @@
       "file_type": "code",
       "norm_label": "reflect-metadata",
       "source_file": "package.json",
-      "source_location": "L39"
+      "source_location": "L52"
     },
     {
       "id": "package_dependencies_rxjs",
@@ -4257,7 +5452,7 @@
       "file_type": "code",
       "norm_label": "rxjs",
       "source_file": "package.json",
-      "source_location": "L40"
+      "source_location": "L53"
     },
     {
       "id": "_agents_skills_caveman_commit_skill_conventional_commits",
@@ -7377,7 +8572,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "src/app.module.ts",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -7581,7 +8776,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -7593,108 +8788,12 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "package.json",
-      "source_location": "L24",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_nestjs_apollo",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_nestjs_axios",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L26",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_nestjs_common",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_nestjs_config",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_nestjs_core",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_nestjs_graphql",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_nestjs_jwt",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L31",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_nestjs_platform_express",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
       "source_location": "L32",
       "weight": 1.0
     },
     {
       "source": "package",
-      "target": "ref_axios",
+      "target": "ref_mikro_orm_core",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7706,7 +8805,7 @@
     },
     {
       "source": "package",
-      "target": "ref_bcrypt",
+      "target": "ref_mikro_orm_migrations",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7718,7 +8817,7 @@
     },
     {
       "source": "package",
-      "target": "ref_class_transformer",
+      "target": "ref_mikro_orm_nestjs",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7730,7 +8829,7 @@
     },
     {
       "source": "package",
-      "target": "ref_class_validator",
+      "target": "ref_mikro_orm_postgresql",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7742,7 +8841,7 @@
     },
     {
       "source": "package",
-      "target": "ref_date_fns",
+      "target": "ref_nestjs_apollo",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7754,7 +8853,7 @@
     },
     {
       "source": "package",
-      "target": "ref_graphql",
+      "target": "ref_nestjs_axios",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7766,7 +8865,7 @@
     },
     {
       "source": "package",
-      "target": "ref_reflect_metadata",
+      "target": "ref_nestjs_common",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7778,7 +8877,7 @@
     },
     {
       "source": "package",
-      "target": "ref_rxjs",
+      "target": "ref_nestjs_config",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7790,7 +8889,31 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint_eslintrc",
+      "target": "ref_nestjs_core",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_nestjs_graphql",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_nestjs_jwt",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7802,7 +8925,7 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint_js",
+      "target": "ref_nestjs_platform_express",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7814,7 +8937,7 @@
     },
     {
       "source": "package",
-      "target": "ref_nestjs_cli",
+      "target": "ref_axios",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7826,7 +8949,7 @@
     },
     {
       "source": "package",
-      "target": "ref_nestjs_schematics",
+      "target": "ref_bcrypt",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7838,7 +8961,7 @@
     },
     {
       "source": "package",
-      "target": "ref_nestjs_testing",
+      "target": "ref_class_transformer",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7850,7 +8973,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_express",
+      "target": "ref_class_validator",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7862,7 +8985,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_jest",
+      "target": "ref_date_fns",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7874,7 +8997,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_node",
+      "target": "ref_dotenv",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7886,7 +9009,7 @@
     },
     {
       "source": "package",
-      "target": "ref_types_supertest",
+      "target": "ref_graphql",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7898,7 +9021,7 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint",
+      "target": "ref_reflect_metadata",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7910,7 +9033,7 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint_config_prettier",
+      "target": "ref_rxjs",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7922,31 +9045,7 @@
     },
     {
       "source": "package",
-      "target": "ref_eslint_plugin_prettier",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L54",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_globals",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "package.json",
-      "source_location": "L55",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "ref_jest",
+      "target": "ref_eslint_eslintrc",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7958,7 +9057,7 @@
     },
     {
       "source": "package",
-      "target": "ref_prettier",
+      "target": "ref_eslint_js",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7970,7 +9069,7 @@
     },
     {
       "source": "package",
-      "target": "ref_source_map_support",
+      "target": "ref_mikro_orm_cli",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7982,7 +9081,7 @@
     },
     {
       "source": "package",
-      "target": "ref_supertest",
+      "target": "ref_nestjs_cli",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7994,7 +9093,7 @@
     },
     {
       "source": "package",
-      "target": "ref_ts_jest",
+      "target": "ref_nestjs_schematics",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8006,7 +9105,7 @@
     },
     {
       "source": "package",
-      "target": "ref_ts_loader",
+      "target": "ref_nestjs_testing",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8018,7 +9117,7 @@
     },
     {
       "source": "package",
-      "target": "ref_ts_node",
+      "target": "ref_types_express",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8030,7 +9129,7 @@
     },
     {
       "source": "package",
-      "target": "ref_tsconfig_paths",
+      "target": "ref_types_jest",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8042,7 +9141,7 @@
     },
     {
       "source": "package",
-      "target": "ref_typescript",
+      "target": "ref_types_node",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8054,7 +9153,7 @@
     },
     {
       "source": "package",
-      "target": "ref_typescript_eslint",
+      "target": "ref_types_supertest",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8062,6 +9161,186 @@
       "context": "import",
       "source_file": "package.json",
       "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_eslint",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_eslint_config_prettier",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_eslint_plugin_prettier",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_globals",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_jest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_prettier",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_source_map_support",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_supertest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_ts_jest",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_ts_loader",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_ts_node",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_tsconfig_paths",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_tsx",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_typescript",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "ref_typescript_eslint",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "package.json",
+      "source_location": "L80",
       "weight": 1.0
     },
     {
@@ -8073,7 +9352,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -8085,7 +9364,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -8097,7 +9376,19 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L12",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_module",
+      "target": "src_database_mikro_orm_options_createmikroormoptions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app.module.ts",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -8173,6 +9464,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_mikro_orm_config",
+      "target": "src_database_mikro_orm_options_createmikroormoptions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/mikro-orm.config.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "test_app_e2e_spec",
       "target": "src_app_module_appmodule",
       "relation": "imports",
@@ -8217,6 +9520,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/common/util.service.spec.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "test_database_mikro_orm_options_spec",
+      "target": "src_database_mikro_orm_options_createmikroormoptions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/database/mikro-orm.options.spec.ts",
       "source_location": "L3",
       "weight": 1.0
     },
@@ -8349,7 +9664,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -8361,7 +9676,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -8373,12 +9688,24 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app.module.ts",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_core",
+      "target": "src_database_mikro_orm_options",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app.module.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_module",
+      "target": "ref_mikro_orm_nestjs",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8390,7 +9717,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_common",
+      "target": "ref_nestjs_core",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8402,7 +9729,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_config",
+      "target": "ref_nestjs_common",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8414,7 +9741,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_graphql",
+      "target": "ref_nestjs_config",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8426,7 +9753,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "ref_nestjs_apollo",
+      "target": "ref_nestjs_graphql",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -8434,6 +9761,18 @@
       "context": "import",
       "source_file": "src/app.module.ts",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_module",
+      "target": "ref_nestjs_apollo",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app.module.ts",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -8581,6 +9920,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_database_mikro_orm_options",
+      "target": "ref_mikro_orm_migrations",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/database/mikro-orm.options.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_database_mikro_orm_options",
+      "target": "ref_mikro_orm_postgresql",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/database/mikro-orm.options.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "src_graphqlexception_filter",
       "target": "ref_nestjs_common",
       "relation": "imports_from",
@@ -8638,6 +10001,30 @@
       "context": "import",
       "source_file": "src/main.ts",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mikro_orm_config",
+      "target": "ref_dotenv",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/mikro-orm.config.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_mikro_orm_config",
+      "target": "src_database_mikro_orm_options",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/mikro-orm.config.ts",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -8770,6 +10157,54 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/common/util.service.spec.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "test_database_database_integration_spec",
+      "target": "ref_mikro_orm_postgresql",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "test_database_database_integration_spec",
+      "target": "src_mikro_orm_config",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "test_database_mikro_orm_options_spec",
+      "target": "ref_mikro_orm_migrations",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/database/mikro-orm.options.spec.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "test_database_mikro_orm_options_spec",
+      "target": "src_database_mikro_orm_options",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/database/mikro-orm.options.spec.ts",
       "source_location": "L3",
       "weight": 1.0
     },
@@ -9845,6 +11280,270 @@
       "weight": 1.0
     },
     {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_consumer_authentication_api_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_consumer_authentication_api_implementation_plan",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_global_constraints",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_consumer_authentication_api_implementation_plan",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_prerequisite_contract",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_consumer_authentication_api_implementation_plan",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_file_map",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_consumer_authentication_api_implementation_plan",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_9_full_graphql_authentication_journey_and_leakage_regression",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1105",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_1_stable_graphql_error_and_validation_contract",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_10_final_verification_and_knowledge_graph_update",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1171",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_2_user_persistence_and_phone_normalization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L238",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_3_otp_challenge_lifecycle",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L375",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_4_stateless_access_tokens_and_rotating_refresh_sessions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L519",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_5_signup_and_login_orchestration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L656",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_0_verify_the_database_foundation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_6_global_access_guard_and_currentuser",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L781",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_7_authentication_graphql_module_and_resolver",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L886",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_8_auth_migration_and_postgresql_integration_proof",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L998",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation",
+      "target": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_postgresql_mikroorm_foundation_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_postgresql_mikroorm_foundation_implementation_plan",
+      "target": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_global_constraints",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_postgresql_mikroorm_foundation_implementation_plan",
+      "target": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_file_map",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_postgresql_mikroorm_foundation_implementation_plan",
+      "target": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_review_focus",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_task_2_nestjs_runtime_and_mikroorm_cli_configuration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L174",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_task_3_postgresql_integration_test_and_migration_harness",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L417",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_task_1_shared_mikroorm_options_and_aligned_dependencies",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_review_focus",
+      "target": "docs_superpowers_plans_2026_09_19_postgresql_mikroorm_foundation_task_4_auth_prerequisite_verification_and_knowledge_graph_update",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md",
+      "source_location": "L552",
+      "weight": 1.0
+    },
+    {
       "source": "docs_superpowers_specs_2026_09_14_sensitive_safe_logging_secure_otp_design",
       "target": "docs_superpowers_specs_2026_09_14_sensitive_safe_logging_secure_otp_design_\ubbfc\uac10\uc815\ubcf4_\uc548\uc804_\ub85c\uae45_\ubc0f_\uc548\uc804\ud55c_otp_\uc0dd\uc131_\uc124\uacc4",
       "relation": "contains",
@@ -10076,6 +11775,468 @@
       "weight": 1.0
     },
     {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub370\uc774\ud130_\ubaa8\ub378",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc81c\uc678_\ubc94\uc704",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uc815\ucc45",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L246",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc785\ub825_\uac80\uc99d",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L258",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc624\ub958_\uacc4\uc57d",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L268",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubcf4\uc548\uacfc_\ub85c\uae45",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L277",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud14c\uc2a4\ud2b8_\uc804\ub7b5",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L288",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubc30\uacbd",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa8\ub4c8_\uad6c\uc870",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc644\ub8cc_\uc870\uac74",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L318",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_\uacc4\uc57d",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa9\ud45c",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_\uacc4\uc57d",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uacf5\uac1c_mutation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_\uacc4\uc57d",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud544\uc694_query",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_\uacc4\uc57d",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc8fc\uc694_\uc785\ub825\uacfc_\uc751\ub2f5",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub370\uc774\ud130_\ubaa8\ub378",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_user",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub370\uc774\ud130_\ubaa8\ub378",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otpchallenge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub370\uc774\ud130_\ubaa8\ub378",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_refreshsession",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa8\ub4c8_\uad6c\uc870",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_usersmodule",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa8\ub4c8_\uad6c\uc870",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_authmodule",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uc694\uccad",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uac80\uc99d",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud68c\uc6d0\uac00\uc785\uacfc_\uc790\ub3d9_\ub85c\uadf8\uc778",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub85c\uadf8\uc778",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L214",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_api_\uc778\uc99d",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L221",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_token_refresh",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub2e8\uc77c_\uae30\uae30_\ub85c\uadf8\uc778",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L242",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud14c\uc2a4\ud2b8_\uc804\ub7b5",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub2e8\uc704_\ud14c\uc2a4\ud2b8",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud14c\uc2a4\ud2b8_\uc804\ub7b5",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_postgresql_\ud1b5\ud569_\ud14c\uc2a4\ud2b8",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L302",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud14c\uc2a4\ud2b8_\uc804\ub7b5",
+      "target": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_e2e_\ud14c\uc2a4\ud2b8",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L310",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\uc81c\uc678_\ubc94\uc704",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\ud328\ud0a4\uc9c0",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\ubc30\uacbd",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\uc124\uc815_\uad6c\uc870",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_migration_\uc815\ucc45",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_integration_test",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\uc624\ub958\uc640_\ubcf4\uc548",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\ubaa9\ud45c",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
+      "target": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_\uac80\uc99d_\uae30\uc900",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
       "source": "graphify_out_memory_query_20260912_174938_32b91154_smart_order_consumer_app_prd_md_docs_spec_smart",
       "target": "graphify_out_memory_query_20260912_174938_32b91154_smart_order_consumer_app_prd_md_docs_spec_smart_q_smart_order_consumer_app_prd_md_docs_spec_smart_order_consumer_app_prd_md_\ud30c\uc77c\uc744_\uae30\uc900\uc73c\ub85c_\ubc31\uc5d4\ub4dc_\uac1c\ubc1c\uc744_\uc2dc\uc791\ud558\ub824\uace0_\ud558\ub294\ub370_\uc5b4\ub5a4\uac70\ubd80\ud130_\ud558\uba74_\uc88b\uc744\uae4c",
       "relation": "contains",
@@ -10208,6 +12369,39 @@
       "weight": 1.0
     },
     {
+      "source": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778",
+      "target": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778_q_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778\uac00",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778_q_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778\uac00",
+      "target": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778_answer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778_q_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778\uac00",
+      "target": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778_outcome",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
       "source": "nest_cli",
       "target": "nest_cli_schema",
       "relation": "contains",
@@ -10264,6 +12458,17 @@
     },
     {
       "source": "package",
+      "target": "package_scripts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
       "target": "package_name",
       "relation": "contains",
       "_origin": "ast",
@@ -10271,17 +12476,6 @@
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "package_dependencies",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -10297,6 +12491,17 @@
     },
     {
       "source": "package",
+      "target": "package_dependencies",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
       "target": "package_description",
       "relation": "contains",
       "_origin": "ast",
@@ -10304,17 +12509,6 @@
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "package_devdependencies",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -10330,6 +12524,17 @@
     },
     {
       "source": "package",
+      "target": "package_devdependencies",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
       "target": "package_private",
       "relation": "contains",
       "_origin": "ast",
@@ -10337,17 +12542,6 @@
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "package",
-      "target": "package_jest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -10363,13 +12557,24 @@
     },
     {
       "source": "package",
-      "target": "package_scripts",
+      "target": "package_mikro_orm",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "package",
+      "target": "package_jest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -10380,7 +12585,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -10391,100 +12596,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L24",
-      "weight": 1.0
-    },
-    {
-      "source": "package_dependencies",
-      "target": "package_dependencies_nestjs_apollo",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "package_dependencies",
-      "target": "package_dependencies_nestjs_axios",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L26",
-      "weight": 1.0
-    },
-    {
-      "source": "package_dependencies",
-      "target": "package_dependencies_nestjs_common",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L27",
-      "weight": 1.0
-    },
-    {
-      "source": "package_dependencies",
-      "target": "package_dependencies_nestjs_config",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "package_dependencies",
-      "target": "package_dependencies_nestjs_core",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L29",
-      "weight": 1.0
-    },
-    {
-      "source": "package_dependencies",
-      "target": "package_dependencies_nestjs_graphql",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L30",
-      "weight": 1.0
-    },
-    {
-      "source": "package_dependencies",
-      "target": "package_dependencies_nestjs_jwt",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L31",
-      "weight": 1.0
-    },
-    {
-      "source": "package_dependencies",
-      "target": "package_dependencies_nestjs_platform_express",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
       "source_location": "L32",
       "weight": 1.0
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_axios",
+      "target": "package_dependencies_mikro_orm_core",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10495,7 +12612,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_bcrypt",
+      "target": "package_dependencies_mikro_orm_migrations",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10506,7 +12623,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_class_transformer",
+      "target": "package_dependencies_mikro_orm_nestjs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10517,7 +12634,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_class_validator",
+      "target": "package_dependencies_mikro_orm_postgresql",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10528,7 +12645,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_date_fns",
+      "target": "package_dependencies_nestjs_apollo",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10539,7 +12656,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_graphql",
+      "target": "package_dependencies_nestjs_axios",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10550,7 +12667,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_reflect_metadata",
+      "target": "package_dependencies_nestjs_common",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10561,7 +12678,7 @@
     },
     {
       "source": "package_dependencies",
-      "target": "package_dependencies_rxjs",
+      "target": "package_dependencies_nestjs_config",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10571,8 +12688,30 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_eslintrc",
+      "source": "package_dependencies",
+      "target": "package_dependencies_nestjs_core",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_nestjs_graphql",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "package_dependencies",
+      "target": "package_dependencies_nestjs_jwt",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10582,8 +12721,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_js",
+      "source": "package_dependencies",
+      "target": "package_dependencies_nestjs_platform_express",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10593,8 +12732,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_nestjs_cli",
+      "source": "package_dependencies",
+      "target": "package_dependencies_axios",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10604,8 +12743,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_nestjs_schematics",
+      "source": "package_dependencies",
+      "target": "package_dependencies_bcrypt",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10615,8 +12754,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_nestjs_testing",
+      "source": "package_dependencies",
+      "target": "package_dependencies_class_transformer",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10626,8 +12765,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_express",
+      "source": "package_dependencies",
+      "target": "package_dependencies_class_validator",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10637,8 +12776,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_jest",
+      "source": "package_dependencies",
+      "target": "package_dependencies_date_fns",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10648,8 +12787,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
+      "source": "package_dependencies",
+      "target": "package_dependencies_dotenv",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10659,8 +12798,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_supertest",
+      "source": "package_dependencies",
+      "target": "package_dependencies_graphql",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10670,8 +12809,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint",
+      "source": "package_dependencies",
+      "target": "package_dependencies_reflect_metadata",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10681,8 +12820,8 @@
       "weight": 1.0
     },
     {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_config_prettier",
+      "source": "package_dependencies",
+      "target": "package_dependencies_rxjs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10693,29 +12832,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_plugin_prettier",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L54",
-      "weight": 1.0
-    },
-    {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_globals",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L55",
-      "weight": 1.0
-    },
-    {
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_jest",
+      "target": "package_devdependencies_eslint_eslintrc",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10726,7 +12843,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_prettier",
+      "target": "package_devdependencies_eslint_js",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10737,7 +12854,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_source_map_support",
+      "target": "package_devdependencies_mikro_orm_cli",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10748,7 +12865,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_supertest",
+      "target": "package_devdependencies_nestjs_cli",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10759,7 +12876,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_ts_jest",
+      "target": "package_devdependencies_nestjs_schematics",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10770,7 +12887,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_ts_loader",
+      "target": "package_devdependencies_nestjs_testing",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10781,7 +12898,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_ts_node",
+      "target": "package_devdependencies_types_express",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10792,7 +12909,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tsconfig_paths",
+      "target": "package_devdependencies_types_jest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10803,7 +12920,7 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
+      "target": "package_devdependencies_types_node",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10814,13 +12931,189 @@
     },
     {
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript_eslint",
+      "target": "package_devdependencies_types_supertest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
       "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_config_prettier",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_plugin_prettier",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_globals",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_jest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_prettier",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_source_map_support",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_supertest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_ts_jest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_ts_loader",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_ts_node",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tsconfig_paths",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tsx",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript_eslint",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "package_jest",
+      "target": "package_jest_watchman",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L101",
       "weight": 1.0
     },
     {
@@ -10831,7 +13124,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L68",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -10842,7 +13135,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L73",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -10853,7 +13146,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L74",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -10864,7 +13157,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L75",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -10875,7 +13168,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L78",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -10886,7 +13179,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L81",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -10897,7 +13190,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L82",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "package_jest",
+      "target": "package_jest_testpathignorepatterns",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -10908,12 +13212,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L76",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
-      "source": "package_scripts",
-      "target": "package_scripts_format",
+      "source": "package_mikro_orm",
+      "target": "package_mikro_orm_configpaths",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10923,113 +13227,14 @@
       "weight": 1.0
     },
     {
-      "source": "package_scripts",
-      "target": "package_scripts_start",
+      "source": "package_mikro_orm",
+      "target": "package_mikro_orm_preferts",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_start_dev",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L12",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_start_debug",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_start_prod",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L14",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_lint",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_test",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_test_watch",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_test_cov",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_test_debug",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "package_scripts",
-      "target": "package_scripts_test_e2e",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -11040,7 +13245,139 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "package.json",
-      "source_location": "L9",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_format",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_start",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_start_dev",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_start_debug",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_start_prod",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_lint",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test_watch",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test_cov",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test_debug",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test_e2e",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "package_scripts",
+      "target": "package_scripts_test_integration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "package.json",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -11051,7 +13388,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app.module.ts",
-      "source_location": "L37",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -11110,6 +13447,17 @@
       "weight": 1.0
     },
     {
+      "source": "src_database_mikro_orm_options",
+      "target": "src_database_mikro_orm_options_createmikroormoptions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/database/mikro-orm.options.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_graphqlexception_filter",
       "target": "src_graphqlexception_filter_graphqlexceptionfilter",
       "relation": "contains",
@@ -11151,6 +13499,17 @@
       "confidence_score": 1.0,
       "source_file": "src/responseLogger.plugin.ts",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "test_app_module_spec",
+      "target": "test_app_module_spec_mockconfigservice",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -13974,5 +16333,5 @@
       "source_file": ".agents/skills/caveman-optimize/SKILL.md"
     }
   ],
-  "built_at_commit": "e7781aed1571579a57566ed8d271cc134c2c4e1a"
+  "built_at_commit": "29437920a05e5843f0f3066ea41602ce2a29aba3"
 }

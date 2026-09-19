@@ -9,6 +9,7 @@
   "7": "devDependencies",
   "8": "compilerOptions",
   "9": "dependencies",
+  "10": "Consumer 인증 API 설계",
   "11": "Caveman Commit",
   "12": "Graph Query Traversal",
   "13": "Lean Build",
@@ -30,8 +31,16 @@
   "29": "__init__.py",
   "30": "app.module.spec.ts",
   "31": "민감정보 안전 로깅 및 안전한 OTP 생성 설계",
+  "32": "Review Focus",
   "33": "File Map",
+  "34": "PostgreSQL·MikroORM 기반 설계",
   "35": "Q: [smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?",
   "36": "Q: graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?",
-  "37": "Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
+  "37": "Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?",
+  "38": "Review Focus",
+  "39": "mikro-orm.options.ts",
+  "40": "eslint.config.mjs",
+  "41": "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?",
+  "42": "mikro-orm",
+  "43": "mikro-orm.config.spec.ts"
 }

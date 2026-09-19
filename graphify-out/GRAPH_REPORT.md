@@ -1,16 +1,16 @@
-# Graph Report - prepick-server  (2026-09-15)
+# Graph Report - prepick-server  (2026-09-20)
 
 ## Corpus Check
-- 80 files · ~39,030 words
+- 91 files · ~49,492 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 531 nodes · 646 edges · 35 communities (31 shown, 3 thin omitted)
+- 632 nodes · 750 edges · 44 communities (39 shown, 4 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e7781aed`
+- Built from commit: `29437920`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,6 +25,7 @@
 - devDependencies
 - compilerOptions
 - dependencies
+- Consumer 인증 API 설계
 - Caveman Commit
 - Graph Query Traversal
 - Lean Build
@@ -44,23 +45,31 @@
 - tsconfig.build.json
 - caveman-learn/tests/skill-file.test.mjs
 - __init__.py
+- app.module.spec.ts
 - 민감정보 안전 로깅 및 안전한 OTP 생성 설계
+- Review Focus
 - File Map
+- PostgreSQL·MikroORM 기반 설계
 - Q: [smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?
 - Q: graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?
 - Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?
+- Review Focus
+- mikro-orm.options.ts
+- eslint.config.mjs
+- Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?
+- mikro-orm
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 21 edges
 2. `_compress_file_locked()` - 18 edges
 3. `validate()` - 14 edges
-4. `scripts` - 13 edges
-5. `@nestjs/common` - 10 edges
-6. `민감정보 안전 로깅 및 안전한 OTP 생성 설계` - 10 edges
-7. `detect_file_type()` - 9 edges
-8. `backup_dir_for()` - 8 edges
-9. `file_lock()` - 8 edges
-10. `should_compress()` - 8 edges
+4. `scripts` - 14 edges
+5. `Consumer 인증 API 설계` - 14 edges
+6. `Review Focus` - 12 edges
+7. `@nestjs/common` - 10 edges
+8. `jest` - 10 edges
+9. `민감정보 안전 로깅 및 안전한 OTP 생성 설계` - 10 edges
+10. `PostgreSQL·MikroORM 기반 설계` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `CLAUDE.md Graphify Integration` --semantically_similar_to--> `Graph-First Codebase Workflow`  [INFERRED] [semantically similar]
@@ -88,11 +97,11 @@
 - **Evidence-First Optimization Safety** — _agents_skills_caveman_evidence_review_skill_evidence_bucket_separation, _agents_skills_caveman_learn_skill_savings_evidence_rungs, _agents_skills_caveman_manage_skill_fail_closed_lifecycle_gate, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 - **Operator-Controlled Changes** — _agents_skills_caveman_discover_skill_operator_approval_gate, _agents_skills_caveman_learn_skill_consent_gated_editing, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 
-## Communities (35 total, 3 thin omitted)
+## Communities (44 total, 4 thin omitted)
 
 ### Community 0 - "app.module.ts"
 Cohesion: 0.07
-Nodes (26): Catch, Query, @apollo/server, @nestjs/apollo, @nestjs/axios, @nestjs/common, @nestjs/config, @nestjs/core (+18 more)
+Nodes (27): Catch, Query, @apollo/server, @mikro-orm/nestjs, @nestjs/apollo, @nestjs/axios, @nestjs/common, @nestjs/config (+19 more)
 
 ### Community 1 - "compress.py"
 Cohesion: 0.06
@@ -120,15 +129,19 @@ Nodes (24): URL Ingestion, Folder Watch Mode, SVG and GraphML Exports, Graph Dat
 
 ### Community 7 - "devDependencies"
 Cohesion: 0.08
-Nodes (24): devDependencies, eslint, eslint-config-prettier, @eslint/eslintrc, @eslint/js, eslint-plugin-prettier, globals, jest (+16 more)
+Nodes (26): devDependencies, eslint, eslint-config-prettier, @eslint/eslintrc, @eslint/js, eslint-plugin-prettier, globals, jest (+18 more)
 
 ### Community 8 - "compilerOptions"
 Cohesion: 0.09
 Nodes (21): compilerOptions, allowSyntheticDefaultImports, declaration, emitDecoratorMetadata, esModuleInterop, experimentalDecorators, forceConsistentCasingInFileNames, incremental (+13 more)
 
 ### Community 9 - "dependencies"
-Cohesion: 0.11
-Nodes (19): dependencies, @apollo/server, @as-integrations/express5, axios, bcrypt, class-transformer, class-validator, date-fns (+11 more)
+Cohesion: 0.08
+Nodes (24): dependencies, @apollo/server, @as-integrations/express5, axios, bcrypt, class-transformer, class-validator, date-fns (+16 more)
+
+### Community 10 - "Consumer 인증 API 설계"
+Cohesion: 0.06
+Nodes (32): API 인증, AuthModule, Consumer 인증 API 설계, GraphQL E2E 테스트, GraphQL 계약, OTP 검증, OTP 요청, OTP 정책 (+24 more)
 
 ### Community 11 - "Caveman Commit"
 Cohesion: 0.12
@@ -143,8 +156,8 @@ Cohesion: 0.14
 Nodes (14): Investigate First Agent Interface, Evidence-Ranked Diagnosis, Investigate First, Lean Build Agent Interface, Lean Build, Narrow Observable Acceptance, Reuse Fitting Seam, Surgical Patch Agent Interface (+6 more)
 
 ### Community 14 - "scripts"
-Cohesion: 0.15
-Nodes (13): scripts, build, format, lint, start, start:debug, start:dev, start:prod (+5 more)
+Cohesion: 0.14
+Nodes (14): scripts, build, format, lint, start, start:debug, start:dev, start:prod (+6 more)
 
 ### Community 15 - "Incremental Graph Update"
 Cohesion: 0.18
@@ -159,8 +172,8 @@ Cohesion: 0.20
 Nodes (9): description, files, license, name, private, scripts, test, type (+1 more)
 
 ### Community 18 - "jest"
-Cohesion: 0.22
-Nodes (9): jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, rootDir, testEnvironment, testRegex, transform (+1 more)
+Cohesion: 0.18
+Nodes (11): jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, rootDir, testEnvironment, testPathIgnorePatterns, testRegex (+3 more)
 
 ### Community 19 - "Persistent Caveman Style"
 Cohesion: 0.29
@@ -198,9 +211,17 @@ Nodes (3): ./tsconfig.json, exclude, extends
 Cohesion: 0.09
 Nodes (21): 1. 전역 요청 결과 로그, 2. 요청 body 로깅 제거, 3. 실패 지점의 업무 로그, 4. OTP 생성, OTP 단위 테스트, SMS 서비스 단위 테스트, 데이터 흐름, 목표 (+13 more)
 
+### Community 32 - "Review Focus"
+Cohesion: 0.12
+Nodes (16): Consumer Authentication API Implementation Plan, File Map, Global Constraints, Prerequisite Contract, Review Focus, Task 0: Verify the Database Foundation, Task 10: Final Verification and Knowledge Graph Update, Task 1: Stable GraphQL Error and Validation Contract (+8 more)
+
 ### Community 33 - "File Map"
 Cohesion: 0.22
 Nodes (8): File Map, Global Constraints, Safe Logging and Secure OTP Implementation Plan, Task 1: Replace response-body logging with GraphQL metadata logging, Task 2: Remove the global request-body logger, Task 3: Add masked context to SMS failures, Task 4: Generate OTPs with Node's cryptographic RNG, Task 5: Verify the PR and refresh Graphify
+
+### Community 34 - "PostgreSQL·MikroORM 기반 설계"
+Cohesion: 0.18
+Nodes (10): Integration test, Migration 정책, PostgreSQL·MikroORM 기반 설계, 검증 기준, 목표, 배경, 설정 구조, 오류와 보안 (+2 more)
 
 ### Community 35 - "Q: [smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
 Cohesion: 0.40
@@ -214,33 +235,53 @@ Nodes (4): Answer, Outcome, Q: graphql은 유지하고 PostgreSQL과 MikroORM을
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?, Source Nodes
 
+### Community 38 - "Review Focus"
+Cohesion: 0.22
+Nodes (8): File Map, Global Constraints, PostgreSQL·MikroORM Foundation Implementation Plan, Review Focus, Task 1: Shared MikroORM Options and Aligned Dependencies, Task 2: NestJS Runtime and MikroORM CLI Configuration, Task 3: PostgreSQL Integration Test and Migration Harness, Task 4: Auth Prerequisite Verification and Knowledge Graph Update
+
+### Community 39 - "mikro-orm.options.ts"
+Cohesion: 0.39
+Nodes (4): dotenv, @mikro-orm/migrations, @mikro-orm/postgresql, createMikroOrmOptions()
+
+### Community 40 - "eslint.config.mjs"
+Cohesion: 0.50
+Nodes (3): @eslint/js, globals, typescript-eslint
+
+### Community 41 - "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?
+
+### Community 42 - "mikro-orm"
+Cohesion: 0.67
+Nodes (3): mikro-orm, configPaths, preferTs
+
 ## Knowledge Gaps
-- **239 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+234 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 320 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **312 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+307 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 399 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `Authentication API` (3× useful, score=2.893316681)
-- `Menu API` (2× useful, score=1.915251154)
-- `Order API` (2× useful, score=1.915251154)
-- `Consumer Backend Scope` (2× useful, score=1.915117794)
+- `Authentication API` (3× useful, score=2.832558383)
+- `Menu API` (2× useful, score=1.875031774)
+- `Order API` (2× useful, score=1.875031774)
+- `Consumer Backend Scope` (2× useful, score=1.874901215)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `package.json`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `@nestjs/common` connect `app.module.ts` to `package.json`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `scripts` connect `scripts` to `package.json`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `license` to the rest of the system?**
-  _239 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _312 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.module.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.07092198581560284 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06887755102040816 - nodes in this community are weakly interconnected._
 - **Should `compress.py` be split into smaller, more focused modules?**
   _Cohesion score 0.05673076923076923 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.052564102564102565 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
