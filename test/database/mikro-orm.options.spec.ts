@@ -1,16 +1,11 @@
-import { Migrator } from '@mikro-orm/migrations';
+import { createMikroOrmOptions } from '../../src/mikro-orm.options';
 
-import { createMikroOrmOptions } from '../../src/database/mikro-orm.options';
-
-jest.mock('@mikro-orm/migrations', () => ({
-  Migrator: class Migrator {},
-}));
 jest.mock('@mikro-orm/postgresql', () => ({
   defineConfig: (options: unknown) => options,
 }));
 
 describe('createMikroOrmOptions', () => {
-  it('데이터베이스 URL을 전달하면 엔티티 탐색과 마이그레이션 옵션을 구성한다', () => {
+  it('데이터베이스 URL을 전달하면 엔티티 탐색과 PostgreSQL 연결 옵션을 구성한다', () => {
     const clientUrl =
       'postgresql://app:p%40ss@db.example:5432/prepick?sslmode=require';
 
@@ -21,14 +16,8 @@ describe('createMikroOrmOptions', () => {
     expect(options.entitiesTs).toEqual(['src/**/*.entity.ts']);
     expect(options.discovery).toEqual({ warnWhenNoEntities: false });
     expect(options.driverOptions).toEqual({ connectionString: clientUrl });
-    expect(options.extensions).toContain(Migrator);
-    expect(options.migrations).toEqual(
-      expect.objectContaining({
-        emit: 'ts',
-        path: 'dist/database/migrations',
-        pathTs: 'src/database/migrations',
-      }),
-    );
+    expect(options.extensions).toBeUndefined();
+    expect(options.migrations).toBeUndefined();
   });
 
   it('DATABASE_URL 형식이 올바르지 않으면 원문을 노출하지 않고 실패한다', () => {

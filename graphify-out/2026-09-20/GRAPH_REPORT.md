@@ -98,7 +98,7 @@
 
 ### Community 0 - "app.module.ts"
 Cohesion: 0.06
-Nodes (29): Catch, Query, @apollo/server, @mikro-orm/nestjs, @mikro-orm/postgresql, @nestjs/apollo, @nestjs/axios, @nestjs/common (+21 more)
+Nodes (29): Catch, createMikroOrmOptions(), Query, @apollo/server, @mikro-orm/nestjs, @mikro-orm/postgresql, @nestjs/apollo, @nestjs/axios (+21 more)
 
 ### Community 1 - "compress.py"
 Cohesion: 0.06

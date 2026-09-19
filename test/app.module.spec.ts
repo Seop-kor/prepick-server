@@ -7,7 +7,7 @@ describe('AppModule configuration', () => {
     jest.dontMock('@nestjs/graphql');
     jest.dontMock('@nestjs/apollo');
     jest.dontMock('../src/common/common.module');
-    jest.dontMock('../src/database/mikro-orm.options');
+    jest.dontMock('../src/mikro-orm.options');
   });
 
   it('애플리케이션 모듈을 불러오면 ConfigService로 MikroORM을 구성한다', () => {
@@ -45,11 +45,11 @@ describe('AppModule configuration', () => {
       jest.doMock('../src/common/common.module', () => ({
         CommonModule: class MockCommonModule {},
       }));
-      jest.doMock('../src/database/mikro-orm.options', () => ({
+      jest.doMock('../src/mikro-orm.options', () => ({
         createMikroOrmOptions: (clientUrl: string) => ({ clientUrl }),
       }));
 
-      require('../src/app.module');
+      jest.requireActual('../src/app.module');
 
       expect(configForRoot).toHaveBeenCalledWith({
         isGlobal: true,
@@ -66,7 +66,7 @@ describe('AppModule configuration', () => {
         },
       ];
       const getOrThrow = jest
-        .fn<(key: string) => string>()
+        .fn<string, [key: string]>()
         .mockReturnValue('postgresql://runtime-database');
 
       expect(asyncOptions.driver).toBe(MockPostgreSqlDriver);

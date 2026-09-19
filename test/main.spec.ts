@@ -21,7 +21,7 @@ describe('bootstrap', () => {
     }));
 
     jest.isolateModules(() => {
-      require('../src/main');
+      jest.requireActual('../src/main');
     });
     await new Promise(setImmediate);
 

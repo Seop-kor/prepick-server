@@ -13,7 +13,8 @@
 ## Global Constraints
 
 - Complete the separate PostgreSQL/MikroORM foundation task before Task 1; this plan does not install or configure the ORM.
-- The foundation must provide `MikroOrmModule.forRoot(...)`, request-scoped EntityManager support, migrations under `src/database/migrations/`, a disposable PostgreSQL test database, `test/jest-integration.json`, and a `test:integration` package script.
+- The foundation must provide `MikroOrmModule.forRoot(...)`, request-scoped EntityManager support, a disposable PostgreSQL test database, `test/jest-integration.json`, and a `test:integration` package script.
+- Database administrators must create the required tables and constraints manually outside this repository before database-backed auth tests run. Do not add migration tooling, SQL files, or schema-sync commands.
 - Keep the public GraphQL names exactly as specified: `sendSignupOtp`, `verifySignupOtp`, `signUp`, `login`, `refreshSession`, `logout`, and `currentUser`.
 - Use `phone`, never `phoneNumber`, for GraphQL and entity property names.
 - Keep `PHONE_NUMBER_ALREADY_REGISTERED` as the duplicate-phone error code.
@@ -31,12 +32,11 @@
 The separate database task must make these commands succeed before this plan starts:
 
 ```bash
-yarn mikro-orm debug
-yarn mikro-orm migration:list
 yarn test:integration --listTests
+yarn test:integration test/database/database.integration-spec.ts --runInBand
 ```
 
-It must also expose a PostgreSQL `EntityManager` from `@mikro-orm/postgresql`, discover entities registered through `MikroOrmModule.forFeature(...)`, and provide a test database through `DATABASE_URL`. `test:integration` must execute Jest with `test/jest-integration.json`. If any check fails, stop and finish the database task rather than introducing mocks or an in-memory persistence fallback here.
+It must also expose a PostgreSQL `EntityManager` from `@mikro-orm/postgresql`, discover entities registered through `MikroOrmModule.forFeature(...)`, and provide a test database through `DATABASE_URL`. The database administrator must confirm that the auth tables and constraints are present. `test:integration` must execute Jest with `test/jest-integration.json`. If any check fails, stop and finish the database preparation rather than introducing mocks or an in-memory persistence fallback here.
 
 ## File Map
 
@@ -60,7 +60,6 @@ It must also expose a PostgreSQL `EntityManager` from `@mikro-orm/postgresql`, d
 - Modify `src/common/common.resolver.ts`: mark `healthCheck` public.
 - Modify `src/graphqlException.filter.ts`: preserve coded GraphQL errors and map validation failures.
 - Modify `src/app.module.ts`: register validation, `UsersModule`, and `AuthModule`.
-- Create `src/database/migrations/Migration20260919000100.ts`: auth tables and constraints.
 - Create focused unit tests under `test/users/` and `test/auth/`.
 - Create `test/auth/auth.integration-spec.ts`: PostgreSQL constraints and concurrency.
 - Create `test/auth/auth.e2e-spec.ts`: full GraphQL auth journey and log leakage regression.
@@ -79,10 +78,10 @@ It must also expose a PostgreSQL `EntityManager` from `@mikro-orm/postgresql`, d
 
 **Files:**
 - Read: `package.json`
-- Read: the MikroORM configuration and migration directory created by the database task
+- Read: the MikroORM runtime configuration created by the database task
 
 **Interfaces:**
-- Consumes: configured PostgreSQL MikroORM connection, CLI, migration runner, and `DATABASE_URL` test database.
+- Consumes: configured PostgreSQL MikroORM connection, manually provisioned tables, and `DATABASE_URL` test database.
 - Produces: evidence that Tasks 1-9 can use real PostgreSQL without adding persistence scaffolding.
 
 - [ ] **Step 1: Verify installed integration packages**
@@ -93,21 +92,15 @@ Run:
 yarn why @mikro-orm/core
 yarn why @mikro-orm/nestjs
 yarn why @mikro-orm/postgresql
-yarn why @mikro-orm/migrations
 ```
 
 Expected: each command reports one installed version and no missing package.
 
 - [ ] **Step 2: Verify configuration and database connectivity**
 
-Run:
+Run `yarn test:integration test/database/database.integration-spec.ts --runInBand` after the database administrator confirms that the required auth tables and constraints exist.
 
-```bash
-yarn mikro-orm debug
-yarn mikro-orm migration:list
-```
-
-Expected: entity discovery and PostgreSQL connection succeed; migration status is printed. If not, stop this plan and repair the separate database task.
+Expected: the NestJS application connects to PostgreSQL and injects its `EntityManager`. If not, stop this plan and repair the separate database preparation.
 
 ---
 
@@ -995,15 +988,14 @@ git commit -m "feat: expose GraphQL authentication API"
 
 ---
 
-### Task 8: Auth Migration and PostgreSQL Integration Proof
+### Task 8: PostgreSQL Integration Proof
 
 **Files:**
-- Create: `src/database/migrations/Migration20260919000100.ts`
 - Create: `test/auth/auth.integration-spec.ts`
 
 **Interfaces:**
-- Consumes: all three entities and the real disposable PostgreSQL database from Task 0.
-- Produces: durable tables/constraints and concurrency proof for signup, OTP send, login replacement, and refresh rotation.
+- Consumes: all three entities and the manually provisioned PostgreSQL database from Task 0.
+- Produces: concurrency proof for signup, OTP send, login replacement, and refresh rotation.
 
 - [ ] **Step 1: Write failing PostgreSQL integration tests**
 
@@ -1025,67 +1017,13 @@ Run:
 yarn test:integration test/auth/auth.integration-spec.ts --runInBand
 ```
 
-Expected: FAIL because auth tables do not exist.
+Expected: FAIL because the auth services or concurrency behavior are not implemented yet. Missing tables are a database-provisioning blocker, not an expected RED state.
 
-- [ ] **Step 3: Create the migration**
+- [ ] **Step 3: Confirm manual database preparation**
 
-Create `Migration20260919000100` with explicit PostgreSQL SQL for:
+Obtain confirmation from the database administrator that the required auth tables, unique constraints, indexes, and foreign keys exist in the test database. Do not add their DDL or a schema-generation command to this repository.
 
-```sql
-create table "users" (
-  "id" uuid primary key,
-  "name" varchar(50) not null,
-  "phone" varchar(11) not null,
-  "password" text not null,
-  "created_at" timestamptz not null,
-  "updated_at" timestamptz not null,
-  constraint "users_phone_unique" unique ("phone")
-);
-
-create table "otp_challenge" (
-  "id" uuid primary key,
-  "phone" varchar(11) not null,
-  "otp" text not null,
-  "expires_at" timestamptz not null,
-  "attempt_count" integer not null default 0,
-  "verified_at" timestamptz null,
-  "verification_token" text null,
-  "verification_expires_at" timestamptz null,
-  "consumed_at" timestamptz null,
-  "invalidated_at" timestamptz null,
-  "created_at" timestamptz not null
-);
-
-create index "otp_challenge_phone_created_at_index"
-  on "otp_challenge" ("phone", "created_at");
-create unique index "otp_challenge_verification_token_unique"
-  on "otp_challenge" ("verification_token")
-  where "verification_token" is not null;
-
-create table "refresh_session" (
-  "id" uuid primary key,
-  "user_id" uuid not null,
-  "refresh_token" text not null,
-  "expires_at" timestamptz not null,
-  "created_at" timestamptz not null,
-  "updated_at" timestamptz not null,
-  constraint "refresh_session_user_id_unique" unique ("user_id"),
-  constraint "refresh_session_user_id_foreign"
-    foreign key ("user_id") references "users" ("id") on delete cascade
-);
-```
-
-The `down()` method drops `refresh_session`, `otp_challenge`, and `users` in that order.
-
-- [ ] **Step 4: Apply the migration and run integration tests**
-
-Run:
-
-```bash
-yarn mikro-orm migration:up
-```
-
-Then run:
+- [ ] **Step 4: Run integration tests**
 
 ```bash
 yarn test:integration test/auth/auth.integration-spec.ts --runInBand
@@ -1096,8 +1034,8 @@ Expected: all seven cases PASS. The concurrency tests must use separate `EntityM
 - [ ] **Step 5: Commit**
 
 ```bash
-git add src/database/migrations/Migration20260919000100.ts test/auth/auth.integration-spec.ts
-git commit -m "feat: migrate authentication data"
+git add test/auth/auth.integration-spec.ts
+git commit -m "test: verify authentication persistence"
 ```
 
 ---

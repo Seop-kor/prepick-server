@@ -12,7 +12,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { GraphqlExceptionFilter } from './graphqlException.filter';
 import { ResponseLoggingPlugin } from './responseLogger.plugin';
 import { CommonModule } from './common/common.module';
-import { createMikroOrmOptions } from './database/mikro-orm.options';
+import { createMikroOrmOptions } from './mikro-orm.options';
 
 @Module({
   imports: [

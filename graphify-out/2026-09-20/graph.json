@@ -313,6 +313,18 @@
       "source_location": "L16"
     },
     {
+      "id": "database_mikro_orm_options_createmikroormoptions",
+      "label": "createMikroOrmOptions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "code",
+      "norm_label": "createmikroormoptions()",
+      "source_file": "database/mikro-orm.options.ts",
+      "source_location": "L3"
+    },
+    {
       "id": "src_common_common_resolver_commonresolver_constructor",
       "label": ".constructor()",
       "_callable": true,
@@ -419,18 +431,6 @@
       "norm_label": "bootstrap()",
       "source_file": "src/main.ts",
       "source_location": "L4"
-    },
-    {
-      "id": "src_mikro_orm_options_createmikroormoptions",
-      "label": "createMikroOrmOptions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "createmikroormoptions()",
-      "source_file": "src/mikro-orm.options.ts",
-      "source_location": "L3"
     },
     {
       "id": "src_responselogger_plugin_responseloggingplugin_requestdidstart",
@@ -1104,6 +1104,17 @@
       "source_location": ""
     },
     {
+      "id": "database_mikro_orm_options",
+      "label": "mikro-orm.options.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "app.module.ts",
+      "file_type": "code",
+      "norm_label": "mikro-orm.options.ts",
+      "source_file": "database/mikro-orm.options.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "query",
       "label": "Query",
       "_origin": "ast",
@@ -1266,17 +1277,6 @@
       "file_type": "code",
       "norm_label": "main.ts",
       "source_file": "src/main.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_mikro_orm_options",
-      "label": "mikro-orm.options.ts",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "mikro-orm.options.ts",
-      "source_file": "src/mikro-orm.options.ts",
       "source_location": "L1"
     },
     {
@@ -9200,7 +9200,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "src_mikro_orm_options_createmikroormoptions",
+      "target": "database_mikro_orm_options_createmikroormoptions",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9344,7 +9344,7 @@
     },
     {
       "source": "test_database_mikro_orm_options_spec",
-      "target": "src_mikro_orm_options_createmikroormoptions",
+      "target": "database_mikro_orm_options_createmikroormoptions",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9439,6 +9439,18 @@
       "weight": 1.0
     },
     {
+      "source": "database_mikro_orm_options",
+      "target": "ref_mikro_orm_postgresql",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "database/mikro-orm.options.ts",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "eslint_config",
       "target": "ref_eslint_js",
       "relation": "imports_from",
@@ -9524,7 +9536,7 @@
     },
     {
       "source": "src_app_module",
-      "target": "src_mikro_orm_options",
+      "target": "database_mikro_orm_options",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9811,18 +9823,6 @@
       "weight": 1.0
     },
     {
-      "source": "src_mikro_orm_options",
-      "target": "ref_mikro_orm_postgresql",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/mikro-orm.options.ts",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
       "source": "src_responselogger_plugin",
       "target": "ref_apollo_server",
       "relation": "imports_from",
@@ -9993,7 +9993,7 @@
     },
     {
       "source": "test_database_mikro_orm_options_spec",
-      "target": "src_mikro_orm_options",
+      "target": "database_mikro_orm_options",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -10984,6 +10984,17 @@
       "confidence_score": 1.0,
       "source_file": ".agents/skills/caveman-learn/tests/skill-file.test.mjs",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "database_mikro_orm_options",
+      "target": "database_mikro_orm_options_createmikroormoptions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/mikro-orm.options.ts",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -13162,17 +13173,6 @@
       "confidence_score": 1.0,
       "source_file": "src/main.ts",
       "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "src_mikro_orm_options",
-      "target": "src_mikro_orm_options_createmikroormoptions",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/mikro-orm.options.ts",
-      "source_location": "L3",
       "weight": 1.0
     },
     {
