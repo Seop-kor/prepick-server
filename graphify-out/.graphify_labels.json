@@ -17,7 +17,7 @@
   "15": "Incremental Graph Update",
   "16": "caveman-explore/package.json",
   "17": "caveman-learn/package.json",
-  "18": "jest",
+  "18": "otp.service.ts",
   "19": "Persistent Caveman Style",
   "20": "Migration",
   "21": "Cavecrew",
@@ -39,5 +39,13 @@
   "37": "Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?",
   "38": "PostgreSQL·MikroORM Foundation Implementation Plan",
   "39": "main.spec.ts",
-  "41": "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?"
+  "40": "@nestjs/common",
+  "41": "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?",
+  "42": "common.resolver.ts",
+  "43": "session.service.ts",
+  "44": "common.module.ts",
+  "45": "auth.e2e-spec.ts",
+  "46": "Q: 어떤것들이 수정되었는지 알려줘",
+  "47": "setup-test-database.ts",
+  "48": "bcrypt.d.ts"
 }
