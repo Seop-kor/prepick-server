@@ -1,3 +1,5 @@
+import { APP_PIPE } from '@nestjs/core';
+
 describe('AppModule configuration', () => {
   afterEach(() => {
     jest.resetModules();
@@ -49,7 +51,12 @@ describe('AppModule configuration', () => {
         createMikroOrmOptions: (clientUrl: string) => ({ clientUrl }),
       }));
 
-      jest.requireActual('../src/app.module');
+      const { AppModule } = jest.requireActual('../src/app.module') as {
+        AppModule: new () => unknown;
+      };
+      const { ValidationPipe } = jest.requireActual('@nestjs/common') as {
+        ValidationPipe: new (...args: unknown[]) => unknown;
+      };
 
       expect(configForRoot).toHaveBeenCalledWith({
         isGlobal: true,
@@ -79,6 +86,20 @@ describe('AppModule configuration', () => {
         }),
       );
       expect(getOrThrow).toHaveBeenCalledWith('DATABASE_URL');
+
+      const providers = Reflect.getMetadata('providers', AppModule) as Array<{
+        provide: unknown;
+        useValue?: unknown;
+      }>;
+      const validationProvider = providers.find(
+        ({ provide }) => provide === APP_PIPE,
+      );
+
+      expect(validationProvider?.useValue).toBeInstanceOf(ValidationPipe);
+      expect(validationProvider?.useValue).toMatchObject({
+        isTransformEnabled: true,
+        validatorOptions: expect.objectContaining({ whitelist: true }),
+      });
     });
   });
 });

@@ -3,8 +3,8 @@ import { join } from 'path';
 import type { Request } from 'express';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { PostgreSqlDriver } from '@mikro-orm/postgresql';
-import { APP_FILTER } from '@nestjs/core';
-import { Module } from '@nestjs/common';
+import { APP_FILTER, APP_PIPE } from '@nestjs/core';
+import { Module, ValidationPipe } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
@@ -45,6 +45,10 @@ import { createMikroOrmOptions } from './mikro-orm.options';
     {
       provide: APP_FILTER,
       useClass: GraphqlExceptionFilter,
+    },
+    {
+      provide: APP_PIPE,
+      useValue: new ValidationPipe({ transform: true, whitelist: true }),
     },
   ],
 })
