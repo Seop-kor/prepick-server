@@ -13,6 +13,8 @@ import { GraphqlExceptionFilter } from './graphqlException.filter';
 import { ResponseLoggingPlugin } from './responseLogger.plugin';
 import { CommonModule } from './common/common.module';
 import { createMikroOrmOptions } from './mikro-orm.options';
+import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -23,13 +25,18 @@ import { createMikroOrmOptions } from './mikro-orm.options';
     MikroOrmModule.forRootAsync({
       driver: PostgreSqlDriver,
       inject: [ConfigService],
-      useFactory: (configService: ConfigService) => ({
-        ...createMikroOrmOptions(
+      useFactory: (configService: ConfigService) => {
+        const options = createMikroOrmOptions(
           configService.getOrThrow<string>('DATABASE_URL'),
-        ),
-        autoLoadEntities: true,
-        registerRequestContext: true,
-      }),
+        );
+        return {
+          ...options,
+          entities: [],
+          entitiesTs: [],
+          autoLoadEntities: true,
+          registerRequestContext: true,
+        };
+      },
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
@@ -40,6 +47,8 @@ import { createMikroOrmOptions } from './mikro-orm.options';
       plugins: [new ResponseLoggingPlugin()],
     }),
     CommonModule,
+    UsersModule,
+    AuthModule,
   ],
   providers: [
     {

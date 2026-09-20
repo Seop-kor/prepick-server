@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import type { EntityManager } from '@mikro-orm/postgresql';
+import { EntityManager } from '@mikro-orm/postgresql';
 
 import { User } from './user.entity';
 
@@ -19,10 +19,7 @@ export class UsersService {
     return (await em.count(User, { phone })) > 0;
   }
 
-  create(
-    input: Pick<User, 'name' | 'phone' | 'password'>,
-    em = this.em,
-  ): User {
+  create(input: Pick<User, 'name' | 'phone' | 'password'>, em = this.em): User {
     const user = em.create(User, input);
     em.persist(user);
     return user;

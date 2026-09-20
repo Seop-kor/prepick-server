@@ -1,5 +1,9 @@
 import type { Request } from 'express';
 
+jest.mock('@mikro-orm/postgresql', () => ({
+  EntityManager: class EntityManager {},
+}));
+
 import { UsersResolver } from '../../src/users/users.resolver';
 import type { UsersService } from '../../src/users/users.service';
 import { User } from '../../src/users/user.entity';

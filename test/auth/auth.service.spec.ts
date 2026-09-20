@@ -3,6 +3,9 @@ import type { EntityManager } from '@mikro-orm/postgresql';
 jest.mock('@mikro-orm/core', () => ({
   LockMode: { PESSIMISTIC_WRITE: 3 },
 }));
+jest.mock('@mikro-orm/postgresql', () => ({
+  EntityManager: class EntityManager {},
+}));
 
 jest.mock('bcrypt', () => ({
   hash: jest.fn(),

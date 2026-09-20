@@ -5,6 +5,9 @@ import type { Reflector } from '@nestjs/core';
 jest.mock('@mikro-orm/core', () => ({
   LockMode: { PESSIMISTIC_WRITE: 3 },
 }));
+jest.mock('@mikro-orm/postgresql', () => ({
+  EntityManager: class EntityManager {},
+}));
 
 import { AuthGuard } from '../../src/auth/auth.guard';
 import type { SessionService } from '../../src/auth/session.service';

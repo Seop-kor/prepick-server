@@ -4,6 +4,9 @@ import type { JwtService } from '@nestjs/jwt';
 jest.mock('@mikro-orm/core', () => ({
   LockMode: { PESSIMISTIC_WRITE: 3 },
 }));
+jest.mock('@mikro-orm/postgresql', () => ({
+  EntityManager: class EntityManager {},
+}));
 
 jest.mock('../../src/auth/auth.crypto', () => {
   const actual = jest.requireActual<
