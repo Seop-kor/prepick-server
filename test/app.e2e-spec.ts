@@ -10,6 +10,7 @@ describe('GraphQL common queries (e2e)', () => {
   let app: INestApplication<App>;
 
   beforeEach(async () => {
+    process.env.OTP_HMAC_SECRET = 'e2e-test-hmac-secret';
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();

@@ -129,7 +129,7 @@ export class OtpService {
     }
     const normalizedPhone = normalizePhone(phone);
 
-    return this.em.transactional(async (em) => {
+    const result = await this.em.transactional(async (em) => {
       const now = new Date();
       const challenge = await em.findOne(
         OtpChallenge,
@@ -153,7 +153,7 @@ export class OtpService {
       if (!safeEqual(challenge.otp, hmacSha256(code, this.hmacSecret))) {
         challenge.attemptCount += 1;
         await em.flush();
-        throw this.invalidOtp();
+        return null;
       }
 
       const verificationToken = randomToken();
@@ -165,6 +165,10 @@ export class OtpService {
 
       return { verificationToken, expiresAt };
     });
+    if (!result) {
+      throw this.invalidOtp();
+    }
+    return result;
   }
 
   async consumeVerificationToken(
