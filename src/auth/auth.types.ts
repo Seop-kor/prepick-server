@@ -1,4 +1,11 @@
-import { Field, GraphQLISODateTime, Int, ObjectType } from '@nestjs/graphql';
+import {
+  Field,
+  GraphQLISODateTime,
+  InputType,
+  Int,
+  ObjectType,
+} from '@nestjs/graphql';
+import { IsString } from 'class-validator';
 
 import { User } from '../users/user.entity';
 
@@ -43,4 +50,30 @@ export class AuthPayload implements SessionTokens {
 
   @Field(() => GraphQLISODateTime)
   refreshTokenExpiresAt!: Date;
+}
+
+@InputType()
+export class SignUpInput {
+  @Field()
+  @IsString()
+  name!: string;
+
+  @Field()
+  @IsString()
+  password!: string;
+
+  @Field()
+  @IsString()
+  verificationToken!: string;
+}
+
+@InputType()
+export class LoginInput {
+  @Field()
+  @IsString()
+  phone!: string;
+
+  @Field()
+  @IsString()
+  password!: string;
 }
