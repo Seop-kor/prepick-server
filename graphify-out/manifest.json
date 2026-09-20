@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "test/jest-e2e.json": {
-    "mtime": 1789890190.4820607,
-    "seen": 1789910277.857331,
-    "ast_hash": "be43c24adcc80fac33dc5715ce594f27",
+    "mtime": 1789910803.4912016,
+    "seen": 1789912497.3978722,
+    "ast_hash": "344adf007aaf51aa4dd19d4581b26adb",
     "semantic_hash": ""
   },
   "tsconfig.build.json": {
@@ -528,9 +528,9 @@
     "semantic_hash": ""
   },
   "test/jest-integration.json": {
-    "mtime": 1789890190.482372,
-    "seen": 1789910277.857332,
-    "ast_hash": "81609f95e29f344225746a16069cca36",
+    "mtime": 1789910803.560351,
+    "seen": 1789912497.397873,
+    "ast_hash": "dd6b2c6d4bf10387316102b3ab3c6e48",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-09-19-consumer-auth-api.md": {
@@ -606,9 +606,9 @@
     "semantic_hash": ""
   },
   "src/auth/auth.service.ts": {
-    "mtime": 1789893680.7002866,
-    "seen": 1789910277.857305,
-    "ast_hash": "4d385b8cd54e15477c7c124a64037dc0",
+    "mtime": 1789910761.1568017,
+    "seen": 1789912497.3978398,
+    "ast_hash": "c3a9f5122c87bb2d561ec3969a74a001",
     "semantic_hash": ""
   },
   "src/auth/auth.types.ts": {
@@ -708,9 +708,9 @@
     "semantic_hash": ""
   },
   "test/auth/auth.e2e-spec.ts": {
-    "mtime": 1789910072.7195678,
-    "seen": 1789910277.857323,
-    "ast_hash": "dd7e8cd7e5d8a5a6a134b7c3841fea80",
+    "mtime": 1789910831.9132264,
+    "seen": 1789912497.397861,
+    "ast_hash": "fa58171452412c48a71028e04ea5be9c",
     "semantic_hash": ""
   },
   "test/auth/auth.error.spec.ts": {
@@ -738,9 +738,9 @@
     "semantic_hash": ""
   },
   "test/auth/auth.service.spec.ts": {
-    "mtime": 1789893681.011983,
-    "seen": 1789910277.857326,
-    "ast_hash": "f7e5da9563c1aad84d73f94d59c79fe1",
+    "mtime": 1789910748.3676746,
+    "seen": 1789912497.397865,
+    "ast_hash": "ee2996b46ac747fc5160dc569c822550",
     "semantic_hash": ""
   },
   "test/auth/otp.service.spec.ts": {
@@ -777,6 +777,18 @@
     "mtime": 1789893822.5894308,
     "seen": 1789910277.857334,
     "ast_hash": "42d74cad1601ea257184994a8b294549",
+    "semantic_hash": ""
+  },
+  "test/setup-test-database.ts": {
+    "mtime": 1789910803.4266543,
+    "seen": 1789912497.397877,
+    "ast_hash": "26c0696517f947aecdfda096b30b71cb",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md": {
+    "mtime": 1789911967.2621212,
+    "seen": 1789912497.397978,
+    "ast_hash": "36613444d4fa67c844c2268f384a5704",
     "semantic_hash": ""
   }
 }

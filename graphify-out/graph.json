@@ -144,19 +144,6 @@
   },
   "nodes": [
     {
-      "id": "src_app_module_appmodule",
-      "label": "AppModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "appmodule",
-      "source_file": "src/app.module.ts",
-      "source_location": "L64"
-    },
-    {
       "id": "src_auth_auth_module_authmodule",
       "label": "AuthModule",
       "_callable": true,
@@ -168,19 +155,6 @@
       "norm_label": "authmodule",
       "source_file": "src/auth/auth.module.ts",
       "source_location": "L39"
-    },
-    {
-      "id": "src_common_common_module_commonmodule",
-      "label": "CommonModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "commonmodule",
-      "source_file": "src/common/common.module.ts",
-      "source_location": "L14"
     },
     {
       "id": "src_users_users_module_usersmodule",
@@ -207,6 +181,58 @@
       "norm_label": "locktimeouterror",
       "source_file": ".agents/skills/caveman-compress/scripts/compress.py",
       "source_location": "L113"
+    },
+    {
+      "id": "src_auth_auth_error_autherrorcode",
+      "label": "AuthErrorCode",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "autherrorcode",
+      "source_file": "src/auth/auth.error.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_auth_auth_guard_authenticatedrequest",
+      "label": "AuthenticatedRequest",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "authenticatedrequest",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_auth_auth_guard_authguard",
+      "label": "AuthGuard",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "authguard",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver",
+      "label": "AuthResolver",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "authresolver",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L16"
     },
     {
       "id": "src_auth_auth_service_authservice",
@@ -313,32 +339,6 @@
       "source_location": "L25"
     },
     {
-      "id": "src_auth_otpchallenge_entity_otpchallenge",
-      "label": "OtpChallenge",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "otpchallenge",
-      "source_file": "src/auth/otpChallenge.entity.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_auth_refreshsession_entity_refreshsession",
-      "label": "RefreshSession",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "refreshsession",
-      "source_file": "src/auth/refreshSession.entity.ts",
-      "source_location": "L7"
-    },
-    {
       "id": "src_auth_session_service_sessionservice",
       "label": "SessionService",
       "_callable": true,
@@ -350,45 +350,6 @@
       "norm_label": "sessionservice",
       "source_file": "src/auth/session.service.ts",
       "source_location": "L19"
-    },
-    {
-      "id": "src_users_user_entity_user",
-      "label": "User",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "user",
-      "source_file": "src/users/user.entity.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_users_users_resolver_usersresolver",
-      "label": "UsersResolver",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "usersresolver",
-      "source_file": "src/users/users.resolver.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_users_users_service_usersservice",
-      "label": "UsersService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "usersservice",
-      "source_file": "src/users/users.service.ts",
-      "source_location": "L7"
     },
     {
       "id": "agents_skills_caveman_compress_scripts_validate_validationresult",
@@ -469,32 +430,6 @@
       "source_location": "L22"
     },
     {
-      "id": "src_auth_auth_error_autherrorcode",
-      "label": "AuthErrorCode",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "@nestjs/common",
-      "file_type": "code",
-      "norm_label": "autherrorcode",
-      "source_file": "src/auth/auth.error.ts",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_auth_auth_guard_authenticatedrequest",
-      "label": "AuthenticatedRequest",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "@nestjs/common",
-      "file_type": "code",
-      "norm_label": "authenticatedrequest",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L12"
-    },
-    {
       "id": "src_graphqlexception_filter_graphqlexceptionfilter",
       "label": "GraphqlExceptionFilter",
       "_callable": true,
@@ -508,17 +443,30 @@
       "source_location": "L14"
     },
     {
-      "id": "test_auth_auth_guard_spec_resolverclass",
-      "label": "ResolverClass",
+      "id": "src_responselogger_plugin_graphqlcontext",
+      "label": "GraphqlContext",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 40,
       "community_name": "@nestjs/common",
       "file_type": "code",
-      "norm_label": "resolverclass",
-      "source_file": "test/auth/auth.guard.spec.ts",
-      "source_location": "L19"
+      "norm_label": "graphqlcontext",
+      "source_file": "src/responseLogger.plugin.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_responselogger_plugin_responseloggingplugin",
+      "label": "ResponseLoggingPlugin",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "responseloggingplugin",
+      "source_file": "src/responseLogger.plugin.ts",
+      "source_location": "L11"
     },
     {
       "id": "src_common_common_resolver_commonresolver",
@@ -527,7 +475,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": "commonresolver",
       "source_file": "src/common/common.resolver.ts",
@@ -540,24 +488,89 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": "commonservice",
       "source_file": "src/common/common.service.ts",
       "source_location": "L4"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver",
-      "label": "AuthResolver",
+      "id": "src_auth_refreshsession_entity_refreshsession",
+      "label": "RefreshSession",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": "authresolver",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L16"
+      "norm_label": "refreshsession",
+      "source_file": "src/auth/refreshSession.entity.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_users_user_entity_user",
+      "label": "User",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "user",
+      "source_file": "src/users/user.entity.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_users_users_resolver_usersresolver",
+      "label": "UsersResolver",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "usersresolver",
+      "source_file": "src/users/users.resolver.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_users_users_service_usersservice",
+      "label": "UsersService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "usersservice",
+      "source_file": "src/users/users.service.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "test_auth_auth_guard_spec_resolverclass",
+      "label": "ResolverClass",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "resolverclass",
+      "source_file": "test/auth/auth.guard.spec.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_common_common_module_commonmodule",
+      "label": "CommonModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "common.module.ts",
+      "file_type": "code",
+      "norm_label": "commonmodule",
+      "source_file": "src/common/common.module.ts",
+      "source_location": "L14"
     },
     {
       "id": "src_common_sms_service_smsservice",
@@ -566,10 +579,49 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 44,
-      "community_name": "SmsService",
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": "smsservice",
       "source_file": "src/common/sms.service.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_common_util_service_utilservice",
+      "label": "UtilService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "common.module.ts",
+      "file_type": "code",
+      "norm_label": "utilservice",
+      "source_file": "src/common/util.service.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_app_module_appmodule",
+      "label": "AppModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "appmodule",
+      "source_file": "src/app.module.ts",
+      "source_location": "L64"
+    },
+    {
+      "id": "src_auth_otpchallenge_entity_otpchallenge",
+      "label": "OtpChallenge",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "otpchallenge",
+      "source_file": "src/auth/otpChallenge.entity.ts",
       "source_location": "L5"
     },
     {
@@ -578,64 +630,12 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 44,
-      "community_name": "SmsService",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
       "file_type": "code",
       "norm_label": "graphqlresponse",
       "source_file": "test/auth/auth.e2e-spec.ts",
       "source_location": "L12"
-    },
-    {
-      "id": "src_common_util_service_utilservice",
-      "label": "UtilService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "UtilService",
-      "file_type": "code",
-      "norm_label": "utilservice",
-      "source_file": "src/common/util.service.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_responselogger_plugin_graphqlcontext",
-      "label": "GraphqlContext",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 46,
-      "community_name": "responseLogger.plugin.ts",
-      "file_type": "code",
-      "norm_label": "graphqlcontext",
-      "source_file": "src/responseLogger.plugin.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_responselogger_plugin_responseloggingplugin",
-      "label": "ResponseLoggingPlugin",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 46,
-      "community_name": "responseLogger.plugin.ts",
-      "file_type": "code",
-      "norm_label": "responseloggingplugin",
-      "source_file": "src/responseLogger.plugin.ts",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_auth_auth_guard_authguard",
-      "label": "AuthGuard",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 47,
-      "community_name": "AuthGuard",
-      "file_type": "code",
-      "norm_label": "authguard",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L15"
     },
     {
       "id": "src_main_bootstrap",
@@ -1070,6 +1070,42 @@
       "source_location": "L10"
     },
     {
+      "id": "src_auth_auth_guard_authguard_canactivate",
+      "label": ".canActivate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".canactivate()",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L21"
+    },
+    {
+      "id": "src_auth_auth_guard_authguard_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_auth_auth_guard_authguard_unauthenticated",
+      "label": ".unauthenticated()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".unauthenticated()",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L47"
+    },
+    {
       "id": "src_auth_auth_resolver_authresolver_constructor",
       "label": ".constructor()",
       "_callable": true,
@@ -1080,6 +1116,78 @@
       "norm_label": ".constructor()",
       "source_file": "src/auth/auth.resolver.ts",
       "source_location": "L17"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_login",
+      "label": ".login()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".login()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_logout",
+      "label": ".logout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".logout()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L55"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_refreshsession",
+      "label": ".refreshSession()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".refreshsession()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L49"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_sendsignupotp",
+      "label": ".sendSignupOtp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".sendsignupotp()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_signup",
+      "label": ".signUp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".signup()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L37"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_verifysignupotp",
+      "label": ".verifySignupOtp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": ".verifysignupotp()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L31"
     },
     {
       "id": "src_auth_auth_service_authservice_constructor",
@@ -1103,7 +1211,7 @@
       "file_type": "code",
       "norm_label": ".isuserphoneuniqueviolation()",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L94"
+      "source_location": "L101"
     },
     {
       "id": "src_auth_auth_service_authservice_login",
@@ -1127,7 +1235,7 @@
       "file_type": "code",
       "norm_label": ".phonealreadyregistered()",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L86"
+      "source_location": "L93"
     },
     {
       "id": "src_auth_auth_service_authservice_signup",
@@ -1200,6 +1308,18 @@
       "norm_label": ".verifysignupotp()",
       "source_file": "src/auth/otp.service.ts",
       "source_location": "L123"
+    },
+    {
+      "id": "src_auth_public_decorator_public",
+      "label": "Public()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "public()",
+      "source_file": "src/auth/public.decorator.ts",
+      "source_location": "L4"
     },
     {
       "id": "src_auth_session_service_sessionservice_constructor",
@@ -1310,54 +1430,6 @@
       "source_location": "L3"
     },
     {
-      "id": "src_users_users_resolver_usersresolver_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/users/users.resolver.ts",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_users_users_resolver_usersresolver_currentuser",
-      "label": ".currentUser()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".currentuser()",
-      "source_file": "src/users/users.resolver.ts",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_users_users_service_usersservice_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/users/users.service.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_users_users_service_usersservice_create",
-      "label": ".create()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".create()",
-      "source_file": "src/users/users.service.ts",
-      "source_location": "L22"
-    },
-    {
       "id": "src_users_users_service_usersservice_existsbyphone",
       "label": ".existsByPhone()",
       "_callable": true,
@@ -1368,30 +1440,6 @@
       "norm_label": ".existsbyphone()",
       "source_file": "src/users/users.service.ts",
       "source_location": "L18"
-    },
-    {
-      "id": "src_users_users_service_usersservice_findbyid",
-      "label": ".findById()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".findbyid()",
-      "source_file": "src/users/users.service.ts",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_users_users_service_usersservice_findbyphone",
-      "label": ".findByPhone()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".findbyphone()",
-      "source_file": "src/users/users.service.ts",
-      "source_location": "L10"
     },
     {
       "id": "agents_skills_caveman_explore_tests_skill_file_test_frontmatter",
@@ -1706,12 +1754,24 @@
       "source_location": "L18"
     },
     {
+      "id": "src_responselogger_plugin_responseloggingplugin_requestdidstart",
+      "label": ".requestDidStart()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": ".requestdidstart()",
+      "source_file": "src/responseLogger.plugin.ts",
+      "source_location": "L14"
+    },
+    {
       "id": "src_common_common_resolver_commonresolver_constructor",
       "label": ".constructor()",
       "_callable": true,
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": ".constructor()",
       "source_file": "src/common/common.resolver.ts",
@@ -1723,7 +1783,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": ".healthcheck()",
       "source_file": "src/common/common.resolver.ts",
@@ -1735,95 +1795,95 @@
       "_callable": true,
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": ".healthcheck()",
       "source_file": "src/common/common.service.ts",
       "source_location": "L5"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_login",
-      "label": ".login()",
+      "id": "src_users_users_resolver_usersresolver_constructor",
+      "label": ".constructor()",
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": ".login()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L43"
+      "norm_label": ".constructor()",
+      "source_file": "src/users/users.resolver.ts",
+      "source_location": "L11"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_logout",
-      "label": ".logout()",
+      "id": "src_users_users_resolver_usersresolver_currentuser",
+      "label": ".currentUser()",
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": ".logout()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L55"
+      "norm_label": ".currentuser()",
+      "source_file": "src/users/users.resolver.ts",
+      "source_location": "L14"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_refreshsession",
-      "label": ".refreshSession()",
+      "id": "src_users_users_service_usersservice_constructor",
+      "label": ".constructor()",
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": ".refreshsession()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L49"
+      "norm_label": ".constructor()",
+      "source_file": "src/users/users.service.ts",
+      "source_location": "L8"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_sendsignupotp",
-      "label": ".sendSignupOtp()",
+      "id": "src_users_users_service_usersservice_create",
+      "label": ".create()",
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": ".sendsignupotp()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L25"
+      "norm_label": ".create()",
+      "source_file": "src/users/users.service.ts",
+      "source_location": "L22"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_signup",
-      "label": ".signUp()",
+      "id": "src_users_users_service_usersservice_findbyid",
+      "label": ".findById()",
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": ".signup()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L37"
+      "norm_label": ".findbyid()",
+      "source_file": "src/users/users.service.ts",
+      "source_location": "L14"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_verifysignupotp",
-      "label": ".verifySignupOtp()",
+      "id": "src_users_users_service_usersservice_findbyphone",
+      "label": ".findByPhone()",
       "_callable": true,
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": ".verifysignupotp()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L31"
+      "norm_label": ".findbyphone()",
+      "source_file": "src/users/users.service.ts",
+      "source_location": "L10"
     },
     {
-      "id": "src_auth_public_decorator_public",
-      "label": "Public()",
+      "id": "src_auth_otp_service_otpservice_constructor",
+      "label": ".constructor()",
       "_callable": true,
       "_origin": "ast",
-      "community": 43,
-      "community_name": "AuthResolver",
+      "community": 44,
+      "community_name": "common.module.ts",
       "file_type": "code",
-      "norm_label": "public()",
-      "source_file": "src/auth/public.decorator.ts",
-      "source_location": "L4"
+      "norm_label": ".constructor()",
+      "source_file": "src/auth/otp.service.ts",
+      "source_location": "L28"
     },
     {
       "id": "src_common_sms_service_smsservice_constructor",
@@ -1831,7 +1891,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 44,
-      "community_name": "SmsService",
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": ".constructor()",
       "source_file": "src/common/sms.service.ts",
@@ -1843,7 +1903,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 44,
-      "community_name": "SmsService",
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": ".send()",
       "source_file": "src/common/sms.service.ts",
@@ -1855,83 +1915,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 44,
-      "community_name": "SmsService",
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": ".sendotp()",
       "source_file": "src/common/sms.service.ts",
       "source_location": "L43"
     },
     {
-      "id": "src_auth_otp_service_otpservice_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "UtilService",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/auth/otp.service.ts",
-      "source_location": "L28"
-    },
-    {
       "id": "src_common_util_service_utilservice_getotp",
       "label": ".getOtp()",
       "_callable": true,
       "_origin": "ast",
-      "community": 45,
-      "community_name": "UtilService",
+      "community": 44,
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": ".getotp()",
       "source_file": "src/common/util.service.ts",
       "source_location": "L6"
-    },
-    {
-      "id": "src_responselogger_plugin_responseloggingplugin_requestdidstart",
-      "label": ".requestDidStart()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 46,
-      "community_name": "responseLogger.plugin.ts",
-      "file_type": "code",
-      "norm_label": ".requestdidstart()",
-      "source_file": "src/responseLogger.plugin.ts",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_auth_auth_guard_authguard_canactivate",
-      "label": ".canActivate()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 47,
-      "community_name": "AuthGuard",
-      "file_type": "code",
-      "norm_label": ".canactivate()",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L21"
-    },
-    {
-      "id": "src_auth_auth_guard_authguard_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 47,
-      "community_name": "AuthGuard",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_auth_auth_guard_authguard_unauthenticated",
-      "label": ".unauthenticated()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 47,
-      "community_name": "AuthGuard",
-      "file_type": "code",
-      "norm_label": ".unauthenticated()",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L47"
     },
     {
       "id": "src_app_module",
@@ -1945,29 +1945,7 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_module_ts_module",
-      "label": "Module",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "module",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_auth_auth_module_ts_module",
-      "label": "Module",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "module",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_common_common_module_ts_module",
       "label": "Module",
       "_origin": "ast",
       "community": 0,
@@ -2011,17 +1989,6 @@
       "source_location": ""
     },
     {
-      "id": "test_database_database_integration_spec",
-      "label": "database.integration-spec.ts",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "database.integration-spec.ts",
-      "source_file": "test/database/database.integration-spec.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "test_database_mikro_orm_options_spec",
       "label": "mikro-orm.options.spec.ts",
       "_origin": "ast",
@@ -2053,17 +2020,6 @@
       "norm_label": "@nestjs/core",
       "source_file": "package.json",
       "source_location": "L33"
-    },
-    {
-      "id": "ref_nestjs_testing",
-      "label": "@nestjs/testing",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "@nestjs/testing",
-      "source_file": "package.json",
-      "source_location": "L51"
     },
     {
       "id": "agents_skills_caveman_compress_scripts_cli",
@@ -3232,13 +3188,13 @@
       "source_file": "node:crypto"
     },
     {
-      "id": "context",
-      "label": "Context",
+      "id": "args",
+      "label": "Args",
       "_origin": "ast",
       "community": 18,
       "community_name": "otp.service.ts",
       "file_type": "code",
-      "norm_label": "context",
+      "norm_label": "args",
       "source_file": "",
       "source_location": ""
     },
@@ -3265,6 +3221,17 @@
       "source_location": ""
     },
     {
+      "id": "mutation",
+      "label": "Mutation",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "mutation",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_auth_auth_crypto",
       "label": "auth.crypto.ts",
       "_origin": "ast",
@@ -3274,6 +3241,39 @@
       "norm_label": "auth.crypto.ts",
       "source_file": "src/auth/auth.crypto.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "src_auth_auth_error",
+      "label": "auth.error.ts",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "auth.error.ts",
+      "source_file": "src/auth/auth.error.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_auth_auth_guard",
+      "label": "auth.guard.ts",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "auth.guard.ts",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_auth_auth_guard_ts_injectable",
+      "label": "Injectable",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "injectable",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_auth_auth_module",
@@ -3296,6 +3296,17 @@
       "norm_label": "auth.resolver.ts",
       "source_file": "src/auth/auth.resolver.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "src_auth_auth_resolver_ts_resolver",
+      "label": "Resolver",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "resolver",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_auth_auth_service",
@@ -3375,81 +3386,26 @@
       "source_location": ""
     },
     {
-      "id": "src_auth_otpchallenge_entity",
-      "label": "otpChallenge.entity.ts",
+      "id": "src_auth_public_decorator",
+      "label": "public.decorator.ts",
       "_origin": "ast",
       "community": 18,
       "community_name": "otp.service.ts",
       "file_type": "code",
-      "norm_label": "otpchallenge.entity.ts",
-      "source_file": "src/auth/otpChallenge.entity.ts",
+      "norm_label": "public.decorator.ts",
+      "source_file": "src/auth/public.decorator.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_auth_otpchallenge_schema",
-      "label": "otpChallenge.schema.ts",
+      "id": "src_auth_public_decorator_is_public_key",
+      "label": "IS_PUBLIC_KEY",
       "_origin": "ast",
       "community": 18,
       "community_name": "otp.service.ts",
       "file_type": "code",
-      "norm_label": "otpchallenge.schema.ts",
-      "source_file": "src/auth/otpChallenge.schema.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_otpchallenge_schema_otpchallengeschema",
-      "label": "OtpChallengeSchema",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "otpchallengeschema",
-      "source_file": "src/auth/otpChallenge.schema.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_auth_refreshsession_entity",
-      "label": "refreshSession.entity.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "refreshsession.entity.ts",
-      "source_file": "src/auth/refreshSession.entity.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_refreshsession_schema",
-      "label": "refreshSession.schema.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "refreshsession.schema.ts",
-      "source_file": "src/auth/refreshSession.schema.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_refreshsession_schema_refreshsessionschema",
-      "label": "RefreshSessionSchema",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "refreshsessionschema",
-      "source_file": "src/auth/refreshSession.schema.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_auth_session_service",
-      "label": "session.service.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "session.service.ts",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L1"
+      "norm_label": "is_public_key",
+      "source_file": "src/auth/public.decorator.ts",
+      "source_location": "L3"
     },
     {
       "id": "src_auth_session_service_ts_injectable",
@@ -3474,127 +3430,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_users_user_entity",
-      "label": "user.entity.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "user.entity.ts",
-      "source_file": "src/users/user.entity.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_users_user_entity_ts_field",
-      "label": "Field",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "field",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_users_user_entity_ts_objecttype",
-      "label": "ObjectType",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "objecttype",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_users_user_schema",
-      "label": "user.schema.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "user.schema.ts",
-      "source_file": "src/users/user.schema.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_users_user_schema_userschema",
-      "label": "UserSchema",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "userschema",
-      "source_file": "src/users/user.schema.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_users_users_module",
-      "label": "users.module.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "users.module.ts",
-      "source_file": "src/users/users.module.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_users_users_resolver",
-      "label": "users.resolver.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "users.resolver.ts",
-      "source_file": "src/users/users.resolver.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_users_users_resolver_ts_query",
-      "label": "Query",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "query",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_users_users_resolver_ts_resolver",
-      "label": "Resolver",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "resolver",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_users_users_service",
-      "label": "users.service.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "users.service.ts",
-      "source_file": "src/users/users.service.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_users_users_service_ts_injectable",
-      "label": "Injectable",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "injectable",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "test_auth_auth_crypto_spec",
       "label": "auth.crypto.spec.ts",
       "_origin": "ast",
@@ -3606,14 +3441,14 @@
       "source_location": "L1"
     },
     {
-      "id": "test_auth_auth_integration_spec",
-      "label": "auth.integration-spec.ts",
+      "id": "test_auth_auth_error_spec",
+      "label": "auth.error.spec.ts",
       "_origin": "ast",
       "community": 18,
       "community_name": "otp.service.ts",
       "file_type": "code",
-      "norm_label": "auth.integration-spec.ts",
-      "source_file": "test/auth/auth.integration-spec.ts",
+      "norm_label": "auth.error.spec.ts",
+      "source_file": "test/auth/auth.error.spec.ts",
       "source_location": "L1"
     },
     {
@@ -3628,17 +3463,6 @@
       "source_location": "L1"
     },
     {
-      "id": "test_auth_auth_service_spec",
-      "label": "auth.service.spec.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "auth.service.spec.ts",
-      "source_file": "test/auth/auth.service.spec.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "test_auth_otp_service_spec",
       "label": "otp.service.spec.ts",
       "_origin": "ast",
@@ -3647,17 +3471,6 @@
       "file_type": "code",
       "norm_label": "otp.service.spec.ts",
       "source_file": "test/auth/otp.service.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_auth_session_service_spec",
-      "label": "session.service.spec.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "session.service.spec.ts",
-      "source_file": "test/auth/session.service.spec.ts",
       "source_location": "L1"
     },
     {
@@ -3672,72 +3485,6 @@
       "source_location": "L1"
     },
     {
-      "id": "test_users_users_resolver_spec",
-      "label": "users.resolver.spec.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "users.resolver.spec.ts",
-      "source_file": "test/users/users.resolver.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_users_users_service_spec",
-      "label": "users.service.spec.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "users.service.spec.ts",
-      "source_file": "test/users/users.service.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_bcrypt",
-      "label": "bcrypt",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "concept",
-      "norm_label": "bcrypt",
-      "source_file": "package.json",
-      "source_location": "L38"
-    },
-    {
-      "id": "ref_mikro_orm_core",
-      "label": "@mikro-orm/core",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "concept",
-      "norm_label": "@mikro-orm/core",
-      "source_file": "package.json",
-      "source_location": "L26"
-    },
-    {
-      "id": "ref_mikro_orm_nestjs",
-      "label": "@mikro-orm/nestjs",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "concept",
-      "norm_label": "@mikro-orm/nestjs",
-      "source_file": "package.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "ref_mikro_orm_postgresql",
-      "label": "@mikro-orm/postgresql",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "concept",
-      "norm_label": "@mikro-orm/postgresql",
-      "source_file": "package.json",
-      "source_location": "L28"
-    },
-    {
       "id": "ref_nestjs_config",
       "label": "@nestjs/config",
       "_origin": "ast",
@@ -3747,17 +3494,6 @@
       "norm_label": "@nestjs/config",
       "source_file": "package.json",
       "source_location": "L32"
-    },
-    {
-      "id": "ref_nestjs_jwt",
-      "label": "@nestjs/jwt",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "otp.service.ts",
-      "file_type": "concept",
-      "norm_label": "@nestjs/jwt",
-      "source_file": "package.json",
-      "source_location": "L35"
     },
     {
       "id": "eslint_config",
@@ -3989,6 +3725,17 @@
       "norm_label": "axios",
       "source_file": "package.json",
       "source_location": "L37"
+    },
+    {
+      "id": "ref_bcrypt",
+      "label": "bcrypt",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "package.json",
+      "file_type": "concept",
+      "norm_label": "bcrypt",
+      "source_file": "package.json",
+      "source_location": "L38"
     },
     {
       "id": "ref_class_transformer",
@@ -5624,50 +5371,6 @@
       "source_location": ""
     },
     {
-      "id": "src_auth_auth_error",
-      "label": "auth.error.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "@nestjs/common",
-      "file_type": "code",
-      "norm_label": "auth.error.ts",
-      "source_file": "src/auth/auth.error.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_auth_guard",
-      "label": "auth.guard.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "@nestjs/common",
-      "file_type": "code",
-      "norm_label": "auth.guard.ts",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_public_decorator",
-      "label": "public.decorator.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "@nestjs/common",
-      "file_type": "code",
-      "norm_label": "public.decorator.ts",
-      "source_file": "src/auth/public.decorator.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_public_decorator_is_public_key",
-      "label": "IS_PUBLIC_KEY",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "@nestjs/common",
-      "file_type": "code",
-      "norm_label": "is_public_key",
-      "source_file": "src/auth/public.decorator.ts",
-      "source_location": "L3"
-    },
-    {
       "id": "src_graphqlexception_filter",
       "label": "graphqlException.filter.ts",
       "_origin": "ast",
@@ -5679,25 +5382,14 @@
       "source_location": "L1"
     },
     {
-      "id": "test_auth_auth_error_spec",
-      "label": "auth.error.spec.ts",
+      "id": "src_responselogger_plugin",
+      "label": "responseLogger.plugin.ts",
       "_origin": "ast",
       "community": 40,
       "community_name": "@nestjs/common",
       "file_type": "code",
-      "norm_label": "auth.error.spec.ts",
-      "source_file": "test/auth/auth.error.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_auth_auth_guard_spec",
-      "label": "auth.guard.spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "@nestjs/common",
-      "file_type": "code",
-      "norm_label": "auth.guard.spec.ts",
-      "source_file": "test/auth/auth.guard.spec.ts",
+      "norm_label": "responselogger.plugin.ts",
+      "source_file": "src/responseLogger.plugin.ts",
       "source_location": "L1"
     },
     {
@@ -5710,6 +5402,17 @@
       "norm_label": "graphqlexception.filter.spec.ts",
       "source_file": "test/graphqlException.filter.spec.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "ref_apollo_server",
+      "label": "@apollo/server",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": "@nestjs/common",
+      "file_type": "concept",
+      "norm_label": "@apollo/server",
+      "source_file": "package.json",
+      "source_location": "L24"
     },
     {
       "id": "ref_graphql",
@@ -5732,17 +5435,6 @@
       "norm_label": "@nestjs/common",
       "source_file": "package.json",
       "source_location": "L31"
-    },
-    {
-      "id": "ref_nestjs_graphql",
-      "label": "@nestjs/graphql",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "@nestjs/common",
-      "file_type": "concept",
-      "norm_label": "@nestjs/graphql",
-      "source_file": "package.json",
-      "source_location": "L34"
     },
     {
       "id": "graphify_out_memory_query_20260915_134843_1cc6f686_\uc18c\uaddc\ubaa8_pr\uc5d0\uc11c_subagent_driven_\uac1c\ubc1c_\uc2dc_\ud1a0\ud070_\uacfc\ub2e4_\uc0ac\uc6a9\uc744_\uc5b4\ub5bb\uac8c_\ubc29\uc9c0\ud560_\uac83\uc778",
@@ -5800,22 +5492,11 @@
       "source_location": "L9"
     },
     {
-      "id": "src_common_common_module",
-      "label": "common.module.ts",
-      "_origin": "ast",
-      "community": 42,
-      "community_name": "common.module.ts",
-      "file_type": "code",
-      "norm_label": "common.module.ts",
-      "source_file": "src/common/common.module.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "src_common_common_resolver",
       "label": "common.resolver.ts",
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": "common.resolver.ts",
       "source_file": "src/common/common.resolver.ts",
@@ -5826,7 +5507,7 @@
       "label": "Query",
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": "query",
       "source_file": "",
@@ -5837,7 +5518,7 @@
       "label": "Resolver",
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": "resolver",
       "source_file": "",
@@ -5848,7 +5529,7 @@
       "label": "common.service.ts",
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": "common.service.ts",
       "source_file": "src/common/common.service.ts",
@@ -5859,7 +5540,7 @@
       "label": "Injectable",
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": "injectable",
       "source_file": "",
@@ -5870,42 +5551,328 @@
       "label": "app.e2e-spec.ts",
       "_origin": "ast",
       "community": 42,
-      "community_name": "common.module.ts",
+      "community_name": "common.resolver.ts",
       "file_type": "code",
       "norm_label": "app.e2e-spec.ts",
       "source_file": "test/app.e2e-spec.ts",
       "source_location": "L1"
     },
     {
-      "id": "args",
-      "label": "Args",
+      "id": "context",
+      "label": "Context",
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": "args",
+      "norm_label": "context",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "mutation",
-      "label": "Mutation",
+      "id": "src_auth_refreshsession_entity",
+      "label": "refreshSession.entity.ts",
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
-      "norm_label": "mutation",
+      "norm_label": "refreshsession.entity.ts",
+      "source_file": "src/auth/refreshSession.entity.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_auth_refreshsession_schema",
+      "label": "refreshSession.schema.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "refreshsession.schema.ts",
+      "source_file": "src/auth/refreshSession.schema.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_auth_refreshsession_schema_refreshsessionschema",
+      "label": "RefreshSessionSchema",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "refreshsessionschema",
+      "source_file": "src/auth/refreshSession.schema.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_auth_session_service",
+      "label": "session.service.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "session.service.ts",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_users_user_entity",
+      "label": "user.entity.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "user.entity.ts",
+      "source_file": "src/users/user.entity.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_users_user_entity_ts_field",
+      "label": "Field",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "field",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_auth_auth_resolver_ts_resolver",
+      "id": "src_users_user_entity_ts_objecttype",
+      "label": "ObjectType",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "objecttype",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_users_user_schema",
+      "label": "user.schema.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "user.schema.ts",
+      "source_file": "src/users/user.schema.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_users_user_schema_userschema",
+      "label": "UserSchema",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "userschema",
+      "source_file": "src/users/user.schema.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_users_users_module",
+      "label": "users.module.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "users.module.ts",
+      "source_file": "src/users/users.module.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_users_users_resolver",
+      "label": "users.resolver.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "users.resolver.ts",
+      "source_file": "src/users/users.resolver.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_users_users_resolver_ts_query",
+      "label": "Query",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "query",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_users_users_resolver_ts_resolver",
       "label": "Resolver",
       "_origin": "ast",
       "community": 43,
-      "community_name": "AuthResolver",
+      "community_name": "session.service.ts",
       "file_type": "code",
       "norm_label": "resolver",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_users_users_service",
+      "label": "users.service.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "users.service.ts",
+      "source_file": "src/users/users.service.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_users_users_service_ts_injectable",
+      "label": "Injectable",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "injectable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "test_auth_auth_guard_spec",
+      "label": "auth.guard.spec.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "auth.guard.spec.ts",
+      "source_file": "test/auth/auth.guard.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_auth_auth_integration_spec",
+      "label": "auth.integration-spec.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "auth.integration-spec.ts",
+      "source_file": "test/auth/auth.integration-spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_auth_auth_service_spec",
+      "label": "auth.service.spec.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "auth.service.spec.ts",
+      "source_file": "test/auth/auth.service.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_auth_session_service_spec",
+      "label": "session.service.spec.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "session.service.spec.ts",
+      "source_file": "test/auth/session.service.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_users_users_resolver_spec",
+      "label": "users.resolver.spec.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "users.resolver.spec.ts",
+      "source_file": "test/users/users.resolver.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_users_users_service_spec",
+      "label": "users.service.spec.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "code",
+      "norm_label": "users.service.spec.ts",
+      "source_file": "test/users/users.service.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_mikro_orm_core",
+      "label": "@mikro-orm/core",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/core",
+      "source_file": "package.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "ref_mikro_orm_nestjs",
+      "label": "@mikro-orm/nestjs",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/nestjs",
+      "source_file": "package.json",
+      "source_location": "L27"
+    },
+    {
+      "id": "ref_mikro_orm_postgresql",
+      "label": "@mikro-orm/postgresql",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/postgresql",
+      "source_file": "package.json",
+      "source_location": "L28"
+    },
+    {
+      "id": "ref_nestjs_graphql",
+      "label": "@nestjs/graphql",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "concept",
+      "norm_label": "@nestjs/graphql",
+      "source_file": "package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "ref_nestjs_jwt",
+      "label": "@nestjs/jwt",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "session.service.ts",
+      "file_type": "concept",
+      "norm_label": "@nestjs/jwt",
+      "source_file": "package.json",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_common_common_module",
+      "label": "common.module.ts",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "common.module.ts",
+      "file_type": "code",
+      "norm_label": "common.module.ts",
+      "source_file": "src/common/common.module.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_common_common_module_ts_module",
+      "label": "Module",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "common.module.ts",
+      "file_type": "code",
+      "norm_label": "module",
       "source_file": "",
       "source_location": ""
     },
@@ -5914,7 +5881,7 @@
       "label": "sms.service.ts",
       "_origin": "ast",
       "community": 44,
-      "community_name": "SmsService",
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": "sms.service.ts",
       "source_file": "src/common/sms.service.ts",
@@ -5925,62 +5892,18 @@
       "label": "Injectable",
       "_origin": "ast",
       "community": 44,
-      "community_name": "SmsService",
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": "injectable",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "test_auth_auth_e2e_spec",
-      "label": "auth.e2e-spec.ts",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "auth.e2e-spec.ts",
-      "source_file": "test/auth/auth.e2e-spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_common_sms_service_spec",
-      "label": "sms.service.spec.ts",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "sms.service.spec.ts",
-      "source_file": "test/common/sms.service.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_nestjs_axios",
-      "label": "@nestjs/axios",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "SmsService",
-      "file_type": "concept",
-      "norm_label": "@nestjs/axios",
-      "source_file": "package.json",
-      "source_location": "L30"
-    },
-    {
-      "id": "ref_supertest",
-      "label": "supertest",
-      "_origin": "ast",
-      "community": 44,
-      "community_name": "SmsService",
-      "file_type": "concept",
-      "norm_label": "supertest",
-      "source_file": "package.json",
-      "source_location": "L63"
-    },
-    {
       "id": "src_common_util_service",
       "label": "util.service.ts",
       "_origin": "ast",
-      "community": 45,
-      "community_name": "UtilService",
+      "community": 44,
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": "util.service.ts",
       "source_file": "src/common/util.service.ts",
@@ -5990,56 +5913,212 @@
       "id": "src_common_util_service_ts_injectable",
       "label": "Injectable",
       "_origin": "ast",
-      "community": 45,
-      "community_name": "UtilService",
+      "community": 44,
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": "injectable",
       "source_file": "",
       "source_location": ""
     },
     {
+      "id": "test_common_sms_service_spec",
+      "label": "sms.service.spec.ts",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "common.module.ts",
+      "file_type": "code",
+      "norm_label": "sms.service.spec.ts",
+      "source_file": "test/common/sms.service.spec.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "test_common_util_service_spec",
       "label": "util.service.spec.ts",
       "_origin": "ast",
-      "community": 45,
-      "community_name": "UtilService",
+      "community": 44,
+      "community_name": "common.module.ts",
       "file_type": "code",
       "norm_label": "util.service.spec.ts",
       "source_file": "test/common/util.service.spec.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_responselogger_plugin",
-      "label": "responseLogger.plugin.ts",
+      "id": "ref_nestjs_axios",
+      "label": "@nestjs/axios",
       "_origin": "ast",
-      "community": 46,
-      "community_name": "responseLogger.plugin.ts",
+      "community": 44,
+      "community_name": "common.module.ts",
+      "file_type": "concept",
+      "norm_label": "@nestjs/axios",
+      "source_file": "package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_app_module_ts_module",
+      "label": "Module",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
       "file_type": "code",
-      "norm_label": "responselogger.plugin.ts",
-      "source_file": "src/responseLogger.plugin.ts",
+      "norm_label": "module",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_auth_otpchallenge_entity",
+      "label": "otpChallenge.entity.ts",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "otpchallenge.entity.ts",
+      "source_file": "src/auth/otpChallenge.entity.ts",
       "source_location": "L1"
     },
     {
-      "id": "ref_apollo_server",
-      "label": "@apollo/server",
+      "id": "src_auth_otpchallenge_schema",
+      "label": "otpChallenge.schema.ts",
       "_origin": "ast",
-      "community": 46,
-      "community_name": "responseLogger.plugin.ts",
-      "file_type": "concept",
-      "norm_label": "@apollo/server",
-      "source_file": "package.json",
-      "source_location": "L24"
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "otpchallenge.schema.ts",
+      "source_file": "src/auth/otpChallenge.schema.ts",
+      "source_location": "L1"
     },
     {
-      "id": "src_auth_auth_guard_ts_injectable",
-      "label": "Injectable",
+      "id": "src_auth_otpchallenge_schema_otpchallengeschema",
+      "label": "OtpChallengeSchema",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "otpchallengeschema",
+      "source_file": "src/auth/otpChallenge.schema.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "test_auth_auth_e2e_spec",
+      "label": "auth.e2e-spec.ts",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "auth.e2e-spec.ts",
+      "source_file": "test/auth/auth.e2e-spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_database_database_integration_spec",
+      "label": "database.integration-spec.ts",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "database.integration-spec.ts",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_nestjs_testing",
+      "label": "@nestjs/testing",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "concept",
+      "norm_label": "@nestjs/testing",
+      "source_file": "package.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "ref_supertest",
+      "label": "supertest",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "concept",
+      "norm_label": "supertest",
+      "source_file": "package.json",
+      "source_location": "L63"
+    },
+    {
+      "id": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918",
+      "label": "query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "Q: \uc5b4\ub5a4\uac83\ub4e4\uc774 \uc218\uc815\ub418\uc5c8\ub294\uc9c0 \uc54c\ub824\uc918",
+      "file_type": "document",
+      "frontmatter": {
+        "type": "query",
+        "date": "2026-09-20T13:46:07.261706+00:00",
+        "question": "\uc5b4\ub5a4\uac83\ub4e4\uc774 \uc218\uc815\ub418\uc5c8\ub294\uc9c0 \uc54c\ub824\uc918",
+        "contributor": "graphify",
+        "outcome": "useful",
+        "source_nodes": "[&quot;Authentication API&quot;, &quot;AuthService&quot;, &quot;auth.service.spec.ts&quot;, &quot;auth.integration-spec.ts&quot;, &quot;database.integration-spec.ts&quot;]"
+      },
+      "node_kind": "page",
+      "norm_label": "query_20260920_134607_fd075829_\u110b\u1165\u1104\u1165\u11ab\u1100\u1165\u11ba\u1103\u1173\u11af\u110b\u1175_\u1109\u116e\u110c\u1165\u11bc\u1103\u116c\u110b\u1165\u11bb\u1102\u1173\u11ab\u110c\u1175_\u110b\u1161\u11af\u1105\u1167\u110c\u116f.md",
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_answer",
+      "label": "Answer",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "Q: \uc5b4\ub5a4\uac83\ub4e4\uc774 \uc218\uc815\ub418\uc5c8\ub294\uc9c0 \uc54c\ub824\uc918",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "answer",
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_outcome",
+      "label": "Outcome",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "Q: \uc5b4\ub5a4\uac83\ub4e4\uc774 \uc218\uc815\ub418\uc5c8\ub294\uc9c0 \uc54c\ub824\uc918",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "outcome",
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_q_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918",
+      "label": "Q: \uc5b4\ub5a4\uac83\ub4e4\uc774 \uc218\uc815\ub418\uc5c8\ub294\uc9c0 \uc54c\ub824\uc918",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "Q: \uc5b4\ub5a4\uac83\ub4e4\uc774 \uc218\uc815\ub418\uc5c8\ub294\uc9c0 \uc54c\ub824\uc918",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "q: \u110b\u1165\u1104\u1165\u11ab\u1100\u1165\u11ba\u1103\u1173\u11af\u110b\u1175 \u1109\u116e\u110c\u1165\u11bc\u1103\u116c\u110b\u1165\u11bb\u1102\u1173\u11ab\u110c\u1175 \u110b\u1161\u11af\u1105\u1167\u110c\u116f",
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_source_nodes",
+      "label": "Source Nodes",
+      "_origin": "ast",
+      "community": 46,
+      "community_name": "Q: \uc5b4\ub5a4\uac83\ub4e4\uc774 \uc218\uc815\ub418\uc5c8\ub294\uc9c0 \uc54c\ub824\uc918",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "source nodes",
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L20"
+    },
+    {
+      "id": "test_setup_test_database",
+      "label": "setup-test-database.ts",
       "_origin": "ast",
       "community": 47,
-      "community_name": "AuthGuard",
+      "community_name": "setup-test-database.ts",
       "file_type": "code",
-      "norm_label": "injectable",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "setup-test-database.ts",
+      "source_file": "test/setup-test-database.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_types_bcrypt_d",
@@ -9921,18 +10000,6 @@
     },
     {
       "source": "src_auth_auth_service_authservice_login",
-      "target": "src_users_phone_normalizephone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/auth/auth.service.ts",
-      "source_location": "L67",
-      "weight": 1.0
-    },
-    {
-      "source": "src_auth_auth_service_authservice_login",
       "target": "src_auth_auth_error_autherror",
       "relation": "calls",
       "_origin": "ast",
@@ -9940,7 +10007,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L75",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_service_authservice_login",
+      "target": "src_users_phone_normalizephone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -9952,7 +10031,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L87",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -18322,6 +18401,50 @@
       "weight": 1.0
     },
     {
+      "source": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918",
+      "target": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_q_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_q_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918",
+      "target": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_answer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_q_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918",
+      "target": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_outcome",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_q_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918",
+      "target": "graphify_out_memory_query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918_source_nodes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "graphify-out/memory/query_20260920_134607_fd075829_\uc5b4\ub5a4\uac83\ub4e4\uc774_\uc218\uc815\ub418\uc5c8\ub294\uc9c0_\uc54c\ub824\uc918.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
       "source": "nest_cli",
       "target": "nest_cli_schema",
       "relation": "contains",
@@ -20231,6 +20354,17 @@
     },
     {
       "source": "src_auth_auth_service_authservice",
+      "target": "src_auth_auth_service_authservice_isuserphoneuniqueviolation",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_service_authservice",
       "target": "src_auth_auth_service_authservice_constructor",
       "relation": "method",
       "_origin": "ast",
@@ -20270,18 +20404,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L86",
-      "weight": 1.0
-    },
-    {
-      "source": "src_auth_auth_service_authservice",
-      "target": "src_auth_auth_service_authservice_isuserphoneuniqueviolation",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/auth/auth.service.ts",
-      "source_location": "L94",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -21081,7 +21204,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L68",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -21093,7 +21216,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L82",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -23243,5 +23366,5 @@
       "source_file": ".agents/skills/caveman-optimize/SKILL.md"
     }
   ],
-  "built_at_commit": "b3b4632ee94eba0ef539e05275524344e8020a93"
+  "built_at_commit": "701bde188f371c3590fc7ea765e023fc6715f15d"
 }

@@ -1,16 +1,16 @@
 # Graph Report - consumer-auth-api  (2026-09-20)
 
 ## Corpus Check
-- 124 files · ~55,417 words
+- 126 files · ~55,655 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 748 nodes · 1216 edges · 49 communities (42 shown, 6 thin omitted)
+- 754 nodes · 1220 edges · 49 communities (43 shown, 4 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b3b4632e`
+- Built from commit: `701bde18`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -56,12 +56,11 @@
 - PostgreSQL·MikroORM Foundation Implementation Plan
 - @nestjs/common
 - Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?
+- common.resolver.ts
+- session.service.ts
 - common.module.ts
-- AuthResolver
-- SmsService
-- UtilService
-- responseLogger.plugin.ts
-- AuthGuard
+- auth.e2e-spec.ts
+- Q: 어떤것들이 수정되었는지 알려줘
 - bcrypt.d.ts
 
 ## God Nodes (most connected - your core abstractions)
@@ -102,11 +101,11 @@
 - **Evidence-First Optimization Safety** — _agents_skills_caveman_evidence_review_skill_evidence_bucket_separation, _agents_skills_caveman_learn_skill_savings_evidence_rungs, _agents_skills_caveman_manage_skill_fail_closed_lifecycle_gate, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 - **Operator-Controlled Changes** — _agents_skills_caveman_discover_skill_operator_approval_gate, _agents_skills_caveman_learn_skill_consent_gated_editing, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 
-## Communities (49 total, 6 thin omitted)
+## Communities (49 total, 4 thin omitted)
 
 ### Community 0 - "app.module.ts"
-Cohesion: 0.14
-Nodes (12): @nestjs/apollo, @nestjs/core, @nestjs/testing, AppModule, Module, AuthModule, Module, CommonModule (+4 more)
+Cohesion: 0.21
+Nodes (7): @nestjs/apollo, @nestjs/core, AuthModule, Module, createMikroOrmOptions(), Module, UsersModule
 
 ### Community 1 - "compress.py"
 Cohesion: 0.06
@@ -114,7 +113,7 @@ Nodes (61): main(), print_usage(), Caveman Compress CLI Usage: caveman <filepath
 
 ### Community 2 - "package.json"
 Cohesion: 0.04
-Nodes (46): author, description, jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, rootDir, testEnvironment (+38 more)
+Nodes (47): author, description, jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, rootDir, testEnvironment (+39 more)
 
 ### Community 3 - "validate.py"
 Cohesion: 0.10
@@ -178,7 +177,7 @@ Nodes (9): description, files, license, name, private, scripts, test, type (+1 m
 
 ### Community 18 - "otp.service.ts"
 Cohesion: 0.07
-Nodes (42): Context, InputType, IsString, bcrypt, @mikro-orm/core, @mikro-orm/nestjs, @mikro-orm/postgresql, @nestjs/config (+34 more)
+Nodes (33): Args, InputType, IsString, Mutation, @nestjs/config, hmacSha256(), randomToken(), safeEqual() (+25 more)
 
 ### Community 19 - "Persistent Caveman Style"
 Cohesion: 0.29
@@ -249,56 +248,60 @@ Cohesion: 0.33
 Nodes (5): Global Constraints, PostgreSQL·MikroORM Foundation Implementation Plan, Task 1: Runtime MikroORM options, Task 2: PostgreSQL integration harness, Task 3: Final verification
 
 ### Community 40 - "@nestjs/common"
-Cohesion: 0.21
-Nodes (9): Catch, graphql, @nestjs/common, @nestjs/graphql, AuthErrorCode, AuthenticatedRequest, IS_PUBLIC_KEY, GraphqlExceptionFilter (+1 more)
+Cohesion: 0.24
+Nodes (7): Catch, @apollo/server, graphql, @nestjs/common, GraphqlExceptionFilter, GraphqlContext, ResponseLoggingPlugin
 
 ### Community 41 - "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?"
 Cohesion: 0.50
 Nodes (3): Answer, Outcome, Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?
 
-### Community 42 - "common.module.ts"
-Cohesion: 0.27
+### Community 42 - "common.resolver.ts"
+Cohesion: 0.25
 Nodes (5): CommonResolver, Query, Resolver, CommonService, Injectable
 
-### Community 43 - "AuthResolver"
-Cohesion: 0.45
-Nodes (5): Args, Mutation, AuthResolver, Resolver, Public()
+### Community 43 - "session.service.ts"
+Cohesion: 0.14
+Nodes (18): Context, @mikro-orm/core, @mikro-orm/nestjs, @mikro-orm/postgresql, @nestjs/graphql, @nestjs/jwt, RefreshSession, RefreshSessionSchema (+10 more)
 
-### Community 44 - "SmsService"
-Cohesion: 0.25
-Nodes (5): @nestjs/axios, supertest, SmsService, Injectable, GraphqlResponse
+### Community 44 - "common.module.ts"
+Cohesion: 0.18
+Nodes (7): @nestjs/axios, CommonModule, Module, SmsService, Injectable, Injectable, UtilService
 
-### Community 46 - "responseLogger.plugin.ts"
+### Community 45 - "auth.e2e-spec.ts"
+Cohesion: 0.24
+Nodes (7): @nestjs/testing, supertest, AppModule, Module, OtpChallenge, OtpChallengeSchema, GraphqlResponse
+
+### Community 46 - "Q: 어떤것들이 수정되었는지 알려줘"
 Cohesion: 0.40
-Nodes (3): @apollo/server, GraphqlContext, ResponseLoggingPlugin
+Nodes (4): Answer, Outcome, Q: 어떤것들이 수정되었는지 알려줘, Source Nodes
 
 ## Knowledge Gaps
-- **307 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+302 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 410 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **310 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+305 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 415 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `Authentication API` (3× useful, score=2.832558383)
-- `Menu API` (2× useful, score=1.875031774)
-- `Order API` (2× useful, score=1.875031774)
-- `Consumer Backend Scope` (2× useful, score=1.874901215)
+- `Authentication API` (3× useful, score=2.576668515)
+- `Menu API` (2× useful, score=1.705643692)
+- `Order API` (2× useful, score=1.705643692)
+- `Consumer Backend Scope` (2× useful, score=1.705524927)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
-- **Why does `@nestjs/common` connect `@nestjs/common` to `app.module.ts`, `package.json`, `common.module.ts`, `SmsService`, `UtilService`, `responseLogger.plugin.ts`, `otp.service.ts`?**
+- **Why does `@nestjs/common` connect `@nestjs/common` to `app.module.ts`, `package.json`, `common.resolver.ts`, `session.service.ts`, `common.module.ts`, `auth.e2e-spec.ts`, `otp.service.ts`?**
   _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `package.json`?**
   _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **What connects `name`, `version`, `license` to the rest of the system?**
-  _307 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `app.module.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.1437908496732026 - nodes in this community are weakly interconnected._
+  _310 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compress.py` be split into smaller, more focused modules?**
   _Cohesion score 0.05673076923076923 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.04343971631205674 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04251700680272109 - nodes in this community are weakly interconnected._
+- **Should `validate.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.10160427807486631 - nodes in this community are weakly interconnected._
