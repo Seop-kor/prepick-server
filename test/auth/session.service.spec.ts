@@ -25,9 +25,8 @@ describe('SessionService', () => {
   const sessionId = '11111111-1111-4111-8111-111111111111';
   const oldSecret = 'a'.repeat(43);
   const newSecret = 'b'.repeat(43);
-  const connection = { execute: jest.fn() };
   const transactionEm = {
-    getConnection: jest.fn(() => connection),
+    execute: jest.fn(),
     nativeDelete: jest.fn(),
     create: jest.fn<(entity: unknown, data: object) => RefreshSession>(),
     persist: jest.fn(),
@@ -81,7 +80,7 @@ describe('SessionService', () => {
     const stored = transactionEm.create.mock.results[0].value as RefreshSession;
 
     expect(em.transactional).toHaveBeenCalled();
-    expect(connection.execute).toHaveBeenCalledWith(
+    expect(transactionEm.execute).toHaveBeenCalledWith(
       'select pg_advisory_xact_lock(hashtext(?))',
       [user.id],
     );
@@ -108,7 +107,7 @@ describe('SessionService', () => {
     await service.start(user);
     await service.start(user);
 
-    expect(connection.execute).toHaveBeenCalledTimes(2);
+    expect(transactionEm.execute).toHaveBeenCalledTimes(2);
     expect(transactionEm.nativeDelete).toHaveBeenCalledTimes(2);
     expect(jwt.signAsync).toHaveBeenLastCalledWith(
       { sub: user.id },

@@ -23,9 +23,8 @@ import type { UsersService } from '../../src/users/users.service';
 
 describe('OtpService', () => {
   const now = new Date('2026-09-20T00:00:00.000Z');
-  const connection = { execute: jest.fn() };
   const transactionEm = {
-    getConnection: jest.fn(() => connection),
+    execute: jest.fn(),
     findOne: jest.fn(),
     count: jest.fn(),
     nativeUpdate: jest.fn(),
@@ -90,11 +89,11 @@ describe('OtpService', () => {
     const stored = transactionEm.create.mock.results[0].value as OtpChallenge;
 
     expect(users.existsByPhone).toHaveBeenCalledWith('01012345678');
-    expect(connection.execute).toHaveBeenCalledWith(
+    expect(transactionEm.execute).toHaveBeenCalledWith(
       'select pg_advisory_xact_lock(hashtext(?))',
       ['01012345678'],
     );
-    expect(connection.execute.mock.invocationCallOrder[0]).toBeLessThan(
+    expect(transactionEm.execute.mock.invocationCallOrder[0]).toBeLessThan(
       transactionEm.findOne.mock.invocationCallOrder[0],
     );
     expect(transactionEm.nativeUpdate).toHaveBeenCalled();
@@ -143,13 +142,13 @@ describe('OtpService', () => {
       service.sendSignupOtp('01012345678'),
     ]);
 
-    expect(connection.execute).toHaveBeenCalledTimes(2);
-    expect(connection.execute).toHaveBeenNthCalledWith(
+    expect(transactionEm.execute).toHaveBeenCalledTimes(2);
+    expect(transactionEm.execute).toHaveBeenNthCalledWith(
       1,
       'select pg_advisory_xact_lock(hashtext(?))',
       ['01012345678'],
     );
-    expect(connection.execute).toHaveBeenNthCalledWith(
+    expect(transactionEm.execute).toHaveBeenNthCalledWith(
       2,
       'select pg_advisory_xact_lock(hashtext(?))',
       ['01012345678'],

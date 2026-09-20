@@ -29,9 +29,7 @@ export class SessionService {
       );
     }
 
-    await em
-      .getConnection()
-      .execute('select pg_advisory_xact_lock(hashtext(?))', [user.id]);
+    await em.execute('select pg_advisory_xact_lock(hashtext(?))', [user.id]);
     await em.nativeDelete(RefreshSession, { user: user.id });
 
     const now = new Date();

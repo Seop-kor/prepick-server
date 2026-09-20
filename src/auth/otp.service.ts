@@ -46,11 +46,9 @@ export class OtpService {
     }
 
     const issued = await this.em.transactional(async (em) => {
-      await em
-        .getConnection()
-        .execute('select pg_advisory_xact_lock(hashtext(?))', [
-          normalizedPhone,
-        ]);
+      await em.execute('select pg_advisory_xact_lock(hashtext(?))', [
+        normalizedPhone,
+      ]);
 
       const now = new Date();
       const latest = await em.findOne(
