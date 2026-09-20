@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T11:24:27.741409+00:00",
+  "generated_at": "2026-09-20T08:01:38.931705+00:00",
   "nodes": {
     "docs_spec_smart_order_consumer_app_prd_authentication_api": {
       "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
@@ -22,7 +22,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 2.832558383,
+      "score": 2.590924751,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 3
@@ -43,7 +43,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.874901215,
+      "score": 1.714961285,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -59,7 +59,7 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.957657168,
+      "score": 0.875963466,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -80,7 +80,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.875031774,
+      "score": 1.715080707,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -101,7 +101,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.875031774,
+      "score": 1.715080707,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -117,7 +117,7 @@
           "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
         }
       ],
-      "score": 0.957526608,
+      "score": 0.875844044,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -133,7 +133,7 @@
           "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
         }
       ],
-      "score": 0.957526608,
+      "score": 0.875844044,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -149,7 +149,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 0.917374607,
+      "score": 0.839117241,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -165,7 +165,7 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.957657168,
+      "score": 0.875963466,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -181,8 +181,40 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 0.917374607,
+      "score": 0.839117241,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_0_verify_the_database_foundation": {
+      "code_fingerprint": "b304e27888f9aaa0e85cdff0df243c0fed9a8b38537ab59ef0437f4bb4d19330",
+      "label": "Task 0: Verify the Database Foundation",
+      "last": "2026-09-20T07:59:47.769060+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T07:59:47.769060+00:00",
+          "outcome": "useful",
+          "q": "postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
+        }
+      ],
+      "score": 0.999970274,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_기반_설계": {
+      "code_fingerprint": "68939edac23d90ccd95bff04c4275954c0811aaa09ac702cdd8358a48108f93c",
+      "label": "PostgreSQL·MikroORM 기반 설계",
+      "last": "2026-09-20T07:59:47.769060+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T07:59:47.769060+00:00",
+          "outcome": "useful",
+          "q": "postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
+        }
+      ],
+      "score": 0.999970274,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
       "status": "tentative",
       "uses": 1
     },
@@ -197,8 +229,40 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.957657168,
+      "score": 0.875963466,
       "source_file": "src/common/sms.service.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_mikro_orm_options": {
+      "code_fingerprint": "8a6c804b0257d0ece95b0b0485c85a7782b4e700be64af676384f336d559e122",
+      "label": "mikro-orm.options.ts",
+      "last": "2026-09-20T07:59:47.769060+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T07:59:47.769060+00:00",
+          "outcome": "useful",
+          "q": "postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
+        }
+      ],
+      "score": 0.999970274,
+      "source_file": "src/mikro-orm.options.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "test_database_database_integration_spec": {
+      "code_fingerprint": "b5b0d5c8e798f4cb7cb4a233f5f08aade6762bacec2aa11be4265a089dbb7acc",
+      "label": "database.integration-spec.ts",
+      "last": "2026-09-20T07:59:47.769060+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T07:59:47.769060+00:00",
+          "outcome": "useful",
+          "q": "postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
+        }
+      ],
+      "score": 0.999970274,
+      "source_file": "test/database/database.integration-spec.ts",
       "status": "tentative",
       "uses": 1
     }
