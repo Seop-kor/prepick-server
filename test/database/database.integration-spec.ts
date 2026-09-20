@@ -6,6 +6,10 @@ import { AppModule } from '../../src/app.module';
 describe('PostgreSQL database foundation', () => {
   let testingModule: TestingModule | undefined;
 
+  beforeEach(() => {
+    process.env.OTP_HMAC_SECRET = 'integration-test-hmac-secret';
+  });
+
   afterEach(async () => {
     await testingModule?.close();
     testingModule = undefined;

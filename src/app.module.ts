@@ -3,8 +3,8 @@ import { join } from 'path';
 import type { Request } from 'express';
 import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { PostgreSqlDriver } from '@mikro-orm/postgresql';
-import { APP_FILTER } from '@nestjs/core';
-import { Module } from '@nestjs/common';
+import { APP_FILTER, APP_PIPE } from '@nestjs/core';
+import { Module, ValidationPipe } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
@@ -13,6 +13,8 @@ import { GraphqlExceptionFilter } from './graphqlException.filter';
 import { ResponseLoggingPlugin } from './responseLogger.plugin';
 import { CommonModule } from './common/common.module';
 import { createMikroOrmOptions } from './mikro-orm.options';
+import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -23,13 +25,18 @@ import { createMikroOrmOptions } from './mikro-orm.options';
     MikroOrmModule.forRootAsync({
       driver: PostgreSqlDriver,
       inject: [ConfigService],
-      useFactory: (configService: ConfigService) => ({
-        ...createMikroOrmOptions(
+      useFactory: (configService: ConfigService) => {
+        const options = createMikroOrmOptions(
           configService.getOrThrow<string>('DATABASE_URL'),
-        ),
-        autoLoadEntities: true,
-        registerRequestContext: true,
-      }),
+        );
+        return {
+          ...options,
+          entities: [],
+          entitiesTs: [],
+          autoLoadEntities: true,
+          registerRequestContext: true,
+        };
+      },
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
@@ -40,11 +47,17 @@ import { createMikroOrmOptions } from './mikro-orm.options';
       plugins: [new ResponseLoggingPlugin()],
     }),
     CommonModule,
+    UsersModule,
+    AuthModule,
   ],
   providers: [
     {
       provide: APP_FILTER,
       useClass: GraphqlExceptionFilter,
+    },
+    {
+      provide: APP_PIPE,
+      useValue: new ValidationPipe({ transform: true, whitelist: true }),
     },
   ],
 })

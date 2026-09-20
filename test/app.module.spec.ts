@@ -1,3 +1,5 @@
+import { APP_PIPE } from '@nestjs/core';
+
 describe('AppModule configuration', () => {
   afterEach(() => {
     jest.resetModules();
@@ -7,6 +9,8 @@ describe('AppModule configuration', () => {
     jest.dontMock('@nestjs/graphql');
     jest.dontMock('@nestjs/apollo');
     jest.dontMock('../src/common/common.module');
+    jest.dontMock('../src/users/users.module');
+    jest.dontMock('../src/auth/auth.module');
     jest.dontMock('../src/mikro-orm.options');
   });
 
@@ -14,6 +18,9 @@ describe('AppModule configuration', () => {
     jest.isolateModules(() => {
       class MockConfigService {}
       class MockPostgreSqlDriver {}
+      class MockCommonModule {}
+      class MockUsersModule {}
+      class MockAuthModule {}
 
       const configForRoot = jest.fn(() => ({
         module: class MockConfigModule {},
@@ -43,13 +50,24 @@ describe('AppModule configuration', () => {
         ApolloDriver: class MockApolloDriver {},
       }));
       jest.doMock('../src/common/common.module', () => ({
-        CommonModule: class MockCommonModule {},
+        CommonModule: MockCommonModule,
+      }));
+      jest.doMock('../src/users/users.module', () => ({
+        UsersModule: MockUsersModule,
+      }));
+      jest.doMock('../src/auth/auth.module', () => ({
+        AuthModule: MockAuthModule,
       }));
       jest.doMock('../src/mikro-orm.options', () => ({
         createMikroOrmOptions: (clientUrl: string) => ({ clientUrl }),
       }));
 
-      jest.requireActual('../src/app.module');
+      const { AppModule } =
+        jest.requireActual<typeof import('../src/app.module')>(
+          '../src/app.module',
+        );
+      const { ValidationPipe } =
+        jest.requireActual<typeof import('@nestjs/common')>('@nestjs/common');
 
       expect(configForRoot).toHaveBeenCalledWith({
         isGlobal: true,
@@ -74,11 +92,42 @@ describe('AppModule configuration', () => {
       expect(asyncOptions.useFactory({ getOrThrow })).toEqual(
         expect.objectContaining({
           clientUrl: 'postgresql://runtime-database',
+          entities: [],
+          entitiesTs: [],
           autoLoadEntities: true,
           registerRequestContext: true,
         }),
       );
       expect(getOrThrow).toHaveBeenCalledWith('DATABASE_URL');
+
+      const imports = Reflect.getMetadata('imports', AppModule) as unknown[];
+      expect(imports).toEqual(
+        expect.arrayContaining([
+          MockCommonModule,
+          MockUsersModule,
+          MockAuthModule,
+        ]),
+      );
+
+      const providers = Reflect.getMetadata('providers', AppModule) as Array<{
+        provide: unknown;
+        useValue?: unknown;
+      }>;
+      const validationProvider = providers.find(
+        ({ provide }) => provide === APP_PIPE,
+      );
+
+      expect(validationProvider?.useValue).toBeInstanceOf(ValidationPipe);
+      expect(validationProvider?.useValue).toMatchObject({
+        isTransformEnabled: true,
+      });
+      expect(
+        (
+          validationProvider?.useValue as {
+            validatorOptions?: { whitelist?: boolean };
+          }
+        ).validatorOptions?.whitelist,
+      ).toBe(true);
     });
   });
 });
