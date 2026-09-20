@@ -290,6 +290,18 @@ describe('GraphQL authentication journey (e2e)', () => {
     });
   });
 
+  it('72바이트 비밀번호 계정에 73바이트 비밀번호로 로그인하면 거부한다', async () => {
+    const password = 'a'.repeat(72);
+    await signUp(password);
+
+    const exact = await login('01012345678', password);
+    const truncatedByBcrypt = await login('01012345678', `${password}b`);
+    expect(exact.errors).toBeUndefined();
+    expect(truncatedByBcrypt.errors?.[0]).toMatchObject({
+      extensions: { code: 'BAD_USER_INPUT' },
+    });
+  });
+
   it('OTP를 다섯 번 틀리면 여섯 번째 검증도 거부한다', async () => {
     const sent = await graphql(
       'mutation { sendSignupOtp(phone: "01012345678") { retryAfterSeconds } }',

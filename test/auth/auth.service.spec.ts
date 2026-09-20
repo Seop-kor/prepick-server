@@ -220,6 +220,16 @@ describe('AuthService', () => {
     expect(users.findByPhone).toHaveBeenCalledWith('01012345678');
   });
 
+  it('로그인 비밀번호가 UTF-8 73바이트이면 bcrypt 비교 전에 거부한다', async () => {
+    await expect(
+      service.login({
+        phone: '01012345678',
+        password: `${'a'.repeat(72)}b`,
+      }),
+    ).rejects.toMatchObject({ extensions: { code: 'BAD_USER_INPUT' } });
+    expect(bcrypt.compare).not.toHaveBeenCalled();
+  });
+
   it.each([
     ['등록되지 않은 번호', null, true],
     ['잘못된 비밀번호', user, false],

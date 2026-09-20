@@ -64,6 +64,13 @@ export class AuthService {
   }
 
   async login(input: LoginInput): Promise<AuthPayload> {
+    if (Buffer.byteLength(input.password, 'utf8') > 72) {
+      throw authError(
+        'BAD_USER_INPUT',
+        'Invalid login input',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
     const phone = normalizePhone(input.phone);
     const user = await this.usersService.findByPhone(phone);
     const passwordMatches = await bcrypt.compare(
