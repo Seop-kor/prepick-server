@@ -46,6 +46,7 @@ describe('authentication persistence', () => {
         otpService,
         usersService,
         sessionService,
+        utilService,
       ),
     };
   };
@@ -228,6 +229,7 @@ describe('authentication persistence', () => {
       otpService,
       usersService,
       sessionService,
+      utilService,
     );
 
     await expect(

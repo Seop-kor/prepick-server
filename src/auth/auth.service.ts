@@ -2,7 +2,7 @@ import { EntityManager } from '@mikro-orm/postgresql';
 import { HttpStatus, Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 
-import { normalizePhone } from '../users/phone';
+import { UtilService } from '../common/util.service';
 import { UsersService } from '../users/users.service';
 import { authError } from './auth.error';
 import type { AuthPayload, LoginInput, SignUpInput } from './auth.types';
@@ -19,6 +19,7 @@ export class AuthService {
     private readonly otpService: OtpService,
     private readonly usersService: UsersService,
     private readonly sessionService: SessionService,
+    private readonly utilService: UtilService,
   ) {}
 
   async signUp(input: SignUpInput): Promise<AuthPayload> {
@@ -71,7 +72,7 @@ export class AuthService {
         HttpStatus.BAD_REQUEST,
       );
     }
-    const phone = normalizePhone(input.phone);
+    const phone = this.utilService.normalizePhone(input.phone);
     const user = await this.usersService.findByPhone(phone);
     const passwordMatches = await bcrypt.compare(
       input.password,

@@ -19,6 +19,7 @@ import { hmacSha256, sha256 } from '../../src/auth/auth.crypto';
 import { OtpChallenge } from '../../src/auth/otpChallenge.entity';
 import { OtpService } from '../../src/auth/otp.service';
 import type { SmsService } from '../../src/common/sms.service';
+import { UtilService } from '../../src/common/util.service';
 import type { UsersService } from '../../src/users/users.service';
 
 describe('OtpService', () => {
@@ -43,7 +44,10 @@ describe('OtpService', () => {
   };
   const users = { existsByPhone: jest.fn() };
   const sms = { sendOtp: jest.fn() };
-  const util = { getOtp: jest.fn() };
+  const util = {
+    getOtp: jest.fn(),
+    normalizePhone: new UtilService().normalizePhone,
+  };
   const config = { getOrThrow: jest.fn() };
   let service: OtpService;
 

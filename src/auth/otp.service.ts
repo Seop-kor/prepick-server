@@ -9,7 +9,6 @@ import { ConfigService } from '@nestjs/config';
 
 import { SmsService } from '../common/sms.service';
 import { UtilService } from '../common/util.service';
-import { normalizePhone } from '../users/phone';
 import { UsersService } from '../users/users.service';
 import { hmacSha256, randomToken, safeEqual, sha256 } from './auth.crypto';
 import { authError } from './auth.error';
@@ -36,7 +35,7 @@ export class OtpService {
   }
 
   async sendSignupOtp(phone: string): Promise<OtpRequestPayload> {
-    const normalizedPhone = normalizePhone(phone);
+    const normalizedPhone = this.utilService.normalizePhone(phone);
     if (await this.usersService.existsByPhone(normalizedPhone)) {
       throw authError(
         'PHONE_NUMBER_ALREADY_REGISTERED',
@@ -127,7 +126,7 @@ export class OtpService {
     if (!/^\d{6}$/.test(code)) {
       throw this.invalidOtp();
     }
-    const normalizedPhone = normalizePhone(phone);
+    const normalizedPhone = this.utilService.normalizePhone(phone);
 
     const result = await this.em.transactional(async (em) => {
       const now = new Date();

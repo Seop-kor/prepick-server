@@ -144,56 +144,43 @@
   },
   "nodes": [
     {
-      "id": "src_auth_auth_resolver_authresolver",
-      "label": "AuthResolver",
+      "id": "src_auth_auth_guard_authguard",
+      "label": "AuthGuard",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
+      "community": 10,
+      "community_name": ".currentUser",
       "file_type": "code",
-      "norm_label": "authresolver",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L16"
+      "norm_label": "authguard",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L15"
     },
     {
-      "id": "src_common_common_module_commonmodule",
-      "label": "CommonModule",
+      "id": "src_auth_auth_module_authmodule",
+      "label": "AuthModule",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
+      "community": 10,
+      "community_name": ".currentUser",
       "file_type": "code",
-      "norm_label": "commonmodule",
-      "source_file": "src/common/common.module.ts",
-      "source_location": "L14"
+      "norm_label": "authmodule",
+      "source_file": "src/auth/auth.module.ts",
+      "source_location": "L39"
     },
     {
-      "id": "src_common_common_resolver_commonresolver",
-      "label": "CommonResolver",
+      "id": "src_users_users_module_usersmodule",
+      "label": "UsersModule",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
+      "community": 10,
+      "community_name": ".currentUser",
       "file_type": "code",
-      "norm_label": "commonresolver",
-      "source_file": "src/common/common.resolver.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_common_common_service_commonservice",
-      "label": "CommonService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "commonservice",
-      "source_file": "src/common/common.service.ts",
-      "source_location": "L4"
+      "norm_label": "usersmodule",
+      "source_file": "src/users/users.module.ts",
+      "source_location": "L13"
     },
     {
       "id": "src_common_sms_service_smsservice",
@@ -222,81 +209,133 @@
       "source_location": "L43"
     },
     {
-      "id": "src_auth_auth_module_authmodule",
-      "label": "AuthModule",
+      "id": "src_auth_auth_resolver_authresolver",
+      "label": "AuthResolver",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
+      "community_name": "SessionService",
       "file_type": "code",
-      "norm_label": "authmodule",
-      "source_file": "src/auth/auth.module.ts",
-      "source_location": "L39"
+      "norm_label": "authresolver",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L16"
     },
     {
-      "id": "src_users_users_module_usersmodule",
-      "label": "UsersModule",
+      "id": "src_auth_auth_service_authservice",
+      "label": "AuthService",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
+      "community_name": "SessionService",
       "file_type": "code",
-      "norm_label": "usersmodule",
-      "source_file": "src/users/users.module.ts",
+      "norm_label": "authservice",
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_auth_auth_types_authpayload",
+      "label": "AuthPayload",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "authpayload",
+      "source_file": "src/auth/auth.types.ts",
+      "source_location": "L38"
+    },
+    {
+      "id": "src_auth_auth_types_logininput",
+      "label": "LoginInput",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "logininput",
+      "source_file": "src/auth/auth.types.ts",
+      "source_location": "L71"
+    },
+    {
+      "id": "src_auth_auth_types_otprequestpayload",
+      "label": "OtpRequestPayload",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "otprequestpayload",
+      "source_file": "src/auth/auth.types.ts",
       "source_location": "L13"
     },
     {
-      "id": "src_app_module_appmodule",
-      "label": "AppModule",
+      "id": "src_auth_auth_types_otpverificationpayload",
+      "label": "OtpVerificationPayload",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
+      "community": 32,
+      "community_name": "SessionService",
       "file_type": "code",
-      "norm_label": "appmodule",
-      "source_file": "src/app.module.ts",
-      "source_location": "L64"
+      "norm_label": "otpverificationpayload",
+      "source_file": "src/auth/auth.types.ts",
+      "source_location": "L22"
     },
     {
-      "id": "src_auth_auth_error_autherrorcode",
-      "label": "AuthErrorCode",
+      "id": "src_auth_auth_types_sessiontokens",
+      "label": "SessionTokens",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
+      "community": 32,
+      "community_name": "SessionService",
       "file_type": "code",
-      "norm_label": "autherrorcode",
-      "source_file": "src/auth/auth.error.ts",
-      "source_location": "L4"
+      "norm_label": "sessiontokens",
+      "source_file": "src/auth/auth.types.ts",
+      "source_location": "L30"
     },
     {
-      "id": "src_auth_auth_guard_authenticatedrequest",
-      "label": "AuthenticatedRequest",
+      "id": "src_auth_auth_types_signupinput",
+      "label": "SignUpInput",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
+      "community": 32,
+      "community_name": "SessionService",
       "file_type": "code",
-      "norm_label": "authenticatedrequest",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L12"
+      "norm_label": "signupinput",
+      "source_file": "src/auth/auth.types.ts",
+      "source_location": "L56"
     },
     {
-      "id": "src_graphqlexception_filter_graphqlexceptionfilter",
-      "label": "GraphqlExceptionFilter",
+      "id": "src_auth_session_service_sessionservice",
+      "label": "SessionService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "sessionservice",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_common_common_module_commonmodule",
+      "label": "CommonModule",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 40,
       "community_name": "app.module.ts",
       "file_type": "code",
-      "norm_label": "graphqlexceptionfilter",
-      "source_file": "src/graphqlException.filter.ts",
+      "norm_label": "commonmodule",
+      "source_file": "src/common/common.module.ts",
       "source_location": "L14"
     },
     {
@@ -326,201 +365,6 @@
       "source_location": "L11"
     },
     {
-      "id": "src_users_users_resolver_usersresolver",
-      "label": "UsersResolver",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "usersresolver",
-      "source_file": "src/users/users.resolver.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "test_app_module_spec_mockauthmodule",
-      "label": "MockAuthModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "mockauthmodule",
-      "source_file": "test/app.module.spec.ts",
-      "source_location": "L23"
-    },
-    {
-      "id": "test_app_module_spec_mockcommonmodule",
-      "label": "MockCommonModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "mockcommonmodule",
-      "source_file": "test/app.module.spec.ts",
-      "source_location": "L21"
-    },
-    {
-      "id": "test_app_module_spec_mockconfigservice",
-      "label": "MockConfigService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "mockconfigservice",
-      "source_file": "test/app.module.spec.ts",
-      "source_location": "L19"
-    },
-    {
-      "id": "test_app_module_spec_mockpostgresqldriver",
-      "label": "MockPostgreSqlDriver",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "mockpostgresqldriver",
-      "source_file": "test/app.module.spec.ts",
-      "source_location": "L20"
-    },
-    {
-      "id": "test_app_module_spec_mockusersmodule",
-      "label": "MockUsersModule",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "mockusersmodule",
-      "source_file": "test/app.module.spec.ts",
-      "source_location": "L22"
-    },
-    {
-      "id": "test_auth_auth_e2e_spec_graphqlresponse",
-      "label": "GraphqlResponse",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "graphqlresponse",
-      "source_file": "test/auth/auth.e2e-spec.ts",
-      "source_location": "L12"
-    },
-    {
-      "id": "test_auth_auth_guard_spec_resolverclass",
-      "label": "ResolverClass",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "resolverclass",
-      "source_file": "test/auth/auth.guard.spec.ts",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_auth_auth_service_authservice",
-      "label": "AuthService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "authservice",
-      "source_file": "src/auth/auth.service.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_auth_auth_types_authpayload",
-      "label": "AuthPayload",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "authpayload",
-      "source_file": "src/auth/auth.types.ts",
-      "source_location": "L38"
-    },
-    {
-      "id": "src_auth_auth_types_logininput",
-      "label": "LoginInput",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "logininput",
-      "source_file": "src/auth/auth.types.ts",
-      "source_location": "L71"
-    },
-    {
-      "id": "src_auth_auth_types_otprequestpayload",
-      "label": "OtpRequestPayload",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "otprequestpayload",
-      "source_file": "src/auth/auth.types.ts",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_auth_auth_types_otpverificationpayload",
-      "label": "OtpVerificationPayload",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "otpverificationpayload",
-      "source_file": "src/auth/auth.types.ts",
-      "source_location": "L22"
-    },
-    {
-      "id": "src_auth_auth_types_sessiontokens",
-      "label": "SessionTokens",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "sessiontokens",
-      "source_file": "src/auth/auth.types.ts",
-      "source_location": "L30"
-    },
-    {
-      "id": "src_auth_auth_types_signupinput",
-      "label": "SignUpInput",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "signupinput",
-      "source_file": "src/auth/auth.types.ts",
-      "source_location": "L56"
-    },
-    {
       "id": "src_auth_otp_service_otpservice",
       "label": "OtpService",
       "_callable": true,
@@ -531,7 +375,7 @@
       "file_type": "code",
       "norm_label": "otpservice",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L25"
+      "source_location": "L24"
     },
     {
       "id": "src_auth_otpchallenge_entity_otpchallenge",
@@ -560,19 +404,6 @@
       "source_location": "L7"
     },
     {
-      "id": "src_auth_session_service_sessionservice",
-      "label": "SessionService",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "sessionservice",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L19"
-    },
-    {
       "id": "src_common_util_service_utilservice",
       "label": "UtilService",
       "_callable": true,
@@ -599,6 +430,19 @@
       "source_location": "L7"
     },
     {
+      "id": "src_users_users_resolver_usersresolver",
+      "label": "UsersResolver",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "usersresolver",
+      "source_file": "src/users/users.resolver.ts",
+      "source_location": "L10"
+    },
+    {
       "id": "src_users_users_service_usersservice",
       "label": "UsersService",
       "_callable": true,
@@ -612,17 +456,173 @@
       "source_location": "L7"
     },
     {
-      "id": "src_auth_auth_guard_authguard",
-      "label": "AuthGuard",
+      "id": "src_common_common_resolver_commonresolver",
+      "label": "CommonResolver",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "commonresolver",
+      "source_file": "src/common/common.resolver.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_common_common_service_commonservice",
+      "label": "CommonService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "commonservice",
+      "source_file": "src/common/common.service.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_auth_auth_error_autherrorcode",
+      "label": "AuthErrorCode",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "authError",
+      "file_type": "code",
+      "norm_label": "autherrorcode",
+      "source_file": "src/auth/auth.error.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_graphqlexception_filter_graphqlexceptionfilter",
+      "label": "GraphqlExceptionFilter",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "authError",
+      "file_type": "code",
+      "norm_label": "graphqlexceptionfilter",
+      "source_file": "src/graphqlException.filter.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_app_module_appmodule",
+      "label": "AppModule",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 50,
-      "community_name": "Task 6: Global Access Guard and `currentUser`",
+      "community_name": "auth.e2e-spec.ts",
       "file_type": "code",
-      "norm_label": "authguard",
+      "norm_label": "appmodule",
+      "source_file": "src/app.module.ts",
+      "source_location": "L64"
+    },
+    {
+      "id": "test_auth_auth_e2e_spec_graphqlresponse",
+      "label": "GraphqlResponse",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "graphqlresponse",
+      "source_file": "test/auth/auth.e2e-spec.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_auth_auth_guard_authenticatedrequest",
+      "label": "AuthenticatedRequest",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "auth.guard.ts",
+      "file_type": "code",
+      "norm_label": "authenticatedrequest",
       "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L15"
+      "source_location": "L12"
+    },
+    {
+      "id": "test_auth_auth_guard_spec_resolverclass",
+      "label": "ResolverClass",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "auth.guard.ts",
+      "file_type": "code",
+      "norm_label": "resolverclass",
+      "source_file": "test/auth/auth.guard.spec.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "test_app_module_spec_mockauthmodule",
+      "label": "MockAuthModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "app.module.spec.ts",
+      "file_type": "code",
+      "norm_label": "mockauthmodule",
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L23"
+    },
+    {
+      "id": "test_app_module_spec_mockcommonmodule",
+      "label": "MockCommonModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "app.module.spec.ts",
+      "file_type": "code",
+      "norm_label": "mockcommonmodule",
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L21"
+    },
+    {
+      "id": "test_app_module_spec_mockconfigservice",
+      "label": "MockConfigService",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "app.module.spec.ts",
+      "file_type": "code",
+      "norm_label": "mockconfigservice",
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L19"
+    },
+    {
+      "id": "test_app_module_spec_mockpostgresqldriver",
+      "label": "MockPostgreSqlDriver",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "app.module.spec.ts",
+      "file_type": "code",
+      "norm_label": "mockpostgresqldriver",
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L20"
+    },
+    {
+      "id": "test_app_module_spec_mockusersmodule",
+      "label": "MockUsersModule",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 53,
+      "community_name": "app.module.spec.ts",
+      "file_type": "code",
+      "norm_label": "mockusersmodule",
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L22"
     },
     {
       "id": "agents_skills_caveman_compress_scripts_compress_locktimeouterror",
@@ -722,43 +722,55 @@
       "source_location": "L123"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_login",
-      "label": ".login()",
+      "id": "src_auth_auth_guard_authguard_canactivate",
+      "label": ".canActivate()",
       "_callable": true,
       "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
+      "community": 10,
+      "community_name": ".currentUser",
       "file_type": "code",
-      "norm_label": ".login()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L43"
+      "norm_label": ".canactivate()",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L21"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_logout",
-      "label": ".logout()",
+      "id": "src_auth_auth_guard_authguard_constructor",
+      "label": ".constructor()",
       "_callable": true,
       "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
+      "community": 10,
+      "community_name": ".currentUser",
       "file_type": "code",
-      "norm_label": ".logout()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L55"
+      "norm_label": ".constructor()",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L16"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_refreshsession",
-      "label": ".refreshSession()",
+      "id": "src_auth_auth_guard_authguard_unauthenticated",
+      "label": ".unauthenticated()",
       "_callable": true,
       "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
+      "community": 10,
+      "community_name": ".currentUser",
       "file_type": "code",
-      "norm_label": ".refreshsession()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L49"
+      "norm_label": ".unauthenticated()",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L47"
     },
     {
-      "id": "src_auth_auth_resolver_authresolver_sendsignupotp",
+      "id": "src_users_users_resolver_usersresolver_currentuser",
+      "label": ".currentUser()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "code",
+      "norm_label": ".currentuser()",
+      "source_file": "src/users/users.resolver.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_auth_otp_service_otpservice_sendsignupotp",
       "label": ".sendSignupOtp()",
       "_callable": true,
       "_origin": "ast",
@@ -766,80 +778,8 @@
       "community_name": "SmsService",
       "file_type": "code",
       "norm_label": ".sendsignupotp()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_auth_auth_resolver_authresolver_signup",
-      "label": ".signUp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": ".signup()",
-      "source_file": "src/auth/auth.resolver.ts",
+      "source_file": "src/auth/otp.service.ts",
       "source_location": "L37"
-    },
-    {
-      "id": "src_auth_auth_resolver_authresolver_verifysignupotp",
-      "label": ".verifySignupOtp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": ".verifysignupotp()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L31"
-    },
-    {
-      "id": "src_auth_public_decorator_public",
-      "label": "Public()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "public()",
-      "source_file": "src/auth/public.decorator.ts",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_common_common_resolver_commonresolver_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/common/common.resolver.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_common_common_resolver_commonresolver_healthcheck",
-      "label": ".healthCheck()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": ".healthcheck()",
-      "source_file": "src/common/common.resolver.ts",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_common_common_service_commonservice_healthcheck",
-      "label": ".healthCheck()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": ".healthcheck()",
-      "source_file": "src/common/common.service.ts",
-      "source_location": "L5"
     },
     {
       "id": "src_common_sms_service_smsservice_constructor",
@@ -876,6 +816,30 @@
       "norm_label": ".sendotp()",
       "source_file": "src/common/sms.service.ts",
       "source_location": "L43"
+    },
+    {
+      "id": "src_common_util_service_utilservice_getotp",
+      "label": ".getOtp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "SmsService",
+      "file_type": "code",
+      "norm_label": ".getotp()",
+      "source_file": "src/common/util.service.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_common_util_service_utilservice_normalizephone",
+      "label": ".normalizePhone()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "SmsService",
+      "file_type": "code",
+      "norm_label": ".normalizephone()",
+      "source_file": "src/common/util.service.ts",
+      "source_location": "L6"
     },
     {
       "id": "agents_skills_caveman_explore_tests_skill_file_test_frontmatter",
@@ -1202,6 +1166,246 @@
       "source_location": "L44"
     },
     {
+      "id": "src_auth_auth_resolver_authresolver_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_login",
+      "label": ".login()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".login()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_logout",
+      "label": ".logout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".logout()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L55"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_refreshsession",
+      "label": ".refreshSession()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".refreshsession()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L49"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_sendsignupotp",
+      "label": ".sendSignupOtp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".sendsignupotp()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_signup",
+      "label": ".signUp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".signup()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L37"
+    },
+    {
+      "id": "src_auth_auth_resolver_authresolver_verifysignupotp",
+      "label": ".verifySignupOtp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".verifysignupotp()",
+      "source_file": "src/auth/auth.resolver.ts",
+      "source_location": "L31"
+    },
+    {
+      "id": "src_auth_auth_service_authservice_isuserphoneuniqueviolation",
+      "label": ".isUserPhoneUniqueViolation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".isuserphoneuniqueviolation()",
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L102"
+    },
+    {
+      "id": "src_auth_auth_service_authservice_login",
+      "label": ".login()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".login()",
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L67"
+    },
+    {
+      "id": "src_auth_auth_service_authservice_phonealreadyregistered",
+      "label": ".phoneAlreadyRegistered()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".phonealreadyregistered()",
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L94"
+    },
+    {
+      "id": "src_auth_auth_service_authservice_signup",
+      "label": ".signUp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".signup()",
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_auth_public_decorator_public",
+      "label": "Public()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "public()",
+      "source_file": "src/auth/public.decorator.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_auth_session_service_sessionservice_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L20"
+    },
+    {
+      "id": "src_auth_session_service_sessionservice_logout",
+      "label": ".logout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".logout()",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L89"
+    },
+    {
+      "id": "src_auth_session_service_sessionservice_parserefreshtoken",
+      "label": ".parseRefreshToken()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".parserefreshtoken()",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L135"
+    },
+    {
+      "id": "src_auth_session_service_sessionservice_refresh",
+      "label": ".refresh()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".refresh()",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L54"
+    },
+    {
+      "id": "src_auth_session_service_sessionservice_signaccesstoken",
+      "label": ".signAccessToken()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".signaccesstoken()",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L123"
+    },
+    {
+      "id": "src_auth_session_service_sessionservice_start",
+      "label": ".start()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".start()",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_auth_session_service_sessionservice_unauthenticated",
+      "label": ".unauthenticated()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".unauthenticated()",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L147"
+    },
+    {
+      "id": "src_auth_session_service_sessionservice_verifyaccesstoken",
+      "label": ".verifyAccessToken()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": ".verifyaccesstoken()",
+      "source_file": "src/auth/session.service.ts",
+      "source_location": "L109"
+    },
+    {
       "id": "agents_skills_caveman_compress_scripts_compress_backup_dir_for",
       "label": "backup_dir_for()",
       "_callable": true,
@@ -1406,30 +1610,6 @@
       "source_location": "L49"
     },
     {
-      "id": "src_graphqlexception_filter_graphqlexceptionfilter_catch",
-      "label": ".catch()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": ".catch()",
-      "source_file": "src/graphqlException.filter.ts",
-      "source_location": "L18"
-    },
-    {
-      "id": "src_main_bootstrap",
-      "label": "bootstrap()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "bootstrap()",
-      "source_file": "src/main.ts",
-      "source_location": "L4"
-    },
-    {
       "id": "src_mikro_orm_options_createmikroormoptions",
       "label": "createMikroOrmOptions()",
       "_callable": true,
@@ -1502,30 +1682,6 @@
       "source_location": "L8"
     },
     {
-      "id": "src_auth_auth_error_autherror",
-      "label": "authError()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "autherror()",
-      "source_file": "src/auth/auth.error.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "src_auth_auth_resolver_authresolver_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L17"
-    },
-    {
       "id": "src_auth_auth_service_authservice_constructor",
       "label": ".constructor()",
       "_callable": true,
@@ -1538,54 +1694,6 @@
       "source_location": "L17"
     },
     {
-      "id": "src_auth_auth_service_authservice_isuserphoneuniqueviolation",
-      "label": ".isUserPhoneUniqueViolation()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".isuserphoneuniqueviolation()",
-      "source_file": "src/auth/auth.service.ts",
-      "source_location": "L101"
-    },
-    {
-      "id": "src_auth_auth_service_authservice_login",
-      "label": ".login()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".login()",
-      "source_file": "src/auth/auth.service.ts",
-      "source_location": "L66"
-    },
-    {
-      "id": "src_auth_auth_service_authservice_phonealreadyregistered",
-      "label": ".phoneAlreadyRegistered()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".phonealreadyregistered()",
-      "source_file": "src/auth/auth.service.ts",
-      "source_location": "L93"
-    },
-    {
-      "id": "src_auth_auth_service_authservice_signup",
-      "label": ".signUp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".signup()",
-      "source_file": "src/auth/auth.service.ts",
-      "source_location": "L24"
-    },
-    {
       "id": "src_auth_otp_service_otpservice_constructor",
       "label": ".constructor()",
       "_callable": true,
@@ -1595,7 +1703,7 @@
       "file_type": "code",
       "norm_label": ".constructor()",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L28"
+      "source_location": "L27"
     },
     {
       "id": "src_auth_otp_service_otpservice_consumeverificationtoken",
@@ -1607,7 +1715,7 @@
       "file_type": "code",
       "norm_label": ".consumeverificationtoken()",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L174"
+      "source_location": "L173"
     },
     {
       "id": "src_auth_otp_service_otpservice_invalidotp",
@@ -1619,7 +1727,7 @@
       "file_type": "code",
       "norm_label": ".invalidotp()",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L203"
+      "source_location": "L202"
     },
     {
       "id": "src_auth_otp_service_otpservice_invalidverificationtoken",
@@ -1631,19 +1739,7 @@
       "file_type": "code",
       "norm_label": ".invalidverificationtoken()",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L207"
-    },
-    {
-      "id": "src_auth_otp_service_otpservice_sendsignupotp",
-      "label": ".sendSignupOtp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".sendsignupotp()",
-      "source_file": "src/auth/otp.service.ts",
-      "source_location": "L38"
+      "source_location": "L206"
     },
     {
       "id": "src_auth_otp_service_otpservice_verifysignupotp",
@@ -1655,127 +1751,7 @@
       "file_type": "code",
       "norm_label": ".verifysignupotp()",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L123"
-    },
-    {
-      "id": "src_auth_session_service_sessionservice_constructor",
-      "label": ".constructor()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L20"
-    },
-    {
-      "id": "src_auth_session_service_sessionservice_logout",
-      "label": ".logout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".logout()",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L89"
-    },
-    {
-      "id": "src_auth_session_service_sessionservice_parserefreshtoken",
-      "label": ".parseRefreshToken()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".parserefreshtoken()",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L135"
-    },
-    {
-      "id": "src_auth_session_service_sessionservice_refresh",
-      "label": ".refresh()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".refresh()",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L54"
-    },
-    {
-      "id": "src_auth_session_service_sessionservice_signaccesstoken",
-      "label": ".signAccessToken()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".signaccesstoken()",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L123"
-    },
-    {
-      "id": "src_auth_session_service_sessionservice_start",
-      "label": ".start()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".start()",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L25"
-    },
-    {
-      "id": "src_auth_session_service_sessionservice_unauthenticated",
-      "label": ".unauthenticated()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".unauthenticated()",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L147"
-    },
-    {
-      "id": "src_auth_session_service_sessionservice_verifyaccesstoken",
-      "label": ".verifyAccessToken()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".verifyaccesstoken()",
-      "source_file": "src/auth/session.service.ts",
-      "source_location": "L109"
-    },
-    {
-      "id": "src_common_util_service_utilservice_getotp",
-      "label": ".getOtp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": ".getotp()",
-      "source_file": "src/common/util.service.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_users_phone_normalizephone",
-      "label": "normalizePhone()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "normalizephone()",
-      "source_file": "src/users/phone.ts",
-      "source_location": "L3"
+      "source_location": "L122"
     },
     {
       "id": "src_users_users_resolver_usersresolver_constructor",
@@ -1850,6 +1826,42 @@
       "source_location": "L10"
     },
     {
+      "id": "src_common_common_resolver_commonresolver_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "src/common/common.resolver.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_common_common_resolver_commonresolver_healthcheck",
+      "label": ".healthCheck()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": ".healthcheck()",
+      "source_file": "src/common/common.resolver.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_common_common_service_commonservice_healthcheck",
+      "label": ".healthCheck()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": ".healthcheck()",
+      "source_file": "src/common/common.service.ts",
+      "source_location": "L5"
+    },
+    {
       "id": "agents_skills_caveman_compress_scripts_compress_write_bytes_atomic",
       "label": "write_bytes_atomic()",
       "_callable": true,
@@ -1886,52 +1898,40 @@
       "source_location": "L254"
     },
     {
-      "id": "src_users_users_resolver_usersresolver_currentuser",
-      "label": ".currentUser()",
+      "id": "src_auth_auth_error_autherror",
+      "label": "authError()",
       "_callable": true,
       "_origin": "ast",
       "community": 49,
-      "community_name": ".currentUser",
+      "community_name": "authError",
       "file_type": "code",
-      "norm_label": ".currentuser()",
-      "source_file": "src/users/users.resolver.ts",
-      "source_location": "L14"
+      "norm_label": "autherror()",
+      "source_file": "src/auth/auth.error.ts",
+      "source_location": "L10"
     },
     {
-      "id": "src_auth_auth_guard_authguard_canactivate",
-      "label": ".canActivate()",
+      "id": "src_graphqlexception_filter_graphqlexceptionfilter_catch",
+      "label": ".catch()",
       "_callable": true,
       "_origin": "ast",
-      "community": 50,
-      "community_name": "Task 6: Global Access Guard and `currentUser`",
+      "community": 49,
+      "community_name": "authError",
       "file_type": "code",
-      "norm_label": ".canactivate()",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L21"
+      "norm_label": ".catch()",
+      "source_file": "src/graphqlException.filter.ts",
+      "source_location": "L18"
     },
     {
-      "id": "src_auth_auth_guard_authguard_constructor",
-      "label": ".constructor()",
+      "id": "src_main_bootstrap",
+      "label": "bootstrap()",
       "_callable": true,
       "_origin": "ast",
-      "community": 50,
-      "community_name": "Task 6: Global Access Guard and `currentUser`",
+      "community": 52,
+      "community_name": "auth.guard.ts",
       "file_type": "code",
-      "norm_label": ".constructor()",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_auth_auth_guard_authguard_unauthenticated",
-      "label": ".unauthenticated()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 50,
-      "community_name": "Task 6: Global Access Guard and `currentUser`",
-      "file_type": "code",
-      "norm_label": ".unauthenticated()",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L47"
+      "norm_label": "bootstrap()",
+      "source_file": "src/main.ts",
+      "source_location": "L4"
     },
     {
       "id": "graphify_out_memory_query_20260920_075947_5891a5f6_postgresql\uacfc_mikro_orm_\uc5f0\uacb0\ud588\ub294\ub370_\uc9c4\ud589\uc774_\uc548\ub418\ub294_\uc774\uc720\ub294_\ubb50\uc57c",
@@ -2123,11 +2123,138 @@
       "source_location": "L78"
     },
     {
+      "id": "context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "code",
+      "norm_label": "context",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_auth_auth_guard_ts_injectable",
+      "label": "Injectable",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "code",
+      "norm_label": "injectable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_auth_auth_module_ts_module",
+      "label": "Module",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "code",
+      "norm_label": "module",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_users_users_module_ts_module",
+      "label": "Module",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "code",
+      "norm_label": "module",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_users_users_resolver_ts_query",
+      "label": "Query",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "code",
+      "norm_label": "query",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api",
+      "label": "2026-09-19-consumer-auth-api.md",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-19-consumer-auth-api.md",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_consumer_authentication_api_implementation_plan",
+      "label": "Consumer Authentication API Implementation Plan",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "consumer authentication api implementation plan",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_file_map",
+      "label": "File Map",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "file map",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_global_constraints",
+      "label": "Global Constraints",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "global constraints",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_prerequisite_contract",
+      "label": "Prerequisite Contract",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "prerequisite contract",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_6_global_access_guard_and_currentuser",
+      "label": "Task 6: Global Access Guard and `currentUser`",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 6: global access guard and `currentuser`",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L774"
+    },
+    {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design",
       "label": "2026-09-19-consumer-auth-api-design.md",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "2026-09-19-consumer-auth-api-design.md",
@@ -2135,11 +2262,35 @@
       "source_location": "L1"
     },
     {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_api_\uc778\uc99d",
+      "label": "API \uc778\uc99d",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "api \u110b\u1175\u11ab\u110c\u1173\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L221"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_authmodule",
+      "label": "AuthModule",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "authmodule",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L43"
+    },
+    {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_consumer_\uc778\uc99d_api_\uc124\uacc4",
       "label": "Consumer \uc778\uc99d API \uc124\uacc4",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "consumer \u110b\u1175\u11ab\u110c\u1173\u11bc api \u1109\u1165\u11af\u1100\u1168",
@@ -2147,11 +2298,59 @@
       "source_location": "L1"
     },
     {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_e2e_\ud14c\uc2a4\ud2b8",
+      "label": "GraphQL E2E \ud14c\uc2a4\ud2b8",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "graphql e2e \u1110\u1166\u1109\u1173\u1110\u1173",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L310"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_\uacc4\uc57d",
+      "label": "GraphQL \uacc4\uc57d",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "graphql \u1100\u1168\u110b\u1163\u11a8",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uac80\uc99d",
+      "label": "OTP \uac80\uc99d",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "otp \u1100\u1165\u11b7\u110c\u1173\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L197"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uc694\uccad",
+      "label": "OTP \uc694\uccad",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "otp \u110b\u116d\u110e\u1165\u11bc",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L183"
+    },
+    {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uc815\ucc45",
       "label": "OTP \uc815\ucc45",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "otp \u110c\u1165\u11bc\u110e\u1162\u11a8",
@@ -2163,7 +2362,7 @@
       "label": "OtpChallenge",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "otpchallenge",
@@ -2171,11 +2370,23 @@
       "source_location": "L138"
     },
     {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_postgresql_\ud1b5\ud569_\ud14c\uc2a4\ud2b8",
+      "label": "PostgreSQL \ud1b5\ud569 \ud14c\uc2a4\ud2b8",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "postgresql \u1110\u1169\u11bc\u1112\u1161\u11b8 \u1110\u1166\u1109\u1173\u1110\u1173",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L302"
+    },
+    {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_refreshsession",
       "label": "RefreshSession",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "refreshsession",
@@ -2183,11 +2394,23 @@
       "source_location": "L160"
     },
     {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_token_refresh",
+      "label": "Token refresh",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "token refresh",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L233"
+    },
+    {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_user",
       "label": "User",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "user",
@@ -2195,11 +2418,59 @@
       "source_location": "L125"
     },
     {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_usersmodule",
+      "label": "UsersModule",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "usersmodule",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uacf5\uac1c_mutation",
+      "label": "\uacf5\uac1c Mutation",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1100\u1169\u11bc\u1100\u1162 mutation",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L60"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub2e8\uc704_\ud14c\uc2a4\ud2b8",
+      "label": "\ub2e8\uc704 \ud14c\uc2a4\ud2b8",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1103\u1161\u11ab\u110b\u1171 \u1110\u1166\u1109\u1173\u1110\u1173",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L290"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub2e8\uc77c_\uae30\uae30_\ub85c\uadf8\uc778",
+      "label": "\ub2e8\uc77c \uae30\uae30 \ub85c\uadf8\uc778",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1103\u1161\u11ab\u110b\u1175\u11af \u1100\u1175\u1100\u1175 \u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L242"
+    },
+    {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub370\uc774\ud130_\ubaa8\ub378",
       "label": "\ub370\uc774\ud130 \ubaa8\ub378",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u1103\u1166\u110b\u1175\u1110\u1165 \u1106\u1169\u1103\u1166\u11af",
@@ -2207,11 +2478,47 @@
       "source_location": "L123"
     },
     {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub85c\uadf8\uc778",
+      "label": "\ub85c\uadf8\uc778",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L214"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa8\ub4c8_\uad6c\uc870",
+      "label": "\ubaa8\ub4c8 \uad6c\uc870",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1106\u1169\u1103\u1172\u11af \u1100\u116e\u110c\u1169",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L30"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa9\ud45c",
+      "label": "\ubaa9\ud45c",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1106\u1169\u11a8\u1111\u116d",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L9"
+    },
+    {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubc30\uacbd",
       "label": "\ubc30\uacbd",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u1107\u1162\u1100\u1167\u11bc",
@@ -2223,7 +2530,7 @@
       "label": "\uc624\ub958 \uacc4\uc57d",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u110b\u1169\u1105\u1172 \u1100\u1168\u110b\u1163\u11a8",
@@ -2231,11 +2538,47 @@
       "source_location": "L268"
     },
     {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc644\ub8cc_\uc870\uac74",
+      "label": "\uc644\ub8cc \uc870\uac74",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u116a\u11ab\u1105\u116d \u110c\u1169\u1100\u1165\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L318"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud544\uc694_query",
+      "label": "\uc778\uc99d \ud544\uc694 Query",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u1175\u11ab\u110c\u1173\u11bc \u1111\u1175\u11af\u110b\u116d query",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
+      "label": "\uc778\uc99d \ud750\ub984",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110b\u1175\u11ab\u110c\u1173\u11bc \u1112\u1173\u1105\u1173\u11b7",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L181"
+    },
+    {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc785\ub825_\uac80\uc99d",
       "label": "\uc785\ub825 \uac80\uc99d",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u110b\u1175\u11b8\u1105\u1167\u11a8 \u1100\u1165\u11b7\u110c\u1173\u11bc",
@@ -2247,12 +2590,48 @@
       "label": "\uc81c\uc678 \ubc94\uc704",
       "_origin": "ast",
       "community": 10,
-      "community_name": "Consumer \uc778\uc99d API \uc124\uacc4",
+      "community_name": ".currentUser",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u110c\u1166\u110b\u116c \u1107\u1165\u11b7\u110b\u1171",
       "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
       "source_location": "L19"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc8fc\uc694_\uc785\ub825\uacfc_\uc751\ub2f5",
+      "label": "\uc8fc\uc694 \uc785\ub825\uacfc \uc751\ub2f5",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u110c\u116e\u110b\u116d \u110b\u1175\u11b8\u1105\u1167\u11a8\u1100\u116a \u110b\u1173\u11bc\u1103\u1161\u11b8",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud14c\uc2a4\ud2b8_\uc804\ub7b5",
+      "label": "\ud14c\uc2a4\ud2b8 \uc804\ub7b5",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1110\u1166\u1109\u1173\u1110\u1173 \u110c\u1165\u11ab\u1105\u1163\u11a8",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L288"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud68c\uc6d0\uac00\uc785\uacfc_\uc790\ub3d9_\ub85c\uadf8\uc778",
+      "label": "\ud68c\uc6d0\uac00\uc785\uacfc \uc790\ub3d9 \ub85c\uadf8\uc778",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": ".currentUser",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u1112\u116c\u110b\u116f\u11ab\u1100\u1161\u110b\u1175\u11b8\u1100\u116a \u110c\u1161\u1103\u1169\u11bc \u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "source_location": "L205"
     },
     {
       "id": "package_scripts",
@@ -2629,127 +3008,6 @@
       "source_location": "L3"
     },
     {
-      "id": "args",
-      "label": "Args",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "args",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "mutation",
-      "label": "Mutation",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "mutation",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_auth_auth_resolver_ts_resolver",
-      "label": "Resolver",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "resolver",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_common_common_module",
-      "label": "common.module.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "common.module.ts",
-      "source_file": "src/common/common.module.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_common_common_module_ts_module",
-      "label": "Module",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "module",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_common_common_resolver",
-      "label": "common.resolver.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "common.resolver.ts",
-      "source_file": "src/common/common.resolver.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_common_common_resolver_ts_query",
-      "label": "Query",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "query",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_common_common_resolver_ts_resolver",
-      "label": "Resolver",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "resolver",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_common_common_service",
-      "label": "common.service.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "common.service.ts",
-      "source_file": "src/common/common.service.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_common_common_service_ts_injectable",
-      "label": "Injectable",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "injectable",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_common_sms_service",
-      "label": "sms.service.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "sms.service.ts",
-      "source_file": "src/common/sms.service.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "src_common_sms_service_ts_injectable",
       "label": "Injectable",
       "_origin": "ast",
@@ -2759,28 +3017,6 @@
       "norm_label": "injectable",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "test_common_sms_service_spec",
-      "label": "sms.service.spec.ts",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "code",
-      "norm_label": "sms.service.spec.ts",
-      "source_file": "test/common/sms.service.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_nestjs_axios",
-      "label": "@nestjs/axios",
-      "_origin": "ast",
-      "community": 18,
-      "community_name": "SmsService",
-      "file_type": "concept",
-      "norm_label": "@nestjs/axios",
-      "source_file": "package.json",
-      "source_location": "L30"
     },
     {
       "id": "docs_superpowers_plans_2026_09_15_safe_logging_secure_otp",
@@ -2891,16 +3127,64 @@
       "source_location": "L560"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_7_authentication_graphql_module_and_resolver",
-      "label": "Task 7: Authentication GraphQL Module and Resolver",
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
+      "label": "Review Focus",
       "_origin": "ast",
       "community": 18,
       "community_name": "SmsService",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "task 7: authentication graphql module and resolver",
+      "norm_label": "review focus",
       "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L879"
+      "source_location": "L67"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_0_verify_the_database_foundation",
+      "label": "Task 0: Verify the Database Foundation",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "SmsService",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 0: verify the database foundation",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_10_final_verification_and_knowledge_graph_update",
+      "label": "Task 10: Final Verification and Knowledge Graph Update",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "SmsService",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 10: final verification and knowledge graph update",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L1109"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_3_otp_challenge_lifecycle",
+      "label": "Task 3: OTP Challenge Lifecycle",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "SmsService",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: otp challenge lifecycle",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L368"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_8_postgresql_integration_proof",
+      "label": "Task 8: PostgreSQL Integration Proof",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "SmsService",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 8: postgresql integration proof",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L991"
     },
     {
       "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_9_full_graphql_authentication_journey_and_leakage_regression",
@@ -3155,17 +3439,6 @@
       "norm_label": "prettier",
       "source_file": "package.json",
       "source_location": "L61"
-    },
-    {
-      "id": "ref_reflect_metadata",
-      "label": "reflect-metadata",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "package.json",
-      "file_type": "concept",
-      "norm_label": "reflect-metadata",
-      "source_file": "package.json",
-      "source_location": "L43"
     },
     {
       "id": "ref_rxjs",
@@ -3973,110 +4246,193 @@
       "source_location": "L112"
     },
     {
-      "id": "src_auth_auth_module_ts_module",
-      "label": "Module",
+      "id": "args",
+      "label": "Args",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
+      "community_name": "SessionService",
       "file_type": "code",
-      "norm_label": "module",
+      "norm_label": "args",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_users_users_module_ts_module",
-      "label": "Module",
+      "id": "inputtype",
+      "label": "InputType",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
+      "community_name": "SessionService",
       "file_type": "code",
-      "norm_label": "module",
+      "norm_label": "inputtype",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api",
-      "label": "2026-09-19-consumer-auth-api.md",
+      "id": "isstring",
+      "label": "IsString",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "2026-09-19-consumer-auth-api.md",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "isstring",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "mutation",
+      "label": "Mutation",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "mutation",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_auth_auth_resolver",
+      "label": "auth.resolver.ts",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "auth.resolver.ts",
+      "source_file": "src/auth/auth.resolver.ts",
       "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_consumer_authentication_api_implementation_plan",
-      "label": "Consumer Authentication API Implementation Plan",
+      "id": "src_auth_auth_resolver_ts_resolver",
+      "label": "Resolver",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "consumer authentication api implementation plan",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "resolver",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_auth_auth_service_ts_injectable",
+      "label": "Injectable",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "injectable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_auth_auth_types",
+      "label": "auth.types.ts",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "auth.types.ts",
+      "source_file": "src/auth/auth.types.ts",
       "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_file_map",
-      "label": "File Map",
+      "id": "src_auth_auth_types_ts_field",
+      "label": "Field",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "file map",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L41"
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "field",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_prerequisite_contract",
-      "label": "Prerequisite Contract",
+      "id": "src_auth_auth_types_ts_objecttype",
+      "label": "ObjectType",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "prerequisite contract",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L30"
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "objecttype",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_authmodule",
-      "label": "AuthModule",
+      "id": "src_auth_public_decorator",
+      "label": "public.decorator.ts",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "authmodule",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "public.decorator.ts",
+      "source_file": "src/auth/public.decorator.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_auth_public_decorator_is_public_key",
+      "label": "IS_PUBLIC_KEY",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "is_public_key",
+      "source_file": "src/auth/public.decorator.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_auth_session_service_ts_injectable",
+      "label": "Injectable",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "injectable",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "test_auth_auth_resolver_spec",
+      "label": "auth.resolver.spec.ts",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "code",
+      "norm_label": "auth.resolver.spec.ts",
+      "source_file": "test/auth/auth.resolver.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_reflect_metadata",
+      "label": "reflect-metadata",
+      "_origin": "ast",
+      "community": 32,
+      "community_name": "SessionService",
+      "file_type": "concept",
+      "norm_label": "reflect-metadata",
+      "source_file": "package.json",
       "source_location": "L43"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_usersmodule",
-      "label": "UsersModule",
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_4_stateless_access_tokens_and_rotating_refresh_sessions",
+      "label": "Task 4: Stateless Access Tokens and Rotating Refresh Sessions",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
+      "community_name": "SessionService",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "usersmodule",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L32"
+      "norm_label": "task 4: stateless access tokens and rotating refresh sessions",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L512"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa8\ub4c8_\uad6c\uc870",
-      "label": "\ubaa8\ub4c8 \uad6c\uc870",
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_7_authentication_graphql_module_and_resolver",
+      "label": "Task 7: Authentication GraphQL Module and Resolver",
       "_origin": "ast",
       "community": 32,
-      "community_name": "UsersModule",
+      "community_name": "SessionService",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\u1106\u1169\u1103\u1172\u11af \u1100\u116e\u110c\u1169",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L30"
+      "norm_label": "task 7: authentication graphql module and resolver",
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "source_location": "L879"
     },
     {
       "id": "agents_skills_caveman_compress_scripts_compress_py_path",
@@ -4177,18 +4533,6 @@
       "norm_label": "2026-09-19-postgresql-mikroorm-foundation-design.md",
       "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
       "source_location": "L1"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_integration_test",
-      "label": "Integration test",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "PostgreSQL\u00b7MikroORM \uae30\ubc18 \uc124\uacc4",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "integration test",
-      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
-      "source_location": "L57"
     },
     {
       "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_\uae30\ubc18_\uc124\uacc4",
@@ -4652,17 +4996,6 @@
       "source_location": "L618"
     },
     {
-      "id": "catch",
-      "label": "Catch",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "catch",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_app_module",
       "label": "app.module.ts",
       "_origin": "ast",
@@ -4674,7 +5007,7 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_module_ts_module",
+      "id": "src_common_common_module_ts_module",
       "label": "Module",
       "_origin": "ast",
       "community": 40,
@@ -4683,72 +5016,6 @@
       "norm_label": "module",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "src_auth_auth_error",
-      "label": "auth.error.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "auth.error.ts",
-      "source_file": "src/auth/auth.error.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_auth_guard",
-      "label": "auth.guard.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "auth.guard.ts",
-      "source_file": "src/auth/auth.guard.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_public_decorator",
-      "label": "public.decorator.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "public.decorator.ts",
-      "source_file": "src/auth/public.decorator.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_public_decorator_is_public_key",
-      "label": "IS_PUBLIC_KEY",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "is_public_key",
-      "source_file": "src/auth/public.decorator.ts",
-      "source_location": "L3"
-    },
-    {
-      "id": "src_graphqlexception_filter",
-      "label": "graphqlException.filter.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "graphqlexception.filter.ts",
-      "source_file": "src/graphqlException.filter.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_main",
-      "label": "main.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "main.ts",
-      "source_file": "src/main.ts",
-      "source_location": "L1"
     },
     {
       "id": "src_mikro_orm_options",
@@ -4773,116 +5040,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_users_user_schema_userschema",
-      "label": "UserSchema",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "userschema",
-      "source_file": "src/users/user.schema.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_users_users_module",
-      "label": "users.module.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "users.module.ts",
-      "source_file": "src/users/users.module.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_users_users_resolver",
-      "label": "users.resolver.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "users.resolver.ts",
-      "source_file": "src/users/users.resolver.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_users_users_resolver_ts_resolver",
-      "label": "Resolver",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "resolver",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "test_app_e2e_spec",
-      "label": "app.e2e-spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "app.e2e-spec.ts",
-      "source_file": "test/app.e2e-spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_app_module_spec",
-      "label": "app.module.spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "app.module.spec.ts",
-      "source_file": "test/app.module.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_auth_auth_e2e_spec",
-      "label": "auth.e2e-spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "auth.e2e-spec.ts",
-      "source_file": "test/auth/auth.e2e-spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_auth_auth_error_spec",
-      "label": "auth.error.spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "auth.error.spec.ts",
-      "source_file": "test/auth/auth.error.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_auth_auth_guard_spec",
-      "label": "auth.guard.spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "auth.guard.spec.ts",
-      "source_file": "test/auth/auth.guard.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_database_database_integration_spec",
-      "label": "database.integration-spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "database.integration-spec.ts",
-      "source_file": "test/database/database.integration-spec.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "test_database_mikro_orm_options_spec",
       "label": "mikro-orm.options.spec.ts",
       "_origin": "ast",
@@ -4892,117 +5049,6 @@
       "norm_label": "mikro-orm.options.spec.ts",
       "source_file": "test/database/mikro-orm.options.spec.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "test_graphqlexception_filter_spec",
-      "label": "graphqlException.filter.spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "graphqlexception.filter.spec.ts",
-      "source_file": "test/graphqlException.filter.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_users_users_resolver_spec",
-      "label": "users.resolver.spec.ts",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "code",
-      "norm_label": "users.resolver.spec.ts",
-      "source_file": "test/users/users.resolver.spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "ref_graphql",
-      "label": "graphql",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "graphql",
-      "source_file": "package.json",
-      "source_location": "L42"
-    },
-    {
-      "id": "ref_mikro_orm_nestjs",
-      "label": "@mikro-orm/nestjs",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "@mikro-orm/nestjs",
-      "source_file": "package.json",
-      "source_location": "L27"
-    },
-    {
-      "id": "ref_nestjs_common",
-      "label": "@nestjs/common",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "@nestjs/common",
-      "source_file": "package.json",
-      "source_location": "L31"
-    },
-    {
-      "id": "ref_nestjs_core",
-      "label": "@nestjs/core",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "@nestjs/core",
-      "source_file": "package.json",
-      "source_location": "L33"
-    },
-    {
-      "id": "ref_nestjs_graphql",
-      "label": "@nestjs/graphql",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "@nestjs/graphql",
-      "source_file": "package.json",
-      "source_location": "L34"
-    },
-    {
-      "id": "ref_nestjs_testing",
-      "label": "@nestjs/testing",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "@nestjs/testing",
-      "source_file": "package.json",
-      "source_location": "L51"
-    },
-    {
-      "id": "ref_supertest",
-      "label": "supertest",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "concept",
-      "norm_label": "supertest",
-      "source_file": "package.json",
-      "source_location": "L63"
-    },
-    {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_1_stable_graphql_error_and_validation_contract",
-      "label": "Task 1: Stable GraphQL Error and Validation Contract",
-      "_origin": "ast",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "task 1: stable graphql error and validation contract",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L107"
     },
     {
       "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubcf4\uc548\uacfc_\ub85c\uae45",
@@ -5193,28 +5239,6 @@
       "source_location": "L80"
     },
     {
-      "id": "inputtype",
-      "label": "InputType",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "inputtype",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "isstring",
-      "label": "IsString",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "isstring",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_auth_auth_crypto",
       "label": "auth.crypto.ts",
       "_origin": "ast",
@@ -5237,17 +5261,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_auth_auth_resolver",
-      "label": "auth.resolver.ts",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "auth.resolver.ts",
-      "source_file": "src/auth/auth.resolver.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "src_auth_auth_service",
       "label": "auth.service.ts",
       "_origin": "ast",
@@ -5257,50 +5270,6 @@
       "norm_label": "auth.service.ts",
       "source_file": "src/auth/auth.service.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "src_auth_auth_service_ts_injectable",
-      "label": "Injectable",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "injectable",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_auth_auth_types",
-      "label": "auth.types.ts",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "auth.types.ts",
-      "source_file": "src/auth/auth.types.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_auth_auth_types_ts_field",
-      "label": "Field",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "field",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_auth_auth_types_ts_objecttype",
-      "label": "ObjectType",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "objecttype",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "src_auth_otp_service",
@@ -5402,17 +5371,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_auth_session_service_ts_injectable",
-      "label": "Injectable",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "injectable",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_common_util_service",
       "label": "util.service.ts",
       "_origin": "ast",
@@ -5433,17 +5391,6 @@
       "norm_label": "injectable",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "src_users_phone",
-      "label": "phone.ts",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "phone.ts",
-      "source_file": "src/users/phone.ts",
-      "source_location": "L1"
     },
     {
       "id": "src_users_user_entity",
@@ -5490,6 +5437,50 @@
       "source_location": "L1"
     },
     {
+      "id": "src_users_user_schema_userschema",
+      "label": "UserSchema",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "userschema",
+      "source_file": "src/users/user.schema.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_users_users_module",
+      "label": "users.module.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "users.module.ts",
+      "source_file": "src/users/users.module.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_users_users_resolver",
+      "label": "users.resolver.ts",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "users.resolver.ts",
+      "source_file": "src/users/users.resolver.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_users_users_resolver_ts_resolver",
+      "label": "Resolver",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "otp.service.ts",
+      "file_type": "code",
+      "norm_label": "resolver",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_users_users_service",
       "label": "users.service.ts",
       "_origin": "ast",
@@ -5531,17 +5522,6 @@
       "file_type": "code",
       "norm_label": "auth.integration-spec.ts",
       "source_file": "test/auth/auth.integration-spec.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "test_auth_auth_resolver_spec",
-      "label": "auth.resolver.spec.ts",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "code",
-      "norm_label": "auth.resolver.spec.ts",
-      "source_file": "test/auth/auth.resolver.spec.ts",
       "source_location": "L1"
     },
     {
@@ -5600,14 +5580,14 @@
       "source_location": "L1"
     },
     {
-      "id": "test_users_phone_spec",
-      "label": "phone.spec.ts",
+      "id": "test_users_users_resolver_spec",
+      "label": "users.resolver.spec.ts",
       "_origin": "ast",
       "community": 43,
       "community_name": "otp.service.ts",
       "file_type": "code",
-      "norm_label": "phone.spec.ts",
-      "source_file": "test/users/phone.spec.ts",
+      "norm_label": "users.resolver.spec.ts",
+      "source_file": "test/users/users.resolver.spec.ts",
       "source_location": "L1"
     },
     {
@@ -5642,6 +5622,17 @@
       "norm_label": "@mikro-orm/core",
       "source_file": "package.json",
       "source_location": "L26"
+    },
+    {
+      "id": "ref_mikro_orm_nestjs",
+      "label": "@mikro-orm/nestjs",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "otp.service.ts",
+      "file_type": "concept",
+      "norm_label": "@mikro-orm/nestjs",
+      "source_file": "package.json",
+      "source_location": "L27"
     },
     {
       "id": "ref_mikro_orm_postgresql",
@@ -5689,30 +5680,6 @@
       "source_location": "L231"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_3_otp_challenge_lifecycle",
-      "label": "Task 3: OTP Challenge Lifecycle",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "task 3: otp challenge lifecycle",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L368"
-    },
-    {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_4_stateless_access_tokens_and_rotating_refresh_sessions",
-      "label": "Task 4: Stateless Access Tokens and Rotating Refresh Sessions",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "otp.service.ts",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "task 4: stateless access tokens and rotating refresh sessions",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L512"
-    },
-    {
       "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_5_signup_and_login_orchestration",
       "label": "Task 5: Signup and Login Orchestration",
       "_origin": "ast",
@@ -5725,100 +5692,114 @@
       "source_location": "L649"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_api_\uc778\uc99d",
-      "label": "API \uc778\uc99d",
+      "id": "src_common_common_module",
+      "label": "common.module.ts",
       "_origin": "ast",
       "community": 44,
-      "community_name": "\uc778\uc99d \ud750\ub984",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "api \u110b\u1175\u11ab\u110c\u1173\u11bc",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L221"
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "common.module.ts",
+      "source_file": "src/common/common.module.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uac80\uc99d",
-      "label": "OTP \uac80\uc99d",
+      "id": "src_common_common_resolver",
+      "label": "common.resolver.ts",
       "_origin": "ast",
       "community": 44,
-      "community_name": "\uc778\uc99d \ud750\ub984",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "otp \u1100\u1165\u11b7\u110c\u1173\u11bc",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L197"
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "common.resolver.ts",
+      "source_file": "src/common/common.resolver.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_otp_\uc694\uccad",
-      "label": "OTP \uc694\uccad",
+      "id": "src_common_common_resolver_ts_query",
+      "label": "Query",
       "_origin": "ast",
       "community": 44,
-      "community_name": "\uc778\uc99d \ud750\ub984",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "otp \u110b\u116d\u110e\u1165\u11bc",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L183"
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "query",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_token_refresh",
-      "label": "Token refresh",
+      "id": "src_common_common_resolver_ts_resolver",
+      "label": "Resolver",
       "_origin": "ast",
       "community": 44,
-      "community_name": "\uc778\uc99d \ud750\ub984",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "token refresh",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L233"
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "resolver",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub2e8\uc77c_\uae30\uae30_\ub85c\uadf8\uc778",
-      "label": "\ub2e8\uc77c \uae30\uae30 \ub85c\uadf8\uc778",
+      "id": "src_common_common_service",
+      "label": "common.service.ts",
       "_origin": "ast",
       "community": 44,
-      "community_name": "\uc778\uc99d \ud750\ub984",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u1103\u1161\u11ab\u110b\u1175\u11af \u1100\u1175\u1100\u1175 \u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L242"
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "common.service.ts",
+      "source_file": "src/common/common.service.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub85c\uadf8\uc778",
-      "label": "\ub85c\uadf8\uc778",
+      "id": "src_common_common_service_ts_injectable",
+      "label": "Injectable",
       "_origin": "ast",
       "community": 44,
-      "community_name": "\uc778\uc99d \ud750\ub984",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L214"
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "injectable",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud750\ub984",
-      "label": "\uc778\uc99d \ud750\ub984",
+      "id": "src_common_sms_service",
+      "label": "sms.service.ts",
       "_origin": "ast",
       "community": 44,
-      "community_name": "\uc778\uc99d \ud750\ub984",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u110b\u1175\u11ab\u110c\u1173\u11bc \u1112\u1173\u1105\u1173\u11b7",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L181"
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "sms.service.ts",
+      "source_file": "src/common/sms.service.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud68c\uc6d0\uac00\uc785\uacfc_\uc790\ub3d9_\ub85c\uadf8\uc778",
-      "label": "\ud68c\uc6d0\uac00\uc785\uacfc \uc790\ub3d9 \ub85c\uadf8\uc778",
+      "id": "test_common_sms_service_spec",
+      "label": "sms.service.spec.ts",
       "_origin": "ast",
       "community": 44,
-      "community_name": "\uc778\uc99d \ud750\ub984",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u1112\u116c\u110b\u116f\u11ab\u1100\u1161\u110b\u1175\u11b8\u1100\u116a \u110c\u1161\u1103\u1169\u11bc \u1105\u1169\u1100\u1173\u110b\u1175\u11ab",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L205"
+      "community_name": "@nestjs/common",
+      "file_type": "code",
+      "norm_label": "sms.service.spec.ts",
+      "source_file": "test/common/sms.service.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_nestjs_axios",
+      "label": "@nestjs/axios",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "@nestjs/common",
+      "file_type": "concept",
+      "norm_label": "@nestjs/axios",
+      "source_file": "package.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "ref_nestjs_common",
+      "label": "@nestjs/common",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "@nestjs/common",
+      "file_type": "concept",
+      "norm_label": "@nestjs/common",
+      "source_file": "package.json",
+      "source_location": "L31"
     },
     {
       "id": "agents_skills_caveman_compress_scripts_compress_rationale_255",
@@ -5955,85 +5936,160 @@
       "source_location": "L1"
     },
     {
-      "id": "context",
-      "label": "Context",
+      "id": "catch",
+      "label": "Catch",
       "_origin": "ast",
       "community": 49,
-      "community_name": ".currentUser",
+      "community_name": "authError",
       "file_type": "code",
-      "norm_label": "context",
+      "norm_label": "catch",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_users_users_resolver_ts_query",
-      "label": "Query",
+      "id": "src_auth_auth_error",
+      "label": "auth.error.ts",
       "_origin": "ast",
       "community": 49,
-      "community_name": ".currentUser",
+      "community_name": "authError",
       "file_type": "code",
-      "norm_label": "query",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "auth.error.ts",
+      "source_file": "src/auth/auth.error.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_global_constraints",
-      "label": "Global Constraints",
+      "id": "src_graphqlexception_filter",
+      "label": "graphqlException.filter.ts",
       "_origin": "ast",
       "community": 49,
-      "community_name": ".currentUser",
+      "community_name": "authError",
+      "file_type": "code",
+      "norm_label": "graphqlexception.filter.ts",
+      "source_file": "src/graphqlException.filter.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_auth_auth_error_spec",
+      "label": "auth.error.spec.ts",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "authError",
+      "file_type": "code",
+      "norm_label": "auth.error.spec.ts",
+      "source_file": "test/auth/auth.error.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_graphqlexception_filter_spec",
+      "label": "graphqlException.filter.spec.ts",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "authError",
+      "file_type": "code",
+      "norm_label": "graphqlexception.filter.spec.ts",
+      "source_file": "test/graphqlException.filter.spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_graphql",
+      "label": "graphql",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "authError",
+      "file_type": "concept",
+      "norm_label": "graphql",
+      "source_file": "package.json",
+      "source_location": "L42"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_1_stable_graphql_error_and_validation_contract",
+      "label": "Task 1: Stable GraphQL Error and Validation Contract",
+      "_origin": "ast",
+      "community": 49,
+      "community_name": "authError",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "global constraints",
+      "norm_label": "task 1: stable graphql error and validation contract",
       "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L13"
+      "source_location": "L107"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ubaa9\ud45c",
-      "label": "\ubaa9\ud45c",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": ".currentUser",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u1106\u1169\u11a8\u1111\u116d",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc644\ub8cc_\uc870\uac74",
-      "label": "\uc644\ub8cc \uc870\uac74",
-      "_origin": "ast",
-      "community": 49,
-      "community_name": ".currentUser",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u110b\u116a\u11ab\u1105\u116d \u110c\u1169\u1100\u1165\u11ab",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L318"
-    },
-    {
-      "id": "src_auth_auth_guard_ts_injectable",
-      "label": "Injectable",
+      "id": "src_app_module_ts_module",
+      "label": "Module",
       "_origin": "ast",
       "community": 50,
-      "community_name": "Task 6: Global Access Guard and `currentUser`",
+      "community_name": "auth.e2e-spec.ts",
       "file_type": "code",
-      "norm_label": "injectable",
+      "norm_label": "module",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_6_global_access_guard_and_currentuser",
-      "label": "Task 6: Global Access Guard and `currentUser`",
+      "id": "test_app_e2e_spec",
+      "label": "app.e2e-spec.ts",
       "_origin": "ast",
       "community": 50,
-      "community_name": "Task 6: Global Access Guard and `currentUser`",
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "app.e2e-spec.ts",
+      "source_file": "test/app.e2e-spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_auth_auth_e2e_spec",
+      "label": "auth.e2e-spec.ts",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "auth.e2e-spec.ts",
+      "source_file": "test/auth/auth.e2e-spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "test_database_database_integration_spec",
+      "label": "database.integration-spec.ts",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "code",
+      "norm_label": "database.integration-spec.ts",
+      "source_file": "test/database/database.integration-spec.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "ref_nestjs_testing",
+      "label": "@nestjs/testing",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "concept",
+      "norm_label": "@nestjs/testing",
+      "source_file": "package.json",
+      "source_location": "L51"
+    },
+    {
+      "id": "ref_supertest",
+      "label": "supertest",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "auth.e2e-spec.ts",
+      "file_type": "concept",
+      "norm_label": "supertest",
+      "source_file": "package.json",
+      "source_location": "L63"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_integration_test",
+      "label": "Integration test",
+      "_origin": "ast",
+      "community": 50,
+      "community_name": "auth.e2e-spec.ts",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "task 6: global access guard and `currentuser`",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L774"
+      "norm_label": "integration test",
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "source_location": "L57"
     },
     {
       "id": "eslint_config",
@@ -6091,148 +6147,70 @@
       "source_location": "L69"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_review_focus",
-      "label": "Review Focus",
+      "id": "src_auth_auth_guard",
+      "label": "auth.guard.ts",
       "_origin": "ast",
       "community": 52,
-      "community_name": "Review Focus",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "review focus",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L67"
+      "community_name": "auth.guard.ts",
+      "file_type": "code",
+      "norm_label": "auth.guard.ts",
+      "source_file": "src/auth/auth.guard.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_0_verify_the_database_foundation",
-      "label": "Task 0: Verify the Database Foundation",
+      "id": "src_main",
+      "label": "main.ts",
       "_origin": "ast",
       "community": 52,
-      "community_name": "Review Focus",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "task 0: verify the database foundation",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L77"
+      "community_name": "auth.guard.ts",
+      "file_type": "code",
+      "norm_label": "main.ts",
+      "source_file": "src/main.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_10_final_verification_and_knowledge_graph_update",
-      "label": "Task 10: Final Verification and Knowledge Graph Update",
+      "id": "test_auth_auth_guard_spec",
+      "label": "auth.guard.spec.ts",
       "_origin": "ast",
       "community": 52,
-      "community_name": "Review Focus",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "task 10: final verification and knowledge graph update",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L1109"
+      "community_name": "auth.guard.ts",
+      "file_type": "code",
+      "norm_label": "auth.guard.spec.ts",
+      "source_file": "test/auth/auth.guard.spec.ts",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_8_postgresql_integration_proof",
-      "label": "Task 8: PostgreSQL Integration Proof",
+      "id": "ref_nestjs_core",
+      "label": "@nestjs/core",
       "_origin": "ast",
       "community": 52,
-      "community_name": "Review Focus",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "task 8: postgresql integration proof",
-      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
-      "source_location": "L991"
+      "community_name": "auth.guard.ts",
+      "file_type": "concept",
+      "norm_label": "@nestjs/core",
+      "source_file": "package.json",
+      "source_location": "L33"
     },
     {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_e2e_\ud14c\uc2a4\ud2b8",
-      "label": "GraphQL E2E \ud14c\uc2a4\ud2b8",
+      "id": "ref_nestjs_graphql",
+      "label": "@nestjs/graphql",
+      "_origin": "ast",
+      "community": 52,
+      "community_name": "auth.guard.ts",
+      "file_type": "concept",
+      "norm_label": "@nestjs/graphql",
+      "source_file": "package.json",
+      "source_location": "L34"
+    },
+    {
+      "id": "test_app_module_spec",
+      "label": "app.module.spec.ts",
       "_origin": "ast",
       "community": 53,
-      "community_name": "\ud14c\uc2a4\ud2b8 \uc804\ub7b5",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "graphql e2e \u1110\u1166\u1109\u1173\u1110\u1173",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L310"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_postgresql_\ud1b5\ud569_\ud14c\uc2a4\ud2b8",
-      "label": "PostgreSQL \ud1b5\ud569 \ud14c\uc2a4\ud2b8",
-      "_origin": "ast",
-      "community": 53,
-      "community_name": "\ud14c\uc2a4\ud2b8 \uc804\ub7b5",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "postgresql \u1110\u1169\u11bc\u1112\u1161\u11b8 \u1110\u1166\u1109\u1173\u1110\u1173",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L302"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ub2e8\uc704_\ud14c\uc2a4\ud2b8",
-      "label": "\ub2e8\uc704 \ud14c\uc2a4\ud2b8",
-      "_origin": "ast",
-      "community": 53,
-      "community_name": "\ud14c\uc2a4\ud2b8 \uc804\ub7b5",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u1103\u1161\u11ab\u110b\u1171 \u1110\u1166\u1109\u1173\u1110\u1173",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L290"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\ud14c\uc2a4\ud2b8_\uc804\ub7b5",
-      "label": "\ud14c\uc2a4\ud2b8 \uc804\ub7b5",
-      "_origin": "ast",
-      "community": 53,
-      "community_name": "\ud14c\uc2a4\ud2b8 \uc804\ub7b5",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u1110\u1166\u1109\u1173\u1110\u1173 \u110c\u1165\u11ab\u1105\u1163\u11a8",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L288"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_graphql_\uacc4\uc57d",
-      "label": "GraphQL \uacc4\uc57d",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "GraphQL \uacc4\uc57d",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "graphql \u1100\u1168\u110b\u1163\u11a8",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L58"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uacf5\uac1c_mutation",
-      "label": "\uacf5\uac1c Mutation",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "GraphQL \uacc4\uc57d",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u1100\u1169\u11bc\u1100\u1162 mutation",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L60"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc778\uc99d_\ud544\uc694_query",
-      "label": "\uc778\uc99d \ud544\uc694 Query",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "GraphQL \uacc4\uc57d",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u110b\u1175\u11ab\u110c\u1173\u11bc \u1111\u1175\u11af\u110b\u116d query",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L71"
-    },
-    {
-      "id": "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_\uc8fc\uc694_\uc785\ub825\uacfc_\uc751\ub2f5",
-      "label": "\uc8fc\uc694 \uc785\ub825\uacfc \uc751\ub2f5",
-      "_origin": "ast",
-      "community": 54,
-      "community_name": "GraphQL \uacc4\uc57d",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\u110c\u116e\u110b\u116d \u110b\u1175\u11b8\u1105\u1167\u11a8\u1100\u116a \u110b\u1173\u11bc\u1103\u1161\u11b8",
-      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
-      "source_location": "L77"
+      "community_name": "app.module.spec.ts",
+      "file_type": "code",
+      "norm_label": "app.module.spec.ts",
+      "source_file": "test/app.module.spec.ts",
+      "source_location": "L1"
     },
     {
       "id": "timeouterror",
@@ -8651,6 +8629,42 @@
       "source_url": null
     },
     {
+      "id": "json",
+      "label": "json",
+      "_origin": "semantic",
+      "community": 1,
+      "community_name": "cli.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "json",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "re",
+      "label": "re",
+      "_origin": "semantic",
+      "community": 1,
+      "community_name": "cli.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "re",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "sys",
+      "label": "sys",
+      "_origin": "semantic",
+      "community": 1,
+      "community_name": "cli.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "sys",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "_codex_skills_graphify_references_hooks_claude_md_integration",
       "label": "CLAUDE.md Graphify Integration",
       "_origin": "semantic",
@@ -9043,6 +9057,246 @@
       "source_location": "lines 29-44"
     },
     {
+      "id": "ref_node_assert",
+      "label": "ref_node_assert",
+      "_origin": "semantic",
+      "community": 26,
+      "community_name": "caveman-explore/tests/skill-file.test.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_assert",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_fs",
+      "label": "ref_node_fs",
+      "_origin": "semantic",
+      "community": 26,
+      "community_name": "caveman-explore/tests/skill-file.test.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_fs",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_path",
+      "label": "ref_node_path",
+      "_origin": "semantic",
+      "community": 26,
+      "community_name": "caveman-explore/tests/skill-file.test.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_path",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_test",
+      "label": "ref_node_test",
+      "_origin": "semantic",
+      "community": 26,
+      "community_name": "caveman-explore/tests/skill-file.test.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_test",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_node_url",
+      "label": "ref_node_url",
+      "_origin": "semantic",
+      "community": 26,
+      "community_name": "caveman-explore/tests/skill-file.test.mjs",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_node_url",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "contextlib",
+      "label": "contextlib",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "contextlib",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "errno",
+      "label": "errno",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "errno",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "fcntl",
+      "label": "fcntl",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "fcntl",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "hashlib",
+      "label": "hashlib",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "hashlib",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "msvcrt",
+      "label": "msvcrt",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "msvcrt",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "os",
+      "label": "os",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "os",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "shutil",
+      "label": "shutil",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "shutil",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "stat",
+      "label": "stat",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "stat",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "subprocess",
+      "label": "subprocess",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "subprocess",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "tempfile",
+      "label": "tempfile",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "tempfile",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "time",
+      "label": "time",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "time",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "typing",
+      "label": "typing",
+      "_origin": "semantic",
+      "community": 28,
+      "community_name": "compress.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "typing",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "collections",
+      "label": "collections",
+      "_origin": "semantic",
+      "community": 3,
+      "community_name": "validate.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "collections",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "pathlib",
+      "label": "pathlib",
+      "_origin": "semantic",
+      "community": 3,
+      "community_name": "validate.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "pathlib",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "tiktoken",
+      "label": "tiktoken",
+      "_origin": "semantic",
+      "community": 3,
+      "community_name": "validate.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "tiktoken",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "docs_spec_smart_order_consumer_app_prd_authentication_api",
       "label": "Authentication API",
       "_origin": "semantic",
@@ -9355,261 +9609,9 @@
       "source_location": "lines 46-47, 470-515"
     },
     {
-      "id": "json",
-      "label": "json",
-      "community": 1,
-      "community_name": "cli.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "json",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "re",
-      "label": "re",
-      "community": 1,
-      "community_name": "cli.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "re",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_node_assert",
-      "label": "ref_node_assert",
-      "community": 26,
-      "community_name": "caveman-explore/tests/skill-file.test.mjs",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_node_assert",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_node_fs",
-      "label": "ref_node_fs",
-      "community": 26,
-      "community_name": "caveman-explore/tests/skill-file.test.mjs",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_node_fs",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_node_path",
-      "label": "ref_node_path",
-      "community": 26,
-      "community_name": "caveman-explore/tests/skill-file.test.mjs",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_node_path",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_node_test",
-      "label": "ref_node_test",
-      "community": 26,
-      "community_name": "caveman-explore/tests/skill-file.test.mjs",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_node_test",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "ref_node_url",
-      "label": "ref_node_url",
-      "community": 26,
-      "community_name": "caveman-explore/tests/skill-file.test.mjs",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_node_url",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "contextlib",
-      "label": "contextlib",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "contextlib",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "errno",
-      "label": "errno",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "errno",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "fcntl",
-      "label": "fcntl",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "fcntl",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "hashlib",
-      "label": "hashlib",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "hashlib",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "msvcrt",
-      "label": "msvcrt",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "msvcrt",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "os",
-      "label": "os",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "os",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "shutil",
-      "label": "shutil",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "shutil",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "stat",
-      "label": "stat",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "stat",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "subprocess",
-      "label": "subprocess",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "subprocess",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "tempfile",
-      "label": "tempfile",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "tempfile",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "time",
-      "label": "time",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "time",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "typing",
-      "label": "typing",
-      "community": 28,
-      "community_name": "compress.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "typing",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "collections",
-      "label": "collections",
-      "community": 3,
-      "community_name": "validate.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "collections",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "pathlib",
-      "label": "pathlib",
-      "community": 3,
-      "community_name": "validate.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "pathlib",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "sys",
-      "label": "sys",
-      "community": 3,
-      "community_name": "validate.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "sys",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "tiktoken",
-      "label": "tiktoken",
-      "community": 3,
-      "community_name": "validate.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "tiktoken",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_express",
       "label": "ref_express",
+      "_origin": "semantic",
       "community": 40,
       "community_name": "app.module.ts",
       "external": true,
@@ -9619,19 +9621,9 @@
       "type": "external"
     },
     {
-      "id": "ref_jest_globals",
-      "label": "ref_jest_globals",
-      "community": 40,
-      "community_name": "app.module.ts",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "ref_jest_globals",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "ref_path",
       "label": "ref_path",
+      "_origin": "semantic",
       "community": 40,
       "community_name": "app.module.ts",
       "external": true,
@@ -9643,11 +9635,24 @@
     {
       "id": "ref_node_crypto",
       "label": "ref_node_crypto",
+      "_origin": "semantic",
       "community": 43,
       "community_name": "otp.service.ts",
       "external": true,
       "file_type": "concept",
       "norm_label": "ref_node_crypto",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "ref_jest_globals",
+      "label": "ref_jest_globals",
+      "_origin": "semantic",
+      "community": 50,
+      "community_name": "auth.e2e-spec.ts",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "ref_jest_globals",
       "source_file": "",
       "type": "external"
     }
@@ -10382,19 +10387,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L68",
-      "weight": 1.0
-    },
-    {
-      "source": "src_auth_auth_service_authservice_login",
-      "target": "src_users_phone_normalizephone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/auth/auth.service.ts",
-      "source_location": "L74",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -10406,7 +10399,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L94",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -10418,7 +10411,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -10430,7 +10423,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -10442,7 +10435,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L59",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -10454,7 +10447,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L179",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -10466,7 +10459,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L184",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -10478,7 +10471,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L204",
+      "source_location": "L203",
       "weight": 1.0
     },
     {
@@ -10490,19 +10483,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L208",
-      "weight": 1.0
-    },
-    {
-      "source": "src_auth_otp_service_otpservice_sendsignupotp",
-      "target": "src_users_phone_normalizephone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/auth/otp.service.ts",
-      "source_location": "L39",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -10514,7 +10495,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L41",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -10526,7 +10507,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L99",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -10538,19 +10519,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L128",
-      "weight": 1.0
-    },
-    {
-      "source": "src_auth_otp_service_otpservice_verifysignupotp",
-      "target": "src_users_phone_normalizephone",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/auth/otp.service.ts",
-      "source_location": "L130",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
@@ -10562,7 +10531,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L153",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -10574,7 +10543,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L153",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -10586,7 +10555,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L159",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -10598,7 +10567,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L162",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -11270,7 +11239,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L24",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -11498,7 +11467,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L66",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -11510,7 +11479,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -11522,7 +11491,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L174",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -11534,7 +11503,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L38",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -11546,7 +11515,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L123",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -12900,7 +12869,7 @@
     },
     {
       "source": "src_auth_auth_service",
-      "target": "src_users_phone_normalizephone",
+      "target": "src_common_util_service_utilservice",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13020,7 +12989,7 @@
     },
     {
       "source": "src_auth_otp_service",
-      "target": "src_users_phone_normalizephone",
+      "target": "src_users_users_service_usersservice",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13032,7 +13001,7 @@
     },
     {
       "source": "src_auth_otp_service",
-      "target": "src_users_users_service_usersservice",
+      "target": "src_auth_auth_crypto_hmacsha256",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13044,18 +13013,6 @@
     },
     {
       "source": "src_auth_otp_service",
-      "target": "src_auth_auth_crypto_hmacsha256",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/auth/otp.service.ts",
-      "source_location": "L14",
-      "weight": 1.0
-    },
-    {
-      "source": "src_auth_otp_service",
       "target": "src_auth_auth_crypto_randomtoken",
       "relation": "imports",
       "_origin": "ast",
@@ -13063,7 +13020,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -13075,7 +13032,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -13087,7 +13044,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -13099,7 +13056,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L15",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -13111,7 +13068,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -13123,7 +13080,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -13135,7 +13092,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -13824,7 +13781,7 @@
     },
     {
       "source": "test_auth_auth_service_spec",
-      "target": "src_users_users_service_usersservice",
+      "target": "src_common_util_service_utilservice",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13836,7 +13793,7 @@
     },
     {
       "source": "test_auth_auth_service_spec",
-      "target": "src_users_user_entity_user",
+      "target": "src_users_users_service_usersservice",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13844,6 +13801,18 @@
       "context": "import",
       "source_file": "test/auth/auth.service.spec.ts",
       "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "test_auth_auth_service_spec",
+      "target": "src_users_user_entity_user",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/auth/auth.service.spec.ts",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -13908,7 +13877,7 @@
     },
     {
       "source": "test_auth_otp_service_spec",
-      "target": "src_users_users_service_usersservice",
+      "target": "src_common_util_service_utilservice",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13916,6 +13885,18 @@
       "context": "import",
       "source_file": "test/auth/otp.service.spec.ts",
       "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "test_auth_otp_service_spec",
+      "target": "src_users_users_service_usersservice",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/auth/otp.service.spec.ts",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -14036,18 +14017,6 @@
       "context": "import",
       "source_file": "test/graphqlException.filter.spec.ts",
       "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "test_users_phone_spec",
-      "target": "src_users_phone_normalizephone",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "test/users/phone.spec.ts",
-      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -15039,7 +15008,7 @@
     },
     {
       "source": "src_auth_auth_service",
-      "target": "src_users_phone",
+      "target": "src_common_util_service",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15172,7 +15141,7 @@
     },
     {
       "source": "src_auth_otp_service",
-      "target": "src_users_phone",
+      "target": "src_users_users_service",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15184,7 +15153,7 @@
     },
     {
       "source": "src_auth_otp_service",
-      "target": "src_users_users_service",
+      "target": "src_auth_auth_crypto",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15196,7 +15165,7 @@
     },
     {
       "source": "src_auth_otp_service",
-      "target": "src_auth_auth_crypto",
+      "target": "src_auth_auth_error",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15208,18 +15177,6 @@
     },
     {
       "source": "src_auth_otp_service",
-      "target": "src_auth_auth_error",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/auth/otp.service.ts",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "src_auth_otp_service",
       "target": "src_auth_auth_types",
       "relation": "imports_from",
       "_origin": "ast",
@@ -15227,7 +15184,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L16",
+      "source_location": "L15",
       "type_only": true,
       "weight": 1.0
     },
@@ -15240,7 +15197,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -15822,18 +15779,6 @@
       "context": "import",
       "source_file": "src/responseLogger.plugin.ts",
       "source_location": "L7",
-      "weight": 1.0
-    },
-    {
-      "source": "src_users_phone",
-      "target": "ref_nestjs_common",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/users/phone.ts",
-      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -16678,7 +16623,7 @@
     },
     {
       "source": "test_auth_auth_service_spec",
-      "target": "src_users_users_service",
+      "target": "src_common_util_service",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -16686,6 +16631,18 @@
       "context": "import",
       "source_file": "test/auth/auth.service.spec.ts",
       "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "test_auth_auth_service_spec",
+      "target": "src_users_users_service",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/auth/auth.service.spec.ts",
+      "source_location": "L21",
       "type_only": true,
       "weight": 1.0
     },
@@ -16698,7 +16655,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "test/auth/auth.service.spec.ts",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -16766,7 +16723,7 @@
     },
     {
       "source": "test_auth_otp_service_spec",
-      "target": "src_users_users_service",
+      "target": "src_common_util_service",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -16774,6 +16731,18 @@
       "context": "import",
       "source_file": "test/auth/otp.service.spec.ts",
       "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "test_auth_otp_service_spec",
+      "target": "src_users_users_service",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "test/auth/otp.service.spec.ts",
+      "source_location": "L23",
       "type_only": true,
       "weight": 1.0
     },
@@ -16993,18 +16962,6 @@
       "context": "import",
       "source_file": "test/graphqlException.filter.spec.ts",
       "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "test_users_phone_spec",
-      "target": "src_users_phone",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "test/users/phone.spec.ts",
-      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -17348,6 +17305,18 @@
     },
     {
       "source": "src_auth_auth_service_authservice_constructor",
+      "target": "src_common_util_service_utilservice",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_service_authservice_constructor",
       "target": "src_users_users_service_usersservice",
       "relation": "references",
       "_origin": "ast",
@@ -17367,7 +17336,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L66",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -17379,7 +17348,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -17391,7 +17360,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -17403,7 +17372,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -17415,7 +17384,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -20734,7 +20703,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L25",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -20933,17 +20902,6 @@
       "confidence_score": 1.0,
       "source_file": "src/types/bcrypt.d.ts",
       "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "src_users_phone",
-      "target": "src_users_phone_normalizephone",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/users/phone.ts",
-      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -21504,7 +21462,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L101",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -21526,7 +21484,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -21537,7 +21495,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L66",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -21548,7 +21506,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L93",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -21559,7 +21517,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L123",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -21570,7 +21528,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L174",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -21581,7 +21539,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L203",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -21592,7 +21550,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L207",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -21603,7 +21561,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -21614,7 +21572,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L38",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
@@ -21774,6 +21732,17 @@
     {
       "source": "src_common_util_service_utilservice",
       "target": "src_common_util_service_utilservice_getotp",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/common/util.service.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_common_util_service_utilservice",
+      "target": "src_common_util_service_utilservice_normalizephone",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -22341,7 +22310,7 @@
     },
     {
       "source": "src_auth_auth_service_authservice_login",
-      "target": "src_users_users_service_usersservice_findbyphone",
+      "target": "src_common_util_service_utilservice_normalizephone",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "INFERRED",
@@ -22353,6 +22322,18 @@
     },
     {
       "source": "src_auth_auth_service_authservice_login",
+      "target": "src_users_users_service_usersservice_findbyphone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "src/auth/auth.service.ts",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_auth_service_authservice_login",
       "target": "src_auth_session_service_sessionservice_start",
       "relation": "calls",
       "_origin": "ast",
@@ -22360,7 +22341,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L89",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -22372,7 +22353,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -22384,7 +22365,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -22396,7 +22377,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -22408,7 +22389,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/auth.service.ts",
-      "source_location": "L55",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -22420,7 +22401,19 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L108",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_otp_service_otpservice_sendsignupotp",
+      "target": "src_common_util_service_utilservice_normalizephone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "src/auth/otp.service.ts",
+      "source_location": "L38",
       "weight": 1.0
     },
     {
@@ -22432,7 +22425,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L40",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -22444,7 +22437,19 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "src/auth/otp.service.ts",
-      "source_location": "L96",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "src_auth_otp_service_otpservice_verifysignupotp",
+      "target": "src_common_util_service_utilservice_normalizephone",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "src/auth/otp.service.ts",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -23517,7 +23522,7 @@
     },
     {
       "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_2_user_persistence_and_phone_normalization",
-      "target": "src_users_phone_normalizephone",
+      "target": "src_common_util_service_utilservice_normalizephone",
       "relation": "references",
       "_origin": "ast",
       "confidence": "INFERRED",
@@ -23529,7 +23534,7 @@
     },
     {
       "source": "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_3_otp_challenge_lifecycle",
-      "target": "src_users_phone_normalizephone",
+      "target": "src_common_util_service_utilservice_normalizephone",
       "relation": "references",
       "_origin": "ast",
       "confidence": "INFERRED",
@@ -25674,5 +25679,5 @@
       "source_file": ".agents/skills/caveman-optimize/SKILL.md"
     }
   ],
-  "built_at_commit": "061dc73fbc833372c8ed545efdd3f27e4b1880c5"
+  "built_at_commit": "d4c617592bc9c0e03c1c3fe13872b5577d455d09"
 }

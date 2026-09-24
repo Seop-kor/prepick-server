@@ -17,6 +17,7 @@ import * as bcrypt from 'bcrypt';
 import { AuthService } from '../../src/auth/auth.service';
 import type { OtpService } from '../../src/auth/otp.service';
 import type { SessionService } from '../../src/auth/session.service';
+import { UtilService } from '../../src/common/util.service';
 import type { UsersService } from '../../src/users/users.service';
 import { User } from '../../src/users/user.entity';
 
@@ -62,6 +63,7 @@ describe('AuthService', () => {
       otp as unknown as OtpService,
       users as unknown as UsersService,
       sessions as unknown as SessionService,
+      new UtilService(),
     );
   });
 
