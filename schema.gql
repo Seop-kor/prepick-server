@@ -2,6 +2,57 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type AuthPayload {
+  accessToken: String!
+  accessTokenExpiresAt: DateTime!
+  refreshToken: String!
+  refreshTokenExpiresAt: DateTime!
+  user: User!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input LoginInput {
+  password: String!
+  phone: String!
+}
+
+type Mutation {
+  login(input: LoginInput!): AuthPayload!
+  logout(refreshToken: String!): Boolean!
+  refreshSession(refreshToken: String!): AuthPayload!
+  sendSignupOtp(phone: String!): OtpRequestPayload!
+  signUp(input: SignUpInput!): AuthPayload!
+  verifySignupOtp(code: String!, phone: String!): OtpVerificationPayload!
+}
+
+type OtpRequestPayload {
+  expiresAt: DateTime!
+  retryAfterSeconds: Int!
+}
+
+type OtpVerificationPayload {
+  expiresAt: DateTime!
+  verificationToken: String!
+}
+
 type Query {
+  currentUser: User!
   healthCheck: Boolean!
+}
+
+input SignUpInput {
+  name: String!
+  password: String!
+  verificationToken: String!
+}
+
+type User {
+  createdAt: DateTime!
+  id: ID!
+  name: String!
+  phone: String!
 }

@@ -4,6 +4,7 @@ import type {
 } from '@apollo/server';
 import { HttpException, Logger } from '@nestjs/common';
 import type { Request } from 'express';
+import { GraphQLError } from 'graphql';
 
 type GraphqlContext = { req: Request };
 
@@ -25,8 +26,10 @@ export class ResponseLoggingPlugin implements ApolloServerPlugin<GraphqlContext>
         return Promise.resolve();
       },
       didEncounterErrors: (requestContext) => {
-        error =
-          requestContext.errors[0]?.originalError ?? requestContext.errors[0];
+        error = requestContext.errors[0];
+        while (error instanceof GraphQLError && error.originalError) {
+          error = error.originalError;
+        }
         return Promise.resolve();
       },
       willSendResponse: (requestContext) => {

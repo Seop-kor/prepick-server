@@ -1,0 +1,23 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "..",
+  "testEnvironment": "node",
+  "testRegex": "test/.*\\.integration-spec\\.ts$",
+  "setupFiles": ["<rootDir>/test/setup-test-database.ts"],
+  "extensionsToTreatAsEsm": [".ts"],
+  "transform": {
+    "^.+\\.ts$": [
+      "ts-jest",
+      {
+        "useESM": true,
+        "tsconfig": {
+          "module": "ESNext",
+          "moduleResolution": "Bundler",
+          "target": "ES2022",
+          "esModuleInterop": true
+        }
+      }
+    ]
+  },
+  "watchman": false
+}

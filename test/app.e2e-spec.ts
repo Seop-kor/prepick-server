@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals';
 import { Test, TestingModule } from '@nestjs/testing';
 import { BadRequestException, INestApplication, Logger } from '@nestjs/common';
 import request from 'supertest';
@@ -9,6 +10,7 @@ describe('GraphQL common queries (e2e)', () => {
   let app: INestApplication<App>;
 
   beforeEach(async () => {
+    process.env.OTP_HMAC_SECRET = 'e2e-test-hmac-secret';
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
@@ -18,7 +20,9 @@ describe('GraphQL common queries (e2e)', () => {
   });
 
   it('returns true for healthCheck', async () => {
-    const log = jest.spyOn(Logger.prototype, 'log').mockImplementation();
+    const log = jest
+      .spyOn(Logger.prototype, 'log')
+      .mockImplementation(() => undefined);
 
     const response = await request(app.getHttpServer())
       .post('/graphql')
@@ -32,7 +36,9 @@ describe('GraphQL common queries (e2e)', () => {
   });
 
   it('does not write request bodies to the console', async () => {
-    const consoleLog = jest.spyOn(console, 'log').mockImplementation();
+    const consoleLog = jest
+      .spyOn(console, 'log')
+      .mockImplementation(() => undefined);
 
     await request(app.getHttpServer())
       .post('/graphql')
@@ -45,7 +51,9 @@ describe('GraphQL common queries (e2e)', () => {
   });
 
   it('logs only the pathname when the URL contains query-string secrets', async () => {
-    const log = jest.spyOn(Logger.prototype, 'log').mockImplementation();
+    const log = jest
+      .spyOn(Logger.prototype, 'log')
+      .mockImplementation(() => undefined);
 
     await request(app.getHttpServer())
       .post('/graphql?token=query-secret')
@@ -69,7 +77,9 @@ describe('GraphQL common queries (e2e)', () => {
   });
 
   it('logs one outcome for an aliased multi-root operation', async () => {
-    const log = jest.spyOn(Logger.prototype, 'log').mockImplementation();
+    const log = jest
+      .spyOn(Logger.prototype, 'log')
+      .mockImplementation(() => undefined);
 
     await request(app.getHttpServer())
       .post('/graphql')
@@ -86,7 +96,9 @@ describe('GraphQL common queries (e2e)', () => {
   });
 
   it('does not pass unknown exceptions with sensitive fields to a logger', async () => {
-    const errorLog = jest.spyOn(Logger.prototype, 'error').mockImplementation();
+    const errorLog = jest
+      .spyOn(Logger.prototype, 'error')
+      .mockImplementation(() => undefined);
     const providerError = Object.assign(new Error('provider-secret'), {
       config: {
         auth: { username: 'credential-secret' },
@@ -122,7 +134,9 @@ describe('GraphQL common queries (e2e)', () => {
   });
 
   it('preserves known HttpException details and status metadata', async () => {
-    const errorLog = jest.spyOn(Logger.prototype, 'error').mockImplementation();
+    const errorLog = jest
+      .spyOn(Logger.prototype, 'error')
+      .mockImplementation(() => undefined);
     jest.spyOn(app.get(CommonService), 'healthCheck').mockImplementation(() => {
       throw new BadRequestException('known bad request');
     });

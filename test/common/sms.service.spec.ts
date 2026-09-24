@@ -42,7 +42,9 @@ describe('SmsService', () => {
     });
     expect(JSON.stringify(errorLog.mock.calls)).not.toContain('01012345678');
     expect(JSON.stringify(errorLog.mock.calls)).not.toContain('123456');
-    expect(JSON.stringify(errorLog.mock.calls)).not.toContain('provider-secret');
+    expect(JSON.stringify(errorLog.mock.calls)).not.toContain(
+      'provider-secret',
+    );
   });
 
   it('redacts seven-character receivers when sending fails', async () => {

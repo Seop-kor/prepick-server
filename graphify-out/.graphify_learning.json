@@ -1,11 +1,16 @@
 {
-  "generated_at": "2026-09-16T11:24:27.741409+00:00",
+  "generated_at": "2026-09-20T14:15:47.235104+00:00",
   "nodes": {
     "docs_spec_smart_order_consumer_app_prd_authentication_api": {
       "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
       "label": "Authentication API",
-      "last": "2026-09-14T14:27:58.164927+00:00",
+      "last": "2026-09-20T13:46:07.261706+00:00",
       "provenance": [
+        {
+          "date": "2026-09-20T13:46:07.261706+00:00",
+          "outcome": "useful",
+          "q": "어떤것들이 수정되었는지 알려줘"
+        },
         {
           "date": "2026-09-14T14:27:58.164927+00:00",
           "outcome": "useful",
@@ -22,10 +27,10 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 2.832558383,
+      "score": 3.574941936,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
-      "uses": 3
+      "uses": 4
     },
     "docs_spec_smart_order_consumer_app_prd_consumer_backend_scope": {
       "code_fingerprint": "5ed1cb74081ba8ef8e4e3d8a1866f8e8828a8556971a3b54e7bd1848440e9b86",
@@ -43,7 +48,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.874901215,
+      "score": 1.704697078,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -59,7 +64,7 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.957657168,
+      "score": 0.870720741,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -80,7 +85,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.875031774,
+      "score": 1.704815785,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -101,7 +106,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 1.875031774,
+      "score": 1.704815785,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "preferred",
       "uses": 2
@@ -117,7 +122,7 @@
           "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
         }
       ],
-      "score": 0.957526608,
+      "score": 0.870602034,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -133,7 +138,7 @@
           "q": "graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?"
         }
       ],
-      "score": 0.957526608,
+      "score": 0.870602034,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -149,7 +154,7 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 0.917374607,
+      "score": 0.834095044,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -165,7 +170,7 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.957657168,
+      "score": 0.870720741,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
       "status": "tentative",
       "uses": 1
@@ -181,8 +186,72 @@
           "q": "[smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?"
         }
       ],
-      "score": 0.917374607,
+      "score": 0.834095044,
       "source_file": "docs/spec/smart-order-consumer-app-PRD.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_superpowers_plans_2026_09_19_consumer_auth_api_task_0_verify_the_database_foundation": {
+      "code_fingerprint": "b304e27888f9aaa0e85cdff0df243c0fed9a8b38537ab59ef0437f4bb4d19330",
+      "label": "Task 0: Verify the Database Foundation",
+      "last": "2026-09-20T07:59:47.769060+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T07:59:47.769060+00:00",
+          "outcome": "useful",
+          "q": "postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
+        }
+      ],
+      "score": 0.993985356,
+      "source_file": "docs/superpowers/plans/2026-09-19-consumer-auth-api.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_superpowers_specs_2026_09_19_consumer_auth_api_design_데이터_모델": {
+      "code_fingerprint": "ebbf6acdd435fa2e0b9df1e86a8f9ce6f71e1380ffe44d5f7746201aba3613bc",
+      "label": "데이터 모델",
+      "last": "2026-09-20T08:03:06.492283+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T08:03:06.492283+00:00",
+          "outcome": "useful",
+          "q": "그러면 내가 어떤 테이블을 생성하면 되는지 sql문 알려줄래?"
+        }
+      ],
+      "score": 0.99403818,
+      "source_file": "docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "docs_superpowers_specs_2026_09_19_postgresql_mikroorm_foundation_design_postgresql_mikroorm_기반_설계": {
+      "code_fingerprint": "68939edac23d90ccd95bff04c4275954c0811aaa09ac702cdd8358a48108f93c",
+      "label": "PostgreSQL·MikroORM 기반 설계",
+      "last": "2026-09-20T07:59:47.769060+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T07:59:47.769060+00:00",
+          "outcome": "useful",
+          "q": "postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
+        }
+      ],
+      "score": 0.993985356,
+      "source_file": "docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md",
+      "status": "tentative",
+      "uses": 1
+    },
+    "src_auth_auth_service_authservice": {
+      "code_fingerprint": "1136df6a60a5bef7ddcf10ad27f2f85a2bed4d093f620278c9e57b543fc3affd",
+      "label": "AuthService",
+      "last": "2026-09-20T13:46:07.261706+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T13:46:07.261706+00:00",
+          "outcome": "useful",
+          "q": "어떤것들이 수정되었는지 알려줘"
+        }
+      ],
+      "score": 0.999524117,
+      "source_file": "src/auth/auth.service.ts",
       "status": "tentative",
       "uses": 1
     },
@@ -197,10 +266,79 @@
           "q": "데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?"
         }
       ],
-      "score": 0.957657168,
+      "score": 0.870720741,
       "source_file": "src/common/sms.service.ts",
       "status": "tentative",
       "uses": 1
+    },
+    "src_mikro_orm_options": {
+      "code_fingerprint": "8a6c804b0257d0ece95b0b0485c85a7782b4e700be64af676384f336d559e122",
+      "label": "mikro-orm.options.ts",
+      "last": "2026-09-20T07:59:47.769060+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T07:59:47.769060+00:00",
+          "outcome": "useful",
+          "q": "postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
+        }
+      ],
+      "score": 0.993985356,
+      "source_file": "src/mikro-orm.options.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "test_auth_auth_integration_spec": {
+      "code_fingerprint": "9e6cff14ef00255b357fe0e20bebbe9839f24b3aac9d5644b4b0a0807aa8ac9c",
+      "label": "auth.integration-spec.ts",
+      "last": "2026-09-20T13:46:07.261706+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T13:46:07.261706+00:00",
+          "outcome": "useful",
+          "q": "어떤것들이 수정되었는지 알려줘"
+        }
+      ],
+      "score": 0.999524117,
+      "source_file": "test/auth/auth.integration-spec.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "test_auth_auth_service_spec": {
+      "code_fingerprint": "91a9d7477e1ad169b64f165eed6d9a94a4412cc0163930ffc4b7b7aa69882223",
+      "label": "auth.service.spec.ts",
+      "last": "2026-09-20T13:46:07.261706+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T13:46:07.261706+00:00",
+          "outcome": "useful",
+          "q": "어떤것들이 수정되었는지 알려줘"
+        }
+      ],
+      "score": 0.999524117,
+      "source_file": "test/auth/auth.service.spec.ts",
+      "status": "tentative",
+      "uses": 1
+    },
+    "test_database_database_integration_spec": {
+      "code_fingerprint": "8a0a155ec65ad3afc6834cb5cdd5be8b6f48c0b8dd236cb3415910e6a403c14e",
+      "label": "database.integration-spec.ts",
+      "last": "2026-09-20T13:46:07.261706+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-20T13:46:07.261706+00:00",
+          "outcome": "useful",
+          "q": "어떤것들이 수정되었는지 알려줘"
+        },
+        {
+          "date": "2026-09-20T07:59:47.769060+00:00",
+          "outcome": "useful",
+          "q": "postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
+        }
+      ],
+      "score": 1.993509472,
+      "source_file": "test/database/database.integration-spec.ts",
+      "status": "preferred",
+      "uses": 2
     }
   },
   "version": 1
