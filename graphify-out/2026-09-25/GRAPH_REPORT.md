@@ -1,17 +1,17 @@
-# Graph Report - prepick-server  (2026-09-25)
+# Graph Report - prepick-server  (2026-09-24)
 
 ## Corpus Check
-- 126 files · ~55,906 words
+- 126 files · ~55,908 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 3, .gql 1)
 
 ## Summary
-- 786 nodes · 1376 edges · 47 communities (44 shown, 3 thin omitted)
+- 787 nodes · 1377 edges · 55 communities (52 shown, 3 thin omitted)
 - Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 131 edges (avg confidence: 0.91)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e2821084`
+- Built from commit: `d4c61759`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,7 +26,7 @@
 - devDependencies
 - compilerOptions
 - dependencies
-- User
+- .currentUser
 - Caveman Commit
 - Graph Query Traversal
 - Lean Build
@@ -48,20 +48,28 @@
 - __init__.py
 - Q: 그러면 내가 어떤 테이블을 생성하면 되는지 sql문 알려줄래?
 - 민감정보 안전 로깅 및 안전한 OTP 생성 설계
-- Consumer 인증 API 설계
+- SessionService
 - Path
 - PostgreSQL·MikroORM 기반 설계
 - Q: [smart-order-consumer-app-PRD.md](docs/spec/smart-order-consumer-app-PRD.md) 파일을 기준으로 백엔드 개발을 시작하려고 하는데 어떤거부터 하면 좋을까?
 - Q: graphql은 유지하고 PostgreSQL과 MikroORM을 사용할 때 Access Token과 Refresh Session은 어떤 방식을 추천하는가?
 - Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?
-- benchmark.py
+- PostgreSQL·MikroORM Foundation Implementation Plan
+- _compress_file_locked
+- app.module.ts
 - Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?
 - jest
 - otp.service.ts
-- app.module.ts
+- @nestjs/common
+- write_bytes_atomic
 - Q: 어떤것들이 수정되었는지 알려줘
 - bcrypt.d.ts
+- authError
+- auth.e2e-spec.ts
 - eslint.config.mjs
+- auth.guard.ts
+- app.module.spec.ts
+- LockTimeoutError
 
 ## God Nodes (most connected - your core abstractions)
 1. `User` - 29 edges
@@ -78,14 +86,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `Task 2: Remove the global request-body logger` --references--> `AppModule`  [INFERRED]
   docs/superpowers/plans/2026-09-15-safe-logging-secure-otp.md → src/app.module.ts
-- `OTP 요청` --references--> `SmsService`  [INFERRED]
-  docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md → src/common/sms.service.ts
-- `Task 7: Authentication GraphQL Module and Resolver` --references--> `AppModule`  [INFERRED]
-  docs/superpowers/plans/2026-09-19-consumer-auth-api.md → src/app.module.ts
 - `Task 2: PostgreSQL integration harness` --references--> `AppModule`  [INFERRED]
   docs/superpowers/plans/2026-09-19-postgresql-mikroorm-foundation.md → src/app.module.ts
-- `Integration test` --references--> `AppModule`  [INFERRED]
-  docs/superpowers/specs/2026-09-19-postgresql-mikroorm-foundation-design.md → src/app.module.ts
+- `OTP 요청` --references--> `SmsService`  [INFERRED]
+  docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md → src/common/sms.service.ts
+- `단위 테스트` --references--> `SmsService`  [INFERRED]
+  docs/superpowers/specs/2026-09-19-consumer-auth-api-design.md → src/common/sms.service.ts
+- `Task 1: Stable GraphQL Error and Validation Contract` --references--> `AppModule`  [INFERRED]
+  docs/superpowers/plans/2026-09-19-consumer-auth-api.md → src/app.module.ts
 
 ## Import Cycles
 - None detected.
@@ -101,23 +109,23 @@
 - **Evidence-First Optimization Safety** — _agents_skills_caveman_evidence_review_skill_evidence_bucket_separation, _agents_skills_caveman_learn_skill_savings_evidence_rungs, _agents_skills_caveman_manage_skill_fail_closed_lifecycle_gate, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 - **Operator-Controlled Changes** — _agents_skills_caveman_discover_skill_operator_approval_gate, _agents_skills_caveman_learn_skill_consent_gated_editing, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 
-## Communities (47 total, 3 thin omitted)
+## Communities (55 total, 3 thin omitted)
 
 ### Community 0 - "Q: postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야, Source Nodes
 
 ### Community 1 - "cli.py"
-Cohesion: 0.13
-Nodes (21): main(), print_usage(), Caveman Compress CLI Usage: caveman <filepath>, backup_dir_for(), Out-of-tree backup dir for filepath, keyed by its parent dir name — kept…, detect_file_type(), _is_code_line(), _is_json_content() (+13 more)
+Cohesion: 0.15
+Nodes (18): main(), print_usage(), Caveman Compress CLI Usage: caveman <filepath>, detect_file_type(), _is_code_line(), _is_json_content(), _is_yaml_content(), Path (+10 more)
 
 ### Community 2 - "package.json"
 Cohesion: 0.06
-Nodes (30): author, description, license, name, private, version, @as-integrations/express5, axios (+22 more)
+Nodes (32): author, description, license, name, private, version, @apollo/server, @as-integrations/express5 (+24 more)
 
 ### Community 3 - "validate.py"
-Cohesion: 0.11
-Nodes (24): count_bullets(), extract_code_blocks(), extract_fenced_spans(), extract_headings(), extract_indented_code_blocks(), extract_inline_codes(), extract_paths(), extract_urls() (+16 more)
+Cohesion: 0.09
+Nodes (31): benchmark_pair(), count_tokens(), main(), print_table(), Path, count_bullets(), extract_code_blocks(), extract_fenced_spans() (+23 more)
 
 ### Community 4 - "Consumer Backend Scope"
 Cohesion: 0.10
@@ -143,9 +151,9 @@ Nodes (22): compilerOptions, allowSyntheticDefaultImports, declaration, emitDeco
 Cohesion: 0.09
 Nodes (22): dependencies, @apollo/server, @as-integrations/express5, axios, bcrypt, class-transformer, class-validator, date-fns (+14 more)
 
-### Community 10 - "User"
-Cohesion: 0.07
-Nodes (34): Context, Consumer Authentication API Implementation Plan, File Map, Global Constraints, Prerequisite Contract, Review Focus, Task 0: Verify the Database Foundation, Task 10: Final Verification and Knowledge Graph Update (+26 more)
+### Community 10 - ".currentUser"
+Cohesion: 0.05
+Nodes (44): Context, Consumer Authentication API Implementation Plan, File Map, Global Constraints, Prerequisite Contract, Task 6: Global Access Guard and `currentUser`, API 인증, AuthModule (+36 more)
 
 ### Community 11 - "Caveman Commit"
 Cohesion: 0.12
@@ -176,8 +184,8 @@ Cohesion: 0.20
 Nodes (9): description, files, license, name, private, scripts, test, type (+1 more)
 
 ### Community 18 - "SmsService"
-Cohesion: 0.11
-Nodes (17): File Map, Global Constraints, Safe Logging and Secure OTP Implementation Plan, Task 1: Replace response-body logging with GraphQL metadata logging, Task 2: Remove the global request-body logger, Task 3: Add masked context to SMS failures, Task 4: Generate OTPs with Node's cryptographic RNG, Task 5: Verify the PR and refresh Graphify (+9 more)
+Cohesion: 0.12
+Nodes (16): File Map, Global Constraints, Safe Logging and Secure OTP Implementation Plan, Task 1: Replace response-body logging with GraphQL metadata logging, Task 2: Remove the global request-body logger, Task 3: Add masked context to SMS failures, Task 4: Generate OTPs with Node's cryptographic RNG, Task 5: Verify the PR and refresh Graphify (+8 more)
 
 ### Community 19 - "Persistent Caveman Style"
 Cohesion: 0.29
@@ -192,8 +200,8 @@ Cohesion: 0.33
 Nodes (6): Cavecrew Overview, Cavecrew, Cavecrew Builder, Cavecrew Investigator, Cavecrew Reviewer, Compressed Subagent Delegation
 
 ### Community 22 - "nest-cli.json"
-Cohesion: 0.33
-Nodes (5): collection, compilerOptions, deleteOutDir, $schema, sourceRoot
+Cohesion: 0.29
+Nodes (6): collection, compilerOptions, deleteOutDir, entryFile, $schema, sourceRoot
 
 ### Community 23 - "Caveman Stats"
 Cohesion: 0.50
@@ -216,24 +224,24 @@ Cohesion: 0.50
 Nodes (3): ./tsconfig.json, exclude, extends
 
 ### Community 28 - "compress.py"
-Cohesion: 0.08
-Nodes (33): build_compress_prompt(), build_fix_prompt(), call_claude(), _compress_file_locked(), first_nonblank_line(), _is_smaller_than_body(), mask_code_blocks(), Caveman Memory Compression Orchestrator Usage: python scripts/compress.py… (+25 more)
+Cohesion: 0.12
+Nodes (17): call_claude(), Caveman Memory Compression Orchestrator Usage: python scripts/compress.py…, r"""Strip an outer ```markdown ... ``` fence when it wraps the ENTIRE output.…, Send a prompt to Claude. Prefers the Anthropic SDK when ANTHROPIC_API_KEY is…, strip_llm_wrapper(), contextlib, errno, fcntl (+9 more)
 
 ### Community 30 - "Q: 그러면 내가 어떤 테이블을 생성하면 되는지 sql문 알려줄래?"
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: 그러면 내가 어떤 테이블을 생성하면 되는지 sql문 알려줄래?, Source Nodes
 
 ### Community 31 - "민감정보 안전 로깅 및 안전한 OTP 생성 설계"
-Cohesion: 0.10
-Nodes (20): 1. 전역 요청 결과 로그, 2. 요청 body 로깅 제거, 3. 실패 지점의 업무 로그, OTP 단위 테스트, SMS 서비스 단위 테스트, 데이터 흐름, 목표, 민감정보 안전 로깅 및 안전한 OTP 생성 설계 (+12 more)
-
-### Community 32 - "Consumer 인증 API 설계"
 Cohesion: 0.09
-Nodes (28): Args, Task 7: Authentication GraphQL Module and Resolver, API 인증, Consumer 인증 API 설계, GraphQL 계약, OTP 검증, OTP 요청, OTP 정책 (+20 more)
+Nodes (21): 1. 전역 요청 결과 로그, 2. 요청 body 로깅 제거, 3. 실패 지점의 업무 로그, 4. OTP 생성, OTP 단위 테스트, SMS 서비스 단위 테스트, 데이터 흐름, 목표 (+13 more)
+
+### Community 32 - "SessionService"
+Cohesion: 0.11
+Nodes (23): Args, Task 4: Stateless Access Tokens and Rotating Refresh Sessions, Task 7: Authentication GraphQL Module and Resolver, InputType, IsString, Mutation, reflect-metadata, AuthResolver (+15 more)
 
 ### Community 33 - "Path"
-Cohesion: 0.11
-Nodes (23): compress_file(), file_lock(), is_sensitive_path(), lock_path_for(), LockTimeoutError, Path, Raised when another process holds the compress lock past LOCK_WAIT_SECONDS., Cross-session lock path keyed on the same (parent-dir-name, stem) identity… (+15 more)
+Cohesion: 0.17
+Nodes (16): backup_dir_for(), compress_file(), file_lock(), is_sensitive_path(), lock_path_for(), Path, Out-of-tree backup dir for filepath, keyed by its parent dir name — kept…, Cross-session lock path keyed on the same (parent-dir-name, stem) identity… (+8 more)
 
 ### Community 34 - "PostgreSQL·MikroORM 기반 설계"
 Cohesion: 0.20
@@ -251,9 +259,17 @@ Nodes (4): Answer, Outcome, Q: graphql은 유지하고 PostgreSQL과 MikroORM을
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?, Source Nodes
 
-### Community 38 - "benchmark.py"
-Cohesion: 0.43
-Nodes (6): benchmark_pair(), count_tokens(), main(), print_table(), Path, tiktoken
+### Community 38 - "PostgreSQL·MikroORM Foundation Implementation Plan"
+Cohesion: 0.33
+Nodes (5): Global Constraints, PostgreSQL·MikroORM Foundation Implementation Plan, Task 1: Runtime MikroORM options, Task 2: PostgreSQL integration harness, Task 3: Final verification
+
+### Community 39 - "_compress_file_locked"
+Cohesion: 0.12
+Nodes (16): build_compress_prompt(), build_fix_prompt(), _compress_file_locked(), first_nonblank_line(), _is_smaller_than_body(), mask_code_blocks(), Read a source file as UTF-8, returning (text, line_terminator, raw_bytes).…, Return the first non-blank line, stripped — used to detect a prose preamble… (+8 more)
+
+### Community 40 - "app.module.ts"
+Cohesion: 0.21
+Nodes (8): 보안과 로깅, ref_express, ref_path, CommonModule, Module, createMikroOrmOptions(), GraphqlContext, ResponseLoggingPlugin
 
 ### Community 41 - "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?"
 Cohesion: 0.50
@@ -264,24 +280,48 @@ Cohesion: 0.18
 Nodes (11): jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, rootDir, testEnvironment, testPathIgnorePatterns, testRegex (+3 more)
 
 ### Community 43 - "otp.service.ts"
-Cohesion: 0.08
-Nodes (39): Task 4: Stateless Access Tokens and Rotating Refresh Sessions, InputType, IsString, bcrypt, @mikro-orm/core, @mikro-orm/postgresql, @nestjs/config, @nestjs/graphql (+31 more)
+Cohesion: 0.10
+Nodes (29): Task 2: User Persistence and Phone Normalization, Task 5: Signup and Login Orchestration, bcrypt, @mikro-orm/core, @mikro-orm/nestjs, @mikro-orm/postgresql, @nestjs/config, @nestjs/jwt (+21 more)
 
-### Community 44 - "app.module.ts"
-Cohesion: 0.05
-Nodes (39): Catch, Task 1: Stable GraphQL Error and Validation Contract, Global Constraints, PostgreSQL·MikroORM Foundation Implementation Plan, Task 1: Runtime MikroORM options, Task 2: PostgreSQL integration harness, Task 3: Final verification, 보안과 로깅 (+31 more)
+### Community 44 - "@nestjs/common"
+Cohesion: 0.24
+Nodes (7): @nestjs/axios, @nestjs/common, CommonResolver, Query, Resolver, CommonService, Injectable
+
+### Community 45 - "write_bytes_atomic"
+Cohesion: 0.40
+Nodes (6): Write ``text`` to ``path`` atomically as UTF-8. Path.write_text() truncates the…, Write ``data`` to ``path`` atomically, preserving permission bits., Write to the target file, surfacing the backup location if the write itself…, write_bytes_atomic(), _write_target(), write_text_atomic()
 
 ### Community 46 - "Q: 어떤것들이 수정되었는지 알려줘"
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: 어떤것들이 수정되었는지 알려줘, Source Nodes
 
+### Community 49 - "authError"
+Cohesion: 0.29
+Nodes (6): Catch, Task 1: Stable GraphQL Error and Validation Contract, graphql, authError(), AuthErrorCode, GraphqlExceptionFilter
+
+### Community 50 - "auth.e2e-spec.ts"
+Cohesion: 0.29
+Nodes (7): Integration test, ref_jest_globals, @nestjs/testing, supertest, AppModule, Module, GraphqlResponse
+
 ### Community 51 - "eslint.config.mjs"
 Cohesion: 0.40
 Nodes (4): @eslint/js, eslint-plugin-prettier, globals, typescript-eslint
 
+### Community 52 - "auth.guard.ts"
+Cohesion: 0.32
+Nodes (4): @nestjs/core, @nestjs/graphql, AuthenticatedRequest, ResolverClass
+
+### Community 53 - "app.module.spec.ts"
+Cohesion: 0.33
+Nodes (5): MockAuthModule, MockCommonModule, MockConfigService, MockPostgreSqlDriver, MockUsersModule
+
+### Community 55 - "LockTimeoutError"
+Cohesion: 0.67
+Nodes (3): LockTimeoutError, Raised when another process holds the compress lock past LOCK_WAIT_SECONDS., TimeoutError
+
 ## Knowledge Gaps
-- **288 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+283 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 410 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **289 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+284 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 411 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
@@ -296,11 +336,11 @@ Nodes (4): @eslint/js, eslint-plugin-prettier, globals, typescript-eslint
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `@nestjs/common` connect `app.module.ts` to `User`, `package.json`, `otp.service.ts`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Why does `@nestjs/common` connect `@nestjs/common` to `SessionService`, `package.json`, `app.module.ts`, `otp.service.ts`, `authError`, `auth.e2e-spec.ts`, `auth.guard.ts`, `app.module.spec.ts`?**
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
   _High betweenness centrality (0.028) - this node is a cross-community bridge._
-- **Why does `AppModule` connect `app.module.ts` to `Consumer 인증 API 설계`, `SmsService`, `otp.service.ts`?**
+- **Why does `AppModule` connect `auth.e2e-spec.ts` to `SessionService`, `PostgreSQL·MikroORM Foundation Implementation Plan`, `app.module.ts`, `otp.service.ts`, `authError`, `SmsService`, `auth.guard.ts`?**
   _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **Are the 7 inferred relationships involving `User` (e.g. with `Consumer Authentication API Implementation Plan` and `File Map`) actually correct?**
   _`User` has 7 INFERRED edges - model-reasoned connections that need verification._
@@ -309,4 +349,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 4 inferred relationships involving `UsersService` (e.g. with `Task 2: User Persistence and Phone Normalization` and `Task 3: OTP Challenge Lifecycle`) actually correct?**
   _`UsersService` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `name`, `version`, `license` to the rest of the system?**
-  _288 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _289 weakly-connected nodes found - possible documentation gaps or missing edges._
