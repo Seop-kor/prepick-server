@@ -15,6 +15,7 @@ import { CommonModule } from './common/common.module';
 import { createMikroOrmOptions } from './mikro-orm.options';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { StoresModule } from './stores/stores.module';
 
 @Module({
   imports: [
@@ -49,6 +50,7 @@ import { AuthModule } from './auth/auth.module';
     CommonModule,
     UsersModule,
     AuthModule,
+    StoresModule,
   ],
   providers: [
     {
