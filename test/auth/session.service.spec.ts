@@ -22,7 +22,7 @@ import { User } from '../../src/users/user.entity';
 
 describe('SessionService', () => {
   const now = new Date('2026-09-20T00:00:00.000Z');
-  const sessionId = '11111111-1111-4111-8111-111111111111';
+  const sessionId = 1;
   const oldSecret = 'a'.repeat(43);
   const newSecret = 'b'.repeat(43);
   const transactionEm = {
@@ -37,7 +37,7 @@ describe('SessionService', () => {
   const em = { transactional: jest.fn() };
   const jwt = { signAsync: jest.fn(), verifyAsync: jest.fn() };
   const user = Object.assign(new User(), {
-    id: '22222222-2222-4222-8222-222222222222',
+    id: 2,
     name: '홍길동',
     phone: '01012345678',
     password: 'bcrypt-value',
@@ -82,13 +82,13 @@ describe('SessionService', () => {
     expect(em.transactional).toHaveBeenCalled();
     expect(transactionEm.execute).toHaveBeenCalledWith(
       'select pg_advisory_xact_lock(hashtext(?))',
-      [user.id],
+      [String(user.id)],
     );
     expect(transactionEm.nativeDelete).toHaveBeenCalledWith(RefreshSession, {
       user: user.id,
     });
     expect(jwt.signAsync).toHaveBeenCalledWith(
-      { sub: user.id },
+      { sub: String(user.id) },
       { expiresIn: '15m' },
     );
     expect(stored.refreshToken).toBe(sha256(newSecret));
@@ -110,7 +110,7 @@ describe('SessionService', () => {
     expect(transactionEm.execute).toHaveBeenCalledTimes(2);
     expect(transactionEm.nativeDelete).toHaveBeenCalledTimes(2);
     expect(jwt.signAsync).toHaveBeenLastCalledWith(
-      { sub: user.id },
+      { sub: String(user.id) },
       { expiresIn: '15m' },
     );
   });
@@ -237,16 +237,24 @@ describe('SessionService', () => {
     );
   });
 
-  it('access token의 sub가 문자열이면 payload를 반환한다', async () => {
-    jwt.verifyAsync.mockResolvedValue({ sub: user.id });
+  it('access token의 sub가 정수 문자열이면 숫자 ID를 반환한다', async () => {
+    jwt.verifyAsync.mockResolvedValue({ sub: String(user.id) });
 
     await expect(service.verifyAccessToken('access-token')).resolves.toEqual({
       sub: user.id,
     });
   });
 
-  it.each([{ sub: undefined }, { sub: 123 }, {}])(
-    'access token의 sub가 문자열이 아니면 인증 오류를 반환한다',
+  it.each([
+    { sub: undefined },
+    { sub: 123 },
+    { sub: '0' },
+    { sub: '01' },
+    { sub: '2147483648' },
+    { sub: '11111111-1111-4111-8111-111111111111' },
+    {},
+  ])(
+    'access token의 sub가 유효한 정수가 아니면 인증 오류를 반환한다',
     async (payload) => {
       jwt.verifyAsync.mockResolvedValue(payload);
 
@@ -255,4 +263,11 @@ describe('SessionService', () => {
       ).rejects.toMatchObject({ extensions: { code: 'UNAUTHENTICATED' } });
     },
   );
+
+  it('기존 UUID session ID로 갱신하면 인증 오류를 반환한다', async () => {
+    await expect(
+      service.refresh(`11111111-1111-4111-8111-111111111111.${oldSecret}`),
+    ).rejects.toMatchObject({ extensions: { code: 'UNAUTHENTICATED' } });
+    expect(em.transactional).not.toHaveBeenCalled();
+  });
 });

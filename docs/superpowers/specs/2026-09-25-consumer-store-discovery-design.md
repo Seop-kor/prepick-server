@@ -53,7 +53,7 @@ CREATE INDEX sku_product_id_active_idx ON sku (product_id) WHERE is_active;
 -- 수동으로 매장을 수정할 때는 updated_at = now()를 함께 지정한다.
 ```
 
-네 테이블의 ID와 연결 ID는 32비트 양의 정수다. 새 ID는 PostgreSQL identity가 생성한다. 현재 사용자가 선택한 스키마에 맞춰 상품·SKU 외래 키와 SKU 가격 CHECK는 추가하지 않는다. 기존 UUID 테이블에는 아래 전환 SQL을 먼저 적용한다. 인증 사용자 ID는 UUID를 유지한다.
+네 테이블의 ID와 연결 ID는 32비트 양의 정수다. 새 ID는 PostgreSQL identity가 생성한다. 현재 사용자가 선택한 스키마에 맞춰 상품·SKU 외래 키와 SKU 가격 CHECK는 추가하지 않는다. 기존 UUID 테이블에는 아래 전환 SQL을 먼저 적용한다. 인증 테이블도 [별도 전환 SQL](2026-09-25-auth-integer-ids-design.md)을 적용해 정수 ID로 변경한다.
 
 기존 `Store`의 사업체 정보와 메뉴판 배치용 `Menu`는 포함하지 않는다. 옛 `Location`의 지점 정보는 `store`에, 옛 `Product`와 `Sku`는 각각 `product`와 `sku`에 대응한다. `isOpen`은 수동으로 관리하며 `sku.is_active`는 게시 여부다. 일시 품절은 8.3에서 별도로 다룬다. 검색 가격 `minPrice`는 활성 `sku.price`의 최솟값으로 계산한다. DB 테이블과 샘플 데이터는 사용자가 수동으로 생성한다. 애플리케이션은 DDL·자동 seed를 실행하지 않으며 저장소에 SQL·seed 파일을 추가하지 않는다. 샘플 데이터 삽입 SQL은 구현 결과에 제공한다.
 

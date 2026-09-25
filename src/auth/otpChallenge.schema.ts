@@ -6,7 +6,7 @@ export const OtpChallengeSchema = new EntitySchema({
   class: OtpChallenge,
   tableName: 'otp_challenge',
   properties: {
-    id: { type: 'uuid', primary: true },
+    id: { type: 'int', primary: true, autoincrement: true },
     phone: { type: String, length: 11 },
     otp: { type: String, length: 64 },
     expiresAt: { type: Date },

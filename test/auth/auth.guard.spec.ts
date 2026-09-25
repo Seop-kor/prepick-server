@@ -48,7 +48,7 @@ describe('AuthGuard', () => {
 
   it('Bearer token이 유효하면 request에 userId만 기록한다', async () => {
     const request = { headers: { authorization: 'Bearer access-token' } };
-    sessions.verifyAccessToken.mockResolvedValue({ sub: 'user-id' });
+    sessions.verifyAccessToken.mockResolvedValue({ sub: 2 });
     jest.spyOn(GqlExecutionContext, 'create').mockReturnValue({
       getContext: () => ({ req: request }),
     } as unknown as GqlExecutionContext);
@@ -57,7 +57,7 @@ describe('AuthGuard', () => {
     expect(sessions.verifyAccessToken).toHaveBeenCalledWith('access-token');
     expect(request).toEqual({
       headers: { authorization: 'Bearer access-token' },
-      userId: 'user-id',
+      userId: 2,
     });
   });
 

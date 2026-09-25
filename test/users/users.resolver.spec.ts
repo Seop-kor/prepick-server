@@ -12,12 +12,12 @@ describe('UsersResolver', () => {
   const users = { findById: jest.fn() };
   const resolver = new UsersResolver(users as unknown as UsersService);
   const user = Object.assign(new User(), {
-    id: '22222222-2222-4222-8222-222222222222',
+    id: 2,
     name: '홍길동',
     phone: '01012345678',
     password: 'bcrypt-value',
   });
-  const request = { userId: user.id } as Request & { userId: string };
+  const request = { userId: user.id } as Request & { userId: number };
 
   beforeEach(() => {
     jest.clearAllMocks();

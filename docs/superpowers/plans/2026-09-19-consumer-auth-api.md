@@ -1,5 +1,7 @@
 # Consumer Authentication API Implementation Plan
 
+> 이 문서의 UUID ID 코드 예시는 초기 구현 기록이다. 현재 인증 ID와 토큰 형식은 [정수 ID 전환 설계](../specs/2026-09-25-auth-integer-ids-design.md)를 따른다.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Implement the approved GraphQL phone-signup, OTP, login, token refresh, logout, and `currentUser` flows on top of the separately prepared PostgreSQL/MikroORM foundation.

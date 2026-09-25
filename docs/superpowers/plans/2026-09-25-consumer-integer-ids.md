@@ -1,5 +1,7 @@
 # Consumer discovery integer IDs implementation plan
 
+> 이 계획의 인증 UUID 유지 문구는 당시 구현 범위의 기록이다. 현재 인증 ID도 [정수 ID 전환 설계](../specs/2026-09-25-auth-integer-ids-design.md)에 따라 변경한다.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Change `store`, `product`, `sku`, and `promotion` identifiers from UUID to PostgreSQL generated `integer` while preserving the user's existing rows and product relationships.
