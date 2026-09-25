@@ -4,13 +4,15 @@ import { Injectable } from '@nestjs/common';
 import {
   decodeCursor,
   encodeCursor,
+  escapeLike,
   slicePage,
   validateFirst,
   validateId,
   validateLocation,
+  validateKeyword,
   validateRadius,
 } from './discovery.pagination';
-import { StorePage } from './discovery.types';
+import { MenuSearchPage, StorePage } from './discovery.types';
 import { Store } from './store.entity';
 
 export type StoreRow = {
@@ -46,6 +48,16 @@ export function storeFromRow(row: StoreRow, includeDistance = false): Store {
         ? Math.round(row.distance_meters)
         : null,
   });
+}
+
+export type Location = { latitude: number; longitude: number };
+
+function distanceSql(alias: string): string {
+  return `2 * 6371000 * asin(sqrt(least(1,
+    power(sin(radians(${alias}.latitude - ?) / 2), 2) +
+    cos(radians(?)) * cos(radians(${alias}.latitude)) *
+    power(sin(radians(${alias}.longitude - ?) / 2), 2)
+  )))`;
 }
 
 @Injectable()
@@ -106,11 +118,105 @@ export class StoresService {
     const page = slicePage(rows, first, (row) =>
       encodeCursor('new', '', new Date(row.created_at).toISOString(), row.id),
     );
-    return { items: page.items.map(storeFromRow), nextCursor: page.nextCursor };
+    return {
+      items: page.items.map((row) => storeFromRow(row)),
+      nextCursor: page.nextCursor,
+    };
   }
 
   async store(id: string): Promise<Store | null> {
     validateId(id);
     return this.em.findOne(Store, { id, isActive: true });
+  }
+
+  async searchStores(
+    keyword: string,
+    location: Location | null,
+    first = 20,
+    after?: string | null,
+  ): Promise<StorePage> {
+    keyword = validateKeyword(keyword);
+    validateFirst(first);
+    if (location) validateLocation(location.latitude, location.longitude, true);
+    const scope = JSON.stringify([keyword, location]);
+    const cursor = decodeCursor('store-search', scope, after);
+    const rows = (await this.em.execute(
+      `SELECT store.*${location ? `, ${distanceSql('store')} AS distance_meters` : ''}
+       FROM store WHERE is_active AND name ILIKE ? ESCAPE '#'
+       ${cursor ? 'AND (name, id) > (?, ?::uuid)' : ''}
+       ORDER BY name ASC, id ASC LIMIT ?`,
+      [
+        ...(location
+          ? [location.latitude, location.latitude, location.longitude]
+          : []),
+        `%${escapeLike(keyword)}%`,
+        ...(cursor ? [cursor.key, cursor.id] : []),
+        first + 1,
+      ],
+    )) as StoreRow[];
+    const page = slicePage(rows, first, (row) =>
+      encodeCursor('store-search', scope, row.name, row.id),
+    );
+    return {
+      items: page.items.map((row) => storeFromRow(row, location !== null)),
+      nextCursor: page.nextCursor,
+    };
+  }
+
+  async searchMenus(
+    keyword: string,
+    location: Location | null,
+    first = 20,
+    after?: string | null,
+  ): Promise<MenuSearchPage> {
+    keyword = validateKeyword(keyword);
+    validateFirst(first);
+    if (location) validateLocation(location.latitude, location.longitude, true);
+    const scope = JSON.stringify([keyword, location]);
+    const cursor = decodeCursor('menu-search', scope, after);
+    type MenuRow = StoreRow & {
+      product_id: string;
+      product_name: string;
+      store_id: string;
+      store_name: string;
+      min_price: number;
+    };
+    const rows = (await this.em.execute(
+      `SELECT p.id AS product_id, p.name AS product_name,
+        s.id AS store_id, s.name AS store_name, s.category, s.address,
+        s.latitude, s.longitude, s.image_url, s.is_open, s.is_active,
+        s.created_at, s.updated_at, min(k.price)::int AS min_price
+        ${location ? `, ${distanceSql('s')} AS distance_meters` : ''}
+       FROM product p
+       JOIN store s ON s.id = p.store_id AND s.is_active
+       JOIN sku k ON k.product_id = p.id AND k.is_active
+       WHERE p.is_active AND p.name ILIKE ? ESCAPE '#'
+       ${cursor ? 'AND (p.name, p.id) > (?, ?::uuid)' : ''}
+       GROUP BY p.id, s.id
+       ORDER BY p.name ASC, p.id ASC LIMIT ?`,
+      [
+        ...(location
+          ? [location.latitude, location.latitude, location.longitude]
+          : []),
+        `%${escapeLike(keyword)}%`,
+        ...(cursor ? [cursor.key, cursor.id] : []),
+        first + 1,
+      ],
+    )) as MenuRow[];
+    const page = slicePage(rows, first, (row) =>
+      encodeCursor('menu-search', scope, row.product_name, row.product_id),
+    );
+    return {
+      items: page.items.map((row) => ({
+        id: row.product_id,
+        name: row.product_name,
+        minPrice: row.min_price,
+        store: storeFromRow(
+          { ...row, id: row.store_id, name: row.store_name },
+          location !== null,
+        ),
+      })),
+      nextCursor: page.nextCursor,
+    };
   }
 }

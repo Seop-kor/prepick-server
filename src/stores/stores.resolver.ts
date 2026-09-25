@@ -1,10 +1,20 @@
-import { Args, Float, ID, Int, Query, Resolver } from '@nestjs/graphql';
+import {
+  Args,
+  Float,
+  ID,
+  Int,
+  Parent,
+  Query,
+  ResolveField,
+  Resolver,
+} from '@nestjs/graphql';
 
-import { StorePage } from './discovery.types';
+import { validateKeyword, validateLocation } from './discovery.pagination';
+import { MenuSearchPage, SearchResult, StorePage } from './discovery.types';
 import { Store } from './store.entity';
 import { StoresService } from './stores.service';
 
-@Resolver()
+@Resolver(() => SearchResult)
 export class StoresResolver {
   constructor(private readonly service: StoresService) {}
 
@@ -30,5 +40,46 @@ export class StoresResolver {
   @Query(() => Store, { nullable: true })
   store(@Args('id', { type: () => ID }) id: string) {
     return this.service.store(id);
+  }
+
+  @Query(() => SearchResult)
+  search(
+    @Args('keyword') keyword: string,
+    @Args('latitude', { type: () => Float, nullable: true }) latitude?: number,
+    @Args('longitude', { type: () => Float, nullable: true })
+    longitude?: number,
+  ): SearchResult {
+    const location = validateLocation(latitude, longitude);
+    return {
+      keyword: validateKeyword(keyword),
+      latitude: location?.latitude ?? null,
+      longitude: location?.longitude ?? null,
+    };
+  }
+
+  @ResolveField(() => StorePage, { name: 'stores' })
+  searchStores(
+    @Parent() parent: SearchResult,
+    @Args('first', { type: () => Int, defaultValue: 20 }) first: number,
+    @Args('after', { nullable: true }) after?: string | null,
+  ) {
+    const location =
+      parent.latitude === null
+        ? null
+        : { latitude: parent.latitude, longitude: parent.longitude! };
+    return this.service.searchStores(parent.keyword, location, first, after);
+  }
+
+  @ResolveField(() => MenuSearchPage, { name: 'menus' })
+  searchMenus(
+    @Parent() parent: SearchResult,
+    @Args('first', { type: () => Int, defaultValue: 20 }) first: number,
+    @Args('after', { nullable: true }) after?: string | null,
+  ) {
+    const location =
+      parent.latitude === null
+        ? null
+        : { latitude: parent.latitude, longitude: parent.longitude! };
+    return this.service.searchMenus(parent.keyword, location, first, after);
   }
 }
