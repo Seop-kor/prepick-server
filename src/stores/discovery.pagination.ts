@@ -94,11 +94,14 @@ export function decodeCursor(
     ) {
       throw new Error();
     }
-    if (
-      kind === 'new' &&
-      new Date(value[2] as string).toISOString() !== value[2]
-    ) {
-      throw new Error();
+    if (kind === 'new') {
+      const date = value[2] as string;
+      if (
+        !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}(?:\d{3})?Z$/.test(date) ||
+        new Date(date).toISOString().slice(0, 23) !== date.slice(0, 23)
+      ) {
+        throw new Error();
+      }
     }
     return { key: value[2] as string | number, id: value[3] };
   } catch {

@@ -65,4 +65,12 @@ describe('매장 탐색 입력과 커서', () => {
       nextCursor: '2',
     });
   });
+
+  it('신규 매장 커서에 마이크로초 시각이 있으면 그대로 복원한다', () => {
+    const key = '2026-09-25T12:34:56.123456Z';
+    expect(decodeCursor('new', '', encodeCursor('new', '', key, ID))).toEqual({
+      key,
+      id: ID,
+    });
+  });
 });

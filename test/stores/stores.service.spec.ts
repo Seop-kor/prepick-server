@@ -30,7 +30,7 @@ const row = (id: string) => ({
 });
 
 describe('StoresService', () => {
-  const execute = jest.fn();
+  const execute = jest.fn<Promise<unknown[]>, [string, unknown[]]>();
   const findOne = jest.fn();
   const service = new StoresService({
     execute,
@@ -75,6 +75,19 @@ describe('StoresService', () => {
     expect(second.items.map(({ id }) => id)).toEqual([A]);
     expect(execute.mock.calls[0][0]).toContain('is_active');
     expect(execute.mock.calls[1][0]).toContain('(created_at, id) <');
+  });
+
+  it('신규 매장의 다음 페이지 커서에 DB의 마이크로초 등록 시각을 보존한다', async () => {
+    execute
+      .mockResolvedValueOnce([
+        { ...row(B), cursor_created_at: '2026-09-25T00:00:00.123456Z' },
+        row(A),
+      ])
+      .mockResolvedValueOnce([]);
+    const page = await service.newStores(1, null);
+    await service.newStores(1, page.nextCursor);
+    expect(execute.mock.calls[0][0]).toContain('cursor_created_at');
+    expect(execute.mock.calls[1][1][0]).toBe('2026-09-25T00:00:00.123456Z');
   });
 
   it('비활성 매장을 조회하면 결과가 없다고 처리한다', async () => {

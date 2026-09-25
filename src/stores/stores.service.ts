@@ -27,6 +27,7 @@ export type StoreRow = {
   is_active: boolean;
   created_at: Date | string;
   updated_at: Date | string;
+  cursor_created_at?: string;
   distance_meters?: number | null;
 };
 
@@ -76,7 +77,7 @@ export class StoresService {
     validateFirst(first);
     const scope = JSON.stringify([latitude, longitude, radiusKm]);
     const cursor = decodeCursor('nearby', scope, after);
-    const rows = (await this.em.execute(
+    const rows = await this.em.execute<StoreRow[]>(
       `WITH ranked AS (
         SELECT s.*, 2 * 6371000 * asin(sqrt(least(1,
           power(sin(radians(s.latitude - ?) / 2), 2) +
@@ -96,7 +97,7 @@ export class StoresService {
         ...(cursor ? [cursor.key, cursor.id] : []),
         first + 1,
       ],
-    )) as StoreRow[];
+    );
     const page = slicePage(rows, first, (row) =>
       encodeCursor('nearby', scope, row.distance_meters!, row.id),
     );
@@ -109,14 +110,20 @@ export class StoresService {
   async newStores(first = 20, after?: string | null): Promise<StorePage> {
     validateFirst(first);
     const cursor = decodeCursor('new', '', after);
-    const rows = (await this.em.execute(
-      `SELECT * FROM store WHERE is_active
+    const rows = await this.em.execute<StoreRow[]>(
+      `SELECT *, to_char(created_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.US"Z"') AS cursor_created_at
+       FROM store WHERE is_active
       ${cursor ? 'AND (created_at, id) < (?::timestamptz, ?::uuid)' : ''}
       ORDER BY created_at DESC, id DESC LIMIT ?`,
       [...(cursor ? [cursor.key, cursor.id] : []), first + 1],
-    )) as StoreRow[];
+    );
     const page = slicePage(rows, first, (row) =>
-      encodeCursor('new', '', new Date(row.created_at).toISOString(), row.id),
+      encodeCursor(
+        'new',
+        '',
+        row.cursor_created_at ?? new Date(row.created_at).toISOString(),
+        row.id,
+      ),
     );
     return {
       items: page.items.map((row) => storeFromRow(row)),
@@ -140,7 +147,7 @@ export class StoresService {
     if (location) validateLocation(location.latitude, location.longitude, true);
     const scope = JSON.stringify([keyword, location]);
     const cursor = decodeCursor('store-search', scope, after);
-    const rows = (await this.em.execute(
+    const rows = await this.em.execute<StoreRow[]>(
       `SELECT store.*${location ? `, ${distanceSql('store')} AS distance_meters` : ''}
        FROM store WHERE is_active AND name ILIKE ? ESCAPE '#'
        ${cursor ? 'AND (name, id) > (?, ?::uuid)' : ''}
@@ -153,7 +160,7 @@ export class StoresService {
         ...(cursor ? [cursor.key, cursor.id] : []),
         first + 1,
       ],
-    )) as StoreRow[];
+    );
     const page = slicePage(rows, first, (row) =>
       encodeCursor('store-search', scope, row.name, row.id),
     );
@@ -181,7 +188,7 @@ export class StoresService {
       store_name: string;
       min_price: number;
     };
-    const rows = (await this.em.execute(
+    const rows = await this.em.execute<MenuRow[]>(
       `SELECT p.id AS product_id, p.name AS product_name,
         s.id AS store_id, s.name AS store_name, s.category, s.address,
         s.latitude, s.longitude, s.image_url, s.is_open, s.is_active,
@@ -202,7 +209,7 @@ export class StoresService {
         ...(cursor ? [cursor.key, cursor.id] : []),
         first + 1,
       ],
-    )) as MenuRow[];
+    );
     const page = slicePage(rows, first, (row) =>
       encodeCursor('menu-search', scope, row.product_name, row.product_id),
     );

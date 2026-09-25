@@ -22,17 +22,22 @@ export class StoresResolver {
   stores(
     @Args('latitude', { type: () => Float }) latitude: number,
     @Args('longitude', { type: () => Float }) longitude: number,
-    @Args('radiusKm', { type: () => Float, defaultValue: 5 }) radiusKm: number,
-    @Args('first', { type: () => Int, defaultValue: 20 }) first: number,
-    @Args('after', { nullable: true }) after?: string | null,
+    @Args('radiusKm', { type: () => Float, nullable: true, defaultValue: 5 })
+    radiusKm: number,
+    @Args('first', { type: () => Int, nullable: true, defaultValue: 20 })
+    first: number,
+    @Args('after', { type: () => String, nullable: true })
+    after?: string | null,
   ) {
     return this.service.nearby(latitude, longitude, radiusKm, first, after);
   }
 
   @Query(() => StorePage)
   newStores(
-    @Args('first', { type: () => Int, defaultValue: 20 }) first: number,
-    @Args('after', { nullable: true }) after?: string | null,
+    @Args('first', { type: () => Int, nullable: true, defaultValue: 20 })
+    first: number,
+    @Args('after', { type: () => String, nullable: true })
+    after?: string | null,
   ) {
     return this.service.newStores(first, after);
   }
@@ -60,8 +65,10 @@ export class StoresResolver {
   @ResolveField(() => StorePage, { name: 'stores' })
   searchStores(
     @Parent() parent: SearchResult,
-    @Args('first', { type: () => Int, defaultValue: 20 }) first: number,
-    @Args('after', { nullable: true }) after?: string | null,
+    @Args('first', { type: () => Int, nullable: true, defaultValue: 20 })
+    first: number,
+    @Args('after', { type: () => String, nullable: true })
+    after?: string | null,
   ) {
     const location =
       parent.latitude === null
@@ -73,8 +80,10 @@ export class StoresResolver {
   @ResolveField(() => MenuSearchPage, { name: 'menus' })
   searchMenus(
     @Parent() parent: SearchResult,
-    @Args('first', { type: () => Int, defaultValue: 20 }) first: number,
-    @Args('after', { nullable: true }) after?: string | null,
+    @Args('first', { type: () => Int, nullable: true, defaultValue: 20 })
+    first: number,
+    @Args('after', { type: () => String, nullable: true })
+    after?: string | null,
   ) {
     const location =
       parent.latitude === null

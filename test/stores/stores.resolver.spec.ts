@@ -9,13 +9,14 @@ jest.mock('@mikro-orm/postgresql', () => ({
 describe('StoresResolver', () => {
   it('주변 매장 조회를 요청하면 서비스 결과를 반환한다', async () => {
     const page = { items: [], nextCursor: null };
+    const nearby = jest.fn().mockResolvedValue(page);
     const service = {
-      nearby: jest.fn().mockResolvedValue(page),
+      nearby,
     } as unknown as StoresService;
     const resolver = new StoresResolver(service);
 
     await expect(resolver.stores(37.5, 127, 5, 20, null)).resolves.toBe(page);
-    expect(service.nearby).toHaveBeenCalledWith(37.5, 127, 5, 20, null);
+    expect(nearby).toHaveBeenCalledWith(37.5, 127, 5, 20, null);
   });
 
   it('검색 좌표를 하나만 제공하면 입력 오류를 반환한다', () => {
@@ -24,23 +25,27 @@ describe('StoresResolver', () => {
   });
 
   it('검색 결과의 매장과 상품을 각각 독립적인 페이지로 조회한다', async () => {
+    const searchStores = jest
+      .fn()
+      .mockResolvedValue({ items: [], nextCursor: null });
+    const searchMenus = jest
+      .fn()
+      .mockResolvedValue({ items: [], nextCursor: null });
     const service = {
-      searchStores: jest
-        .fn()
-        .mockResolvedValue({ items: [], nextCursor: null }),
-      searchMenus: jest.fn().mockResolvedValue({ items: [], nextCursor: null }),
+      searchStores,
+      searchMenus,
     } as unknown as StoresService;
     const resolver = new StoresResolver(service);
     const parent = resolver.search(' 커피 ', 37.5, 127);
     await resolver.searchStores(parent, 2, 'store-cursor');
     await resolver.searchMenus(parent, 3, 'menu-cursor');
-    expect(service.searchStores).toHaveBeenCalledWith(
+    expect(searchStores).toHaveBeenCalledWith(
       '커피',
       { latitude: 37.5, longitude: 127 },
       2,
       'store-cursor',
     );
-    expect(service.searchMenus).toHaveBeenCalledWith(
+    expect(searchMenus).toHaveBeenCalledWith(
       '커피',
       { latitude: 37.5, longitude: 127 },
       3,

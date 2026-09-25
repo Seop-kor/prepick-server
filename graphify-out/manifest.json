@@ -102,9 +102,9 @@
     "semantic_hash": "3e04085c1eafd5ce2c6cf21de5df7aa2"
   },
   "src/app.module.ts": {
-    "mtime": 1790165185.2204287,
-    "seen": 1790218306.714575,
-    "ast_hash": "db668edaef9f635acc4d898053470e20",
+    "mtime": 1790337031.5259817,
+    "seen": 1790337173.3816571,
+    "ast_hash": "48749add9fe7b955204e2a5bb49a8e65",
     "semantic_hash": ""
   },
   "src/common/common.module.ts": {
@@ -144,15 +144,15 @@
     "semantic_hash": ""
   },
   "test/app.e2e-spec.ts": {
-    "mtime": 1790165185.222857,
-    "seen": 1790218306.7145972,
-    "ast_hash": "941c2fcea8a825e2d87a022017f0c375",
+    "mtime": 1790336573.0190766,
+    "seen": 1790337173.3816938,
+    "ast_hash": "1b0ca3c2a01e19b0502cd34f85a58e46",
     "semantic_hash": ""
   },
   "test/app.module.spec.ts": {
-    "mtime": 1790165185.2235186,
-    "seen": 1790218306.714598,
-    "ast_hash": "0808581ec93c1250dacad8894cf1e09b",
+    "mtime": 1790337002.6127758,
+    "seen": 1790337173.3816938,
+    "ast_hash": "84ae89b8f14b98b66ef7109ad66e8ed6",
     "semantic_hash": ""
   },
   "test/common/sms.service.spec.ts": {
@@ -789,6 +789,144 @@
     "mtime": 1790165185.2196255,
     "seen": 1790218306.714659,
     "ast_hash": "1086b7921e97c28005e6d569f1f1c721",
+    "semantic_hash": ""
+  },
+  "src/promotions/promotion.entity.ts": {
+    "mtime": 1790337031.2299812,
+    "seen": 1790337173.381676,
+    "ast_hash": "d40e5920821d4b740702ede0e78fe9b6",
+    "semantic_hash": ""
+  },
+  "src/promotions/promotion.schema.ts": {
+    "mtime": 1790337031.285394,
+    "seen": 1790337173.3816772,
+    "ast_hash": "99e8b37db334907603550aeea6696a0b",
+    "semantic_hash": ""
+  },
+  "src/promotions/promotions.module.ts": {
+    "mtime": 1790337031.4676096,
+    "seen": 1790337173.38168,
+    "ast_hash": "b1579e713c050111e633f6b34789f8e3",
+    "semantic_hash": ""
+  },
+  "src/promotions/promotions.resolver.ts": {
+    "mtime": 1790337031.3941119,
+    "seen": 1790337173.381681,
+    "ast_hash": "d0526f28652a0f9a2e505077639e622c",
+    "semantic_hash": ""
+  },
+  "src/promotions/promotions.service.ts": {
+    "mtime": 1790337170.5949109,
+    "seen": 1790337173.381681,
+    "ast_hash": "f38800a0c2e5f9b16a7f324fe2f696f0",
+    "semantic_hash": ""
+  },
+  "src/stores/discovery.pagination.ts": {
+    "mtime": 1790337097.2208316,
+    "seen": 1790337173.3816829,
+    "ast_hash": "47e7f4677ffb0c18b4de5918a170513d",
+    "semantic_hash": ""
+  },
+  "src/stores/discovery.types.ts": {
+    "mtime": 1790336892.1550117,
+    "seen": 1790337173.3816829,
+    "ast_hash": "c81acf9b175484723cb0f7949a4252da",
+    "semantic_hash": ""
+  },
+  "src/stores/product.entity.ts": {
+    "mtime": 1790336891.875327,
+    "seen": 1790337173.381684,
+    "ast_hash": "16a886034a3d918dad3a15e5747ff8e6",
+    "semantic_hash": ""
+  },
+  "src/stores/product.schema.ts": {
+    "mtime": 1790336891.9344769,
+    "seen": 1790337173.381685,
+    "ast_hash": "219da3c5a56a445f8689c7fe6ff8a3b6",
+    "semantic_hash": ""
+  },
+  "src/stores/sku.entity.ts": {
+    "mtime": 1790336891.9934995,
+    "seen": 1790337173.381685,
+    "ast_hash": "44581c0a1e7267f83c53668a18bd41b6",
+    "semantic_hash": ""
+  },
+  "src/stores/sku.schema.ts": {
+    "mtime": 1790336892.0661645,
+    "seen": 1790337173.381686,
+    "ast_hash": "91f548d7a3af316a45dbc4d320a4df8a",
+    "semantic_hash": ""
+  },
+  "src/stores/store.entity.ts": {
+    "mtime": 1790336820.1302774,
+    "seen": 1790337173.381686,
+    "ast_hash": "8775b20caa5d9e7ac74cec3fa68c986a",
+    "semantic_hash": ""
+  },
+  "src/stores/store.schema.ts": {
+    "mtime": 1790336820.1391783,
+    "seen": 1790337173.381687,
+    "ast_hash": "f039221cc798286703354f8298b181a3",
+    "semantic_hash": ""
+  },
+  "src/stores/stores.module.ts": {
+    "mtime": 1790336892.2194595,
+    "seen": 1790337173.381687,
+    "ast_hash": "9e7df8e60d0d49ab38b3c8ac3289f70c",
+    "semantic_hash": ""
+  },
+  "src/stores/stores.resolver.ts": {
+    "mtime": 1790337170.5699792,
+    "seen": 1790337173.381688,
+    "ast_hash": "c73f3eae7f1d4bdc2243be9d9d079065",
+    "semantic_hash": ""
+  },
+  "src/stores/stores.service.ts": {
+    "mtime": 1790337212.210549,
+    "seen": 1790337295.422782,
+    "ast_hash": "ebd390b7a794e1bbeff1571d543effd2",
+    "semantic_hash": ""
+  },
+  "test/promotions/promotions.service.spec.ts": {
+    "mtime": 1790337002.5619133,
+    "seen": 1790337173.381716,
+    "ast_hash": "eb6cf80ae7a2b10c33c1eae1d9792007",
+    "semantic_hash": ""
+  },
+  "test/stores/discovery.graphql.spec.ts": {
+    "mtime": 1790337247.2314427,
+    "seen": 1790337295.422803,
+    "ast_hash": "fe827340cc709c8985102bd578ce4598",
+    "semantic_hash": ""
+  },
+  "test/stores/discovery.pagination.spec.ts": {
+    "mtime": 1790337078.581648,
+    "seen": 1790337173.381718,
+    "ast_hash": "172f69a03fc3b324dad7ceab0d83c5d7",
+    "semantic_hash": ""
+  },
+  "test/stores/stores.resolver.spec.ts": {
+    "mtime": 1790337258.0715566,
+    "seen": 1790337295.4228039,
+    "ast_hash": "d7e2f4cd070a7881606cfe1ee91622df",
+    "semantic_hash": ""
+  },
+  "test/stores/stores.service.spec.ts": {
+    "mtime": 1790337247.1767764,
+    "seen": 1790337295.422805,
+    "ast_hash": "33abe1402c6406a1d96665b474ae6f30",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-09-25-consumer-store-discovery.md": {
+    "mtime": 1790333572.8280644,
+    "seen": 1790337173.381768,
+    "ast_hash": "43d64e0674bf546fc6a152665167ba6a",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-09-25-consumer-store-discovery-design.md": {
+    "mtime": 1790332275.7291281,
+    "seen": 1790337173.381771,
+    "ast_hash": "9f97962e68262b2c7b630ce18ee77363",
     "semantic_hash": ""
   }
 }
