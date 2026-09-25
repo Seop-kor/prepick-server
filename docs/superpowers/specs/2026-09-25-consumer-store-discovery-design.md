@@ -6,16 +6,53 @@
 
 이번 범위는 조회 전용이다. 매장 메뉴 목록·카테고리·메뉴 상세는 PRD 8.3에서 구현한다. 관리자 API, 영업 시간 자동 계산, 지도 API, PostGIS는 추가하지 않는다.
 
-## 기존 스키마와 데이터 구성
+## 데이터 스키마 (PostgreSQL)
 
-옛 `schema.graphql`의 `Store`는 사업체, `Location`은 실제 지점이다. 옛 `Product`가 판매 메뉴이고 `Sku`가 가격을 가진 하위 상품이다. 옛 `Menu`는 판매 메뉴가 아니라 메뉴판 배치 설정이다. 이번 앱은 지점 단위 탐색·주문만 필요하므로 사업체와 지점을 별도 테이블로 나누지 않고, 옛 `Location`과 `StoreInfo`의 Consumer 표시 정보를 새 `Store`에 모은다. 다지점 사업체 관계가 필요해지면 그때 별도 사업체 모델을 추가한다.
+```sql
+-- 이전 Location + StoreInfo → 지점, Product → 메뉴, Sku → 하위 상품
+CREATE TABLE store (
+  id uuid PRIMARY KEY,
+  name varchar(100) NOT NULL,
+  category varchar(50) NOT NULL,
+  address text NOT NULL,
+  latitude double precision NOT NULL CHECK (latitude BETWEEN -90 AND 90),
+  longitude double precision NOT NULL CHECK (longitude BETWEEN -180 AND 180),
+  image_url text,
+  is_open boolean NOT NULL DEFAULT false,
+  is_active boolean NOT NULL DEFAULT true,
+  created_at timestamptz NOT NULL DEFAULT now()
+);
 
-- `Store`: UUID ID, 지점 이름, 카테고리, 주소, 위도·경도, 선택적 이미지 URL, `isOpen`, `isActive`, 등록일. 옛 `Location.name/address/state`와 `StoreInfo.logo`에 대응한다. 옛 스키마에 없는 좌표는 주변 매장 조회를 위해 추가한다. `isOpen`은 DB에서 수동 관리하는 현재 영업 상태이며 `isActive`는 Consumer 노출 여부다.
-- `Menu`: UUID ID, 매장 ID, 이름, `isActive`. 옛 `Product`에 대응한다.
-- `MenuVariant`: UUID ID, 메뉴 ID, 이름, 원화 단위 가격, `isActive`. 옛 `Sku`에 대응한다. 검색 결과의 `minPrice`는 활성 하위 상품 가격의 최솟값으로 계산하며 별도 저장하지 않는다. 활성 하위 상품이 없는 메뉴는 검색 결과에서 제외한다. `isActive`는 판매 목록 게시 여부이며 일시 품절 상태는 8.3에서 별도로 다룬다. 하위 상품을 조회·선택하는 API도 8.3에서 추가한다.
-- `Promotion`: UUID ID, 제목, 설명, 선택적 이미지 URL, 표시 순서, `isActive`. 노출 기간과 클릭 동작은 요구사항에 없어 포함하지 않는다.
+CREATE TABLE menu (
+  id uuid PRIMARY KEY,
+  store_id uuid NOT NULL REFERENCES store(id),
+  name varchar(100) NOT NULL,
+  is_active boolean NOT NULL DEFAULT true
+);
 
-옛 스키마의 AWS 인증 지시문, S3 객체, 메뉴판 구성, 사업체 관리, 재고·정산 모델은 이 앱의 조회에 필요하지 않다. 이미지에는 URL만 저장하고 프로모션은 새 모델로 둔다. MikroORM entity/schema를 기존 패턴대로 기능 모듈에 등록한다. 매장 검색은 활성 매장만, 메뉴 검색은 활성 메뉴·활성 하위 상품·활성 매장만, 프로모션 조회는 활성 배너만 반환한다. DB 테이블과 샘플 데이터는 사용자가 수동으로 생성한다. 애플리케이션은 DDL·자동 seed를 실행하지 않으며 저장소에 SQL·seed 파일을 추가하지 않는다. 구현 결과에 PostgreSQL 테이블 생성과 샘플 데이터 삽입 SQL을 텍스트로 제공한다.
+CREATE TABLE menu_variant (
+  id uuid PRIMARY KEY,
+  menu_id uuid NOT NULL REFERENCES menu(id),
+  name varchar(100) NOT NULL,
+  price integer NOT NULL CHECK (price >= 0),
+  is_active boolean NOT NULL DEFAULT true
+);
+
+CREATE TABLE promotion (
+  id uuid PRIMARY KEY,
+  title varchar(100) NOT NULL,
+  description text NOT NULL,
+  image_url text,
+  sort_order integer NOT NULL DEFAULT 0,
+  is_active boolean NOT NULL DEFAULT true
+);
+
+CREATE INDEX store_active_new_idx ON store (created_at DESC, id DESC) WHERE is_active;
+CREATE INDEX menu_store_id_idx ON menu (store_id);
+CREATE INDEX menu_variant_menu_id_active_idx ON menu_variant (menu_id) WHERE is_active;
+```
+
+기존 `Store`의 사업체 정보와 메뉴판 배치용 `Menu`는 포함하지 않는다. `isOpen`은 수동으로 관리하며 하위 상품의 `isActive`는 게시 여부다. 일시 품절은 8.3에서 별도로 다룬다. 검색 가격 `minPrice`는 활성 하위 상품 가격의 최솟값으로 계산한다. DB 테이블과 샘플 데이터는 사용자가 수동으로 생성한다. 애플리케이션은 DDL·자동 seed를 실행하지 않으며 저장소에 SQL·seed 파일을 추가하지 않는다. 샘플 데이터 삽입 SQL은 구현 결과에 제공한다.
 
 ## GraphQL 계약
 
