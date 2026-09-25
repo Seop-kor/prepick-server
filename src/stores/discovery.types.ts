@@ -21,7 +21,7 @@ export class SearchResult {
 @ObjectType()
 export class MenuSearchHit {
   @Field(() => ID)
-  id!: string;
+  id!: number;
 
   @Field()
   name!: string;

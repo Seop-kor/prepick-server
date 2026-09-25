@@ -1,5 +1,7 @@
 # Consumer Store Discovery GraphQL Implementation Plan
 
+> 이 문서는 초기 UUID 구현의 기록이다. 현재 정수 ID 설계와 수동 DB 전환 SQL은 [정수 ID 전환 계획](2026-09-25-consumer-integer-ids.md) 및 [설계 문서](../specs/2026-09-25-consumer-store-discovery-design.md)를 따른다. 아래 UUID 샘플 INSERT는 정수 ID 스키마에 실행하지 않는다.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** 로그인한 사용자가 GraphQL로 주변·신규 매장, 매장 상세, 매장·메뉴 통합 검색, 프로모션을 조회하며 매장·검색 목록을 커서로 이어 받는다.

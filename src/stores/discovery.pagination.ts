@@ -2,8 +2,11 @@ import { BadRequestException } from '@nestjs/common';
 
 export type CursorKind = 'nearby' | 'new' | 'store-search' | 'menu-search';
 
-const UUID_RE =
-  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const MAX_ID = 2147483647;
+
+function validId(id: number): boolean {
+  return Number.isInteger(id) && id > 0 && id <= MAX_ID;
+}
 
 export function validateLocation(
   latitude?: number | null,
@@ -42,9 +45,11 @@ export function validateFirst(first = 20): number {
   return first;
 }
 
-export function validateId(id: string): string {
-  if (!UUID_RE.test(id)) throw new BadRequestException('Invalid id');
-  return id;
+export function validateId(id: string): number {
+  if (!/^[1-9]\d*$/.test(id) || !validId(Number(id))) {
+    throw new BadRequestException('Invalid id');
+  }
+  return Number(id);
 }
 
 export function validateKeyword(keyword: string): string {
@@ -63,7 +68,7 @@ export function encodeCursor(
   kind: CursorKind,
   scope: string,
   key: string | number,
-  id: string,
+  id: number,
 ): string {
   return Buffer.from(JSON.stringify([kind, scope, key, id])).toString(
     'base64url',
@@ -74,7 +79,7 @@ export function decodeCursor(
   kind: CursorKind,
   scope: string,
   cursor?: string | null,
-): { key: string | number; id: string } | null {
+): { key: string | number; id: number } | null {
   if (cursor == null) return null;
   try {
     if (cursor.length > 2048) throw new Error();
@@ -86,8 +91,8 @@ export function decodeCursor(
       value.length !== 4 ||
       value[0] !== kind ||
       value[1] !== scope ||
-      typeof value[3] !== 'string' ||
-      !UUID_RE.test(value[3]) ||
+      typeof value[3] !== 'number' ||
+      !validId(value[3]) ||
       (kind === 'nearby'
         ? typeof value[2] !== 'number' || !Number.isFinite(value[2])
         : typeof value[2] !== 'string')

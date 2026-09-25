@@ -12,7 +12,7 @@ import {
   validateRadius,
 } from '../../src/stores/discovery.pagination';
 
-const ID = '00000000-0000-4000-8000-000000000001';
+const ID = 1;
 
 describe('매장 탐색 입력과 커서', () => {
   it('좌표가 없으면 검색을 허용하고 주변 조회에서는 거부한다', () => {
@@ -37,7 +37,11 @@ describe('매장 탐색 입력과 커서', () => {
     expect(() => validateRadius(0)).toThrow(BadRequestException);
     expect(() => validateFirst(0)).toThrow(BadRequestException);
     expect(() => validateFirst(51)).toThrow(BadRequestException);
-    expect(() => validateId('not-a-uuid')).toThrow(BadRequestException);
+    expect(() => validateId('not-an-integer')).toThrow(BadRequestException);
+    expect(() => validateId('0')).toThrow(BadRequestException);
+    expect(() => validateId('01')).toThrow(BadRequestException);
+    expect(() => validateId('2147483648')).toThrow(BadRequestException);
+    expect(validateId('2147483647')).toBe(2147483647);
   });
 
   it('검색어를 정리하면 와일드카드를 문자 그대로 찾도록 만든다', () => {
@@ -55,6 +59,21 @@ describe('매장 탐색 입력과 커서', () => {
       BadRequestException,
     );
     expect(() => decodeCursor('store-search', 'coffee', 'invalid')).toThrow(
+      BadRequestException,
+    );
+    expect(decodeCursor('store-search', 'coffee', cursor)).toEqual({
+      key: 'Cafe',
+      id: ID,
+    });
+    const oldUuidCursor = Buffer.from(
+      JSON.stringify([
+        'store-search',
+        'coffee',
+        'Cafe',
+        '00000000-0000-4000-8000-000000000001',
+      ]),
+    ).toString('base64url');
+    expect(() => decodeCursor('store-search', 'coffee', oldUuidCursor)).toThrow(
       BadRequestException,
     );
   });

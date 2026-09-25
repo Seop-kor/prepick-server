@@ -16,7 +16,7 @@ import { MenuSearchPage, StorePage } from './discovery.types';
 import { Store } from './store.entity';
 
 export type StoreRow = {
-  id: string;
+  id: number;
   name: string;
   category: string;
   address: string;
@@ -87,7 +87,7 @@ export class StoresService {
         FROM store s WHERE s.is_active
       )
       SELECT * FROM ranked WHERE distance_meters <= ?
-      ${cursor ? 'AND (distance_meters, id) > (?, ?::uuid)' : ''}
+      ${cursor ? 'AND (distance_meters, id) > (?, ?::integer)' : ''}
       ORDER BY distance_meters ASC, id ASC LIMIT ?`,
       [
         latitude,
@@ -113,7 +113,7 @@ export class StoresService {
     const rows = await this.em.execute<StoreRow[]>(
       `SELECT *, to_char(created_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.US"Z"') AS cursor_created_at
        FROM store WHERE is_active
-      ${cursor ? 'AND (created_at, id) < (?::timestamptz, ?::uuid)' : ''}
+      ${cursor ? 'AND (created_at, id) < (?::timestamptz, ?::integer)' : ''}
       ORDER BY created_at DESC, id DESC LIMIT ?`,
       [...(cursor ? [cursor.key, cursor.id] : []), first + 1],
     );
@@ -132,8 +132,7 @@ export class StoresService {
   }
 
   async store(id: string): Promise<Store | null> {
-    validateId(id);
-    return this.em.findOne(Store, { id, isActive: true });
+    return this.em.findOne(Store, { id: validateId(id), isActive: true });
   }
 
   async searchStores(
@@ -150,7 +149,7 @@ export class StoresService {
     const rows = await this.em.execute<StoreRow[]>(
       `SELECT store.*${location ? `, ${distanceSql('store')} AS distance_meters` : ''}
        FROM store WHERE is_active AND name ILIKE ? ESCAPE '#'
-       ${cursor ? 'AND (name, id) > (?, ?::uuid)' : ''}
+       ${cursor ? 'AND (name, id) > (?, ?::integer)' : ''}
        ORDER BY name ASC, id ASC LIMIT ?`,
       [
         ...(location
@@ -182,9 +181,9 @@ export class StoresService {
     const scope = JSON.stringify([keyword, location]);
     const cursor = decodeCursor('menu-search', scope, after);
     type MenuRow = StoreRow & {
-      product_id: string;
+      product_id: number;
       product_name: string;
-      store_id: string;
+      store_id: number;
       store_name: string;
       min_price: number;
     };
@@ -198,7 +197,7 @@ export class StoresService {
        JOIN store s ON s.id = p.store_id AND s.is_active
        JOIN sku k ON k.product_id = p.id AND k.is_active
        WHERE p.is_active AND p.name ILIKE ? ESCAPE '#'
-       ${cursor ? 'AND (p.name, p.id) > (?, ?::uuid)' : ''}
+       ${cursor ? 'AND (p.name, p.id) > (?, ?::integer)' : ''}
        GROUP BY p.id, s.id
        ORDER BY p.name ASC, p.id ASC LIMIT ?`,
       [

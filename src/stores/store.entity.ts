@@ -1,5 +1,3 @@
-import { randomUUID } from 'node:crypto';
-
 import type { OptionalProps } from '@mikro-orm/core';
 import {
   Field,
@@ -14,7 +12,7 @@ export class Store {
   declare [OptionalProps]?: 'id' | 'createdAt' | 'updatedAt' | 'distanceMeters';
 
   @Field(() => ID)
-  id: string = randomUUID();
+  id!: number;
 
   @Field()
   name!: string;

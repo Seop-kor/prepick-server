@@ -8,13 +8,9 @@ jest.mock('@mikro-orm/postgresql', () => ({
 import { Store } from '../../src/stores/store.entity';
 import { StoresService } from '../../src/stores/stores.service';
 
-const [A, B, C] = [
-  '00000000-0000-4000-8000-000000000001',
-  '00000000-0000-4000-8000-000000000002',
-  '00000000-0000-4000-8000-000000000003',
-];
+const [A, B, C] = [1, 2, 3];
 const createdAt = new Date('2026-09-25T00:00:00.000Z');
-const row = (id: string) => ({
+const row = (id: number) => ({
   id,
   name: 'Cafe',
   category: '카페',
@@ -59,6 +55,8 @@ describe('StoresService', () => {
       'ORDER BY distance_meters ASC, id ASC',
     );
     expect(execute.mock.calls[1][0]).toContain('(distance_meters, id) >');
+    expect(execute.mock.calls[1][0]).toContain('?::integer');
+    expect(execute.mock.calls[1][1]).toContain(B);
     expect(execute.mock.calls[0][1]).toEqual([37.5, 37.5, 127, 5000, 3]);
   });
 
@@ -93,12 +91,15 @@ describe('StoresService', () => {
   it('비활성 매장을 조회하면 결과가 없다고 처리한다', async () => {
     findOne.mockResolvedValue(null);
 
-    await expect(service.store(A)).resolves.toBeNull();
+    await expect(service.store(String(A))).resolves.toBeNull();
     expect(findOne).toHaveBeenCalledWith(Store, { id: A, isActive: true });
   });
 
-  it('매장 ID가 UUID가 아니면 입력 오류를 반환한다', async () => {
+  it('매장 ID가 양의 32비트 정수가 아니면 입력 오류를 반환한다', async () => {
     await expect(service.store('wrong')).rejects.toBeInstanceOf(
+      BadRequestException,
+    );
+    await expect(service.store('2147483648')).rejects.toBeInstanceOf(
       BadRequestException,
     );
     expect(findOne).not.toHaveBeenCalled();

@@ -6,7 +6,7 @@ export const StoreSchema = new EntitySchema({
   class: Store,
   tableName: 'store',
   properties: {
-    id: { type: 'uuid', primary: true },
+    id: { type: 'int', primary: true, autoincrement: true },
     name: { type: String, length: 100 },
     category: { type: String, length: 50 },
     address: { type: 'text' },

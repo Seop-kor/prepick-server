@@ -1,5 +1,3 @@
-import { randomUUID } from 'node:crypto';
-
 import type { OptionalProps } from '@mikro-orm/core';
 import { Field, ID, ObjectType } from '@nestjs/graphql';
 
@@ -8,7 +6,7 @@ export class Promotion {
   declare [OptionalProps]?: 'id' | 'sortOrder' | 'isActive';
 
   @Field(() => ID)
-  id: string = randomUUID();
+  id!: number;
 
   @Field()
   title!: string;

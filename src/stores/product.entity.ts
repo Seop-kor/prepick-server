@@ -1,8 +1,6 @@
-import { randomUUID } from 'node:crypto';
-
 export class Product {
-  id = randomUUID();
-  storeId!: string;
+  id!: number;
+  storeId!: number;
   name!: string;
   isActive = true;
 }
