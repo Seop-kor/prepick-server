@@ -1,0 +1,120 @@
+import { BadRequestException } from '@nestjs/common';
+
+export type CursorKind = 'nearby' | 'new' | 'store-search' | 'menu-search';
+
+const UUID_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+export function validateLocation(
+  latitude?: number | null,
+  longitude?: number | null,
+  required = false,
+): { latitude: number; longitude: number } | null {
+  if (latitude == null && longitude == null && !required) return null;
+  if (
+    latitude == null ||
+    longitude == null ||
+    !Number.isFinite(latitude) ||
+    !Number.isFinite(longitude) ||
+    latitude < -90 ||
+    latitude > 90 ||
+    longitude < -180 ||
+    longitude > 180
+  ) {
+    throw new BadRequestException('Invalid location');
+  }
+  return { latitude, longitude };
+}
+
+export function validateRadius(radiusKm = 5): number {
+  if (!Number.isFinite(radiusKm) || radiusKm <= 0 || radiusKm > 50) {
+    throw new BadRequestException(
+      'radiusKm must be greater than 0 and at most 50',
+    );
+  }
+  return radiusKm;
+}
+
+export function validateFirst(first = 20): number {
+  if (!Number.isInteger(first) || first < 1 || first > 50) {
+    throw new BadRequestException('first must be 1-50');
+  }
+  return first;
+}
+
+export function validateId(id: string): string {
+  if (!UUID_RE.test(id)) throw new BadRequestException('Invalid id');
+  return id;
+}
+
+export function validateKeyword(keyword: string): string {
+  const normalized = keyword.trim();
+  if (normalized.length < 1 || normalized.length > 100) {
+    throw new BadRequestException('Invalid keyword');
+  }
+  return normalized;
+}
+
+export function escapeLike(keyword: string): string {
+  return keyword.replace(/([#%_])/g, '#$1');
+}
+
+export function encodeCursor(
+  kind: CursorKind,
+  scope: string,
+  key: string | number,
+  id: string,
+): string {
+  return Buffer.from(JSON.stringify([kind, scope, key, id])).toString(
+    'base64url',
+  );
+}
+
+export function decodeCursor(
+  kind: CursorKind,
+  scope: string,
+  cursor?: string | null,
+): { key: string | number; id: string } | null {
+  if (cursor == null) return null;
+  try {
+    if (cursor.length > 2048) throw new Error();
+    const raw = Buffer.from(cursor, 'base64url').toString('utf8');
+    if (Buffer.from(raw).toString('base64url') !== cursor) throw new Error();
+    const value: unknown = JSON.parse(raw);
+    if (
+      !Array.isArray(value) ||
+      value.length !== 4 ||
+      value[0] !== kind ||
+      value[1] !== scope ||
+      typeof value[3] !== 'string' ||
+      !UUID_RE.test(value[3]) ||
+      (kind === 'nearby'
+        ? typeof value[2] !== 'number' || !Number.isFinite(value[2])
+        : typeof value[2] !== 'string')
+    ) {
+      throw new Error();
+    }
+    if (
+      kind === 'new' &&
+      new Date(value[2] as string).toISOString() !== value[2]
+    ) {
+      throw new Error();
+    }
+    return { key: value[2] as string | number, id: value[3] };
+  } catch {
+    throw new BadRequestException('Invalid cursor');
+  }
+}
+
+export function slicePage<T>(
+  rows: T[],
+  first: number,
+  makeCursor: (row: T) => string,
+): { items: T[]; nextCursor: string | null } {
+  const items = rows.slice(0, first);
+  return {
+    items,
+    nextCursor:
+      rows.length > first ? makeCursor(items[items.length - 1]) : null,
+  };
+}
