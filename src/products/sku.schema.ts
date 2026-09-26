@@ -11,5 +11,6 @@ export const SkuSchema = new EntitySchema({
     name: { type: String, length: 100 },
     price: { type: 'int' },
     isActive: { type: Boolean, default: true },
+    isSoldOut: { type: Boolean, default: false },
   },
 });

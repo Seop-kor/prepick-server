@@ -4,4 +4,5 @@ export class Sku {
   name!: string;
   price!: number;
   isActive = true;
+  isSoldOut = false;
 }
