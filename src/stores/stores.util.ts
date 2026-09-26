@@ -1,12 +1,8 @@
 import { BadRequestException } from '@nestjs/common';
 
+import { isValidId } from '../common/validation';
+
 export type CursorKind = 'nearby' | 'new' | 'store-search' | 'menu-search';
-
-const MAX_ID = 2147483647;
-
-function validId(id: number): boolean {
-  return Number.isInteger(id) && id > 0 && id <= MAX_ID;
-}
 
 export function validateLocation(
   latitude?: number | null,
@@ -43,13 +39,6 @@ export function validateFirst(first = 20): number {
     throw new BadRequestException('first must be 1-50');
   }
   return first;
-}
-
-export function validateId(id: string): number {
-  if (!/^[1-9]\d*$/.test(id) || !validId(Number(id))) {
-    throw new BadRequestException('Invalid id');
-  }
-  return Number(id);
 }
 
 export function validateKeyword(keyword: string): string {
@@ -92,7 +81,7 @@ export function decodeCursor(
       value[0] !== kind ||
       value[1] !== scope ||
       typeof value[3] !== 'number' ||
-      !validId(value[3]) ||
+      !isValidId(value[3]) ||
       (kind === 'nearby'
         ? typeof value[2] !== 'number' || !Number.isFinite(value[2])
         : typeof value[2] !== 'string')

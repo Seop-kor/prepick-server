@@ -1,18 +1,18 @@
 import { EntityManager } from '@mikro-orm/postgresql';
 import { Injectable } from '@nestjs/common';
 
+import { validateId } from '../common/validation';
 import {
   decodeCursor,
   encodeCursor,
   escapeLike,
   slicePage,
   validateFirst,
-  validateId,
   validateLocation,
   validateKeyword,
   validateRadius,
-} from './discovery.pagination';
-import { MenuSearchPage, StorePage } from './discovery.types';
+} from './stores.util';
+import { MenuSearchPage, StorePage } from './stores.types';
 import { Store } from './store.entity';
 
 export type StoreRow = {

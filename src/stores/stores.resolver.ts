@@ -9,8 +9,8 @@ import {
   Resolver,
 } from '@nestjs/graphql';
 
-import { validateKeyword, validateLocation } from './discovery.pagination';
-import { MenuSearchPage, SearchResult, StorePage } from './discovery.types';
+import { validateKeyword, validateLocation } from './stores.util';
+import { MenuSearchPage, SearchResult, StorePage } from './stores.types';
 import { Store } from './store.entity';
 import { StoresService } from './stores.service';
 

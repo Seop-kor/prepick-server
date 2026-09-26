@@ -6,11 +6,10 @@ import {
   escapeLike,
   slicePage,
   validateFirst,
-  validateId,
   validateKeyword,
   validateLocation,
   validateRadius,
-} from '../../src/stores/discovery.pagination';
+} from '../../src/stores/stores.util';
 
 const ID = 1;
 
@@ -37,11 +36,6 @@ describe('매장 탐색 입력과 커서', () => {
     expect(() => validateRadius(0)).toThrow(BadRequestException);
     expect(() => validateFirst(0)).toThrow(BadRequestException);
     expect(() => validateFirst(51)).toThrow(BadRequestException);
-    expect(() => validateId('not-an-integer')).toThrow(BadRequestException);
-    expect(() => validateId('0')).toThrow(BadRequestException);
-    expect(() => validateId('01')).toThrow(BadRequestException);
-    expect(() => validateId('2147483648')).toThrow(BadRequestException);
-    expect(validateId('2147483647')).toBe(2147483647);
   });
 
   it('검색어를 정리하면 와일드카드를 문자 그대로 찾도록 만든다', () => {
