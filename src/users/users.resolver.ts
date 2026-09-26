@@ -12,7 +12,7 @@ export class UsersResolver {
 
   @Query(() => User)
   async currentUser(
-    @Context('req') request: Request & { userId: string },
+    @Context('req') request: Request & { userId: number },
   ): Promise<User> {
     const user = await this.usersService.findById(request.userId);
     if (!user) {

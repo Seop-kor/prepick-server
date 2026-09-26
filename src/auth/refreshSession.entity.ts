@@ -1,5 +1,3 @@
-import { randomUUID } from 'node:crypto';
-
 import type { OptionalProps } from '@mikro-orm/core';
 
 import { User } from '../users/user.entity';
@@ -7,7 +5,7 @@ import { User } from '../users/user.entity';
 export class RefreshSession {
   declare [OptionalProps]?: 'id' | 'createdAt' | 'updatedAt';
 
-  id: string = randomUUID();
+  id!: number;
   user!: User;
   refreshToken!: string;
   expiresAt!: Date;

@@ -11,7 +11,7 @@ export class UsersService {
     return em.findOne(User, { phone });
   }
 
-  findById(id: string, em = this.em): Promise<User | null> {
+  findById(id: number, em = this.em): Promise<User | null> {
     return em.findOne(User, { id });
   }
 

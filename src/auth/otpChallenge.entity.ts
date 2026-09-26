@@ -1,11 +1,9 @@
-import { randomUUID } from 'node:crypto';
-
 import type { OptionalProps } from '@mikro-orm/core';
 
 export class OtpChallenge {
   declare [OptionalProps]?: 'id' | 'attemptCount' | 'createdAt';
 
-  id: string = randomUUID();
+  id!: number;
   phone!: string;
   otp!: string;
   expiresAt!: Date;

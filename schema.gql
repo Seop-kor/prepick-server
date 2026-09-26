@@ -20,6 +20,18 @@ input LoginInput {
   phone: String!
 }
 
+type MenuSearchHit {
+  id: ID!
+  minPrice: Int!
+  name: String!
+  store: Store!
+}
+
+type MenuSearchPage {
+  items: [MenuSearchHit!]!
+  nextCursor: String
+}
+
 type Mutation {
   login(input: LoginInput!): AuthPayload!
   logout(refreshToken: String!): Boolean!
@@ -39,15 +51,48 @@ type OtpVerificationPayload {
   verificationToken: String!
 }
 
+type Promotion {
+  description: String!
+  id: ID!
+  imageUrl: String
+  title: String!
+}
+
 type Query {
   currentUser: User!
   healthCheck: Boolean!
+  newStores(after: String, first: Int = 20): StorePage!
+  promotions: [Promotion!]!
+  search(keyword: String!, latitude: Float, longitude: Float): SearchResult!
+  store(id: ID!): Store
+  stores(after: String, first: Int = 20, latitude: Float!, longitude: Float!, radiusKm: Float = 5): StorePage!
+}
+
+type SearchResult {
+  menus(after: String, first: Int = 20): MenuSearchPage!
+  stores(after: String, first: Int = 20): StorePage!
 }
 
 input SignUpInput {
   name: String!
   password: String!
   verificationToken: String!
+}
+
+type Store {
+  address: String!
+  category: String!
+  createdAt: DateTime!
+  distanceMeters: Int
+  id: ID!
+  imageUrl: String
+  isOpen: Boolean!
+  name: String!
+}
+
+type StorePage {
+  items: [Store!]!
+  nextCursor: String
 }
 
 type User {

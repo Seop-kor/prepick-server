@@ -9,7 +9,7 @@ import { authError } from './auth.error';
 import { IS_PUBLIC_KEY } from './public.decorator';
 import { SessionService } from './session.service';
 
-export type AuthenticatedRequest = Request & { userId: string };
+export type AuthenticatedRequest = Request & { userId: number };
 
 @Injectable()
 export class AuthGuard implements CanActivate {

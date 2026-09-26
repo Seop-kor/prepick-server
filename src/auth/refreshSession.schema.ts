@@ -7,7 +7,7 @@ export const RefreshSessionSchema = new EntitySchema({
   class: RefreshSession,
   tableName: 'session',
   properties: {
-    id: { type: 'uuid', primary: true },
+    id: { type: 'int', primary: true, autoincrement: true },
     user: {
       kind: '1:1',
       entity: () => User,

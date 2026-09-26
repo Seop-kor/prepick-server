@@ -11,9 +11,13 @@ import { RefreshSession } from './refreshSession.entity';
 
 const ACCESS_TOKEN_SECONDS = 15 * 60;
 const REFRESH_TOKEN_SECONDS = 30 * 24 * 60 * 60;
-const UUID_PATTERN =
-  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const REFRESH_SECRET_PATTERN = /^[A-Za-z0-9_-]{43}$/;
+
+function parseId(value: unknown): number | null {
+  if (typeof value !== 'string' || !/^[1-9]\d*$/.test(value)) return null;
+  const id = Number(value);
+  return Number.isInteger(id) && id <= 2147483647 ? id : null;
+}
 
 @Injectable()
 export class SessionService {
@@ -29,7 +33,9 @@ export class SessionService {
       );
     }
 
-    await em.execute('select pg_advisory_xact_lock(hashtext(?))', [user.id]);
+    await em.execute('select pg_advisory_xact_lock(hashtext(?))', [
+      String(user.id),
+    ]);
     await em.nativeDelete(RefreshSession, { user: user.id });
 
     const now = new Date();
@@ -106,24 +112,25 @@ export class SessionService {
     });
   }
 
-  async verifyAccessToken(rawToken: string): Promise<{ sub: string }> {
+  async verifyAccessToken(rawToken: string): Promise<{ sub: number }> {
     try {
       const payload = await this.jwtService.verifyAsync<{
         sub?: unknown;
       }>(rawToken);
-      if (typeof payload.sub !== 'string') {
+      const id = parseId(payload.sub);
+      if (id === null) {
         throw new Error('Invalid subject');
       }
-      return { sub: payload.sub };
+      return { sub: id };
     } catch {
       throw this.unauthenticated();
     }
   }
 
-  private async signAccessToken(userId: string, now: Date) {
+  private async signAccessToken(userId: number, now: Date) {
     return {
       accessToken: await this.jwtService.signAsync(
-        { sub: userId },
+        { sub: String(userId) },
         { expiresIn: '15m' },
       ),
       accessTokenExpiresAt: new Date(
@@ -134,14 +141,11 @@ export class SessionService {
 
   private parseRefreshToken(rawToken: string) {
     const parts = rawToken.split('.');
-    if (
-      parts.length !== 2 ||
-      !UUID_PATTERN.test(parts[0]) ||
-      !REFRESH_SECRET_PATTERN.test(parts[1])
-    ) {
+    if (parts.length !== 2 || !REFRESH_SECRET_PATTERN.test(parts[1])) {
       return null;
     }
-    return { id: parts[0], secret: parts[1] };
+    const id = parseId(parts[0]);
+    return id === null ? null : { id, secret: parts[1] };
   }
 
   private unauthenticated() {

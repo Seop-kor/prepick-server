@@ -1,5 +1,3 @@
-import { randomUUID } from 'node:crypto';
-
 import type { OptionalProps } from '@mikro-orm/core';
 import { Field, GraphQLISODateTime, ID, ObjectType } from '@nestjs/graphql';
 
@@ -8,7 +6,7 @@ export class User {
   declare [OptionalProps]?: 'id' | 'createdAt' | 'updatedAt';
 
   @Field(() => ID)
-  id: string = randomUUID();
+  id!: number;
 
   @Field()
   name!: string;

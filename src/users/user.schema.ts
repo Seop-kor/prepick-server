@@ -6,7 +6,7 @@ export const UserSchema = new EntitySchema({
   class: User,
   tableName: 'user',
   properties: {
-    id: { type: 'uuid', primary: true },
+    id: { type: 'int', primary: true, autoincrement: true },
     name: { type: String, length: 50 },
     phone: { type: String, length: 11, unique: true },
     password: { type: String, hidden: true },

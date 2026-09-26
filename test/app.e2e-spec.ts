@@ -19,6 +19,17 @@ describe('GraphQL common queries (e2e)', () => {
     await app.init();
   });
 
+  it('로그인하지 않고 매장을 조회하면 인증 오류를 반환한다', async () => {
+    const response = await request(app.getHttpServer())
+      .post('/graphql')
+      .send({
+        query: '{ stores(latitude: 37.5, longitude: 127.0) { items { id } } }',
+      })
+      .expect(200);
+
+    expect(response.body.errors[0].extensions.code).toBe('UNAUTHENTICATED');
+  });
+
   it('returns true for healthCheck', async () => {
     const log = jest
       .spyOn(Logger.prototype, 'log')

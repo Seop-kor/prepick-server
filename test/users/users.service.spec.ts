@@ -37,10 +37,10 @@ describe('UsersService', () => {
   });
 
   it('ID로 사용자를 찾으면 주입된 EntityManager를 사용한다', async () => {
-    await service.findById('7e219e7e-f53a-43c1-b090-d2e91c1a564d');
+    await service.findById(7);
 
     expect(findOne).toHaveBeenCalledWith(User, {
-      id: '7e219e7e-f53a-43c1-b090-d2e91c1a564d',
+      id: 7,
     });
   });
 

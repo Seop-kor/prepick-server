@@ -120,6 +120,8 @@ type User {
 
 `logout`은 access token 없이 호출할 수 있으며, refresh token이 이미 만료되거나 삭제된 경우에도 `true`를 반환한다. 클라이언트는 결과와 관계없이 메모리의 access token과 OS 보안 저장소의 refresh token을 삭제한다.
 
+> 인증 테이블의 현재 ID 스키마와 기존 UUID 데이터 전환 SQL은 [정수 ID 전환 설계](2026-09-25-auth-integer-ids-design.md)를 따른다.
+
 ## 데이터 모델
 
 ### User
