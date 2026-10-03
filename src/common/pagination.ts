@@ -3,11 +3,7 @@ import { BadRequestException } from '@nestjs/common';
 import { isValidId } from './validation';
 
 export type CursorKind =
-  | 'nearby'
-  | 'new'
-  | 'store-search'
-  | 'menu-search'
-  | 'orders';
+  'nearby' | 'new' | 'store-search' | 'menu-search' | 'orders';
 
 export function validateSize(size = 20): number {
   if (!Number.isInteger(size) || size < 1 || size > 50) {
