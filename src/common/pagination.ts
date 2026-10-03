@@ -2,7 +2,12 @@ import { BadRequestException } from '@nestjs/common';
 
 import { isValidId } from './validation';
 
-export type CursorKind = 'nearby' | 'new' | 'store-search' | 'menu-search';
+export type CursorKind =
+  | 'nearby'
+  | 'new'
+  | 'store-search'
+  | 'menu-search'
+  | 'orders';
 
 export function validateSize(size = 20): number {
   if (!Number.isInteger(size) || size < 1 || size > 50) {
@@ -46,7 +51,7 @@ export function decodeCursor(
     ) {
       throw new Error();
     }
-    if (kind === 'new') {
+    if (kind === 'new' || kind === 'orders') {
       const date = key as string;
       if (
         !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}(?:\d{3})?Z$/.test(date) ||

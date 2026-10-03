@@ -52,6 +52,23 @@ describe('커서 페이지네이션', () => {
     });
   });
 
+  it('주문 커서를 같은 사용자가 쓰면 생성 시각과 ID를 복원하고 다른 사용자가 쓰면 거부한다', () => {
+    const key = '2026-10-04T01:02:03.123456Z';
+    const cursor = encodeCursor('orders', '7', key, ID);
+
+    expect(decodeCursor('orders', '7', cursor)).toEqual({ key, id: ID });
+    expect(() => decodeCursor('orders', '8', cursor)).toThrow(
+      BadRequestException,
+    );
+    expect(() =>
+      decodeCursor(
+        'orders',
+        '7',
+        encodeCursor('orders', '7', 'not-a-date', ID),
+      ),
+    ).toThrow(BadRequestException);
+  });
+
   it('신규 매장 커서에 마이크로초 시각이 있으면 그대로 복원한다', () => {
     const key = '2026-09-25T12:34:56.123456Z';
     expect(decodeCursor('new', '', encodeCursor('new', '', key, ID))).toEqual({
