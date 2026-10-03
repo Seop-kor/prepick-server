@@ -16,6 +16,15 @@ type Category {
   productIds: [ID!]!
 }
 
+input CreateOrderInput {
+  amount: Int!
+  cartId: String!
+  items: [OrderItemInput!]!
+  paidAt: DateTime!
+  request: String
+  storeId: ID!
+}
+
 """
 A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 """
@@ -39,12 +48,50 @@ type MenuSearchPage {
 }
 
 type Mutation {
+  createOrder(input: CreateOrderInput!): Order!
   login(input: LoginInput!): AuthPayload!
   logout(refreshToken: String!): Boolean!
   refreshSession(refreshToken: String!): AuthPayload!
   sendSignupOtp(phone: String!): OtpRequestPayload!
   signUp(input: SignUpInput!): AuthPayload!
   verifySignupOtp(code: String!, phone: String!): OtpVerificationPayload!
+}
+
+type Order {
+  amount: Int!
+  createdAt: DateTime!
+  id: ID!
+  items: [OrderItem!]!
+  orderNumber: Int!
+  paidAt: DateTime!
+  prefixOrderNumber: String!
+  request: String
+  storeId: ID!
+  storeName: String!
+}
+
+type OrderItem {
+  id: ID!
+  price: Int!
+  productId: ID!
+  productName: String!
+  quantity: Int!
+  skuId: ID!
+  skuName: String!
+}
+
+input OrderItemInput {
+  price: Int!
+  productId: ID!
+  productName: String!
+  quantity: Int!
+  skuId: ID!
+  skuName: String!
+}
+
+type OrderPage {
+  items: [Order!]!
+  nextCursor: String
 }
 
 type OtpRequestPayload {
@@ -79,6 +126,8 @@ type Query {
   currentUser: User!
   healthCheck: Boolean!
   newStores(cursor: String, size: Int = 20): StorePage!
+  order(id: ID!): Order
+  orders(cursor: String, size: Int = 20): OrderPage!
   product(id: ID!): Product
   promotions: [Promotion!]!
   search(keyword: String!, latitude: Float, longitude: Float): SearchResult!
