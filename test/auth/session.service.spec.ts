@@ -28,7 +28,7 @@ describe('SessionService', () => {
   const transactionEm = {
     execute: jest.fn(),
     nativeDelete: jest.fn(),
-    create: jest.fn<(entity: unknown, data: object) => RefreshSession>(),
+    create: jest.fn<RefreshSession, [unknown, object]>(),
     persist: jest.fn(),
     flush: jest.fn(),
     findOne: jest.fn(),

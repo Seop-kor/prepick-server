@@ -1,18 +1,18 @@
 import { EntityManager } from '@mikro-orm/postgresql';
 import { Injectable } from '@nestjs/common';
 
+import { validateId } from '../common/validation';
 import {
   decodeCursor,
   encodeCursor,
   escapeLike,
   slicePage,
   validateFirst,
-  validateId,
   validateLocation,
   validateKeyword,
   validateRadius,
-} from './discovery.pagination';
-import { MenuSearchPage, StorePage } from './discovery.types';
+} from './stores.util';
+import { MenuSearchPage, StorePage } from './stores.types';
 import { Store } from './store.entity';
 
 export type StoreRow = {
@@ -65,7 +65,7 @@ function distanceSql(alias: string): string {
 export class StoresService {
   constructor(private readonly em: EntityManager) {}
 
-  async nearby(
+  async findNearbyStores(
     latitude: number,
     longitude: number,
     radiusKm = 5,
@@ -107,7 +107,7 @@ export class StoresService {
     };
   }
 
-  async newStores(first = 20, after?: string | null): Promise<StorePage> {
+  async findNewStores(first = 20, after?: string | null): Promise<StorePage> {
     validateFirst(first);
     const cursor = decodeCursor('new', '', after);
     const rows = await this.em.execute<StoreRow[]>(
@@ -131,7 +131,7 @@ export class StoresService {
     };
   }
 
-  async store(id: string): Promise<Store | null> {
+  async findStore(id: string): Promise<Store | null> {
     return this.em.findOne(Store, { id: validateId(id), isActive: true });
   }
 

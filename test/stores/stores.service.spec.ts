@@ -43,12 +43,18 @@ describe('StoresService', () => {
       .mockResolvedValueOnce([row(A), row(B), row(C)])
       .mockResolvedValueOnce([row(C)]);
 
-    const first = await service.nearby(37.5, 127, 5, 2, null);
+    const first = await service.findNearbyStores(37.5, 127, 5, 2, null);
     expect(first.items.map(({ id }) => id)).toEqual([A, B]);
     expect(first.items[0].distanceMeters).toBe(100);
     expect(first.nextCursor).toEqual(expect.any(String));
 
-    const second = await service.nearby(37.5, 127, 5, 2, first.nextCursor);
+    const second = await service.findNearbyStores(
+      37.5,
+      127,
+      5,
+      2,
+      first.nextCursor,
+    );
     expect(second.items.map(({ id }) => id)).toEqual([C]);
     expect(second.nextCursor).toBeNull();
     expect(execute.mock.calls[0][0]).toContain(
@@ -65,11 +71,11 @@ describe('StoresService', () => {
       .mockResolvedValueOnce([row(C), row(B), row(A)])
       .mockResolvedValueOnce([row(A)]);
 
-    const first = await service.newStores(2, null);
+    const first = await service.findNewStores(2, null);
     expect(first.items.map(({ id }) => id)).toEqual([C, B]);
     expect(first.items[0].distanceMeters).toBeNull();
 
-    const second = await service.newStores(2, first.nextCursor);
+    const second = await service.findNewStores(2, first.nextCursor);
     expect(second.items.map(({ id }) => id)).toEqual([A]);
     expect(execute.mock.calls[0][0]).toContain('is_active');
     expect(execute.mock.calls[1][0]).toContain('(created_at, id) <');
@@ -82,8 +88,8 @@ describe('StoresService', () => {
         row(A),
       ])
       .mockResolvedValueOnce([]);
-    const page = await service.newStores(1, null);
-    await service.newStores(1, page.nextCursor);
+    const page = await service.findNewStores(1, null);
+    await service.findNewStores(1, page.nextCursor);
     expect(execute.mock.calls[0][0]).toContain('cursor_created_at');
     expect(execute.mock.calls[1][1][0]).toBe('2026-09-25T00:00:00.123456Z');
   });
@@ -91,15 +97,15 @@ describe('StoresService', () => {
   it('비활성 매장을 조회하면 결과가 없다고 처리한다', async () => {
     findOne.mockResolvedValue(null);
 
-    await expect(service.store(String(A))).resolves.toBeNull();
+    await expect(service.findStore(String(A))).resolves.toBeNull();
     expect(findOne).toHaveBeenCalledWith(Store, { id: A, isActive: true });
   });
 
   it('매장 ID가 양의 32비트 정수가 아니면 입력 오류를 반환한다', async () => {
-    await expect(service.store('wrong')).rejects.toBeInstanceOf(
+    await expect(service.findStore('wrong')).rejects.toBeInstanceOf(
       BadRequestException,
     );
-    await expect(service.store('2147483648')).rejects.toBeInstanceOf(
+    await expect(service.findStore('2147483648')).rejects.toBeInstanceOf(
       BadRequestException,
     );
     expect(findOne).not.toHaveBeenCalled();

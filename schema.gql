@@ -10,6 +10,12 @@ type AuthPayload {
   user: User!
 }
 
+type Category {
+  id: ID!
+  name: String!
+  productIds: [ID!]!
+}
+
 """
 A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 """
@@ -51,6 +57,17 @@ type OtpVerificationPayload {
   verificationToken: String!
 }
 
+type Product {
+  description: String
+  id: ID!
+  imageUrl: String
+  isSoldOut: Boolean!
+  minPrice: Int!
+  name: String!
+  skus: [Sku!]!
+  storeId: ID!
+}
+
 type Promotion {
   description: String!
   id: ID!
@@ -62,9 +79,11 @@ type Query {
   currentUser: User!
   healthCheck: Boolean!
   newStores(after: String, first: Int = 20): StorePage!
+  product(id: ID!): Product
   promotions: [Promotion!]!
   search(keyword: String!, latitude: Float, longitude: Float): SearchResult!
   store(id: ID!): Store
+  storeProducts(storeId: ID!): StoreProducts
   stores(after: String, first: Int = 20, latitude: Float!, longitude: Float!, radiusKm: Float = 5): StorePage!
 }
 
@@ -77,6 +96,13 @@ input SignUpInput {
   name: String!
   password: String!
   verificationToken: String!
+}
+
+type Sku {
+  id: ID!
+  isSoldOut: Boolean!
+  name: String!
+  price: Int!
 }
 
 type Store {
@@ -93,6 +119,11 @@ type Store {
 type StorePage {
   items: [Store!]!
   nextCursor: String
+}
+
+type StoreProducts {
+  categories: [Category!]!
+  products: [Product!]!
 }
 
 type User {

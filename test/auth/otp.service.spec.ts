@@ -29,7 +29,7 @@ describe('OtpService', () => {
     findOne: jest.fn(),
     count: jest.fn(),
     nativeUpdate: jest.fn(),
-    create: jest.fn<(entity: unknown, data: object) => OtpChallenge>(),
+    create: jest.fn<OtpChallenge, [unknown, object]>(),
     persist: jest.fn(),
     flush: jest.fn(),
   };
