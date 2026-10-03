@@ -27,7 +27,10 @@ describe('GraphQL common queries (e2e)', () => {
       })
       .expect(200);
 
-    expect(response.body.errors[0].extensions.code).toBe('UNAUTHENTICATED');
+    expect(
+      (response.body as { errors: Array<{ extensions: { code: string } }> })
+        .errors[0].extensions.code,
+    ).toBe('UNAUTHENTICATED');
   });
 
   it('returns true for healthCheck', async () => {

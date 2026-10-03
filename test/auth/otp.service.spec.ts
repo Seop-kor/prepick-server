@@ -46,7 +46,7 @@ describe('OtpService', () => {
   const sms = { sendOtp: jest.fn() };
   const util = {
     getOtp: jest.fn(),
-    normalizePhone: new UtilService().normalizePhone,
+    normalizePhone: (phone: string) => new UtilService().normalizePhone(phone),
   };
   const config = { getOrThrow: jest.fn() };
   let service: OtpService;
