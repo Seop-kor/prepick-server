@@ -215,7 +215,7 @@ RETURNING last_number, order_date;
 ## 조회 규칙
 
 - `orders(size, cursor)`: 현재 사용자의 주문을 `created_at` 내림차순, `id` 내림차순으로 반환한다.
-  - 주문 조회와 항목 조회(`WHERE order_id = ANY(?)`) 두 번으로 끝나므로 N+1이 없다.
+  - 주문 조회와 항목 조회(`WHERE order_id IN (...)`) 두 번으로 끝나므로 N+1이 없다. 주문이 없으면 항목을 조회하지 않는다.
   - 커서는 기존 `encodeCursor`/`decodeCursor`를 쓴다. `kind`는 `'orders'`, `scope`는 `String(userId)`, 키는 `created_at`과 `id`다. 다른 사용자의 커서는 `Invalid cursor`로 거절한다.
   - `size + 1`건을 조회해 다음 페이지 여부를 판단하는 기존 `slicePage`를 쓴다.
 - `order(id)`: `WHERE id = ? AND user_id = ?`로 조회한다. 없거나 다른 사용자의 주문이면 `null`을 반환한다. 존재 여부를 드러내지 않기 위해 권한 오류를 쓰지 않는다.
