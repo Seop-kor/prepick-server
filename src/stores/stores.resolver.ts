@@ -29,7 +29,13 @@ export class StoresResolver {
     @Args('after', { type: () => String, nullable: true })
     after?: string | null,
   ) {
-    return this.service.nearby(latitude, longitude, radiusKm, first, after);
+    return this.service.findNearbyStores(
+      latitude,
+      longitude,
+      radiusKm,
+      first,
+      after,
+    );
   }
 
   @Query(() => StorePage)
@@ -39,12 +45,12 @@ export class StoresResolver {
     @Args('after', { type: () => String, nullable: true })
     after?: string | null,
   ) {
-    return this.service.newStores(first, after);
+    return this.service.findNewStores(first, after);
   }
 
   @Query(() => Store, { nullable: true })
   store(@Args('id', { type: () => ID }) id: string) {
-    return this.service.store(id);
+    return this.service.findStore(id);
   }
 
   @Query(() => SearchResult)

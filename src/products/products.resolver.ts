@@ -9,11 +9,11 @@ export class ProductsResolver {
 
   @Query(() => StoreProducts, { nullable: true })
   storeProducts(@Args('storeId', { type: () => ID }) storeId: string) {
-    return this.service.storeProducts(storeId);
+    return this.service.findStoreProducts(storeId);
   }
 
   @Query(() => ProductType, { nullable: true })
   product(@Args('id', { type: () => ID }) id: string) {
-    return this.service.product(id);
+    return this.service.findProduct(id);
   }
 }

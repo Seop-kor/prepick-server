@@ -9,14 +9,14 @@ jest.mock('@mikro-orm/postgresql', () => ({
 describe('StoresResolver', () => {
   it('주변 매장 조회를 요청하면 서비스 결과를 반환한다', async () => {
     const page = { items: [], nextCursor: null };
-    const nearby = jest.fn().mockResolvedValue(page);
+    const findNearbyStores = jest.fn().mockResolvedValue(page);
     const service = {
-      nearby,
+      findNearbyStores,
     } as unknown as StoresService;
     const resolver = new StoresResolver(service);
 
     await expect(resolver.stores(37.5, 127, 5, 20, null)).resolves.toBe(page);
-    expect(nearby).toHaveBeenCalledWith(37.5, 127, 5, 20, null);
+    expect(findNearbyStores).toHaveBeenCalledWith(37.5, 127, 5, 20, null);
   });
 
   it('검색 좌표를 하나만 제공하면 입력 오류를 반환한다', () => {

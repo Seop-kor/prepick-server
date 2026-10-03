@@ -1,17 +1,17 @@
-# Graph Report - prepick-server  (2026-09-26)
+# Graph Report - prepick-server  (2026-10-03)
 
 ## Corpus Check
-- 174 files · ~82,560 words
+- 174 files · ~82,569 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: (none) 4, .gql 1)
 
 ## Summary
-- 1026 nodes · 1875 edges · 71 communities (63 shown, 8 thin omitted)
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 194 edges (avg confidence: 0.92)
+- 1026 nodes · 1892 edges · 74 communities (66 shown, 8 thin omitted)
+- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 211 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6e66a702`
+- Built from commit: `8e8dd44e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -56,28 +56,28 @@
 - Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?
 - stores.service.ts
 - PostgreSQL·MikroORM 기반 설계
-- @nestjs/common
+- app.module.ts
 - Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?
 - jest
 - .currentUser
 - AuthResolver
-- SmsService
+- otp.service.ts
 - Q: 어떤것들이 수정되었는지 알려줘
 - bcrypt.d.ts
 - What You Must Do When Invoked
 - write_bytes_atomic
 - eslint.config.mjs
 - User
-- auth.resolver.ts
-- otp.service.ts
-- LockTimeoutError
 - SessionService
-- AppModule
+- Consumer discovery integer IDs implementation plan
+- LockTimeoutError
+- @nestjs/common
+- Consumer 인증 API 설계
 - graphify reference: extra exports and benchmark
 - File Map
 - graphify reference: query, path, explain
 - PostgreSQL·MikroORM Foundation Implementation Plan
-- GraphqlExceptionFilter
+- Review Focus
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native CLAUDE.md integration
 - graphify reference: incremental update and cluster-only
@@ -86,6 +86,9 @@
 - graphify reference: transcribe video and audio
 - .claude/CLAUDE.md
 - extraction-spec.md
+- 테스트 전략
+- GraphQL 계약
+- 데이터 모델
 
 ## God Nodes (most connected - your core abstractions)
 1. `@nestjs/common` - 38 edges
@@ -125,7 +128,7 @@
 - **Evidence-First Optimization Safety** — _agents_skills_caveman_evidence_review_skill_evidence_bucket_separation, _agents_skills_caveman_learn_skill_savings_evidence_rungs, _agents_skills_caveman_manage_skill_fail_closed_lifecycle_gate, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 - **Operator-Controlled Changes** — _agents_skills_caveman_discover_skill_operator_approval_gate, _agents_skills_caveman_learn_skill_consent_gated_editing, _agents_skills_caveman_optimize_skill_paired_baseline_evaluation [INFERRED 0.95]
 
-## Communities (71 total, 8 thin omitted)
+## Communities (74 total, 8 thin omitted)
 
 ### Community 0 - "Q: postgresql과 mikro orm 연결했는데 진행이 안되는 이유는 뭐야"
 Cohesion: 0.40
@@ -168,8 +171,8 @@ Cohesion: 0.09
 Nodes (22): dependencies, @apollo/server, @as-integrations/express5, axios, bcrypt, class-transformer, class-validator, date-fns (+14 more)
 
 ### Community 10 - "OtpService"
-Cohesion: 0.11
-Nodes (15): Review Focus, Task 0: Verify the Database Foundation, Task 10: Final Verification and Knowledge Graph Update, Task 2: User Persistence and Phone Normalization, Task 3: OTP Challenge Lifecycle, Task 5: Signup and Login Orchestration, Task 7: Authentication GraphQL Module and Resolver, Task 8: PostgreSQL Integration Proof (+7 more)
+Cohesion: 0.13
+Nodes (14): Review Focus, Task 0: Verify the Database Foundation, Task 10: Final Verification and Knowledge Graph Update, Task 3: OTP Challenge Lifecycle, Task 5: Signup and Login Orchestration, Task 7: Authentication GraphQL Module and Resolver, Task 8: PostgreSQL Integration Proof, Task 9: Full GraphQL Authentication Journey and Leakage Regression (+6 more)
 
 ### Community 11 - "Caveman Commit"
 Cohesion: 0.12
@@ -200,8 +203,8 @@ Cohesion: 0.20
 Nodes (9): description, files, license, name, private, scripts, test, type (+1 more)
 
 ### Community 18 - "promotions.module.ts"
-Cohesion: 0.11
-Nodes (19): Consumer 홈·매장 탐색 GraphQL 설계, GraphQL 계약, 구현 경계와 검증, 기존 UUID 데이터 전환, 목표와 범위, 조회와 페이지 규칙, Promotion, Field (+11 more)
+Cohesion: 0.20
+Nodes (9): Promotion, Field, ObjectType, PromotionSchema, PromotionsResolver, Query, Resolver, PromotionsService (+1 more)
 
 ### Community 19 - "Persistent Caveman Style"
 Cohesion: 0.29
@@ -252,8 +255,8 @@ Cohesion: 0.09
 Nodes (21): 1. 전역 요청 결과 로그, 2. 요청 body 로깅 제거, 3. 실패 지점의 업무 로그, 4. OTP 생성, OTP 단위 테스트, SMS 서비스 단위 테스트, 데이터 흐름, 목표 (+13 more)
 
 ### Community 32 - "products.service.ts"
-Cohesion: 0.05
-Nodes (51): Consumer 매장 상품(메뉴) Implementation Plan, File Structure, Global Constraints, Review Focus, Task 1: discovery 파일 이름 변경과 validateId 이동, Task 2: 상품·SKU 매핑을 ProductsModule로 이동, Task 3: 상품 조회 서비스, Task 4: GraphQL resolver와 스키마 (+43 more)
+Cohesion: 0.06
+Nodes (49): Consumer 매장 상품(메뉴) Implementation Plan, File Structure, Global Constraints, Review Focus, Task 1: discovery 파일 이름 변경과 validateId 이동, Task 2: 상품·SKU 매핑을 ProductsModule로 이동, Task 3: 상품 조회 서비스, Task 4: GraphQL resolver와 스키마 (+41 more)
 
 ### Community 33 - "Path"
 Cohesion: 0.17
@@ -276,16 +279,16 @@ Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: 데이터베이스 서버 없이 먼저 개발할 때 추천 순서는?, Source Nodes
 
 ### Community 38 - "stores.service.ts"
-Cohesion: 0.09
-Nodes (40): Consumer Store Discovery GraphQL Implementation Plan, File Structure, Global Constraints, Review Focus, Task 1: 입력 검증과 커서, Task 2: 매장 주변·신규·상세 조회, Task 3: 매장·상품명 통합 검색, Task 4: 프로모션과 전체 연결 확인 (+32 more)
+Cohesion: 0.07
+Nodes (52): Consumer Store Discovery GraphQL Implementation Plan, File Structure, Global Constraints, Review Focus, Task 1: 입력 검증과 커서, Task 2: 매장 주변·신규·상세 조회, Task 3: 매장·상품명 통합 검색, Task 4: 프로모션과 전체 연결 확인 (+44 more)
 
 ### Community 39 - "PostgreSQL·MikroORM 기반 설계"
 Cohesion: 0.18
 Nodes (10): Integration test, PostgreSQL·MikroORM 기반 설계, 검증 기준, 목표, 배경, 설정 구조, 오류와 보안, 제외 범위 (+2 more)
 
-### Community 40 - "@nestjs/common"
-Cohesion: 0.12
-Nodes (18): ref_express, graphql, @mikro-orm/nestjs, @nestjs/common, @nestjs/config, @nestjs/core, @nestjs/graphql, ref_path (+10 more)
+### Community 40 - "app.module.ts"
+Cohesion: 0.13
+Nodes (15): Catch, Task 1: Stable GraphQL Error and Validation Contract, graphql, ref_jest_globals, @nestjs/core, @nestjs/graphql, @nestjs/testing, ref_path (+7 more)
 
 ### Community 41 - "Q: 소규모 PR에서 subagent-driven 개발 시 토큰 과다 사용을 어떻게 방지할 것인가?"
 Cohesion: 0.50
@@ -296,16 +299,16 @@ Cohesion: 0.18
 Nodes (11): jest, collectCoverageFrom, coverageDirectory, moduleFileExtensions, rootDir, testEnvironment, testPathIgnorePatterns, testRegex (+3 more)
 
 ### Community 43 - ".currentUser"
-Cohesion: 0.05
-Nodes (39): Context, Consumer Authentication API Implementation Plan, File Map, Global Constraints, Prerequisite Contract, Consumer discovery integer IDs implementation plan, Global Constraints, Review Focus (+31 more)
+Cohesion: 0.19
+Nodes (15): Context, Consumer Authentication API Implementation Plan, File Map, Global Constraints, Prerequisite Contract, AuthModule, UsersModule, 모듈 구조 (+7 more)
 
 ### Community 44 - "AuthResolver"
-Cohesion: 0.10
-Nodes (22): API 인증, GraphQL 계약, OTP 검증, OTP 요청, Token refresh, 공개 Mutation, 단일 기기 로그인, 로그인 (+14 more)
+Cohesion: 0.12
+Nodes (18): API 인증, OTP 검증, OTP 요청, Token refresh, 단일 기기 로그인, 로그인, 인증 흐름, 회원가입과 자동 로그인 (+10 more)
 
-### Community 45 - "SmsService"
-Cohesion: 0.36
-Nodes (4): Task 3: Add masked context to SMS failures, @nestjs/axios, SmsService, Injectable
+### Community 45 - "otp.service.ts"
+Cohesion: 0.19
+Nodes (12): Task 3: Add masked context to SMS failures, @nestjs/axios, @nestjs/config, ref_node_crypto, hmacSha256(), safeEqual(), sha256(), OtpChallenge (+4 more)
 
 ### Community 46 - "Q: 어떤것들이 수정되었는지 알려줘"
 Cohesion: 0.40
@@ -324,28 +327,28 @@ Cohesion: 0.40
 Nodes (4): @eslint/js, eslint-plugin-prettier, globals, typescript-eslint
 
 ### Community 52 - "User"
-Cohesion: 0.28
-Nodes (11): @mikro-orm/core, @nestjs/jwt, ref_node_crypto, hmacSha256(), randomToken(), safeEqual(), sha256(), RefreshSession (+3 more)
+Cohesion: 0.15
+Nodes (16): Task 2: User Persistence and Phone Normalization, Task 6: Global Access Guard and `currentUser`, ref_express, @mikro-orm/core, @mikro-orm/nestjs, @mikro-orm/postgresql, @nestjs/jwt, RefreshSession (+8 more)
 
-### Community 53 - "auth.resolver.ts"
+### Community 53 - "SessionService"
+Cohesion: 0.16
+Nodes (16): Task 4: Stateless Access Tokens and Rotating Refresh Sessions, InputType, IsString, class-validator, randomToken(), AuthPayload, LoginInput, OtpRequestPayload (+8 more)
+
+### Community 54 - "Consumer discovery integer IDs implementation plan"
 Cohesion: 0.22
-Nodes (13): Task 4: Stateless Access Tokens and Rotating Refresh Sessions, InputType, IsString, class-validator, AuthPayload, LoginInput, OtpRequestPayload, OtpVerificationPayload (+5 more)
-
-### Community 54 - "otp.service.ts"
-Cohesion: 0.25
-Nodes (6): bcrypt, @mikro-orm/postgresql, Injectable, UtilService, Injectable, UsersService
+Nodes (4): Consumer discovery integer IDs implementation plan, Global Constraints, 기존 UUID 데이터 전환, 인증 테이블 자동증가 정수 ID 전환
 
 ### Community 55 - "LockTimeoutError"
 Cohesion: 0.67
 Nodes (3): LockTimeoutError, Raised when another process holds the compress lock past LOCK_WAIT_SECONDS., TimeoutError
 
-### Community 56 - "SessionService"
-Cohesion: 0.22
-Nodes (6): Task 6: Global Access Guard and `currentUser`, AuthGuard, Injectable, parseId(), SessionService, Injectable
+### Community 56 - "@nestjs/common"
+Cohesion: 0.14
+Nodes (11): bcrypt, @nestjs/common, authError(), AuthErrorCode, AuthenticatedRequest, AuthGuard, Injectable, OtpChallengeSchema (+3 more)
 
-### Community 57 - "AppModule"
-Cohesion: 0.23
-Nodes (8): ref_jest_globals, @nestjs/testing, supertest, AppModule, Module, OtpChallenge, OtpChallengeSchema, GraphqlResponse
+### Community 57 - "Consumer 인증 API 설계"
+Cohesion: 0.22
+Nodes (8): Consumer 인증 API 설계, OTP 정책, 배경, 보안과 로깅, 오류 계약, 입력 검증, 제외 범위, ResponseLoggingPlugin
 
 ### Community 58 - "graphify reference: extra exports and benchmark"
 Cohesion: 0.22
@@ -363,9 +366,9 @@ Nodes (5): For /graphify explain, For /graphify path, graphify reference: query,
 Cohesion: 0.33
 Nodes (5): Global Constraints, PostgreSQL·MikroORM Foundation Implementation Plan, Task 1: Runtime MikroORM options, Task 2: PostgreSQL integration harness, Task 3: Final verification
 
-### Community 62 - "GraphqlExceptionFilter"
-Cohesion: 0.67
-Nodes (3): Catch, Task 1: Stable GraphQL Error and Validation Contract, GraphqlExceptionFilter
+### Community 62 - "Review Focus"
+Cohesion: 0.50
+Nodes (4): Review Focus, Task 1: Cursor and ORM mappings, Task 2: Store queries and GraphQL boundary, Task 3: Manual migration and verification
 
 ### Community 63 - "graphify reference: add a URL and watch a folder"
 Cohesion: 0.50
@@ -379,9 +382,21 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
+### Community 71 - "테스트 전략"
+Cohesion: 0.50
+Nodes (4): GraphQL E2E 테스트, PostgreSQL 통합 테스트, 단위 테스트, 테스트 전략
+
+### Community 72 - "GraphQL 계약"
+Cohesion: 0.50
+Nodes (4): GraphQL 계약, 공개 Mutation, 인증 필요 Query, 주요 입력과 응답
+
+### Community 73 - "데이터 모델"
+Cohesion: 0.50
+Nodes (4): OtpChallenge, RefreshSession, User, 데이터 모델
+
 ## Knowledge Gaps
-- **355 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+350 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 506 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **353 isolated node(s):** `name`, `version`, `license`, `private`, `type` (+348 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 504 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
@@ -396,12 +411,12 @@ Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphif
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `@nestjs/common` connect `@nestjs/common` to `products.service.ts`, `package.json`, `stores.service.ts`, `AuthResolver`, `SmsService`, `promotions.module.ts`, `User`, `auth.resolver.ts`, `otp.service.ts`, `AppModule`?**
-  _High betweenness centrality (0.058) - this node is a cross-community bridge._
+- **Why does `@nestjs/common` connect `@nestjs/common` to `products.service.ts`, `package.json`, `stores.service.ts`, `app.module.ts`, `AuthResolver`, `otp.service.ts`, `promotions.module.ts`, `User`?**
+  _High betweenness centrality (0.057) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `package.json`?**
   _High betweenness centrality (0.033) - this node is a cross-community bridge._
-- **Why does `AppModule` connect `AppModule` to `products.service.ts`, `PostgreSQL·MikroORM 기반 설계`, `@nestjs/common`, `OtpService`, `promotions.module.ts`, `User`, `File Map`, `PostgreSQL·MikroORM Foundation Implementation Plan`, `GraphqlExceptionFilter`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Why does `AppModule` connect `app.module.ts` to `products.service.ts`, `stores.service.ts`, `PostgreSQL·MikroORM 기반 설계`, `OtpService`, `otp.service.ts`, `File Map`, `PostgreSQL·MikroORM Foundation Implementation Plan`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **Are the 7 inferred relationships involving `User` (e.g. with `Consumer Authentication API Implementation Plan` and `File Map`) actually correct?**
   _`User` has 7 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `SessionService` (e.g. with `Task 5: Signup and Login Orchestration` and `Task 6: Global Access Guard and `currentUser``) actually correct?**
@@ -409,4 +424,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 4 inferred relationships involving `UsersService` (e.g. with `Task 2: User Persistence and Phone Normalization` and `Task 3: OTP Challenge Lifecycle`) actually correct?**
   _`UsersService` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `name`, `version`, `license` to the rest of the system?**
-  _355 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _353 weakly-connected nodes found - possible documentation gaps or missing edges._

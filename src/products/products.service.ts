@@ -26,7 +26,7 @@ const PRODUCT_SQL = `SELECT p.id, p.store_id, p.name, p.description, p.image_url
   WHERE p.is_active`;
 
 // 행 순서(상품 정렬 후 SKU 정렬)를 그대로 유지하며 상품별로 묶는다.
-function toProducts(rows: ProductRow[]): ProductType[] {
+function buildProducts(rows: ProductRow[]): ProductType[] {
   const products = new Map<number, ProductType>();
   for (const row of rows) {
     let product = products.get(row.id);
@@ -59,7 +59,7 @@ function toProducts(rows: ProductRow[]): ProductType[] {
 export class ProductsService {
   constructor(private readonly em: EntityManager) {}
 
-  async storeProducts(storeId: string): Promise<StoreProducts | null> {
+  async findStoreProducts(storeId: string): Promise<StoreProducts | null> {
     const id = validateId(storeId);
     const stores = await this.em.execute<{ id: number }[]>(
       'SELECT id FROM store WHERE id = ? AND is_active',
@@ -67,7 +67,7 @@ export class ProductsService {
     );
     if (stores.length === 0) return null;
 
-    const products = toProducts(
+    const products = buildProducts(
       await this.em.execute<ProductRow[]>(
         `${PRODUCT_SQL} AND p.store_id = ?
         ORDER BY p.name ASC, p.id ASC, k.price ASC, k.id ASC`,
@@ -96,11 +96,11 @@ export class ProductsService {
     return { categories: [...categories.values()], products };
   }
 
-  async product(id: string): Promise<ProductType | null> {
+  async findProduct(id: string): Promise<ProductType | null> {
     const rows = await this.em.execute<ProductRow[]>(
       `${PRODUCT_SQL} AND p.id = ? ORDER BY k.price ASC, k.id ASC`,
       [validateId(id)],
     );
-    return toProducts(rows)[0] ?? null;
+    return buildProducts(rows)[0] ?? null;
   }
 }

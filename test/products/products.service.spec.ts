@@ -28,7 +28,7 @@ describe('ProductsService', () => {
   it('없거나 비활성인 매장을 조회하면 null을 반환한다', async () => {
     execute.mockResolvedValueOnce([]);
 
-    await expect(service.storeProducts('1')).resolves.toBeNull();
+    await expect(service.findStoreProducts('1')).resolves.toBeNull();
     expect(execute).toHaveBeenCalledTimes(1);
     expect(execute.mock.calls[0][0]).toContain('is_active');
     expect(execute.mock.calls[0][1]).toEqual([1]);
@@ -40,7 +40,7 @@ describe('ProductsService', () => {
       .mockResolvedValueOnce([])
       .mockResolvedValueOnce([]);
 
-    await expect(service.storeProducts('1')).resolves.toEqual({
+    await expect(service.findStoreProducts('1')).resolves.toEqual({
       categories: [],
       products: [],
     });
@@ -56,7 +56,7 @@ describe('ProductsService', () => {
       ])
       .mockResolvedValueOnce([]);
 
-    const result = await service.storeProducts('1');
+    const result = await service.findStoreProducts('1');
 
     expect(result?.products).toEqual([
       {
@@ -110,7 +110,7 @@ describe('ProductsService', () => {
         { id: 3, name: '디저트', product_id: 99 },
       ]);
 
-    const result = await service.storeProducts('1');
+    const result = await service.findStoreProducts('1');
 
     expect(result?.categories).toEqual([
       { id: 1, name: '인기', productIds: [10] },
@@ -132,7 +132,7 @@ describe('ProductsService', () => {
       row(10, 101, 4000, true),
     ]);
 
-    await expect(service.product('10')).resolves.toMatchObject({
+    await expect(service.findProduct('10')).resolves.toMatchObject({
       id: 10,
       storeId: 1,
       minPrice: 3500,
@@ -149,14 +149,14 @@ describe('ProductsService', () => {
   it('노출할 수 없는 상품을 조회하면 null을 반환한다', async () => {
     execute.mockResolvedValueOnce([]);
 
-    await expect(service.product('10')).resolves.toBeNull();
+    await expect(service.findProduct('10')).resolves.toBeNull();
   });
 
   it('잘못된 ID로 조회하면 DB 조회 없이 입력 오류를 반환한다', async () => {
-    await expect(service.storeProducts('abc')).rejects.toThrow(
+    await expect(service.findStoreProducts('abc')).rejects.toThrow(
       BadRequestException,
     );
-    await expect(service.product('0')).rejects.toThrow(BadRequestException);
+    await expect(service.findProduct('0')).rejects.toThrow(BadRequestException);
     expect(execute).not.toHaveBeenCalled();
   });
 });

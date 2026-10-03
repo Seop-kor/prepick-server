@@ -75,21 +75,21 @@ export function decodeCursor(
     const raw = Buffer.from(cursor, 'base64url').toString('utf8');
     if (Buffer.from(raw).toString('base64url') !== cursor) throw new Error();
     const value: unknown = JSON.parse(raw);
+    if (!Array.isArray(value) || value.length !== 4) throw new Error();
+    const [cursorKind, cursorScope, key, id] = value as unknown[];
     if (
-      !Array.isArray(value) ||
-      value.length !== 4 ||
-      value[0] !== kind ||
-      value[1] !== scope ||
-      typeof value[3] !== 'number' ||
-      !isValidId(value[3]) ||
+      cursorKind !== kind ||
+      cursorScope !== scope ||
+      typeof id !== 'number' ||
+      !isValidId(id) ||
       (kind === 'nearby'
-        ? typeof value[2] !== 'number' || !Number.isFinite(value[2])
-        : typeof value[2] !== 'string')
+        ? typeof key !== 'number' || !Number.isFinite(key)
+        : typeof key !== 'string')
     ) {
       throw new Error();
     }
     if (kind === 'new') {
-      const date = value[2] as string;
+      const date = key as string;
       if (
         !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}(?:\d{3})?Z$/.test(date) ||
         new Date(date).toISOString().slice(0, 23) !== date.slice(0, 23)
@@ -97,7 +97,7 @@ export function decodeCursor(
         throw new Error();
       }
     }
-    return { key: value[2] as string | number, id: value[3] };
+    return { key: key as string | number, id };
   } catch {
     throw new BadRequestException('Invalid cursor');
   }
