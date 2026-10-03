@@ -738,14 +738,14 @@
     "semantic_hash": ""
   },
   "test/auth/otp.service.spec.ts": {
-    "mtime": 1790689138.0212095,
-    "seen": 1791034306.1042519,
+    "mtime": 1791034790.0672956,
+    "seen": 1791045081.6245172,
     "ast_hash": "536c04ff77724559b0e0aaec35ebd8cf",
     "semantic_hash": ""
   },
   "test/auth/session.service.spec.ts": {
-    "mtime": 1790689138.023926,
-    "seen": 1791034306.1042528,
+    "mtime": 1791034790.0674984,
+    "seen": 1791045081.6245198,
     "ast_hash": "5fd49b7599d94904de482023b97d9f16",
     "semantic_hash": ""
   },
@@ -840,15 +840,15 @@
     "semantic_hash": ""
   },
   "src/stores/stores.resolver.ts": {
-    "mtime": 1791034302.0845332,
-    "seen": 1791034306.104237,
-    "ast_hash": "bfa6187a8b3862bd03ee2abf2f6533bc",
+    "mtime": 1791045056.919041,
+    "seen": 1791045081.624504,
+    "ast_hash": "89d08bc89fddb9c79562ca76287e76d2",
     "semantic_hash": ""
   },
   "src/stores/stores.service.ts": {
-    "mtime": 1791034272.9860013,
-    "seen": 1791034306.104238,
-    "ast_hash": "8bc60de9f0483edef458a8b59645701a",
+    "mtime": 1791045056.9192135,
+    "seen": 1791045081.624504,
+    "ast_hash": "46b6ef8243270c8b0f689baa5e28aa61",
     "semantic_hash": ""
   },
   "test/promotions/promotions.service.spec.ts": {
@@ -858,14 +858,14 @@
     "semantic_hash": ""
   },
   "test/stores/stores.resolver.spec.ts": {
-    "mtime": 1791034277.0525975,
-    "seen": 1791034306.104265,
+    "mtime": 1791034790.0680935,
+    "seen": 1791045081.624532,
     "ast_hash": "1507190b9213f393bab939339e6e14c0",
     "semantic_hash": ""
   },
   "test/stores/stores.service.spec.ts": {
-    "mtime": 1791034302.107822,
-    "seen": 1791034306.104266,
+    "mtime": 1791034790.0683126,
+    "seen": 1791045081.624533,
     "ast_hash": "1394846d25f47599a1d670abcd52317c",
     "semantic_hash": ""
   },
@@ -924,14 +924,14 @@
     "semantic_hash": ""
   },
   "src/products/products.resolver.ts": {
-    "mtime": 1791034272.9827726,
-    "seen": 1791034306.104226,
+    "mtime": 1791034790.0662258,
+    "seen": 1791045081.624494,
     "ast_hash": "430bd229044c1dd76f26d0aa5029a00c",
     "semantic_hash": ""
   },
   "src/products/products.service.ts": {
-    "mtime": 1791034272.9792333,
-    "seen": 1791034306.104227,
+    "mtime": 1791034790.0664444,
+    "seen": 1791045081.624494,
     "ast_hash": "55d13bda4f813a896543faff47492964",
     "semantic_hash": ""
   },
@@ -960,9 +960,9 @@
     "semantic_hash": ""
   },
   "src/stores/stores.util.ts": {
-    "mtime": 1791034285.8490775,
-    "seen": 1791034306.1042402,
-    "ast_hash": "c0821795ae1f6f34f562ad433ff9842e",
+    "mtime": 1791045056.919346,
+    "seen": 1791045081.624506,
+    "ast_hash": "c43865e525f63be6a4fb259388732c2f",
     "semantic_hash": ""
   },
   "test/common/validation.spec.ts": {
@@ -978,27 +978,27 @@
     "semantic_hash": ""
   },
   "test/products/products.resolver.spec.ts": {
-    "mtime": 1791034277.0563712,
-    "seen": 1791034306.1042612,
+    "mtime": 1791034790.0676885,
+    "seen": 1791045081.624529,
     "ast_hash": "d63cb6155ca52396bf6dfa7641ca3c55",
     "semantic_hash": ""
   },
   "test/products/products.service.spec.ts": {
-    "mtime": 1791034272.992209,
-    "seen": 1791034306.1042619,
+    "mtime": 1791034790.0678859,
+    "seen": 1791045081.6245298,
     "ast_hash": "4cfb6c8c17e3bdf99e8390777a589544",
     "semantic_hash": ""
   },
   "test/stores/stores.graphql.spec.ts": {
-    "mtime": 1790389662.003106,
-    "seen": 1790432341.248011,
-    "ast_hash": "fe827340cc709c8985102bd578ce4598",
+    "mtime": 1791045056.9195042,
+    "seen": 1791045081.624532,
+    "ast_hash": "7442c0449aeb745721ed940e24fa6589",
     "semantic_hash": ""
   },
   "test/stores/stores.util.spec.ts": {
-    "mtime": 1790432148.0047524,
-    "seen": 1790432341.248013,
-    "ast_hash": "08af54c6e9f809b982e17e3a4840d818",
+    "mtime": 1791045056.9196403,
+    "seen": 1791045081.6245341,
+    "ast_hash": "fa3d1f256bf9990841abdf00cff8a150",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
@@ -1077,6 +1077,36 @@
     "mtime": 1790418138.1349387,
     "seen": 1790432341.248066,
     "ast_hash": "63b391e3df6d65da5951dae024d56957",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1791035228.9742706,
+    "seen": 1791045081.6244678,
+    "ast_hash": "2cecd26dc603c9b2cdd84a173126ff13",
+    "semantic_hash": ""
+  },
+  "src/common/pagination.ts": {
+    "mtime": 1791045021.1288388,
+    "seen": 1791045081.624486,
+    "ast_hash": "ca411ecb1cacac0dc3af46525df4d40a",
+    "semantic_hash": ""
+  },
+  "test/common/pagination.spec.ts": {
+    "mtime": 1791044999.8176937,
+    "seen": 1791045081.624521,
+    "ast_hash": "8f6d1e5363672741f7e63fbce6598995",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-10-04-consumer-orders.md": {
+    "mtime": 1791044886.9820516,
+    "seen": 1791045081.6245859,
+    "ast_hash": "f729360476aaee8b9d9af0284c48ed05",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-10-04-consumer-orders-design.md": {
+    "mtime": 1791044859.4782298,
+    "seen": 1791045081.624591,
+    "ast_hash": "c8ad2a149b43d8669ea85546e3c712b9",
     "semantic_hash": ""
   }
 }

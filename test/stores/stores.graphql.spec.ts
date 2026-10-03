@@ -30,11 +30,14 @@ describe('매장 탐색 GraphQL 스키마', () => {
     expect(schema.getType('SearchResult')?.toString()).toBe('SearchResult');
     const sdl = printSchema(schema);
     expect(sdl).toContain(
-      'stores(latitude: Float!, longitude: Float!, radiusKm: Float = 5, first: Int = 20, after: String): StorePage!',
+      'stores(latitude: Float!, longitude: Float!, radiusKm: Float = 5, size: Int = 20, cursor: String): StorePage!',
     );
-    expect(sdl).toContain('stores(first: Int = 20, after: String): StorePage!');
+    expect(sdl).toContain('stores(size: Int = 20, cursor: String): StorePage!');
     expect(sdl).toContain(
-      'menus(first: Int = 20, after: String): MenuSearchPage!',
+      'menus(size: Int = 20, cursor: String): MenuSearchPage!',
+    );
+    expect(sdl).toContain(
+      'newStores(size: Int = 20, cursor: String): StorePage!',
     );
     expect(sdl).toContain('promotions: [Promotion!]!');
     await module.close();

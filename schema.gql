@@ -78,18 +78,18 @@ type Promotion {
 type Query {
   currentUser: User!
   healthCheck: Boolean!
-  newStores(after: String, first: Int = 20): StorePage!
+  newStores(cursor: String, size: Int = 20): StorePage!
   product(id: ID!): Product
   promotions: [Promotion!]!
   search(keyword: String!, latitude: Float, longitude: Float): SearchResult!
   store(id: ID!): Store
   storeProducts(storeId: ID!): StoreProducts
-  stores(after: String, first: Int = 20, latitude: Float!, longitude: Float!, radiusKm: Float = 5): StorePage!
+  stores(cursor: String, latitude: Float!, longitude: Float!, radiusKm: Float = 5, size: Int = 20): StorePage!
 }
 
 type SearchResult {
-  menus(after: String, first: Int = 20): MenuSearchPage!
-  stores(after: String, first: Int = 20): StorePage!
+  menus(cursor: String, size: Int = 20): MenuSearchPage!
+  stores(cursor: String, size: Int = 20): StorePage!
 }
 
 input SignUpInput {
