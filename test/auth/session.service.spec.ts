@@ -1,5 +1,6 @@
 import type { EntityManager } from '@mikro-orm/postgresql';
 import type { JwtService } from '@nestjs/jwt';
+import { TokenExpiredError } from '@nestjs/jwt';
 
 jest.mock('@mikro-orm/core', () => ({
   LockMode: { PESSIMISTIC_WRITE: 3 },
@@ -243,6 +244,16 @@ describe('SessionService', () => {
     await expect(service.verifyAccessToken('access-token')).resolves.toEqual({
       sub: user.id,
     });
+  });
+
+  it('access token이 만료되면 ACCESS_TOKEN_EXPIRED 오류를 반환한다', async () => {
+    jwt.verifyAsync.mockRejectedValue(
+      new TokenExpiredError('jwt expired', new Date()),
+    );
+
+    await expect(
+      service.verifyAccessToken('access-token'),
+    ).rejects.toMatchObject({ extensions: { code: 'ACCESS_TOKEN_EXPIRED' } });
   });
 
   it.each([

@@ -360,7 +360,7 @@ describe('GraphQL authentication journey (e2e)', () => {
       {},
       registered.accessToken,
     );
-    expect(expired.errors?.[0].extensions.code).toBe('UNAUTHENTICATED');
+    expect(expired.errors?.[0].extensions.code).toBe('ACCESS_TOKEN_EXPIRED');
   });
 
   it('인증 흐름을 실행하면 비밀값 원문을 로그에 남기지 않는다', async () => {

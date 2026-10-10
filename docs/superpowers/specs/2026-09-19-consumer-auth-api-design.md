@@ -230,7 +230,7 @@ Authorization: Bearer <accessToken>
 
 access token에는 `sub`, `iat`, `exp`만 포함하며 15분 동안 유효하다. 서버는 JWT 서명과 만료를 검증하고 `sub`를 현재 사용자 ID로 사용한다. access token 검증 시 session DB를 조회하지 않는다.
 
-GraphQL 응답의 `extensions.code`가 `UNAUTHENTICATED`이면 앱은 보안 저장소의 refresh token으로 `refreshSession`을 한 번 호출한다. 여러 요청이 동시에 실패하더라도 refresh는 하나만 실행하고 나머지는 결과를 기다린다. 성공하면 새 access token은 메모리에, 새 refresh token은 보안 저장소에 교체한 뒤 원래 요청을 한 번만 재시도한다.
+GraphQL 응답의 `extensions.code`가 `ACCESS_TOKEN_EXPIRED`이면 앱은 보안 저장소의 refresh token으로 `refreshSession`을 한 번 호출한다. 여러 요청이 동시에 실패하더라도 refresh는 하나만 실행하고 나머지는 결과를 기다린다. 성공하면 새 access token은 메모리에, 새 refresh token은 보안 저장소에 교체한 뒤 원래 요청을 한 번만 재시도한다.
 
 ### Token refresh
 
@@ -269,10 +269,11 @@ GraphQL 응답의 `extensions.code`가 `UNAUTHENTICATED`이면 앱은 보안 저
 
 ## 오류 계약
 
+- `ACCESS_TOKEN_EXPIRED`: 만료된 access token (refresh 후 재시도)
 - `BAD_USER_INPUT`: 입력 형식 오류, 잘못되거나 만료된 OTP 또는 verification token
 - `PHONE_NUMBER_ALREADY_REGISTERED`: 이미 가입된 전화번호
 - `TOO_MANY_REQUESTS`: OTP 재전송 대기 또는 발송 한도 초과
-- `UNAUTHENTICATED`: 잘못된 로그인 정보, 없거나 만료·폐기된 access/refresh token
+- `UNAUTHENTICATED`: 잘못된 로그인 정보, 없거나 위조된 access token, 만료·폐기된 refresh token
 
 클라이언트가 HTTP 상태 코드에 의존하지 않도록 GraphQL `extensions.code`에 위 값을 제공한다. 전화번호 미가입과 잘못된 비밀번호는 구분하지 않는다.
 

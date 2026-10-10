@@ -1,7 +1,7 @@
 import { LockMode } from '@mikro-orm/core';
 import { EntityManager } from '@mikro-orm/postgresql';
 import { HttpStatus, Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
+import { JwtService, TokenExpiredError } from '@nestjs/jwt';
 
 import { User } from '../users/user.entity';
 import { randomToken, safeEqual, sha256 } from './auth.crypto';
@@ -122,7 +122,14 @@ export class SessionService {
         throw new Error('Invalid subject');
       }
       return { sub: id };
-    } catch {
+    } catch (error) {
+      if (error instanceof TokenExpiredError) {
+        throw authError(
+          'ACCESS_TOKEN_EXPIRED',
+          'Access token expired',
+          HttpStatus.UNAUTHORIZED,
+        );
+      }
       throw this.unauthenticated();
     }
   }

@@ -2,6 +2,7 @@ import { HttpException, HttpStatus } from '@nestjs/common';
 import { GraphQLError } from 'graphql';
 
 export type AuthErrorCode =
+  | 'ACCESS_TOKEN_EXPIRED'
   | 'BAD_USER_INPUT'
   | 'PHONE_NUMBER_ALREADY_REGISTERED'
   | 'TOO_MANY_REQUESTS'
