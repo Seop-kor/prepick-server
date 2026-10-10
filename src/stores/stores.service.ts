@@ -5,9 +5,11 @@ import { validateId } from '../common/validation';
 import {
   decodeCursor,
   encodeCursor,
-  escapeLike,
   slicePage,
-  validateFirst,
+  validateSize,
+} from '../common/pagination';
+import {
+  escapeLike,
   validateLocation,
   validateKeyword,
   validateRadius,
@@ -69,14 +71,14 @@ export class StoresService {
     latitude: number,
     longitude: number,
     radiusKm = 5,
-    first = 20,
-    after?: string | null,
+    size = 20,
+    cursor?: string | null,
   ): Promise<StorePage> {
     validateLocation(latitude, longitude, true);
     validateRadius(radiusKm);
-    validateFirst(first);
+    validateSize(size);
     const scope = JSON.stringify([latitude, longitude, radiusKm]);
-    const cursor = decodeCursor('nearby', scope, after);
+    const start = decodeCursor('nearby', scope, cursor);
     const rows = await this.em.execute<StoreRow[]>(
       `WITH ranked AS (
         SELECT s.*, 2 * 6371000 * asin(sqrt(least(1,
@@ -87,18 +89,18 @@ export class StoresService {
         FROM store s WHERE s.is_active
       )
       SELECT * FROM ranked WHERE distance_meters <= ?
-      ${cursor ? 'AND (distance_meters, id) > (?, ?::integer)' : ''}
+      ${start ? 'AND (distance_meters, id) > (?, ?::integer)' : ''}
       ORDER BY distance_meters ASC, id ASC LIMIT ?`,
       [
         latitude,
         latitude,
         longitude,
         radiusKm * 1000,
-        ...(cursor ? [cursor.key, cursor.id] : []),
-        first + 1,
+        ...(start ? [start.key, start.id] : []),
+        size + 1,
       ],
     );
-    const page = slicePage(rows, first, (row) =>
+    const page = slicePage(rows, size, (row) =>
       encodeCursor('nearby', scope, row.distance_meters!, row.id),
     );
     return {
@@ -107,17 +109,17 @@ export class StoresService {
     };
   }
 
-  async findNewStores(first = 20, after?: string | null): Promise<StorePage> {
-    validateFirst(first);
-    const cursor = decodeCursor('new', '', after);
+  async findNewStores(size = 20, cursor?: string | null): Promise<StorePage> {
+    validateSize(size);
+    const start = decodeCursor('new', '', cursor);
     const rows = await this.em.execute<StoreRow[]>(
       `SELECT *, to_char(created_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.US"Z"') AS cursor_created_at
        FROM store WHERE is_active
-      ${cursor ? 'AND (created_at, id) < (?::timestamptz, ?::integer)' : ''}
+      ${start ? 'AND (created_at, id) < (?::timestamptz, ?::integer)' : ''}
       ORDER BY created_at DESC, id DESC LIMIT ?`,
-      [...(cursor ? [cursor.key, cursor.id] : []), first + 1],
+      [...(start ? [start.key, start.id] : []), size + 1],
     );
-    const page = slicePage(rows, first, (row) =>
+    const page = slicePage(rows, size, (row) =>
       encodeCursor(
         'new',
         '',
@@ -138,29 +140,29 @@ export class StoresService {
   async searchStores(
     keyword: string,
     location: Location | null,
-    first = 20,
-    after?: string | null,
+    size = 20,
+    cursor?: string | null,
   ): Promise<StorePage> {
     keyword = validateKeyword(keyword);
-    validateFirst(first);
+    validateSize(size);
     if (location) validateLocation(location.latitude, location.longitude, true);
     const scope = JSON.stringify([keyword, location]);
-    const cursor = decodeCursor('store-search', scope, after);
+    const start = decodeCursor('store-search', scope, cursor);
     const rows = await this.em.execute<StoreRow[]>(
       `SELECT store.*${location ? `, ${distanceSql('store')} AS distance_meters` : ''}
        FROM store WHERE is_active AND name ILIKE ? ESCAPE '#'
-       ${cursor ? 'AND (name, id) > (?, ?::integer)' : ''}
+       ${start ? 'AND (name, id) > (?, ?::integer)' : ''}
        ORDER BY name ASC, id ASC LIMIT ?`,
       [
         ...(location
           ? [location.latitude, location.latitude, location.longitude]
           : []),
         `%${escapeLike(keyword)}%`,
-        ...(cursor ? [cursor.key, cursor.id] : []),
-        first + 1,
+        ...(start ? [start.key, start.id] : []),
+        size + 1,
       ],
     );
-    const page = slicePage(rows, first, (row) =>
+    const page = slicePage(rows, size, (row) =>
       encodeCursor('store-search', scope, row.name, row.id),
     );
     return {
@@ -172,14 +174,14 @@ export class StoresService {
   async searchMenus(
     keyword: string,
     location: Location | null,
-    first = 20,
-    after?: string | null,
+    size = 20,
+    cursor?: string | null,
   ): Promise<MenuSearchPage> {
     keyword = validateKeyword(keyword);
-    validateFirst(first);
+    validateSize(size);
     if (location) validateLocation(location.latitude, location.longitude, true);
     const scope = JSON.stringify([keyword, location]);
-    const cursor = decodeCursor('menu-search', scope, after);
+    const start = decodeCursor('menu-search', scope, cursor);
     type MenuRow = StoreRow & {
       product_id: number;
       product_name: string;
@@ -197,7 +199,7 @@ export class StoresService {
        JOIN store s ON s.id = p.store_id AND s.is_active
        JOIN sku k ON k.product_id = p.id AND k.is_active
        WHERE p.is_active AND p.name ILIKE ? ESCAPE '#'
-       ${cursor ? 'AND (p.name, p.id) > (?, ?::integer)' : ''}
+       ${start ? 'AND (p.name, p.id) > (?, ?::integer)' : ''}
        GROUP BY p.id, s.id
        ORDER BY p.name ASC, p.id ASC LIMIT ?`,
       [
@@ -205,11 +207,11 @@ export class StoresService {
           ? [location.latitude, location.latitude, location.longitude]
           : []),
         `%${escapeLike(keyword)}%`,
-        ...(cursor ? [cursor.key, cursor.id] : []),
-        first + 1,
+        ...(start ? [start.key, start.id] : []),
+        size + 1,
       ],
     );
-    const page = slicePage(rows, first, (row) =>
+    const page = slicePage(rows, size, (row) =>
       encodeCursor('menu-search', scope, row.product_name, row.product_id),
     );
     return {

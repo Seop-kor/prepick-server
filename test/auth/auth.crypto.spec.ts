@@ -17,10 +17,13 @@ import {
   sha256,
 } from '../../src/auth/auth.crypto';
 
+// randomBytes는 오버로드가 있어 jest.mocked가 콜백형(void 반환) 시그니처를 고르므로 동기 시그니처로 좁힌다.
+const mockedRandomBytes = jest.mocked(randomBytes as (size: number) => Buffer);
+
 describe('auth crypto', () => {
   beforeEach(() => {
-    jest.mocked(randomBytes).mockReset();
-    jest.mocked(randomBytes).mockReturnValue(Buffer.alloc(32, 1));
+    mockedRandomBytes.mockReset();
+    mockedRandomBytes.mockReturnValue(Buffer.alloc(32, 1));
   });
 
   it('문자열을 SHA-256으로 해시하면 64자리 16진수를 반환한다', () => {

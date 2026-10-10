@@ -24,28 +24,28 @@ export class StoresResolver {
     @Args('longitude', { type: () => Float }) longitude: number,
     @Args('radiusKm', { type: () => Float, nullable: true, defaultValue: 5 })
     radiusKm: number,
-    @Args('first', { type: () => Int, nullable: true, defaultValue: 20 })
-    first: number,
-    @Args('after', { type: () => String, nullable: true })
-    after?: string | null,
+    @Args('size', { type: () => Int, nullable: true, defaultValue: 20 })
+    size: number,
+    @Args('cursor', { type: () => String, nullable: true })
+    cursor?: string | null,
   ) {
     return this.service.findNearbyStores(
       latitude,
       longitude,
       radiusKm,
-      first,
-      after,
+      size,
+      cursor,
     );
   }
 
   @Query(() => StorePage)
   newStores(
-    @Args('first', { type: () => Int, nullable: true, defaultValue: 20 })
-    first: number,
-    @Args('after', { type: () => String, nullable: true })
-    after?: string | null,
+    @Args('size', { type: () => Int, nullable: true, defaultValue: 20 })
+    size: number,
+    @Args('cursor', { type: () => String, nullable: true })
+    cursor?: string | null,
   ) {
-    return this.service.findNewStores(first, after);
+    return this.service.findNewStores(size, cursor);
   }
 
   @Query(() => Store, { nullable: true })
@@ -71,30 +71,30 @@ export class StoresResolver {
   @ResolveField(() => StorePage, { name: 'stores' })
   searchStores(
     @Parent() parent: SearchResult,
-    @Args('first', { type: () => Int, nullable: true, defaultValue: 20 })
-    first: number,
-    @Args('after', { type: () => String, nullable: true })
-    after?: string | null,
+    @Args('size', { type: () => Int, nullable: true, defaultValue: 20 })
+    size: number,
+    @Args('cursor', { type: () => String, nullable: true })
+    cursor?: string | null,
   ) {
     const location =
       parent.latitude === null
         ? null
         : { latitude: parent.latitude, longitude: parent.longitude! };
-    return this.service.searchStores(parent.keyword, location, first, after);
+    return this.service.searchStores(parent.keyword, location, size, cursor);
   }
 
   @ResolveField(() => MenuSearchPage, { name: 'menus' })
   searchMenus(
     @Parent() parent: SearchResult,
-    @Args('first', { type: () => Int, nullable: true, defaultValue: 20 })
-    first: number,
-    @Args('after', { type: () => String, nullable: true })
-    after?: string | null,
+    @Args('size', { type: () => Int, nullable: true, defaultValue: 20 })
+    size: number,
+    @Args('cursor', { type: () => String, nullable: true })
+    cursor?: string | null,
   ) {
     const location =
       parent.latitude === null
         ? null
         : { latitude: parent.latitude, longitude: parent.longitude! };
-    return this.service.searchMenus(parent.keyword, location, first, after);
+    return this.service.searchMenus(parent.keyword, location, size, cursor);
   }
 }

@@ -18,6 +18,7 @@ import { AuthModule } from './auth/auth.module';
 import { StoresModule } from './stores/stores.module';
 import { PromotionsModule } from './promotions/promotions.module';
 import { ProductsModule } from './products/products.module';
+import { OrdersModule } from './orders/orders.module';
 
 @Module({
   imports: [
@@ -55,6 +56,7 @@ import { ProductsModule } from './products/products.module';
     StoresModule,
     ProductsModule,
     PromotionsModule,
+    OrdersModule,
   ],
   providers: [
     {

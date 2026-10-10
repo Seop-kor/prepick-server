@@ -19,7 +19,9 @@ import { UsersService } from '../../src/users/users.service';
 
 describe('authentication persistence', () => {
   const verificationToken = 'v'.repeat(43);
-  const sms = { sendOtp: jest.fn().mockResolvedValue(true) };
+  const sms = {
+    sendOtp: jest.fn<SmsService['sendOtp']>().mockResolvedValue(true),
+  };
   let module: TestingModule;
   let rootEm: EntityManager;
   let jwtService: JwtService;
@@ -222,7 +224,7 @@ describe('authentication persistence', () => {
     );
     const sessionError = new Error('forced session failure');
     const sessionService = {
-      start: jest.fn().mockRejectedValue(sessionError),
+      start: jest.fn<SessionService['start']>().mockRejectedValue(sessionError),
     } as unknown as SessionService;
     const authService = new AuthService(
       em,

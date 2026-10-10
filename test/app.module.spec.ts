@@ -14,6 +14,7 @@ describe('AppModule configuration', () => {
     jest.dontMock('../src/stores/stores.module');
     jest.dontMock('../src/promotions/promotions.module');
     jest.dontMock('../src/products/products.module');
+    jest.dontMock('../src/orders/orders.module');
     jest.dontMock('../src/mikro-orm.options');
   });
 
@@ -27,6 +28,7 @@ describe('AppModule configuration', () => {
       class MockStoresModule {}
       class MockPromotionsModule {}
       class MockProductsModule {}
+      class MockOrdersModule {}
 
       const configForRoot = jest.fn(() => ({
         module: class MockConfigModule {},
@@ -72,6 +74,9 @@ describe('AppModule configuration', () => {
       }));
       jest.doMock('../src/products/products.module', () => ({
         ProductsModule: MockProductsModule,
+      }));
+      jest.doMock('../src/orders/orders.module', () => ({
+        OrdersModule: MockOrdersModule,
       }));
       jest.doMock('../src/mikro-orm.options', () => ({
         createMikroOrmOptions: (clientUrl: string) => ({ clientUrl }),
@@ -124,6 +129,7 @@ describe('AppModule configuration', () => {
           MockStoresModule,
           MockPromotionsModule,
           MockProductsModule,
+          MockOrdersModule,
         ]),
       );
 
