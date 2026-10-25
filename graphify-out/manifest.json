@@ -1104,9 +1104,9 @@
     "semantic_hash": ""
   },
   "docs/superpowers/specs/2026-10-04-consumer-orders-design.md": {
-    "mtime": 1791625846.1976569,
-    "seen": 1791625861.621195,
-    "ast_hash": "c8ad2a149b43d8669ea85546e3c712b9",
+    "mtime": 1792910279.482781,
+    "seen": 1792910301.2353332,
+    "ast_hash": "d4285dbfc60b6968df617d7ed78f238b",
     "semantic_hash": ""
   },
   "src/orders/orders.module.ts": {
@@ -1122,27 +1122,27 @@
     "semantic_hash": ""
   },
   "src/orders/orders.service.ts": {
-    "mtime": 1791625846.2030566,
-    "seen": 1791625861.621085,
-    "ast_hash": "d715898a41a366d1438e586e3fcdd6fb",
+    "mtime": 1792910279.4814665,
+    "seen": 1792910301.235204,
+    "ast_hash": "86bc96a87e1e8fa9bf1c74c9d4be0cdb",
     "semantic_hash": ""
   },
   "src/orders/orders.types.ts": {
-    "mtime": 1791625846.2032247,
-    "seen": 1791625861.621085,
-    "ast_hash": "6bb56703463e9b4b4d039bc00cb3196f",
+    "mtime": 1792910279.4811606,
+    "seen": 1792910301.2352052,
+    "ast_hash": "0a9eb1e7ffa59abf9f7bc24a3e7fa7f8",
     "semantic_hash": ""
   },
   "test/orders/orders.create.spec.ts": {
-    "mtime": 1791625846.2059662,
-    "seen": 1791625861.621123,
-    "ast_hash": "9fadbf2c0289c805eef7038ec04a4c2c",
+    "mtime": 1792910279.4819827,
+    "seen": 1792910301.2352471,
+    "ast_hash": "d6e04bcf1d0f2b99299ec53355703e49",
     "semantic_hash": ""
   },
   "test/orders/orders.graphql.spec.ts": {
-    "mtime": 1791625846.206107,
-    "seen": 1791625861.621124,
-    "ast_hash": "154f88bcb9aadc4be1a52d970d29b3b9",
+    "mtime": 1792910279.4823167,
+    "seen": 1792910301.2352471,
+    "ast_hash": "0eae3cb340f57186e4c0743e2a9e9575",
     "semantic_hash": ""
   },
   "test/orders/orders.input.spec.ts": {
@@ -1158,9 +1158,9 @@
     "semantic_hash": ""
   },
   "test/orders/orders.service.spec.ts": {
-    "mtime": 1791625846.2065904,
-    "seen": 1791625861.621127,
-    "ast_hash": "df160cf9daf3bd87d3b5be320f1fc989",
+    "mtime": 1792910279.482218,
+    "seen": 1792910301.235251,
+    "ast_hash": "5bbd0288667f1cd9055f1752f206b391",
     "semantic_hash": ""
   },
   "test/orders/orders.integration-spec.ts": {

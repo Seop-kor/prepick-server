@@ -39,6 +39,7 @@ CREATE TABLE "order" (
   order_date date NOT NULL,
   prefix_order_number varchar(10) NOT NULL,
   order_number integer NOT NULL,
+  status varchar(20) NOT NULL DEFAULT 'CREATED',
   amount integer NOT NULL,
   request varchar(100),
   paid_at timestamptz NOT NULL,

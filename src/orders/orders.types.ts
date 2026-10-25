@@ -5,6 +5,7 @@ import {
   InputType,
   Int,
   ObjectType,
+  registerEnumType,
 } from '@nestjs/graphql';
 import { Type } from 'class-transformer';
 import {
@@ -20,6 +21,18 @@ import {
   Min,
   ValidateNested,
 } from 'class-validator';
+
+// 주문은 CREATED부터 PICKED_UP까지 순서대로 진행하고, 진행 중 언제든 CANCELED가 될 수 있다.
+export enum OrderStatus {
+  CREATED = 'CREATED',
+  CONFIRMED = 'CONFIRMED',
+  IN_PROGRESS = 'IN_PROGRESS',
+  READY = 'READY',
+  PICKED_UP = 'PICKED_UP',
+  CANCELED = 'CANCELED',
+}
+
+registerEnumType(OrderStatus, { name: 'OrderStatus' });
 
 @InputType()
 export class OrderItemInput {
@@ -127,6 +140,9 @@ export class OrderType {
 
   @Field(() => Int)
   orderNumber!: number;
+
+  @Field(() => OrderStatus)
+  status!: OrderStatus;
 
   @Field(() => Int)
   amount!: number;
