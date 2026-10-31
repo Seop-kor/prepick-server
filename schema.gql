@@ -66,6 +66,7 @@ type Order {
   paidAt: DateTime!
   prefixOrderNumber: String!
   request: String
+  status: OrderStatus!
   storeId: ID!
   storeName: String!
 }
@@ -92,6 +93,15 @@ input OrderItemInput {
 type OrderPage {
   items: [Order!]!
   nextCursor: String
+}
+
+enum OrderStatus {
+  CANCELED
+  CONFIRMED
+  CREATED
+  IN_PROGRESS
+  PICKED_UP
+  READY
 }
 
 type OtpRequestPayload {
