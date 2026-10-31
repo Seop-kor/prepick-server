@@ -12,6 +12,7 @@ import {
   CreateOrderInput,
   OrderItemType,
   OrderPage,
+  OrderStatus,
   OrderType,
 } from './orders.types';
 
@@ -21,6 +22,7 @@ type OrderRow = {
   store_name: string;
   prefix_order_number: string;
   order_number: number;
+  status: OrderStatus;
   amount: number;
   request: string | null;
   paid_at: Date | string;
@@ -41,7 +43,7 @@ type OrderItemRow = {
 
 // cursor_created_at은 커서가 마이크로초까지 보존하도록 DB에서 문자열로 만든다.
 const ORDER_COLUMNS = `id, store_id, store_name, prefix_order_number, order_number,
-  amount, request, paid_at, created_at,
+  status, amount, request, paid_at, created_at,
   to_char(created_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.US"Z"') AS cursor_created_at`;
 
 const ORDER_NUMBER_PREFIX = 'A';
@@ -214,6 +216,7 @@ export class OrdersService {
       storeName: row.store_name,
       prefixOrderNumber: row.prefix_order_number,
       orderNumber: row.order_number,
+      status: row.status,
       amount: row.amount,
       request: row.request,
       paidAt: new Date(row.paid_at),

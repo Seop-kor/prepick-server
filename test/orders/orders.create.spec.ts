@@ -17,6 +17,7 @@ const orderRow = (id: number, orderNumber: number) => ({
   store_name: '브루랩 강남점',
   prefix_order_number: 'A',
   order_number: orderNumber,
+  status: 'CREATED',
   amount: 12500,
   request: null,
   paid_at: paidAt,

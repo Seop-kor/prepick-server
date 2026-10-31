@@ -33,6 +33,10 @@ describe('주문 GraphQL 스키마', () => {
     expect(sdl).toContain('order(id: ID!): Order');
     expect(sdl).toContain('prefixOrderNumber: String!');
     expect(sdl).toContain('orderNumber: Int!');
+    expect(sdl).toContain('status: OrderStatus!');
+    expect(sdl).toMatch(
+      /enum OrderStatus \{\s+CREATED\s+CONFIRMED\s+IN_PROGRESS\s+READY\s+PICKED_UP\s+CANCELED\s+\}/,
+    );
     expect(sdl).toContain('storeName: String!');
     expect(sdl).toContain('paidAt: DateTime!');
     expect(sdl).toContain('items: [OrderItem!]!');
