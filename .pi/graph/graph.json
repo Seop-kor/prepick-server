@@ -1,0 +1,68 @@
+{
+  "$comment": "노드와 엣지의 단일 정의. 엔진(bin/graph.mjs)만 이 파일을 해석한다. to: 노드 이름 | 배열(병렬 분기) | \"$mode\"(state.vars.mode) | \"@<graph>\"(다른 그래프로 넘김) | \"END\".",
+  "graphs": {
+    "write-plan": {
+      "start": "plan",
+      "nodes": {
+        "plan":       { "kind": "work", "doc": "nodes/plan.md", "requires": ["designPath"] },
+        "plan-gate":  { "kind": "gate", "doc": "nodes/plan-gate.md" },
+        "write-jira": { "kind": "work", "doc": "nodes/write-jira.md", "requires": ["ticketKey"] }
+      },
+      "edges": [
+        { "from": "plan",       "on": "done",    "to": "plan-gate" },
+        { "from": "plan-gate",  "on": "approve", "to": "write-jira" },
+        { "from": "plan-gate",  "on": "reject",  "to": "plan", "requireReason": true },
+        { "from": "write-jira", "on": "done",    "to": "END" }
+      ]
+    },
+
+    "graph-run": {
+      "start": "read-jira",
+      "nodes": {
+        "read-jira":         { "kind": "work", "doc": "nodes/read-jira.md", "requires": ["snapshotPath", "modules"] },
+        "decide-mode-gate":  { "kind": "gate", "doc": "nodes/decide-mode-gate.md" },
+        "inline-tdd":        { "kind": "work", "doc": "nodes/inline-tdd.md", "requires": ["testsPassed"] },
+        "subagent-tdd":      { "kind": "work", "doc": "nodes/subagent-tdd.md", "requires": ["testsPassed"] },
+        "code-review":       { "kind": "work", "doc": "nodes/code-review.md", "requires": ["reportPath"] },
+        "secure-review":     { "kind": "work", "doc": "nodes/secure-review.md", "requires": ["reportPath"] },
+        "review-collect":    { "kind": "work", "doc": "nodes/review-collect.md", "requires": ["p0", "p1", "p2", "reportPath"], "derive": { "blocking": { "sum": ["p0", "p1"] } } },
+        "review-gate":       { "kind": "gate", "doc": "nodes/review-gate.md" },
+        "verification":      { "kind": "work", "doc": "nodes/verification.md", "requires": ["reportPath"] },
+        "verification-gate": { "kind": "gate", "doc": "nodes/verification-gate.md" },
+        "commit":            { "kind": "work", "doc": "nodes/commit.md", "requires": ["commitSha"] },
+        "jira-update":       { "kind": "work", "doc": "nodes/jira-update.md" }
+      },
+      "edges": [
+        { "from": "read-jira", "on": "done", "to": "decide-mode-gate" },
+
+        { "from": "decide-mode-gate", "on": "inline",   "to": "inline-tdd",   "set": { "mode": "inline-tdd" } },
+        { "from": "decide-mode-gate", "on": "subagent", "to": "subagent-tdd", "set": { "mode": "subagent-tdd" } },
+
+        { "from": "inline-tdd",   "on": "done", "to": ["code-review", "secure-review"], "when": { "eq": ["data.testsPassed", true] }, "inc": ["reviewRound"] },
+        { "from": "subagent-tdd", "on": "done", "to": ["code-review", "secure-review"], "when": { "eq": ["data.testsPassed", true] }, "inc": ["reviewRound"] },
+
+        { "from": "code-review",   "on": "done", "to": "review-collect", "join": true },
+        { "from": "secure-review", "on": "done", "to": "review-collect", "join": true },
+
+        { "$comment": "P0/P1이 있으면 자동으로 TDD로. 자동 수정은 3회까지.",
+          "from": "review-collect", "on": "done", "to": "$mode",
+          "when": { "all": [ { "gt": ["data.blocking", 0] }, { "lt": ["vars.autoFix", 3] } ] },
+          "inc": ["autoFix"], "feedbackFrom": "data.reportPath" },
+        { "from": "review-collect", "on": "done", "to": "review-gate" },
+
+        { "from": "review-gate", "on": "approve",       "to": "verification" },
+        { "from": "review-gate", "on": "reject_impl",   "to": "$mode", "requireReason": true, "reset": ["autoFix"] },
+        { "from": "review-gate", "on": "reject_design", "to": "@write-plan", "requireReason": true },
+
+        { "from": "verification", "on": "done", "to": "verification-gate" },
+
+        { "from": "verification-gate", "on": "approve",       "to": "commit" },
+        { "from": "verification-gate", "on": "reject_impl",   "to": "$mode", "requireReason": true, "reset": ["autoFix"] },
+        { "from": "verification-gate", "on": "reject_design", "to": "@write-plan", "requireReason": true },
+
+        { "from": "commit",      "on": "done", "to": "jira-update" },
+        { "from": "jira-update", "on": "done", "to": "END" }
+      ]
+    }
+  }
+}
