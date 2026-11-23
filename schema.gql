@@ -137,7 +137,7 @@ type Query {
   healthCheck: Boolean!
   newStores(cursor: String, size: Int = 20): StorePage!
   order(id: ID!): Order
-  orders(cursor: String, size: Int = 20): OrderPage!
+  orders(cursor: String, size: Int = 20, statuses: [OrderStatus!]): OrderPage!
   product(id: ID!): Product
   promotions: [Promotion!]!
   search(keyword: String!, latitude: Float, longitude: Float): SearchResult!

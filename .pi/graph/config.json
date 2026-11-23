@@ -3,10 +3,10 @@
     "cloudId": "a97eda65-5552-40ed-937f-d21aedd28681",
     "projectKey": "KAN",
     "issueType": "Task",
-    "doneTransition": ""
+    "doneTransition": "리뷰 중"
   },
   "mode": {
     "subagentMinModules": 3
   },
-  "testCommand": ""
+  "testCommand": "yarn test --runInBand"
 }
