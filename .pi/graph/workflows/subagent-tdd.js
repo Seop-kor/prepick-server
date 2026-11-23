@@ -6,7 +6,7 @@
 const schema = {
   type: "object",
   properties: {
-    status: { enum: ["done", "blocked"] },
+    status: { type: "string", enum: ["done", "blocked"] },
     reason: { type: "string" },
     changedFiles: { type: "array", items: { type: "string" } },
     testsRun: { type: "string" },
