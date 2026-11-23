@@ -142,15 +142,25 @@ export class OrdersService {
     userId: number,
     size = 20,
     cursor?: string | null,
+    statuses?: OrderStatus[] | null,
   ): Promise<OrderPage> {
     validateSize(size);
-    const scope = String(userId);
+    const normalizedStatuses = [...new Set(statuses ?? [])].sort();
+    const scope = normalizedStatuses.length
+      ? JSON.stringify([userId, normalizedStatuses])
+      : String(userId);
     const start = decodeCursor('orders', scope, cursor);
     const rows = await this.em.execute<OrderRow[]>(
       `SELECT ${ORDER_COLUMNS} FROM "order" WHERE user_id = ?
+      ${normalizedStatuses.length ? `AND status IN (${normalizedStatuses.map(() => '?').join(', ')})` : ''}
       ${start ? 'AND (created_at, id) < (?::timestamptz, ?::integer)' : ''}
       ORDER BY created_at DESC, id DESC LIMIT ?`,
-      [userId, ...(start ? [start.key, start.id] : []), size + 1],
+      [
+        userId,
+        ...normalizedStatuses,
+        ...(start ? [start.key, start.id] : []),
+        size + 1,
+      ],
     );
     const page = slicePage(rows, size, (row) =>
       encodeCursor('orders', scope, row.cursor_created_at, row.id),

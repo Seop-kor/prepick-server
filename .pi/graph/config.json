@@ -8,5 +8,5 @@
   "mode": {
     "subagentMinModules": 3
   },
-  "testCommand": ""
+  "testCommand": "yarn test --runInBand"
 }

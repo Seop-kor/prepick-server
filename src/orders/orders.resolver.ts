@@ -10,7 +10,12 @@ import {
 
 import type { AuthenticatedRequest } from '../auth/auth.guard';
 import { OrdersService } from './orders.service';
-import { CreateOrderInput, OrderPage, OrderType } from './orders.types';
+import {
+  CreateOrderInput,
+  OrderPage,
+  OrderStatus,
+  OrderType,
+} from './orders.types';
 
 @Resolver()
 export class OrdersResolver {
@@ -31,8 +36,10 @@ export class OrdersResolver {
     size: number,
     @Args('cursor', { type: () => String, nullable: true })
     cursor?: string | null,
+    @Args('statuses', { type: () => [OrderStatus], nullable: true })
+    statuses?: OrderStatus[] | null,
   ) {
-    return this.service.findOrders(req.userId, size, cursor);
+    return this.service.findOrders(req.userId, size, cursor, statuses);
   }
 
   @Query(() => OrderType, { nullable: true })

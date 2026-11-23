@@ -5,7 +5,10 @@ jest.mock('@mikro-orm/postgresql', () => ({
 import type { AuthenticatedRequest } from '../../src/auth/auth.guard';
 import { OrdersResolver } from '../../src/orders/orders.resolver';
 import type { OrdersService } from '../../src/orders/orders.service';
-import type { CreateOrderInput } from '../../src/orders/orders.types';
+import {
+  type CreateOrderInput,
+  OrderStatus,
+} from '../../src/orders/orders.types';
 
 const req = { userId: 7 } as AuthenticatedRequest;
 
@@ -22,15 +25,18 @@ describe('OrdersResolver', () => {
     expect(createOrder).toHaveBeenCalledWith(7, input);
   });
 
-  it('주문 목록을 요청하면 토큰의 사용자 ID와 페이지 인자를 전달한다', async () => {
+  it('주문 목록을 요청하면 토큰의 사용자 ID와 페이지·상태 인자를 전달한다', async () => {
     const page = { items: [], nextCursor: null };
     const findOrders = jest.fn().mockResolvedValue(page);
     const resolver = new OrdersResolver({
       findOrders,
     } as unknown as OrdersService);
+    const statuses = [OrderStatus.CREATED, OrderStatus.READY];
 
-    await expect(resolver.orders(req, 10, 'cursor')).resolves.toBe(page);
-    expect(findOrders).toHaveBeenCalledWith(7, 10, 'cursor');
+    await expect(
+      resolver.orders(req, 10, 'cursor', statuses),
+    ).resolves.toBe(page);
+    expect(findOrders).toHaveBeenCalledWith(7, 10, 'cursor', statuses);
   });
 
   it('주문 상세를 요청하면 토큰의 사용자 ID와 주문 ID를 전달한다', async () => {

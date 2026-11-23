@@ -6,6 +6,7 @@ jest.mock('@mikro-orm/postgresql', () => ({
 }));
 
 import { OrdersService } from '../../src/orders/orders.service';
+import { OrderStatus } from '../../src/orders/orders.types';
 
 const USER = 7;
 const createdAt = new Date('2026-10-04T01:00:00.000Z');
@@ -112,6 +113,46 @@ describe('OrdersService 조회', () => {
     ]);
   });
 
+  it('여러 상태로 주문 목록을 조회하면 해당 상태의 본인 주문만 반환한다', async () => {
+    execute
+      .mockResolvedValueOnce([
+        { ...orderRow(3), status: OrderStatus.PICKED_UP },
+        { ...orderRow(2), status: OrderStatus.CANCELED },
+      ])
+      .mockResolvedValueOnce([]);
+
+    const page = await service.findOrders(USER, 20, null, [
+      OrderStatus.PICKED_UP,
+      OrderStatus.CANCELED,
+    ]);
+
+    expect(page.items.map(({ id, status }) => ({ id, status }))).toEqual([
+      { id: 3, status: OrderStatus.PICKED_UP },
+      { id: 2, status: OrderStatus.CANCELED },
+    ]);
+    expect(execute.mock.calls[0][1]).toEqual([
+      USER,
+      OrderStatus.CANCELED,
+      OrderStatus.PICKED_UP,
+      21,
+    ]);
+  });
+
+  it('상태 필터를 null이나 빈 배열로 전달하면 필터 없는 목록과 같은 조건으로 조회한다', async () => {
+    execute
+      .mockResolvedValueOnce([orderRow(3)])
+      .mockResolvedValueOnce([])
+      .mockResolvedValueOnce([orderRow(3)])
+      .mockResolvedValueOnce([]);
+
+    const nullFilter = await service.findOrders(USER, 20, null, null);
+    const emptyFilter = await service.findOrders(USER, 20, null, []);
+
+    expect(emptyFilter).toEqual(nullFilter);
+    expect(execute.mock.calls[0][1]).toEqual([USER, 21]);
+    expect(execute.mock.calls[2][1]).toEqual([USER, 21]);
+  });
+
   it('같은 시각의 주문이 페이지 경계에 걸리면 마이크로초 시각과 ID로 다음 페이지를 이어 조회한다', async () => {
     execute
       .mockResolvedValueOnce([orderRow(3), orderRow(2)])
@@ -135,6 +176,50 @@ describe('OrdersService 조회', () => {
       3,
       2,
     ]);
+  });
+
+  it('같은 상태 집합을 다른 순서와 중복으로 전달하면 필터된 다음 페이지를 이어 조회한다', async () => {
+    execute
+      .mockResolvedValueOnce([orderRow(3), orderRow(2)])
+      .mockResolvedValueOnce([])
+      .mockResolvedValueOnce([orderRow(1)])
+      .mockResolvedValueOnce([]);
+
+    const first = await service.findOrders(USER, 1, null, [
+      OrderStatus.READY,
+      OrderStatus.CREATED,
+    ]);
+    const second = await service.findOrders(USER, 1, first.nextCursor, [
+      OrderStatus.CREATED,
+      OrderStatus.READY,
+      OrderStatus.CREATED,
+    ]);
+
+    expect(first.items.map(({ id }) => id)).toEqual([3]);
+    expect(second.items.map(({ id }) => id)).toEqual([1]);
+    expect(execute.mock.calls[2][1]).toEqual([
+      USER,
+      OrderStatus.CREATED,
+      OrderStatus.READY,
+      '2026-10-04T01:00:00.123456Z',
+      3,
+      2,
+    ]);
+  });
+
+  it('다른 상태 조합의 커서를 사용하면 조회 없이 입력 오류를 반환한다', async () => {
+    execute
+      .mockResolvedValueOnce([orderRow(3), orderRow(2)])
+      .mockResolvedValueOnce([]);
+    const page = await service.findOrders(USER, 1, null, [OrderStatus.CREATED]);
+
+    await expect(
+      service.findOrders(USER, 1, page.nextCursor, [OrderStatus.READY]),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    await expect(
+      service.findOrders(USER, 1, page.nextCursor),
+    ).rejects.toBeInstanceOf(BadRequestException);
+    expect(execute).toHaveBeenCalledTimes(2);
   });
 
   it('다른 사용자의 커서로 목록을 조회하면 입력 오류를 반환한다', async () => {
