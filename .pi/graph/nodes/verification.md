@@ -7,10 +7,12 @@
 ## 1. 실행 검증 (`.pi/graph/verify.md`)
 
 verify.md에 적힌 프로젝트마다 다음을 한다.
-1. 서버를 백그라운드로 띄운다. 로그는 `<runDir>/verify-logs/<프로젝트>-server.log`에 남기고 PID를 기록한다.
-2. 준비 확인 명령이 성공할 때까지 기다린다. 시간 제한을 넘기면 실패로 기록한다.
-3. e2e 명령을 실행한다 (프론트엔드: Playwright, 백엔드: hurl). 출력을 `<runDir>/verify-logs/<프로젝트>-e2e.log`에 저장한다.
-4. 서버를 종료한다. 실패하든 성공하든 반드시 종료한다.
+1. 서버를 백그라운드로 띄운다: `mkdir -p <runDir>/verify-logs && nohup <서버 실행> > <runDir>/verify-logs/<프로젝트>-server.log 2>&1 & echo $!`. 출력된 PID를 기록한다. 이 명령은 바로 끝나야 한다.
+2. 준비 확인 명령이 성공할 때까지 기다린다. 대기 루프는 bash 한 번으로 돌리고, bash `timeout`을 verify.md의 대기 한도 + 30초로 준다. 한도를 넘기면 실패로 기록한다.
+3. e2e 명령을 실행한다. bash `timeout`을 명시한다(기본 900초). 출력을 `<runDir>/verify-logs/<프로젝트>-e2e.log`에 저장하고 종료 코드를 기록한다.
+4. 서버를 종료한다(`kill <PID>`). 실패하든 성공하든 반드시 종료한다.
+
+bash 호출에 `timeout`을 빼지 않는다. claude-bridge provider에서는 timeout 없는 bash 호출이 120초에 끊긴다.
 
 ## 2. 설계 대비 확인
 

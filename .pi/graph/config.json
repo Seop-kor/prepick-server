@@ -6,7 +6,7 @@
     "doneTransition": "리뷰 중"
   },
   "mode": {
-    "subagentMinModules": 3
+    "subagentMinModules": 6
   },
   "testCommand": "yarn test --runInBand"
 }
