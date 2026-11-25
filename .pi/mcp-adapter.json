@@ -1,8 +1,7 @@
 {
   "mcpServers": {
     "atlassian": {
-      "url": "https://mcp.atlassian.com/v2/mcp?tools=all",
-      "directTools": true,
+      "url": "https://mcp.atlassian.com/v2/mcp",
       "openUi": false
     }
   }
